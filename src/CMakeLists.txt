@@ -1,20 +1,17 @@
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-
 add_executable(${PROJECT_NAME} main.cpp)
+target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
+target_link_libraries(${PROJECT_NAME} PRIVATE raylib)
 
-find_package(OpenGL REQUIRED)
+if(EMSCRIPTEN)
+    set_target_properties(${PROJECT_NAME} PROPERTIES LINK_FLAGS "-s USE_GLFW=3 -s ASYNCIFY -s ALLOW_MEMORY_GROWTH=1 -s WASM=1 -s ASSERTIONS=1 -s FORCE_FILESYSTEM=1")
 
-target_link_libraries(${PROJECT_NAME}
-    PRIVATE
-        OpenGL::GL
-        SDL3::SDL3
-        imgui
-)
+    add_custom_command(
+        TARGET ${PROJECT_NAME} POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.js ${PROJECT_SOURCE_DIR}/demo/${PROJECT_NAME}.js
+    )
 
-message(SDL3_BINARY_DIR ${SDL3_BINARY_DIR})
-
-add_custom_command(
-    TARGET ${PROJECT_NAME}
-    COMMENT "Copy SDL3 DLL"
-    PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_BINARY_DIR}/SDL3.dll $<TARGET_FILE_DIR:${PROJECT_NAME}>
-    VERBATIM)
+    add_custom_command(
+        TARGET ${PROJECT_NAME} POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.wasm ${PROJECT_SOURCE_DIR}/demo/${PROJECT_NAME}.wasm
+    )
+endif()
