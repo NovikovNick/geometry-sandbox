@@ -1,0 +1,57 @@
+name: docs
+
+on:
+  push:
+    branches: [ "master" ]
+
+env:
+  DOXYGEN_VERSION: "1.16.1"  # best with current doxygen-awesome-css
+
+jobs:
+  build-and-deploy-docs:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write # need to push to gh-pages
+    
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: recursive
+
+    # copypasted from raylib git workflow
+    - name: Install Raylib Dependencies
+      run: |
+        sudo apt-get update -qq
+        sudo apt-get install -y --no-install-recommends libglfw3 libglfw3-dev libx11-dev libxcursor-dev libxrandr-dev libxinerama-dev libxi-dev libxext-dev libxfixes-dev libwayland-dev libxkbcommon-dev
+    
+    - name: Install Doxygen
+      run: |
+        wget https://www.doxygen.nl/files/doxygen-${{ env.DOXYGEN_VERSION }}.linux.bin.tar.gz
+        tar -xzf doxygen-${{ env.DOXYGEN_VERSION }}.linux.bin.tar.gz
+        sudo cp doxygen-${{ env.DOXYGEN_VERSION }}/bin/doxygen /usr/local/bin/
+        sudo chmod +x /usr/local/bin/doxygen
+        doxygen --version
+
+    - name: Generate Documentation
+      run: |
+        cmake -B build \
+          -DGSAND_ENABLE_TESTS=OFF \
+          -DGSAND_ENABLE_BENCHMARKS=OFF \
+          -DGSAND_BUILD_DOCS=ON \
+          -DGSAND_BUILD_SAMPLES=OFF \
+          -DGSAND_USE_CLANG_TIDY=OFF
+        cmake --build build --target docs
+    
+    - name: Build samples
+      run: |
+        chmod +x scripts/build_web.sh
+        ./scripts/build_web.sh
+
+    - name: Deploy Documentation
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: ./docs/html
+        branch: gh-pages
+
+

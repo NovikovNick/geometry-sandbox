@@ -1,0 +1,40 @@
+name: test
+
+env:
+  BUILD_TYPE: Debug  # for test it should be debug
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build-and-deploy-docs:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: recursive
+
+    # copypasted from raylib git workflow
+    - name: Install Raylib Dependencies
+      run: |
+        sudo apt-get update -qq
+        sudo apt-get install -y --no-install-recommends libglfw3 libglfw3-dev libx11-dev libxcursor-dev libxrandr-dev libxinerama-dev libxi-dev libxext-dev libxfixes-dev libwayland-dev libxkbcommon-dev
+
+    - name: Build
+      run: |
+        cmake -B build \
+          -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE }} \
+          -DGSAND_ENABLE_TESTS=ON \
+          -DGSAND_ENABLE_BENCHMARKS=OFF \
+          -DGSAND_BUILD_DOCS=OFF \
+          -DGSAND_BUILD_SAMPLES=OFF \
+          -DGSAND_USE_CLANG_TIDY=OFF
+        cmake --build build --config ${{ env.BUILD_TYPE }}
+
+    - name: Run Tests
+      working-directory: build
+      run: ctest --output-on-failure -C ${{ env.BUILD_TYPE }}
