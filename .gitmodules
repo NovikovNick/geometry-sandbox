@@ -1,3 +1,6 @@
-[submodule "third_parties/emsdk"]
-	path = third_parties/emsdk
+[submodule "third_party/emsdk"]
+	path = third_party/emsdk
 	url = https://github.com/emscripten-core/emsdk.git
+[submodule "docs/doxygen-awesome-css"]
+	path = docs/doxygen-awesome-css
+	url = https://github.com/jothepro/doxygen-awesome-css.git

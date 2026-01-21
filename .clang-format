@@ -2,6 +2,8 @@ Language: Cpp
 BasedOnStyle: Microsoft
 AllowShortBlocksOnASingleLine: false
 AlignAfterOpenBracket: Align
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowAllArgumentsOnNextLine: false
 AllowShortFunctionsOnASingleLine: Inline
 AllowShortIfStatementsOnASingleLine: true
 AllowShortCaseLabelsOnASingleLine: true
@@ -19,3 +21,6 @@ SpacesBeforeTrailingComments: 2
 TabWidth: '4'
 UseTab: Always
 IndentWidth: '4'
+PenaltyBreakBeforeFirstCallParameter: 100000
+PenaltyBreakAssignment: 100000
+QualifierAlignment: Left

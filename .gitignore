@@ -36,8 +36,4 @@ build
 .vs
 
 # project
-build_protobuf_emscripten/
-build_server/
-build_client/
-build_protobuf_win/
-build_client_win/
+docs/html
