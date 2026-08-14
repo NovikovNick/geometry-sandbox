@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>geometry-sandbox: /home/runner/work/geometry-sandbox/geometry-sandbox/src/core/configuration.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="theme-round.css" rel="stylesheet" type="text/css"/>
+<link href="theme-robot.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/NovikovNick/algorithm-visualizer" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">geometry-sandbox
+   </div>
+   <div id="projectbrief">Yet another geometry sandbox project</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">configuration.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="configuration_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef GEOMETRY_SANDBOX_CONFIGURATION_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define GEOMETRY_SANDBOX_CONFIGURATION_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="animation_2manager_8h.html">animation/manager.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="player__manager_8h.html">animation/player_manager.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="animation_2service_8h.html">animation/service.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="application_8h.html">core/application.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="camera__controller__service_8h.html">core/camera_controller_service.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="camera__service_8h.html">core/camera_service.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="canvas__service_8h.html">core/canvas_service.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="input__manager_8h.html">core/input_manager.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="log__manager_8h.html">core/log_manager.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="math_8h.html">core/math.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="render__service_8h.html">core/render_service.h</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="resource__manager_8h.html">core/resource_manager.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="scene__service_8h.html">core/scene_service.h</a>&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="settings_8h.html">core/settings.h</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="window__manager_8h.html">core/window_manager.h</a>&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="camera__idle__rotation__manager_8h.html">feature/camera_idle_rotation_manager.h</a>&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="ortho__projection__view__manager_8h.html">feature/ortho_projection_view_manager.h</a>&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;<a class="code" href="interaction_2service_8h.html">interaction/service.h</a>&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="translate__gizmo_8h.html">interaction/translate_gizmo.h</a>&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;<a class="code" href="ui_2manager_8h.html">ui/manager.h</a>&quot;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;<a class="code" href="ui_2service_8h.html">ui/service.h</a>&quot;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &quot;IconsFontAwesome7.h&quot;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;boost/di.hpp&quot;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacegs.html">gs</a></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>{</div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="namespacegs.html#a532871a295d8339eff3e40164250c00b">   38</a></span><span class="keyword">inline</span> <a class="code hl_struct" href="structgs_1_1Settings.html">Settings</a> <a class="code hl_function" href="namespacegs.html#a532871a295d8339eff3e40164250c00b">createDefaultSettings</a>()</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structgs_1_1Camera.html">Camera</a> defaultCamera{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        .<a class="code hl_variable" href="structgs_1_1Camera.html#acb5abb62a82ee90e18a09d3a5c0b58c3">handedness</a>  = <a class="code hl_enumvalue" href="namespacegs.html#aec7a1ecf393e9dd407f46ea71f6204bba92b09c7c48c520c3c55e497875da437c">CoordinateHandedness::Right</a>,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        .position    = <a class="code hl_typedef" href="namespacegs.html#aff26127e720eeae5a29c485c3eed6d34">Vec3</a>{5, 5, 5},</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        .target      = <a class="code hl_typedef" href="namespacegs.html#aff26127e720eeae5a29c485c3eed6d34">Vec3</a>{2, 2, 2},</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        .rotation    = <a class="code hl_typedef" href="namespacegs.html#aff26127e720eeae5a29c485c3eed6d34">Vec3</a>{0.0f, 0.0f, 0.0f},        <span class="comment">// in radian</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        .quat        = <a class="code hl_typedef" href="namespacegs.html#a46f126316ba554e24f729e7f50e124d1">Quat</a>{0.0f, 0.0f, 0.0f, 1.0f},  <span class="comment">// identity quatertion</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        .upAxis      = <a class="code hl_enumvalue" href="namespacegs.html#ab12d4497e42e30b14afc4aae1c3b496ca57cec4137b614c87cb4e24a3d003a3e0">Axis::Y</a>,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        .width       = 1024,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        .height      = 768,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        .fov         = 50.f,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        .zNear       = 1.0f,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        .zFar        = 100.f,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        .perspective = <span class="keyword">true</span>,  <span class="comment">//  perspective or orthographic</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    };</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structgs_1_1scene_1_1Grid2D.html">scene::Grid2D</a> grid{.<a class="code hl_variable" href="structgs_1_1scene_1_1Grid2D.html#a262c960f99842eb2b6a1d26cd58327aa">majorLineColor</a> = <a class="code hl_struct" href="structgs_1_1Color.html">Color</a>{125.0F, 125.0F, 125.0F, 255.0F},</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                             .minorLineColor = <a class="code hl_struct" href="structgs_1_1Color.html">Color</a>{90.0F, 90.0F, 90.0F, 255.0F},</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                             .majorLineStep  = 10,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                             .cellSize       = 1.0F,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                             .gridSize       = 10};</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structgs_1_1Settings.html">Settings</a>{</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        .<a class="code hl_variable" href="structgs_1_1Settings.html#a7657039bbd7e15436e1e3e3730061673">title</a>                              = <span class="stringliteral">&quot;Geometry Sandbox&quot;</span>,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        .width                              = 1024,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        .height                             = 768,</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        .fullscreen                         = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        .multiSampleAntiAliasing4X          = <span class="keyword">true</span>,</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        .vSync                              = <span class="keyword">true</span>,</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        .footerHeight                       = 50.0F,</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        .detailsWidth                       = 300.0f,</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        .showConsole                        = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        .showCollisions                     = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        .showCursorRay                      = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        .animationSpeed                     = 1.00F,</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        .iconPlayerBackwardFast             = ICON_FA_BACKWARD_FAST,</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        .iconPlayerBackwardStep             = ICON_FA_BACKWARD_STEP,</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        .iconPlayerPlay                     = ICON_FA_PLAY,</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        .iconPlayerPause                    = ICON_FA_PAUSE,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        .iconPlayerForwardStep              = ICON_FA_FORWARD_STEP,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        .iconPlayerForwardFast              = ICON_FA_FORWARD_FAST,</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        .iconSettings                       = ICON_FA_GEAR,</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        .enableQuaternionCameraRotation     = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        .resetTimelineAfterDataChange       = <span class="keyword">true</span>,</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        .gizmoArrowSize                     = 7.6F,</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        .gizmoTranslateAxisX                = <a class="code hl_function" href="structgs_1_1Color.html#a8e063e48dce5d2789ab89a08d5b8910b">Color::red</a>(),</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        .gizmoTranslateAxisXSelected        = <a class="code hl_function" href="structgs_1_1Color.html#a8e063e48dce5d2789ab89a08d5b8910b">Color::red</a>(172.0F),</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        .gizmoTranslateAxesXY               = <a class="code hl_function" href="structgs_1_1Color.html#a3410d5c600d4e3e1518513c74be19f2a">Color::yellow</a>(),</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        .gizmoTranslateAxesXYSelected       = <a class="code hl_function" href="structgs_1_1Color.html#a3410d5c600d4e3e1518513c74be19f2a">Color::yellow</a>(172.0F),</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        .gizmoTranslateAxisY                = <a class="code hl_function" href="structgs_1_1Color.html#a84a468375c21c9fcdbfdd73444b1a812">Color::green</a>(),</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        .gizmoTranslateAxisYSelected        = <a class="code hl_function" href="structgs_1_1Color.html#a84a468375c21c9fcdbfdd73444b1a812">Color::green</a>(172.0F),</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        .gizmoTranslateAxesYZ               = <a class="code hl_function" href="structgs_1_1Color.html#ab362fb0b4bbaba11a9b263b1cfd24329">Color::cian</a>(),</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        .gizmoTranslateAxesYZSelected       = <a class="code hl_function" href="structgs_1_1Color.html#ab362fb0b4bbaba11a9b263b1cfd24329">Color::cian</a>(172.0F),</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        .gizmoTranslateAxisZ                = <a class="code hl_function" href="structgs_1_1Color.html#a291942d1e36442832062cda22ee880db">Color::blue</a>(),</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        .gizmoTranslateAxisZSelected        = <a class="code hl_function" href="structgs_1_1Color.html#a291942d1e36442832062cda22ee880db">Color::blue</a>(172.0F),</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        .gizmoTranslateAxesZX               = <a class="code hl_function" href="structgs_1_1Color.html#a39caed1102f98818a769e54d99416fa1">Color::magenta</a>(),</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        .gizmoTranslateAxesZXSelected       = <a class="code hl_function" href="structgs_1_1Color.html#a39caed1102f98818a769e54d99416fa1">Color::magenta</a>(172.0F),</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        .gizmoColliderPlaneThickness        = 0,</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        .gizmoColliderAxisThickness         = 0.003F,</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        .gizmoColliderAxisLength            = 0.14,</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        .gizmoColliderPlaneSize             = 0.07,</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        .canvasFontSize                     = 32.0F,</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        .uiFontSize                         = 20.0F,</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        .uiButtonColor                      = <a class="code hl_function" href="structgs_1_1Color.html#a6118f9c9099d2ce6c617261f57cb164d">Color::white</a>(),  <span class="comment">// doesn&#39;t work</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        .canvasBackgroundColor              = <a class="code hl_struct" href="structgs_1_1Color.html">Color</a>{63.0F, 63.0F, 63.0F, 255.0F},</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        .uiPlayerTimelineBackgroundColor    = <a class="code hl_function" href="structgs_1_1Color.html#abdc6da40f592b53f7e110c9a29391ea8">Color::gray</a>(),</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        .uiPlayerTimelineFillColor          = <a class="code hl_function" href="structgs_1_1Color.html#a291942d1e36442832062cda22ee880db">Color::blue</a>(),</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        .uiPlayerTimelineGrabberColor       = <a class="code hl_function" href="structgs_1_1Color.html#a6118f9c9099d2ce6c617261f57cb164d">Color::white</a>(),</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        .uiPlayerTimelineGrabberColorActive = <a class="code hl_function" href="structgs_1_1Color.html#a3410d5c600d4e3e1518513c74be19f2a">Color::yellow</a>(),</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        .uiPlayerTimelineGrabberSize        = 10.0F,</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        .uiPlayerTimelineRoundingSize       = 5.0F,</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        .uiPlayerTimelineHeight             = 6.0F,</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        .uiPlayerControlButtonWidth         = 25.0F,</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        .uiPlayerControlTextWidth           = 15.0F,</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        .uiPlayerHeight                     = 34.0F,</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        .lineThick                          = 0.03F,</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        .dashLength                         = 0.2F,</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        .defaultCamera                      = defaultCamera,</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        .grid                               = grid,</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        .idleRotationAnglePerFrame          = 0.002F,</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        .idleRotationAnimationStartDelay    = <a class="code hl_typedef" href="namespacegs.html#a4c28c295b2749cdbca832eb5eb8803b7">Seconds</a>{1},</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        .idleRotationTransitionDuration     = <a class="code hl_typedef" href="namespacegs.html#a4c28c295b2749cdbca832eb5eb8803b7">Seconds</a>{5},</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        .idleRotationDistanceMin            = 4.0F,</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        .idleRotationDistanceMod            = 1.5F,</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        .cameraRotateSensitivity            = 0.002F,</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        .cameraMoveSensitivity              = 0.15F,</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    };</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>}</div>
+</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="keyword">namespace </span>di</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>{</div>
+<div class="foldopen" id="foldopen00144" data-start="{" data-end="}">
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="namespacegs_1_1di.html#a25ae220a7f123eb12d5e4f2bf933d2ab">  144</a></span><span class="keyword">inline</span> <span class="keyword">auto</span>&amp; <a class="code hl_function" href="namespacegs_1_1di.html#a25ae220a7f123eb12d5e4f2bf933d2ab">getContext</a>()</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>{</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keyword">static</span> <span class="keyword">auto</span> ctx = []()</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    {</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="keyword">auto</span> injector      = boost::di::make_injector(boost::di::bind&lt;Settings&gt;().in(boost::di::singleton),</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                                                  boost::di::bind&lt;Application&gt;().in(boost::di::singleton),</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                                                  boost::di::bind&lt;ecs::Registry&gt;().in(boost::di::singleton),</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                                                  inputManager(),</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                                                  <a class="code hl_function" href="namespacegs_1_1di.html#a732cf43c70883752c1eb66ac69e0d451">windowManager</a>(),</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                                                  <a class="code hl_function" href="namespacegs_1_1di.html#a3a51fbb24898c71e3eded81ee0b9d5a1">resourceManager</a>(),</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                                                  animationManager(),</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                                                  uiManager(),</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                                                  <a class="code hl_function" href="namespacegs_1_1di.html#a46a912ddaf79d8a99cd9d8bca757fd33">uiService</a>(),</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                                                  <a class="code hl_function" href="namespacegs_1_1di.html#a58341bcd0e889fc6d4853979a9e29ba4">renderSystem</a>(),</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                                                  <a class="code hl_function" href="namespacegs_1_1di.html#a2d41064c134b651208b878bf14d425fd">cameraControllerSystem</a>(),</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                                                  <a class="code hl_function" href="namespacegs_1_1di.html#a2ca8f68001887a35b24880663e73e308">interactionService</a>(),</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                                                  <a class="code hl_function" href="namespacegs_1_1di.html#a85ac753d48a858b9adfa8f96773003ae">cameraService</a>(),</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                                                  <a class="code hl_function" href="namespacegs_1_1di.html#ae2394faff9d4490636b1d4a5e07e8037">canvasService</a>(),</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                                                  <a class="code hl_function" href="namespacegs_1_1di.html#a814122a0411f5a7c3398f0b55278c20f">translateGizmoUpdateService</a>(),</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                                                  <a class="code hl_function" href="namespacegs_1_1di.html#af66e943a587ec6829bc06c49940f0ee5">translateGizmoRenderService</a>(),</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                                                  <a class="code hl_function" href="namespacegs_1_1di.html#adc7e64e0a29a0fddc96e7acccee290f1">sceneService</a>(),</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                                                  <a class="code hl_function" href="namespacegs_1_1di.html#a4de2532639a0d512ada32d6f03c6141c">animationService</a>(),</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                                                  animationPlayerManager(),</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                                                  cameraIdleRotationManager(),</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                                                  <a class="code hl_function" href="namespacegs_1_1di.html#a69374abe6969880bfa44d93b2503c58f">orthoProjectionViewManager</a>(),</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                                                  <a class="code hl_function" href="namespacegs_1_1di.html#a1ba605dde6f732cede638df812909a7b">logManager</a>());</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <a class="code hl_struct" href="structgs_1_1Settings.html">Settings</a>&amp; settings = injector.create&lt;<a class="code hl_struct" href="structgs_1_1Settings.html">Settings</a>&amp;&gt;();</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        settings           = <a class="code hl_function" href="namespacegs.html#a532871a295d8339eff3e40164250c00b">createDefaultSettings</a>();</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <span class="keywordflow">return</span> injector;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    }();</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="keywordflow">return</span> ctx;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>};</div>
+</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>}  <span class="comment">// namespace di</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>}  <span class="comment">// namespace gs</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="preprocessor">#endif  </span><span class="comment">// GEOMETRY_SANDBOX_CONFIGURATION_H</span></div>
+<div class="ttc" id="aanimation_2manager_8h_html"><div class="ttname"><a href="animation_2manager_8h.html">manager.h</a></div><div class="ttdoc">Core animation manager - builds assets, spawns instances, and drives playback.</div></div>
+<div class="ttc" id="aanimation_2service_8h_html"><div class="ttname"><a href="animation_2service_8h.html">service.h</a></div><div class="ttdoc">Provides factory methods for creating common animation.</div></div>
+<div class="ttc" id="aapplication_8h_html"><div class="ttname"><a href="application_8h.html">application.h</a></div><div class="ttdoc">main entry class</div></div>
+<div class="ttc" id="acamera__controller__service_8h_html"><div class="ttname"><a href="camera__controller__service_8h.html">camera_controller_service.h</a></div></div>
+<div class="ttc" id="acamera__idle__rotation__manager_8h_html"><div class="ttname"><a href="camera__idle__rotation__manager_8h.html">camera_idle_rotation_manager.h</a></div></div>
+<div class="ttc" id="acamera__service_8h_html"><div class="ttname"><a href="camera__service_8h.html">camera_service.h</a></div></div>
+<div class="ttc" id="acanvas__service_8h_html"><div class="ttname"><a href="canvas__service_8h.html">canvas_service.h</a></div></div>
+<div class="ttc" id="ainput__manager_8h_html"><div class="ttname"><a href="input__manager_8h.html">input_manager.h</a></div></div>
+<div class="ttc" id="ainteraction_2service_8h_html"><div class="ttname"><a href="interaction_2service_8h.html">service.h</a></div><div class="ttdoc">main service for interaction system</div></div>
+<div class="ttc" id="alog__manager_8h_html"><div class="ttname"><a href="log__manager_8h.html">log_manager.h</a></div></div>
+<div class="ttc" id="amath_8h_html"><div class="ttname"><a href="math_8h.html">math.h</a></div></div>
+<div class="ttc" id="anamespacegs_1_1di_html_a1ba605dde6f732cede638df812909a7b"><div class="ttname"><a href="namespacegs_1_1di.html#a1ba605dde6f732cede638df812909a7b">gs::di::logManager</a></div><div class="ttdeci">auto logManager() noexcept</div><div class="ttdef"><b>Definition</b> log_manager.h:72</div></div>
+<div class="ttc" id="anamespacegs_1_1di_html_a25ae220a7f123eb12d5e4f2bf933d2ab"><div class="ttname"><a href="namespacegs_1_1di.html#a25ae220a7f123eb12d5e4f2bf933d2ab">gs::di::getContext</a></div><div class="ttdeci">auto &amp; getContext()</div><div class="ttdef"><b>Definition</b> configuration.h:144</div></div>
+<div class="ttc" id="anamespacegs_1_1di_html_a2ca8f68001887a35b24880663e73e308"><div class="ttname"><a href="namespacegs_1_1di.html#a2ca8f68001887a35b24880663e73e308">gs::di::interactionService</a></div><div class="ttdeci">auto interactionService() noexcept</div><div class="ttdef"><b>Definition</b> service.h:66</div></div>
+<div class="ttc" id="anamespacegs_1_1di_html_a2d41064c134b651208b878bf14d425fd"><div class="ttname"><a href="namespacegs_1_1di.html#a2d41064c134b651208b878bf14d425fd">gs::di::cameraControllerSystem</a></div><div class="ttdeci">auto cameraControllerSystem() noexcept</div><div class="ttdef"><b>Definition</b> camera_controller_service.h:44</div></div>
+<div class="ttc" id="anamespacegs_1_1di_html_a3a51fbb24898c71e3eded81ee0b9d5a1"><div class="ttname"><a href="namespacegs_1_1di.html#a3a51fbb24898c71e3eded81ee0b9d5a1">gs::di::resourceManager</a></div><div class="ttdeci">auto resourceManager() noexcept</div><div class="ttdef"><b>Definition</b> resource_manager.h:71</div></div>
+<div class="ttc" id="anamespacegs_1_1di_html_a46a912ddaf79d8a99cd9d8bca757fd33"><div class="ttname"><a href="namespacegs_1_1di.html#a46a912ddaf79d8a99cd9d8bca757fd33">gs::di::uiService</a></div><div class="ttdeci">auto uiService() noexcept</div><div class="ttdef"><b>Definition</b> service.h:48</div></div>
+<div class="ttc" id="anamespacegs_1_1di_html_a4de2532639a0d512ada32d6f03c6141c"><div class="ttname"><a href="namespacegs_1_1di.html#a4de2532639a0d512ada32d6f03c6141c">gs::di::animationService</a></div><div class="ttdeci">auto animationService() noexcept</div><div class="ttdef"><b>Definition</b> service.h:96</div></div>
+<div class="ttc" id="anamespacegs_1_1di_html_a58341bcd0e889fc6d4853979a9e29ba4"><div class="ttname"><a href="namespacegs_1_1di.html#a58341bcd0e889fc6d4853979a9e29ba4">gs::di::renderSystem</a></div><div class="ttdeci">auto renderSystem() noexcept</div><div class="ttdef"><b>Definition</b> render_service.h:76</div></div>
+<div class="ttc" id="anamespacegs_1_1di_html_a69374abe6969880bfa44d93b2503c58f"><div class="ttname"><a href="namespacegs_1_1di.html#a69374abe6969880bfa44d93b2503c58f">gs::di::orthoProjectionViewManager</a></div><div class="ttdeci">auto orthoProjectionViewManager() noexcept</div><div class="ttdef"><b>Definition</b> ortho_projection_view_manager.h:83</div></div>
+<div class="ttc" id="anamespacegs_1_1di_html_a732cf43c70883752c1eb66ac69e0d451"><div class="ttname"><a href="namespacegs_1_1di.html#a732cf43c70883752c1eb66ac69e0d451">gs::di::windowManager</a></div><div class="ttdeci">auto windowManager() noexcept</div><div class="ttdef"><b>Definition</b> window_manager.h:49</div></div>
+<div class="ttc" id="anamespacegs_1_1di_html_a814122a0411f5a7c3398f0b55278c20f"><div class="ttname"><a href="namespacegs_1_1di.html#a814122a0411f5a7c3398f0b55278c20f">gs::di::translateGizmoUpdateService</a></div><div class="ttdeci">auto translateGizmoUpdateService() noexcept</div><div class="ttdef"><b>Definition</b> translate_gizmo.h:64</div></div>
+<div class="ttc" id="anamespacegs_1_1di_html_a85ac753d48a858b9adfa8f96773003ae"><div class="ttname"><a href="namespacegs_1_1di.html#a85ac753d48a858b9adfa8f96773003ae">gs::di::cameraService</a></div><div class="ttdeci">auto cameraService() noexcept</div><div class="ttdef"><b>Definition</b> camera_service.h:51</div></div>
+<div class="ttc" id="anamespacegs_1_1di_html_adc7e64e0a29a0fddc96e7acccee290f1"><div class="ttname"><a href="namespacegs_1_1di.html#adc7e64e0a29a0fddc96e7acccee290f1">gs::di::sceneService</a></div><div class="ttdeci">auto sceneService() noexcept</div><div class="ttdef"><b>Definition</b> json_service.h:41</div></div>
+<div class="ttc" id="anamespacegs_1_1di_html_ae2394faff9d4490636b1d4a5e07e8037"><div class="ttname"><a href="namespacegs_1_1di.html#ae2394faff9d4490636b1d4a5e07e8037">gs::di::canvasService</a></div><div class="ttdeci">auto canvasService() noexcept</div><div class="ttdef"><b>Definition</b> canvas_service.h:81</div></div>
+<div class="ttc" id="anamespacegs_1_1di_html_af66e943a587ec6829bc06c49940f0ee5"><div class="ttname"><a href="namespacegs_1_1di.html#af66e943a587ec6829bc06c49940f0ee5">gs::di::translateGizmoRenderService</a></div><div class="ttdeci">auto translateGizmoRenderService() noexcept</div><div class="ttdef"><b>Definition</b> translate_gizmo.h:59</div></div>
+<div class="ttc" id="anamespacegs_html"><div class="ttname"><a href="namespacegs.html">gs</a></div><div class="ttdoc">geometry sandbox</div><div class="ttdef"><b>Definition</b> dsl.h:21</div></div>
+<div class="ttc" id="anamespacegs_html_a46f126316ba554e24f729e7f50e124d1"><div class="ttname"><a href="namespacegs.html#a46f126316ba554e24f729e7f50e124d1">gs::Quat</a></div><div class="ttdeci">Eigen::Quaternion&lt; float &gt; Quat</div><div class="ttdef"><b>Definition</b> math.h:16</div></div>
+<div class="ttc" id="anamespacegs_html_a4c28c295b2749cdbca832eb5eb8803b7"><div class="ttname"><a href="namespacegs.html#a4c28c295b2749cdbca832eb5eb8803b7">gs::Seconds</a></div><div class="ttdeci">std::chrono::seconds Seconds</div><div class="ttdef"><b>Definition</b> types.h:20</div></div>
+<div class="ttc" id="anamespacegs_html_a532871a295d8339eff3e40164250c00b"><div class="ttname"><a href="namespacegs.html#a532871a295d8339eff3e40164250c00b">gs::createDefaultSettings</a></div><div class="ttdeci">Settings createDefaultSettings()</div><div class="ttdef"><b>Definition</b> configuration.h:38</div></div>
+<div class="ttc" id="anamespacegs_html_ab12d4497e42e30b14afc4aae1c3b496ca57cec4137b614c87cb4e24a3d003a3e0"><div class="ttname"><a href="namespacegs.html#ab12d4497e42e30b14afc4aae1c3b496ca57cec4137b614c87cb4e24a3d003a3e0">gs::Axis::Y</a></div><div class="ttdeci">@ Y</div></div>
+<div class="ttc" id="anamespacegs_html_aec7a1ecf393e9dd407f46ea71f6204bba92b09c7c48c520c3c55e497875da437c"><div class="ttname"><a href="namespacegs.html#aec7a1ecf393e9dd407f46ea71f6204bba92b09c7c48c520c3c55e497875da437c">gs::CoordinateHandedness::Right</a></div><div class="ttdeci">@ Right</div></div>
+<div class="ttc" id="anamespacegs_html_aff26127e720eeae5a29c485c3eed6d34"><div class="ttname"><a href="namespacegs.html#aff26127e720eeae5a29c485c3eed6d34">gs::Vec3</a></div><div class="ttdeci">Eigen::Vector3f Vec3</div><div class="ttdef"><b>Definition</b> math.h:14</div></div>
+<div class="ttc" id="aortho__projection__view__manager_8h_html"><div class="ttname"><a href="ortho__projection__view__manager_8h.html">ortho_projection_view_manager.h</a></div></div>
+<div class="ttc" id="aplayer__manager_8h_html"><div class="ttname"><a href="player__manager_8h.html">player_manager.h</a></div><div class="ttdoc">Manages animation playback for gs::ui::AnimationPlayer.</div></div>
+<div class="ttc" id="arender__service_8h_html"><div class="ttname"><a href="render__service_8h.html">render_service.h</a></div></div>
+<div class="ttc" id="aresource__manager_8h_html"><div class="ttname"><a href="resource__manager_8h.html">resource_manager.h</a></div></div>
+<div class="ttc" id="ascene__service_8h_html"><div class="ttname"><a href="scene__service_8h.html">scene_service.h</a></div></div>
+<div class="ttc" id="asettings_8h_html"><div class="ttname"><a href="settings_8h.html">settings.h</a></div></div>
+<div class="ttc" id="astructgs_1_1Camera_html"><div class="ttname"><a href="structgs_1_1Camera.html">gs::Camera</a></div><div class="ttdoc">Camera with coordinate handedness property.</div><div class="ttdef"><b>Definition</b> types.h:166</div></div>
+<div class="ttc" id="astructgs_1_1Camera_html_acb5abb62a82ee90e18a09d3a5c0b58c3"><div class="ttname"><a href="structgs_1_1Camera.html#acb5abb62a82ee90e18a09d3a5c0b58c3">gs::Camera::handedness</a></div><div class="ttdeci">CoordinateHandedness handedness</div><div class="ttdef"><b>Definition</b> types.h:167</div></div>
+<div class="ttc" id="astructgs_1_1Color_html"><div class="ttname"><a href="structgs_1_1Color.html">gs::Color</a></div><div class="ttdef"><b>Definition</b> types.h:31</div></div>
+<div class="ttc" id="astructgs_1_1Color_html_a291942d1e36442832062cda22ee880db"><div class="ttname"><a href="structgs_1_1Color.html#a291942d1e36442832062cda22ee880db">gs::Color::blue</a></div><div class="ttdeci">static constexpr Color blue(float alpha=255)</div><div class="ttdef"><b>Definition</b> types.h:40</div></div>
+<div class="ttc" id="astructgs_1_1Color_html_a3410d5c600d4e3e1518513c74be19f2a"><div class="ttname"><a href="structgs_1_1Color.html#a3410d5c600d4e3e1518513c74be19f2a">gs::Color::yellow</a></div><div class="ttdeci">static constexpr Color yellow(float alpha=255)</div><div class="ttdef"><b>Definition</b> types.h:37</div></div>
+<div class="ttc" id="astructgs_1_1Color_html_a39caed1102f98818a769e54d99416fa1"><div class="ttname"><a href="structgs_1_1Color.html#a39caed1102f98818a769e54d99416fa1">gs::Color::magenta</a></div><div class="ttdeci">static constexpr Color magenta(float alpha=255)</div><div class="ttdef"><b>Definition</b> types.h:41</div></div>
+<div class="ttc" id="astructgs_1_1Color_html_a6118f9c9099d2ce6c617261f57cb164d"><div class="ttname"><a href="structgs_1_1Color.html#a6118f9c9099d2ce6c617261f57cb164d">gs::Color::white</a></div><div class="ttdeci">static constexpr Color white(float alpha=255)</div><div class="ttdef"><b>Definition</b> types.h:43</div></div>
+<div class="ttc" id="astructgs_1_1Color_html_a84a468375c21c9fcdbfdd73444b1a812"><div class="ttname"><a href="structgs_1_1Color.html#a84a468375c21c9fcdbfdd73444b1a812">gs::Color::green</a></div><div class="ttdeci">static constexpr Color green(float alpha=255)</div><div class="ttdef"><b>Definition</b> types.h:38</div></div>
+<div class="ttc" id="astructgs_1_1Color_html_a8e063e48dce5d2789ab89a08d5b8910b"><div class="ttname"><a href="structgs_1_1Color.html#a8e063e48dce5d2789ab89a08d5b8910b">gs::Color::red</a></div><div class="ttdeci">static constexpr Color red(float alpha=255)</div><div class="ttdef"><b>Definition</b> types.h:36</div></div>
+<div class="ttc" id="astructgs_1_1Color_html_ab362fb0b4bbaba11a9b263b1cfd24329"><div class="ttname"><a href="structgs_1_1Color.html#ab362fb0b4bbaba11a9b263b1cfd24329">gs::Color::cian</a></div><div class="ttdeci">static constexpr Color cian(float alpha=255)</div><div class="ttdef"><b>Definition</b> types.h:39</div></div>
+<div class="ttc" id="astructgs_1_1Color_html_abdc6da40f592b53f7e110c9a29391ea8"><div class="ttname"><a href="structgs_1_1Color.html#abdc6da40f592b53f7e110c9a29391ea8">gs::Color::gray</a></div><div class="ttdeci">static constexpr Color gray(float alpha=255)</div><div class="ttdef"><b>Definition</b> types.h:44</div></div>
+<div class="ttc" id="astructgs_1_1Settings_html"><div class="ttname"><a href="structgs_1_1Settings.html">gs::Settings</a></div><div class="ttdef"><b>Definition</b> settings.h:13</div></div>
+<div class="ttc" id="astructgs_1_1Settings_html_a7657039bbd7e15436e1e3e3730061673"><div class="ttname"><a href="structgs_1_1Settings.html#a7657039bbd7e15436e1e3e3730061673">gs::Settings::title</a></div><div class="ttdeci">std::string title</div><div class="ttdef"><b>Definition</b> settings.h:14</div></div>
+<div class="ttc" id="astructgs_1_1scene_1_1Grid2D_html"><div class="ttname"><a href="structgs_1_1scene_1_1Grid2D.html">gs::scene::Grid2D</a></div><div class="ttdoc">square 2D grid</div><div class="ttdef"><b>Definition</b> types.h:82</div></div>
+<div class="ttc" id="astructgs_1_1scene_1_1Grid2D_html_a262c960f99842eb2b6a1d26cd58327aa"><div class="ttname"><a href="structgs_1_1scene_1_1Grid2D.html#a262c960f99842eb2b6a1d26cd58327aa">gs::scene::Grid2D::majorLineColor</a></div><div class="ttdeci">Color majorLineColor</div><div class="ttdef"><b>Definition</b> types.h:83</div></div>
+<div class="ttc" id="atranslate__gizmo_8h_html"><div class="ttname"><a href="translate__gizmo_8h.html">translate_gizmo.h</a></div><div class="ttdoc">services to handle translate gizmo</div></div>
+<div class="ttc" id="aui_2manager_8h_html"><div class="ttname"><a href="ui_2manager_8h.html">manager.h</a></div></div>
+<div class="ttc" id="aui_2service_8h_html"><div class="ttname"><a href="ui_2service_8h.html">service.h</a></div></div>
+<div class="ttc" id="awindow__manager_8h_html"><div class="ttname"><a href="window__manager_8h.html">window_manager.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

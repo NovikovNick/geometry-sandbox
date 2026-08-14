@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>geometry-sandbox: /home/runner/work/geometry-sandbox/geometry-sandbox/src/core/ecs.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="theme-round.css" rel="stylesheet" type="text/css"/>
+<link href="theme-robot.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/NovikovNick/algorithm-visualizer" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">geometry-sandbox
+   </div>
+   <div id="projectbrief">Yet another geometry sandbox project</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
+  <div class="headertitle"><div class="title">ecs.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="math_8h_source.html">core/math.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="core_2types_8h_source.html">core/types.h</a>&quot;</code><br />
+<code>#include &quot;entt/entt.hpp&quot;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for ecs.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="ecs_8h__incl.png" border="0" usemap="#a_2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2src_2core_2ecs_8h" alt=""/></div>
+<map name="a_2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2src_2core_2ecs_8h" id="a_2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2src_2core_2ecs_8h">
+<area shape="rect" title=" " alt="" coords="409,5,621,60"/>
+<area shape="rect" href="math_8h.html" title=" " alt="" coords="123,181,223,207"/>
+<area shape="poly" title=" " alt="" coords="460,62,211,178,208,173,458,58"/>
+<area shape="rect" href="core_2types_8h.html" title=" " alt="" coords="400,108,503,133"/>
+<area shape="poly" title=" " alt="" coords="498,62,470,99,466,95,494,58"/>
+<area shape="rect" title=" " alt="" coords="527,108,634,133"/>
+<area shape="poly" title=" " alt="" coords="537,58,566,95,561,99,533,62"/>
+<area shape="rect" title=" " alt="" coords="659,108,783,133"/>
+<area shape="poly" title=" " alt="" coords="579,58,682,100,680,105,577,63"/>
+<area shape="rect" title=" " alt="" coords="5,255,108,280"/>
+<area shape="poly" title=" " alt="" coords="155,209,89,250,86,245,153,204"/>
+<area shape="rect" title=" " alt="" coords="133,255,213,280"/>
+<area shape="poly" title=" " alt="" coords="175,207,175,241,170,241,170,207"/>
+<area shape="rect" title=" " alt="" coords="237,255,316,280"/>
+<area shape="poly" title=" " alt="" coords="191,204,250,244,247,249,188,209"/>
+<area shape="poly" title=" " alt="" coords="407,136,232,180,230,175,406,131"/>
+<area shape="rect" title=" " alt="" coords="246,181,305,207"/>
+<area shape="poly" title=" " alt="" coords="424,136,318,178,316,174,422,131"/>
+<area shape="rect" title=" " alt="" coords="329,181,395,207"/>
+<area shape="poly" title=" " alt="" coords="439,135,389,175,386,170,435,131"/>
+<area shape="rect" title=" " alt="" coords="420,181,483,207"/>
+<area shape="poly" title=" " alt="" coords="454,134,454,168,449,168,449,134"/>
+<area shape="rect" title=" " alt="" coords="507,181,593,207"/>
+<area shape="poly" title=" " alt="" coords="469,131,524,171,521,175,466,136"/>
+<area shape="rect" title=" " alt="" coords="618,181,661,207"/>
+<area shape="poly" title=" " alt="" coords="482,131,606,177,605,182,481,136"/>
+<area shape="rect" title=" " alt="" coords="685,181,743,207"/>
+<area shape="poly" title=" " alt="" coords="495,131,672,179,671,184,494,136"/>
+<area shape="rect" title=" " alt="" coords="768,181,831,207"/>
+<area shape="poly" title=" " alt="" coords="504,129,755,179,754,184,503,134"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="ecs_8h__dep__incl.png" border="0" usemap="#a_2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2src_2core_2ecs_8hdep" alt=""/></div>
+<map name="a_2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2src_2core_2ecs_8hdep" id="a_2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2src_2core_2ecs_8hdep">
+<area shape="rect" title=" " alt="" coords="801,5,1013,60"/>
+<area shape="rect" href="animation_2manager_8h.html" title="Core animation manager &#45; builds assets, spawns instances, and drives playback." alt="" coords="148,438,360,493"/>
+<area shape="poly" title=" " alt="" coords="787,46,555,71,446,89,370,111,326,129,293,148,266,173,242,212,230,241,224,271,224,334,234,392,247,437,242,438,228,393,218,334,219,271,225,239,237,209,262,169,290,144,324,125,368,105,445,84,554,66,787,40"/>
+<area shape="rect" href="animation_2service_8h.html" title="Provides factory methods for creating common animation." alt="" coords="5,548,217,603"/>
+<area shape="poly" title=" " alt="" coords="788,41,574,57,452,72,332,92,223,119,176,135,134,153,101,173,75,194,59,218,54,244,54,357,59,411,71,463,102,547,97,549,66,465,54,411,49,357,49,244,55,216,71,191,98,168,132,148,174,130,221,114,331,87,451,67,573,52,787,36"/>
+<area shape="rect" href="animation_2types_8h.html" title="Core data types and structures for the animation system." alt="" coords="381,108,593,163"/>
+<area shape="poly" title=" " alt="" coords="788,65,594,111,593,106,787,60"/>
+<area shape="rect" href="application_8h.html" title="main entry class" alt="" coords="655,218,867,273"/>
+<area shape="poly" title=" " alt="" coords="883,73,781,219,777,216,879,70"/>
+<area shape="rect" href="camera__controller__service_8h.html" title=" " alt="" coords="891,211,1103,280"/>
+<area shape="poly" title=" " alt="" coords="926,72,985,210,980,212,921,74"/>
+<area shape="rect" href="render__service_8h.html" title=" " alt="" coords="1033,328,1245,383"/>
+<area shape="poly" title=" " alt="" coords="967,65,1005,92,1046,125,1085,165,1116,209,1129,239,1137,271,1143,328,1137,328,1132,272,1124,241,1112,212,1080,168,1042,129,1002,96,964,70"/>
+<area shape="rect" href="scene__service_8h.html" title=" " alt="" coords="1176,548,1388,603"/>
+<area shape="poly" title=" " alt="" coords="1028,48,1114,71,1157,88,1197,109,1232,134,1260,165,1278,202,1285,244,1285,357,1285,548,1279,548,1279,357,1279,244,1273,203,1255,168,1228,138,1194,113,1155,93,1112,76,1026,53"/>
+<area shape="rect" href="interaction_2service_8h.html" title="main service for interaction system" alt="" coords="1319,108,1531,163"/>
+<area shape="poly" title=" " alt="" coords="1027,53,1301,105,1319,109,1318,114,1300,111,1026,58"/>
+<area shape="rect" href="player__manager_8h.html" title="Manages animation playback for gs::ui::AnimationPlayer." alt="" coords="291,548,527,603"/>
+<area shape="poly" title=" " alt="" coords="304,498,372,545,369,550,301,503"/>
+<area shape="rect" href="configuration_8h.html" title="define all settings and setup dependency injection context" alt="" coords="804,651,1016,705"/>
+<area shape="poly" title=" " alt="" coords="252,506,256,557,265,581,280,601,305,613,353,624,491,644,655,659,804,668,804,674,655,664,491,649,352,629,303,618,276,605,260,583,251,558,247,507"/>
+<area shape="poly" title=" " alt="" coords="210,503,148,550,145,546,207,499"/>
+<area shape="poly" title=" " alt="" coords="541,600,804,653,803,658,540,606"/>
+<area shape="poly" title=" " alt="" coords="231,599,236,600,390,622,545,640,804,666,804,671,544,646,389,627,235,605,230,605"/>
+<area shape="poly" title=" " alt="" coords="369,158,321,180,299,194,280,212,262,238,251,267,243,298,240,330,243,390,250,438,245,438,237,391,235,330,238,297,245,266,258,236,276,209,296,190,318,175,367,154"/>
+<area shape="poly" title=" " alt="" coords="369,154,301,176,270,192,241,213,206,250,178,293,157,340,141,388,121,479,115,548,109,547,116,479,135,387,152,338,174,290,202,246,238,209,267,188,299,171,367,149"/>
+<area shape="rect" href="dsl_8h.html" title="DSL for animation system with compile&#45;time validation." alt="" coords="291,218,503,273"/>
+<area shape="poly" title=" " alt="" coords="458,175,421,219,417,216,454,172"/>
+<area shape="rect" href="handle_8h.html" title="Lightweight handle for controlling a playing animation instance." alt="" coords="527,328,739,383"/>
+<area shape="poly" title=" " alt="" coords="515,173,617,326,613,329,510,176"/>
+<area shape="poly" title=" " alt="" coords="568,165,695,215,693,220,566,170"/>
+<area shape="poly" title=" " alt="" coords="330,282,302,304,280,329,267,356,260,385,255,438,250,438,255,384,262,354,276,327,299,300,327,278"/>
+<area shape="rect" href="sampler_8h.html" title="Samples animation keyframe data and produces interpolated channel values." alt="" coords="291,328,503,383"/>
+<area shape="poly" title=" " alt="" coords="399,287,399,328,394,328,394,287"/>
+<area shape="poly" title=" " alt="" coords="353,393,291,440,287,436,349,389"/>
+<area shape="poly" title=" " alt="" coords="528,389,347,441,345,435,527,384"/>
+<area shape="poly" title=" " alt="" coords="514,389,458,410,437,421,424,432,410,460,404,490,403,521,406,547,401,548,398,521,398,490,405,458,420,429,434,417,456,405,512,384"/>
+<area shape="rect" href="camera__idle__rotation__manager_8h.html" title=" " alt="" coords="435,431,673,500"/>
+<area shape="poly" title=" " alt="" coords="607,396,581,432,576,429,603,393"/>
+<area shape="rect" href="ortho__projection__view__manager_8h.html" title=" " alt="" coords="697,431,909,500"/>
+<area shape="poly" title=" " alt="" coords="687,388,751,428,748,433,685,392"/>
+<area shape="poly" title=" " alt="" coords="624,505,867,648,864,653,621,509"/>
+<area shape="poly" title=" " alt="" coords="829,511,899,649,894,652,824,514"/>
+<area shape="poly" title=" " alt="" coords="807,280,838,309,871,344,901,385,923,430,932,459,936,490,937,552,930,608,920,651,915,650,925,607,932,551,931,491,927,461,918,432,896,388,867,347,835,312,804,284"/>
+<area shape="poly" title=" " alt="" coords="1003,294,1005,357,1001,435,990,521,967,604,954,630,937,652,933,649,949,627,962,602,985,520,996,435,999,357,998,294"/>
+<area shape="poly" title=" " alt="" coords="1129,397,1087,496,1055,552,1017,604,989,631,959,653,956,648,986,627,1013,601,1051,549,1082,494,1124,395"/>
+<area shape="poly" title=" " alt="" coords="1173,609,1008,653,1006,648,1171,604"/>
+<area shape="poly" title=" " alt="" coords="1427,176,1427,354,1427,467,1431,542,1424,573,1401,605,1374,623,1336,637,1236,659,1123,671,1016,677,1016,672,1122,666,1235,653,1334,632,1372,618,1397,601,1420,571,1426,541,1422,467,1422,354,1422,176"/>
+</map>
+</div>
+</div>
+<p><a href="ecs_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1ecs_1_1component_1_1Arrow.html">gs::ecs::component::Arrow</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1ecs_1_1component_1_1MainColor.html">gs::ecs::component::MainColor</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1ecs_1_1component_1_1Normal.html">gs::ecs::component::Normal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1ecs_1_1component_1_1Distance.html">gs::ecs::component::Distance</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1ecs_1_1component_1_1Position.html">gs::ecs::component::Position</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1ecs_1_1component_1_1EndPosition.html">gs::ecs::component::EndPosition</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1ecs_1_1component_1_1Radius.html">gs::ecs::component::Radius</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1ecs_1_1component_1_1AABBSize.html">gs::ecs::component::AABBSize</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1ecs_1_1component_1_1Thickness.html">gs::ecs::component::Thickness</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1ecs_1_1component_1_1Label.html">gs::ecs::component::Label</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1ecs_1_1component_1_1SphereCollider.html">gs::ecs::component::SphereCollider</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1ecs_1_1component_1_1AABBCollider.html">gs::ecs::component::AABBCollider</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1ecs_1_1component_1_1Dashed.html">gs::ecs::component::Dashed</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacegs" id="r_namespacegs"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs.html">gs</a></td></tr>
+<tr class="memdesc:namespacegs"><td class="mdescLeft">&#160;</td><td class="mdescRight">geometry sandbox <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacegs_1_1ecs" id="r_namespacegs_1_1ecs"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1ecs.html">gs::ecs</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacegs_1_1ecs_1_1component" id="r_namespacegs_1_1ecs_1_1component"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1ecs_1_1component.html">gs::ecs::component</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:adea0c72e04575b05ab42900ede693e39" id="r_adea0c72e04575b05ab42900ede693e39"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1ecs.html#adea0c72e04575b05ab42900ede693e39">gs::ecs::Entity</a> = entt::entity</td></tr>
+<tr class="separator:adea0c72e04575b05ab42900ede693e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00b8065ae2ea7cd01ded9b0c561074ed" id="r_a00b8065ae2ea7cd01ded9b0c561074ed"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1ecs.html#a00b8065ae2ea7cd01ded9b0c561074ed">gs::ecs::Registry</a> = entt::basic_registry&lt; <a class="el" href="namespacegs_1_1ecs.html#adea0c72e04575b05ab42900ede693e39">Entity</a> &gt;</td></tr>
+<tr class="separator:a00b8065ae2ea7cd01ded9b0c561074ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

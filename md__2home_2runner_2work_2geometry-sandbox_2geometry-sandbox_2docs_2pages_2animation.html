@@ -1,0 +1,422 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>geometry-sandbox: DSL-based animation system</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="theme-round.css" rel="stylesheet" type="text/css"/>
+<link href="theme-robot.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/NovikovNick/algorithm-visualizer" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">geometry-sandbox
+   </div>
+   <div id="projectbrief">Yet another geometry sandbox project</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div><div class="header">
+  <div class="headertitle"><div class="title">DSL-based animation system</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md8"></a> Хоть анимации по сути это простой процесс lerp, но правильно прикрутить это к приложению та еще задачка.</p>
+<div class="fragment"><div class="line"> ++</div>
+<div class="line"><span class="keyword">using namespace </span>std::chrono;</div>
+<div class="line"> </div>
+<div class="line">animation::KeyframeCollection keyframes;</div>
+<div class="line">keyframes += keyframe(0s)</div>
+<div class="line">             | accessor::point(pointId) / point::position &lt;&lt; Vec3{0, 0, 1}</div>
+<div class="line">             | accessor::point(pointId) / point::color  &lt;&lt; Color::blue();</div>
+<div class="line"> </div>
+<div class="line">keyframes += keyframe(1s)</div>
+<div class="line">             | accessor::point(pointId) / point::position &lt;&lt; key(Vec3{0, 0, 1}, circularMovement)</div>
+<div class="line">             | accessor::point(pointId) / point::color  &lt;&lt; Color::red();</div>
+<div class="line"> </div>
+<div class="line">animation::Manager manager;</div>
+<div class="line">animation::Clip clip = manager.build(keyframes);</div>
+<div class="line">clip.loop = <span class="keyword">true</span>;</div>
+<div class="line"> </div>
+<div class="line">animation::Handle handle; <span class="comment">// id, version</span></div>
+<div class="line">handle = manager.play(clip); <span class="comment">// starts animation::Instance </span></div>
+</div><!-- fragment --><p>построена на трёхуровневой модели абстракции, разделяющей пользовательский интерфейс, внутреннее представление данных и непосредственно анимируемые свойства. Это позволяет совместить выразительный, безопасный на этапе компиляции DSL с высокопроизводительным рантаймом, лишённым виртуальных вызовов и шаблонной магии.</p>
+<h2><a class="anchor" id="autotoc_md9"></a>
+1.1. Слои абстракции</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Слой   </th><th class="markdownTableHeadNone">namespace   </th><th class="markdownTableHeadNone">Назначение    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Frontend classes</b>   </td><td class="markdownTableBodyNone"><code>gsand::frontend</code>   </td><td class="markdownTableBodyNone">Классический ООП-интерфейс для пользователя. Оперирует объектами сцены (<code>Point</code>, <code>Line</code> и т.д.), скрывая ECS-представление. DSL анимационной системы работает именно с этими классами.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Entry classes</b>   </td><td class="markdownTableBodyNone"><code>gsand::ecs::component</code>, <code>gsand::ui</code>   </td><td class="markdownTableBodyNone">ECS-компоненты со стандартным layout (<code>standard layout type</code>). Идентифицируются по уникальному <code>id</code>. Анимационная система работает с ними как с сырыми байтами (<code>std::span&lt;std::byte&gt;</code>).    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Property classes</b>   </td><td class="markdownTableBodyNone"><em>Вложены в entry classes</em>   </td><td class="markdownTableBodyNone">Непосредственно анимируемые поля внутри entry-классов (<code>Vec3</code>, <code>Color</code>, <code>float</code> и т.д.).   </td></tr>
+</table>
+<p>Подсистема рефлексии, хранит offset в байтах для property типов внутри entry типа, а также соответствие между frontend, entry и проперти типами. Данные хранятся в виде плоского дерева для удобства поиска root frontend типа и property потомков, а также random access по id.</p>
+<div class="fragment"><div class="line">Frontend (frontend::Point)            // used in dsl </div>
+<div class="line">├── Entry (ecs::component::Position)  // will be converted to std::span&lt;std::byte&gt; for writing</div>
+<div class="line">│   └── Property (Vec3)               // byte access via offset</div>
+<div class="line">│       ├── Property (float)          // byte access via offset</div>
+<div class="line">│       ├── Property (float)          // byte access via offset</div>
+<div class="line">│       └── Property (float)          // byte access via offset</div>
+<div class="line">├── Entry (ecs::component::MainColor) // will be converted to std::span&lt;std::byte&gt; for writing</div>
+<div class="line">│   ├── Property (Color)              // byte access via offset</div>
+<div class="line">│   │   ├── Property (float)          // byte access via offset</div>
+<div class="line">│   │   ├── Property (float)          // byte access via offset</div>
+<div class="line">│   │   ├── Property (float)          // byte access via offset</div>
+<div class="line">│   │   └── Property (float)          // byte access via offset</div>
+<div class="line">└── Entry (ecs::component::Radius)    // will be converted to std::span&lt;std::byte&gt; for writing</div>
+<div class="line">    └── Property (float)              // byte access via offset</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md10"></a>
+1.2. Подсистема рефлексии</h2>
+<p>Отдельная подсистема хранит метаинформацию о связях между слоями:</p>
+<ul>
+<li>Соответствие <code>frontend class</code> → <code>entry class</code></li>
+<li>Соответствие <code>property class</code> → родительский <code>entry class</code></li>
+<li>Смещение (<code>offset</code>) каждого property-поля относительно начала entry-класса</li>
+</ul>
+<p>Данные хранятся в памяти в виде <b>плоского дерева</b> (flat tree) — иерархия представлена линейным массивом узлов, где связи задаются числовыми индексами родителей, а не указателями. Это обеспечивает кэш-френдли доступ, быстрый расчёт суммарных смещений и простоту сериализации.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md12"></a>
+2. DSL анимационной системы</h1>
+<p>DSL спроектирован так, чтобы гарантировать корректность описания анимации на этапе компиляции. Ошибки в именах свойств, типах значений или несовместимость интерполяторов выявляются до запуска программы.</p>
+<h2><a class="anchor" id="autotoc_md13"></a>
+2.1. Базовый синтаксис</h2>
+<div class="fragment"><div class="line"> ++</div>
+<div class="line"><span class="keyword">using namespace </span>std::chrono;</div>
+<div class="line"><span class="keyword">using namespace </span>algovis::dsl;</div>
+<div class="line"> </div>
+<div class="line">AnimationParams animation;</div>
+<div class="line">animation.loop = <span class="keyword">true</span>;</div>
+<div class="line"> </div>
+<div class="line">animation += keyframe(0s)</div>
+<div class="line">             | accessor::point(pointId) / point::position &lt;&lt; Vec3{0, 0, 1}</div>
+<div class="line">             | accessor::point(pointId) / point::color  &lt;&lt; Color::blue();</div>
+<div class="line"> </div>
+<div class="line">animation += keyframe(1s)</div>
+<div class="line">             | accessor::point(pointId) / point::position &lt;&lt; val(Vec3{0, 0, 1}, circularMovement)</div>
+<div class="line">             | accessor::point(pointId) / point::color  &lt;&lt; Color::red();</div>
+<div class="line"> </div>
+<div class="line">animManager.add(std::move(animation));</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md14"></a>
+3. Механизм анимации в рантайме</h1>
+<h2><a class="anchor" id="autotoc_md15"></a>
+3.1. Прямая байтовая запись</h2>
+<p>При проигрывании анимации система не использует виртуальные вызовы и не инстанцирует шаблоны для каждого типа свойства. Вместо этого:</p>
+<ol type="1">
+<li>При компиляции/инициализации DSL-выражения вычисляется итоговое <b>смещение</b> целевого property-поля относительно начала entry-компонента (суммированием смещений по плоскому дереву рефлексии).</li>
+<li>В рантайме система получает <code>void*</code> на экземпляр entry-компонента.</li>
+<li>Прибавляет заранее вычисленное смещение.</li>
+<li>Записывает интерполированное значение через <code>memcpy</code>.</li>
+</ol>
+<p>Это минимизирует накладные расходы и сохраняет предсказуемую производительность при анимации сотен свойств за кадр.</p>
+<h1><a class="anchor" id="autotoc_md16"></a>
+4. Пример полного цикла использования</h1>
+<div class="fragment"><div class="line"> ++</div>
+<div class="line"><span class="comment">// 1. Создание объекта через frontend-интерфейс</span></div>
+<div class="line">entt::entity pointId = sceneService.addPoint({</div>
+<div class="line">    .color  = Color::blue(),</div>
+<div class="line">    .radius = 0.08F</div>
+<div class="line">});</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 2. Определение пользовательского интерполятора</span></div>
+<div class="line">Interpolator&lt;Vec3&gt; circularMovement = [](<span class="keyword">const</span> Vec3&amp;, <span class="keyword">const</span> Vec3&amp;, <span class="keywordtype">float</span> t) -&gt; Vec3 {</div>
+<div class="line">    <span class="keyword">constexpr</span> <span class="keywordtype">float</span> angleRad = 360.0f * std::numbers::pi / 180;</div>
+<div class="line">    <span class="keywordflow">return</span> Vec3{std::sinf(angleRad * t), 0, std::cosf(angleRad * t)};</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 3. Описание анимации на DSL</span></div>
+<div class="line">AnimationParams animation;</div>
+<div class="line">animation.loop = <span class="keyword">true</span>;</div>
+<div class="line">animation += <a class="code hl_function" href="namespacegs_1_1animation_1_1dsl.html#aee33532faa3837eac74fa2e4e845500b">keyframe</a>(0s)</div>
+<div class="line">             | accessor::point(pointId) / point::position &lt;&lt; <a class="code hl_typedef" href="namespacegs.html#aff26127e720eeae5a29c485c3eed6d34">Vec3</a>{0, 0, 1}</div>
+<div class="line">             | accessor::point(pointId) / point::color  &lt;&lt; Color::blue();</div>
+<div class="line">animation += <a class="code hl_function" href="namespacegs_1_1animation_1_1dsl.html#aee33532faa3837eac74fa2e4e845500b">keyframe</a>(500ms)</div>
+<div class="line">             | accessor::point(pointId) / point::color &lt;&lt; Color::red();</div>
+<div class="line">animation += <a class="code hl_function" href="namespacegs_1_1animation_1_1dsl.html#aee33532faa3837eac74fa2e4e845500b">keyframe</a>(1s)</div>
+<div class="line">             | accessor::point(pointId) / point::position &lt;&lt; val(Vec3{0, 0, 1}, circularMovement)</div>
+<div class="line">             | accessor::point(pointId) / point::color  &lt;&lt; Color::blue();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 4. Добавление в менеджер анимаций</span></div>
+<div class="line">animManager.add(std::move(animation));</div>
+<div class="ttc" id="anamespacegs_1_1animation_1_1dsl_html_aee33532faa3837eac74fa2e4e845500b"><div class="ttname"><a href="namespacegs_1_1animation_1_1dsl.html#aee33532faa3837eac74fa2e4e845500b">gs::animation::dsl::keyframe</a></div><div class="ttdeci">Keyframe keyframe(const Milliseconds &amp;ms)</div><div class="ttdef"><b>Definition</b> dsl.h:177</div></div>
+<div class="ttc" id="anamespacegs_html_aff26127e720eeae5a29c485c3eed6d34"><div class="ttname"><a href="namespacegs.html#aff26127e720eeae5a29c485c3eed6d34">gs::Vec3</a></div><div class="ttdeci">Eigen::Vector3f Vec3</div><div class="ttdef"><b>Definition</b> math.h:14</div></div>
+</div><!-- fragment --><hr  />
+<h1><a class="anchor" id="autotoc_md18"></a>
+5. Ключевые проектные решения</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Решение   </th><th class="markdownTableHeadNone">Обоснование    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">DSL с compile-time валидацией   </td><td class="markdownTableBodyNone">Исключает ошибки в рантайме, сохраняя выразительность    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Frontend-классы в DSL   </td><td class="markdownTableBodyNone">Пользователь оперирует привычными объектами, а не ECS-компонентами    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Прямая байтовая запись   </td><td class="markdownTableBodyNone">Устраняет виртуальные вызовы и шаблонную сложность    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Плоское дерево рефлексии   </td><td class="markdownTableBodyNone">Быстрый расчёт смещений, кэш-френдли доступ, простая сериализация    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Стандартный layout entry-классов   </td><td class="markdownTableBodyNone">Гарантирует корректность прямого байтового доступа   </td></tr>
+</table>
+<p>Создание своей анимационной системы с DSL с compile-time валидацией продиктовано стремлением совместить предельную гибкость с надёжностью. DSL даёт возможность описывать анимацию ключевыми кадрами или пользовательскими интерполяторами для произвольных полей объектов на любой глубине вложенности. И одновременно гарантирует корректность этого описания ещё на этапе компиляции, не допуская ошибок в рантайме.</p>
+<div class="fragment"><div class="line"> ++</div>
+<div class="line"><span class="keyword">using namespace </span>std::chrono;</div>
+<div class="line"><span class="keyword">using namespace </span>algovis::dsl;</div>
+<div class="line"> </div>
+<div class="line">entt::entity pointId = sceneService.addPoint({.color = Color::blue(), .radius = 0.08F});</div>
+<div class="line"> </div>
+<div class="line">Interpolator&lt;Vec3&gt; circularMovement = [](<span class="keyword">const</span> Vec3&amp;, <span class="keyword">const</span> Vec3&amp;, <span class="keywordtype">float</span> t) -&gt; Vec3</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">constexpr</span> <span class="keywordtype">float</span> angleRad = 360.0f * std::numbers::pi / 180;</div>
+<div class="line">    <span class="keywordflow">return</span> Vec3{std::sinf(angleRad * t), 0, std::cosf(angleRad * t)};</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line">AnimationParams animation;</div>
+<div class="line">animation.loop = <span class="keyword">true</span>;</div>
+<div class="line">animation += <a class="code hl_function" href="namespacegs_1_1animation_1_1dsl.html#aee33532faa3837eac74fa2e4e845500b">keyframe</a>(0s)                                                           </div>
+<div class="line">             | accessor::point(pointId) / point::position &lt;&lt; <a class="code hl_typedef" href="namespacegs.html#aff26127e720eeae5a29c485c3eed6d34">Vec3</a>{0.0f, 0.0f, 1.f}  </div>
+<div class="line">             | accessor::point(pointId) / point::color &lt;&lt; Color::blue();</div>
+<div class="line">animation += <a class="code hl_function" href="namespacegs_1_1animation_1_1dsl.html#aee33532faa3837eac74fa2e4e845500b">keyframe</a>(500ms)</div>
+<div class="line">             | accessor::point(pointId) / point::color &lt;&lt; Color::red();</div>
+<div class="line">animation += <a class="code hl_function" href="namespacegs_1_1animation_1_1dsl.html#aee33532faa3837eac74fa2e4e845500b">keyframe</a>(1s)                                                                             </div>
+<div class="line">             | accessor::point(pointId) / point::position &lt;&lt; val(Vec3{0.0f, 0.0f, 1.f}, circularMovement)  </div>
+<div class="line">             | accessor::point(pointId) / point::color &lt;&lt; Color::blue();</div>
+<div class="line">animManager.add(std::move(animation));</div>
+</div><!-- fragment --><p>Как приложение в целом, так и анимационная система в частности используют классический ООП-интерфейс на верхнем уровне, в то время как ядро построено на ECS-архитектуре. Подобно тому, как для создания объекта на сцене используется frontend класс, скрывающий внутреннее ECS-представление, DSL анимационной системы оперирует тем же frontend классом, а не ECS компонентами.</p>
+<p>Классы ООП-интерфейса верхнего уровня находятся в namespace <code>gsand::frontend</code> и называются frontend classes.</p>
+<p>На уровне реализации анимационная система использует механизм прямой байтовой записи в поля целевых объектов. Данный подход позволяет минимизировать как накладные расходы на виртуальные вызовы, так и сложную в сопровождении шаблонную магию.</p>
+<p>Все классы, которые хранятся в namespace <code>gsand::ecs::component</code> и namespace <code>gsand::ui</code>, имеют стандартный layout и которые можно идентифицировать по id, называются entry classes. Анимационная система работает с ними как с сырыми байтами.</p>
+<p>Все классы, которые находятся внутри entry classes называются как property classes и непосредвенно они и анимируются.</p>
+<p>Отдельная подсистема рефлексии, хранит соответствие между frontend, entry и проперти классами, смещение каждого property относительно entry класса. В памяти эти данные хранятся в виде плоского дерева.</p>
+<div class="fragment"><div class="line"> ++</div>
+<div class="line"><span class="keyword">struct </span>Property</div>
+<div class="line">{</div>
+<div class="line">    std::uint32_t id;  <span class="comment">// unique property id</span></div>
+<div class="line">    <span class="keywordtype">int</span> depth;         <span class="comment">// depth in entry object</span></div>
+<div class="line">    <span class="keywordtype">int</span> offset;        <span class="comment">// offset in entry object</span></div>
+<div class="line">    Type entryType;</div>
+<div class="line">    Type type;</div>
+<div class="line">    std::string_view name;  <span class="comment">// to distinguish between fields of the same type</span></div>
+<div class="line">};</div>
+</div><!-- fragment --><p>Эта метаинформация заполняется в плоское дерево. Где Property 1 уровня это всегда API тип Далее на 2 уровне всегда Entry тип И ниже идут обычные типы вроде Vec3, Color, float</p>
+<p>Эти типы никак не пересекаются, т.к. у каждого группы типов своя зона отвественности.</p>
+<p>API тип кроме как по кол-ву каналов, никак не связан с Entry типом, который находится непосредственно в памяти.</p>
+<p>Подсистема рефликсии должна решать проблему</p>
+<h2><a class="anchor" id="autotoc_md19"></a>
+General classes</h2>
+<p>algovis::PropertyRegistry - отвечает за иерархию каналов/свойств</p><ul>
+<li>обход каналов. т.е. по всем анимированным полям сущности включая вложенные</li>
+<li>запись/чтение из sample, запись/чтение из сущности</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md20"></a>
+Алгоритм</h2>
+<ol type="1">
+<li>В compile-time собираем мета информацию об анимируемых типах: точки, линии, камеры, кнопки.</li>
+</ol>
+<ul>
+<li>нужен отступ от составного и простого объектов, чтобы записывать значения.</li>
+<li>примитивный объект - это просто float. В будущем по идее все, что можно смаппить во float</li>
+<li>просто объект - это претендент стать ecs::component</li>
+<li>составной объект - в первую очередь это объект, на который можно повесить отдельную анимацию</li>
+</ul>
+<ol type="1">
+<li>Build анимации</li>
+<li>При update в manager'е вычисляет progress каждой анимации</li>
+</ol>
+<ol type="1">
+<li>Далее при update manager смотрит, какой тип объекта, находит его и отправляет в сэмплер как байтовый массив вместе с ассетом и progress который нужно вычислить</li>
+<li>после того как sample готов, он записывается в байтовый массив</li>
+</ol>
+<ul>
+<li>Для упрощения кода, анимационная система воспринимает анимируемые объекты просто как байтовый массив.</li>
+<li>Вся информация необходимая для записи собирается в compile-time в DLS модуле.<ul>
+<li>Каждый анимируемый объект регистрируется в системе с указанием AnimatableType</li>
+<li>система строит плоское дерево всех вложенных анимируемых свойств таргета</li>
+<li>положение свойства в этом дереве является однозначным идентификатором</li>
+</ul>
+</li>
+<li></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md21"></a>
+Мысли</h2>
+<p>Основные принципы (без кода!):</p><ul>
+<li>документация нужна еще и для того чтобы зафиксировать в голове архитектуру в целом и системно. Если описать не получается, значит архитектура дырявая и в ней много темных мест и костылей</li>
+<li>Compile-Time Reflection Data. Type mapping Frontend OOP -&gt; std::span&lt;float&gt; -&gt; Backend DOD:<ol type="1">
+<li>данные и метод рекурсивно вытаскивать из Frontend объекта вложенные поля и сохранять их в плоский массив Key</li>
+<li>данные и метод записывать из std::span&lt;float&gt; в Backend ecs::component'ы</li>
+</ol>
+</li>
+<li>Reflection Data собирается рекурсивным обходом всех полей фронтенд-типа, включая вложенные структуры.</li>
+<li>Каждое числовое числовое поле становится отдельным каналом.</li>
+<li>Порядок каналов детерминирован и фиксируется на этапе компиляции.</li>
+<li>Каждое числовое поле Frontend объекта превратится во float канал для animation::sampler'а, а потом выдет записано в соотвествующий ecs::component</li>
+<li>reinterpret_cast нужен для записи std::span&lt;float&gt; в объект, так как набор каналов у разных анимаций разный</li>
+<li>animation::sampler ничего не знает об анимируемых объектах, она работает просто с std::span&lt;float&gt; разной величины.<ul>
+<li>std::span&lt;float&gt; в 1 если нет интерполятора</li>
+<li>std::span&lt;float&gt; размером в анимируемый объект если есть custom интерполятор</li>
+</ul>
+</li>
+<li>Запись из std::span&lt;float&gt; в backend ecs::component'ы.<ol type="1">
+<li>Вложенных компонентов нет. Все компоненты одного объекта привязаны к его entt::entity</li>
+<li>для каждого канала надо будет найти ecs::component, вычислить смещение байтах и записать</li>
+<li>Причем надо как-то кэшировать ссылку на ecs::component, чтобы не стучаться каждый раз в entt::registry</li>
+</ol>
+</li>
+<li>Что конкретно надо хранить в системе рефлексии?<ul>
+<li>В приложении API на котором задается алгоритмы и dsl для анимации оперирует OOP классами.</li>
+<li>В памяти же данные хранятся в DOD в ecs::component'ах</li>
+<li>Для маппинга OOP в DOD и обратно и нужна данная система рефлексии</li>
+</ul>
+</li>
+<li>похоже мне действительно надо хранить 2 отступа:<ul>
+<li>отступ от ближайшего родителя</li>
+<li>отступ от ecs::component'а</li>
+</ul>
+</li>
+<li></li>
+</ul>
+<p>// frontend группирует по смыслу struct AnimatablePlane { Vec3 normal; Color color; float distance; };</p>
+<p>// backend по паттернам доступа. namespace ecs::component { struct MainColor { Color color; }; struct Plane { Vec3 normal; float distance; }; }</p>
+<ul>
+<li>...</li>
+</ul>
+<hr  />
+<ul>
+<li>почему не делать составной point?<ul>
+<li>потому что так проще писать интерполятор, который работает с целым point'ом</li>
+</ul>
+</li>
+<li>std::unordered_map&lt;esc::Entity, std::vector&lt;Key&gt;&gt; entityToChannels</li>
+<li>Чтобы хранить key надо их всех привести к общему знаменателю - массиву float</li>
+<li>- Анимация не создает и не удаляет объекты, только обновляет их свойства</li>
+<li>при смене направления(reverse) флаг finished = false</li>
+<li>Ускорять, или делать reverse надо для конкретной анимации или их группы</li>
+<li>Добавлять ли анимациям порядковый номер ее объявления для внутренней сортировки?</li>
+<li>Анимация хранит дельту как 2 поля: duration, elapsed</li>
+<li>Возможно binary search как-то поможет</li>
+<li>assert("initial keyframe for every channel should be defined")</li>
+<li>Штука, которая сохраняет timepoint как float от 0.0f до 1.0f для отдельной анимации?</li>
+<li>Штука, которая расщепляет на каналы?</li>
+<li>Штука, придумывает каждому каналу hash по accessory?</li>
+<li>Камеры сделаны как сущность entt, потому что их поведение обрабатывается общими системами: interaction/animation system</li>
+<li>Key всегда содержит value типа float</li>
+<li>Channel всегда записывает float в Registry</li>
+<li>Анимация записывает все float каналы в entity, а сама ими управляет и содержит каналы для текста и ивентов</li>
+<li>Сэмплирование позволяет не вычислять easing/interpolation каждый кадр x каждый канал, но ухудшает плавность</li>
+<li>во время сэмплирования создаем все float каналы, и используя интерполяторы ключи последоватально высчитываем все sample'ы</li>
+<li>При loop-анимации, последний и 0 кадр соврадают. Чтобы 2 раза не показывать одинаковый кадр, последний кадр отрасывают</li>
+<li>Во время сэмплирования только для кастмного интерполятора имеет смысл считать сразу по нескольким каналам.</li>
+<li>Все самплы хранятся в плоском массиве float, где 1 сампл это совокупность всех значений по каналам от t</li>
+<li>Линейную интерполяцию нет смысла сэмлировать, но тогда пришлось бы хранить для каждого сэмпла t.</li>
+<li>Каждый трэк хранит смещение для на диапазона (проще говоря индекс колонки) сэплов и ключи для сэмплирования</li>
+</ul>
+<hr  />
+<ul>
+<li>Анимация анимирует несколько сущностей</li>
+<li>Keyframe нужен только для build'a, а не runtime'a </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

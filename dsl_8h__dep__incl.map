@@ -1,0 +1,16 @@
+<map id="/home/runner/work/geometry&#45;sandbox/geometry&#45;sandbox/src/animation/dsl.h" name="/home/runner/work/geometry&#45;sandbox/geometry&#45;sandbox/src/animation/dsl.h">
+<area shape="rect" id="Node000001" title="DSL for animation system with compile&#45;time validation." alt="" coords="172,5,384,60"/>
+<area shape="rect" id="Node000002" href="$animation_2manager_8h.html" title="Core animation manager &#45; builds assets, spawns instances, and drives playback." alt="" coords="172,211,384,265"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="252,73,235,109,230,135,235,162,246,187,259,209,255,212,241,189,230,163,225,135,230,107,247,70"/>
+<area shape="rect" id="Node000006" href="$sampler_8h.html" title="Samples animation keyframe data and produces interpolated channel values." alt="" coords="244,108,456,163"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="307,70,333,106,329,109,303,73"/>
+<area shape="rect" id="Node000003" href="$player__manager_8h.html" title="Manages animation playback for gs::ui::AnimationPlayer." alt="" coords="5,313,241,368"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="228,275,165,315,162,311,225,271"/>
+<area shape="rect" id="Node000004" href="$configuration_8h.html" title="define all settings and setup dependency injection context" alt="" coords="172,416,384,471"/>
+<area shape="poly" id="edge6_Node000002_Node000004" title=" " alt="" coords="281,279,281,415,275,415,275,279"/>
+<area shape="rect" id="Node000005" href="$animation_2service_8h.html" title="Provides factory methods for creating common animation." alt="" coords="315,313,527,368"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="328,271,385,311,382,315,325,275"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="177,373,239,414,236,418,174,378"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="374,378,317,418,314,414,371,374"/>
+<area shape="poly" id="edge8_Node000006_Node000002" title=" " alt="" coords="325,175,299,212,295,209,321,172"/>
+</map>

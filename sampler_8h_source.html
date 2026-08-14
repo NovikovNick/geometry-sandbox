@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>geometry-sandbox: /home/runner/work/geometry-sandbox/geometry-sandbox/src/animation/sampler.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="theme-round.css" rel="stylesheet" type="text/css"/>
+<link href="theme-robot.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/NovikovNick/algorithm-visualizer" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">geometry-sandbox
+   </div>
+   <div id="projectbrief">Yet another geometry sandbox project</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ef3688935c4dc6a7f1d7ee8410fdb67e.html">animation</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">sampler.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="sampler_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef GEOMETRY_SANDBOX_ANIMATION_SAMPLER_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define GEOMETRY_SANDBOX_ANIMATION_SAMPLER_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="dsl_8h.html">animation/dsl.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;cstring&gt;</span>  <span class="comment">// for std::memcpy</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;span&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacegs_1_1animation.html">gs::animation</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">template</span> &lt;std::<span class="keywordtype">size_t</span> Size&gt;</div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classgs_1_1animation_1_1Sampler.html">   26</a></span><span class="keyword">class </span><a class="code hl_class" href="classgs_1_1animation_1_1Sampler.html">Sampler</a></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classgs_1_1animation_1_1Sampler.html#a96acd26e2a5438792281ed9b6bdcb75c">   32</a></span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classgs_1_1animation_1_1Sampler.html#a96acd26e2a5438792281ed9b6bdcb75c">isBufferSufficientForChannels</a>(<span class="keywordtype">int</span> channelCount)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">constexpr</span> <span class="keywordtype">int</span> slotCount = 3;  <span class="comment">// res, lhs and rhs sample slots in buffer</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">return</span> channelCount * slotCount &lt;= Size;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
+</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classgs_1_1animation_1_1Sampler.html#a9f96006bc8a06b0b46985de363a94da1">   43</a></span>    std::span&lt;float&gt; <a class="code hl_function" href="classgs_1_1animation_1_1Sampler.html#a9f96006bc8a06b0b46985de363a94da1">sample</a>(<span class="keyword">const</span> <span class="keywordtype">float</span> progress, <span class="keyword">const</span> <a class="code hl_struct" href="structgs_1_1animation_1_1Asset.html">Asset</a>&amp; asset)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">const</span> std::size_t channelCount       = asset.<a class="code hl_variable" href="structgs_1_1animation_1_1Asset.html#a62fa91bb42fd54d8ea9b698c6b90aedd">channels</a>.size();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        resSample                            = std::span&lt;float&gt;{buffer.data() + channelCount * 0, channelCount};</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        lhsSample                            = std::span&lt;float&gt;{buffer.data() + channelCount * 1, channelCount};</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        rhsSample                            = std::span&lt;float&gt;{buffer.data() + channelCount * 2, channelCount};</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">const</span> <a class="code hl_struct" href="structgs_1_1animation_1_1Asset_1_1Key.html">Asset::Key</a>* animationKeyframes = asset.<a class="code hl_variable" href="structgs_1_1animation_1_1Asset.html#aeb94b027d63303da84143506c7ea5028">keys</a>.data();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> channelIdx = 0; channelIdx &lt; channelCount; ++channelIdx)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keyword">auto</span> [lhs, rhs] = findBoundingKeys(progress, asset.<a class="code hl_function" href="structgs_1_1animation_1_1Asset.html#aa8cf8a5d03ae7af9b22abb4542759211">channelKeyframeTimes</a>(channelIdx));</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            std::span&lt;const Asset::Key&gt; rhsKeyframe{animationKeyframes + channelCount * rhs-&gt;index, channelCount};</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keyword">const</span> <a class="code hl_struct" href="structgs_1_1animation_1_1Asset_1_1Key.html">Asset::Key</a>&amp; rhsKey = rhsKeyframe[channelIdx];</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordflow">if</span> (lhs == rhs)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                resSample[channelIdx] = rhsKey.<a class="code hl_variable" href="structgs_1_1animation_1_1Asset_1_1Key.html#acf8a61c129f185a5e726427a2df11970">value</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                std::span&lt;const Asset::Key&gt; lhsKeyframe{animationKeyframes + channelCount * lhs-&gt;index, channelCount};</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                <span class="keyword">const</span> <a class="code hl_struct" href="structgs_1_1animation_1_1Asset_1_1Key.html">Asset::Key</a>&amp; lhsKey         = lhsKeyframe[channelIdx];</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <span class="keyword">const</span> <span class="keywordtype">float</span> keyProgress          = (progress - lhs-&gt;time) / <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(rhs-&gt;time - lhs-&gt;time);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                <span class="keyword">const</span> <a class="code hl_struct" href="structgs_1_1animation_1_1Asset_1_1Interpolation.html">Asset::Interpolation</a>&amp; data = asset.<a class="code hl_variable" href="structgs_1_1animation_1_1Asset.html#adee470b217247241cc1f3264d8108af1">interpolations</a>[rhsKey.<a class="code hl_variable" href="structgs_1_1animation_1_1Asset_1_1Key.html#ad9f80afe3b4f6f07de49f70cc1e3267d">interpolationIndex</a>];</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                <span class="keywordflow">if</span> (data.<a class="code hl_variable" href="structgs_1_1animation_1_1Asset_1_1Interpolation.html#add28f4a236ec1bf451dcf3ff77863efb">interpolator</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                    resSample[channelIdx] = <a class="code hl_function" href="namespacestd.html#a9f3fd0f1374b543ea83b1486200bed52">std::lerp</a>(lhsKey.<a class="code hl_variable" href="structgs_1_1animation_1_1Asset_1_1Key.html#acf8a61c129f185a5e726427a2df11970">value</a>, rhsKey.<a class="code hl_variable" href="structgs_1_1animation_1_1Asset_1_1Key.html#acf8a61c129f185a5e726427a2df11970">value</a>, data.<a class="code hl_variable" href="structgs_1_1animation_1_1Asset_1_1Interpolation.html#ac3d58cd051bd0e54887a2d6fd2f53914">easing</a>(keyProgress));</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                    <span class="comment">// based on the invariant that properties go in order</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                    <span class="keywordtype">int</span> idx                  = channelIdx;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> targetMetadata = rhsKey.<a class="code hl_variable" href="structgs_1_1animation_1_1Asset_1_1Key.html#ad9f80afe3b4f6f07de49f70cc1e3267d">interpolationIndex</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                    <span class="keywordflow">while</span> (idx &lt; channelCount &amp;&amp; rhsKeyframe[idx].interpolationIndex == targetMetadata)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                    {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                        rhsSample[idx] = rhsKeyframe[idx].value;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                        lhsSample[idx] = lhsKeyframe[idx].value;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                        ++idx;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                    }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> count = idx - channelIdx;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                    data.<a class="code hl_variable" href="structgs_1_1animation_1_1Asset_1_1Interpolation.html#add28f4a236ec1bf451dcf3ff77863efb">interpolator</a>(lhsSample.subspan(channelIdx, count),</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                                      rhsSample.subspan(channelIdx, count),</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                                      resSample.subspan(channelIdx, count),</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                                      keyProgress);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                    channelIdx = idx - 1;  <span class="comment">// skip channels because they have already been calculated</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">return</span> resSample;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
+</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    std::array&lt;float, Size&gt; buffer;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    std::span&lt;float&gt; resSample;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    std::span&lt;float&gt; lhsSample;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    std::span&lt;float&gt; rhsSample;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keyword">using </span>Keys = std::span&lt;const Asset::KeyframeTime&gt;;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keyword">static</span> std::pair&lt;Keys::iterator, Keys::iterator&gt; findBoundingKeys(<span class="keyword">const</span> <span class="keywordtype">float</span> progress, <span class="keyword">const</span> Keys&amp; keys)</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keyword">auto</span> cmp = [](<span class="keyword">const</span> <span class="keywordtype">float</span> t, <span class="keyword">const</span> <a class="code hl_struct" href="structgs_1_1animation_1_1Asset_1_1KeyframeTime.html">Asset::KeyframeTime</a>&amp; key) { <span class="keywordflow">return</span> t &lt; key.time; };</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keyword">auto</span> it  = std::upper_bound(keys.begin(), keys.end(), progress, cmp);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">if</span> (it == keys.end())</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            it = std::prev(keys.end());</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            <span class="keywordflow">return</span> std::make_pair(it, it);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        }</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (it == keys.begin())</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <span class="keywordflow">return</span> std::make_pair(it, it);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            <span class="keywordflow">return</span> std::make_pair(std::prev(it), it);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        }</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>};</div>
+</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>}  <span class="comment">// namespace gs::animation</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="preprocessor">#endif  </span><span class="comment">// GEOMETRY_SANDBOX_ANIMATION_SAMPLER_H</span></div>
+<div class="ttc" id="aclassgs_1_1animation_1_1Sampler_html"><div class="ttname"><a href="classgs_1_1animation_1_1Sampler.html">gs::animation::Sampler</a></div><div class="ttdoc">Samples animation keyframe data and produces interpolated channel values.</div><div class="ttdef"><b>Definition</b> sampler.h:27</div></div>
+<div class="ttc" id="aclassgs_1_1animation_1_1Sampler_html_a96acd26e2a5438792281ed9b6bdcb75c"><div class="ttname"><a href="classgs_1_1animation_1_1Sampler.html#a96acd26e2a5438792281ed9b6bdcb75c">gs::animation::Sampler::isBufferSufficientForChannels</a></div><div class="ttdeci">static bool isBufferSufficientForChannels(int channelCount)</div><div class="ttdoc">Checks whether the internal buffer is large enough for a given channel count.</div><div class="ttdef"><b>Definition</b> sampler.h:32</div></div>
+<div class="ttc" id="aclassgs_1_1animation_1_1Sampler_html_a9f96006bc8a06b0b46985de363a94da1"><div class="ttname"><a href="classgs_1_1animation_1_1Sampler.html#a9f96006bc8a06b0b46985de363a94da1">gs::animation::Sampler::sample</a></div><div class="ttdeci">std::span&lt; float &gt; sample(const float progress, const Asset &amp;asset)</div><div class="ttdoc">Samples the animation asset at the given progress value.</div><div class="ttdef"><b>Definition</b> sampler.h:43</div></div>
+<div class="ttc" id="adsl_8h_html"><div class="ttname"><a href="dsl_8h.html">dsl.h</a></div><div class="ttdoc">DSL for animation system with compile-time validation.</div></div>
+<div class="ttc" id="anamespacegs_1_1animation_html"><div class="ttname"><a href="namespacegs_1_1animation.html">gs::animation</a></div><div class="ttdoc">animation system</div><div class="ttdef"><b>Definition</b> dsl.h:21</div></div>
+<div class="ttc" id="anamespacestd_html_a9f3fd0f1374b543ea83b1486200bed52"><div class="ttname"><a href="namespacestd.html#a9f3fd0f1374b543ea83b1486200bed52">std::lerp</a></div><div class="ttdeci">gs::Vec3 lerp(const gs::Vec3 &amp;lhs, const gs::Vec3 &amp;rhs, float t)</div><div class="ttdef"><b>Definition</b> types.h:283</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_1_1Interpolation_html"><div class="ttname"><a href="structgs_1_1animation_1_1Asset_1_1Interpolation.html">gs::animation::Asset::Interpolation</a></div><div class="ttdef"><b>Definition</b> types.h:89</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_1_1Interpolation_html_ac3d58cd051bd0e54887a2d6fd2f53914"><div class="ttname"><a href="structgs_1_1animation_1_1Asset_1_1Interpolation.html#ac3d58cd051bd0e54887a2d6fd2f53914">gs::animation::Asset::Interpolation::easing</a></div><div class="ttdeci">float(* easing)(float)</div><div class="ttdef"><b>Definition</b> types.h:90</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_1_1Interpolation_html_add28f4a236ec1bf451dcf3ff77863efb"><div class="ttname"><a href="structgs_1_1animation_1_1Asset_1_1Interpolation.html#add28f4a236ec1bf451dcf3ff77863efb">gs::animation::Asset::Interpolation::interpolator</a></div><div class="ttdeci">SampleInterpolator interpolator</div><div class="ttdef"><b>Definition</b> types.h:91</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_1_1Key_html"><div class="ttname"><a href="structgs_1_1animation_1_1Asset_1_1Key.html">gs::animation::Asset::Key</a></div><div class="ttdef"><b>Definition</b> types.h:82</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_1_1Key_html_acf8a61c129f185a5e726427a2df11970"><div class="ttname"><a href="structgs_1_1animation_1_1Asset_1_1Key.html#acf8a61c129f185a5e726427a2df11970">gs::animation::Asset::Key::value</a></div><div class="ttdeci">float value</div><div class="ttdef"><b>Definition</b> types.h:85</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_1_1Key_html_ad9f80afe3b4f6f07de49f70cc1e3267d"><div class="ttname"><a href="structgs_1_1animation_1_1Asset_1_1Key.html#ad9f80afe3b4f6f07de49f70cc1e3267d">gs::animation::Asset::Key::interpolationIndex</a></div><div class="ttdeci">int interpolationIndex</div><div class="ttdef"><b>Definition</b> types.h:83</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_1_1KeyframeTime_html"><div class="ttname"><a href="structgs_1_1animation_1_1Asset_1_1KeyframeTime.html">gs::animation::Asset::KeyframeTime</a></div><div class="ttdef"><b>Definition</b> types.h:67</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_html"><div class="ttname"><a href="structgs_1_1animation_1_1Asset.html">gs::animation::Asset</a></div><div class="ttdoc">Describes a complete, immutable animation asset.</div><div class="ttdef"><b>Definition</b> types.h:65</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_html_a62fa91bb42fd54d8ea9b698c6b90aedd"><div class="ttname"><a href="structgs_1_1animation_1_1Asset.html#a62fa91bb42fd54d8ea9b698c6b90aedd">gs::animation::Asset::channels</a></div><div class="ttdeci">std::vector&lt; Channel &gt; channels</div><div class="ttdef"><b>Definition</b> types.h:95</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_html_aa8cf8a5d03ae7af9b22abb4542759211"><div class="ttname"><a href="structgs_1_1animation_1_1Asset.html#aa8cf8a5d03ae7af9b22abb4542759211">gs::animation::Asset::channelKeyframeTimes</a></div><div class="ttdeci">std::span&lt; const KeyframeTime &gt; channelKeyframeTimes(int channelIndex) const</div><div class="ttdef"><b>Definition</b> types.h:100</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_html_adee470b217247241cc1f3264d8108af1"><div class="ttname"><a href="structgs_1_1animation_1_1Asset.html#adee470b217247241cc1f3264d8108af1">gs::animation::Asset::interpolations</a></div><div class="ttdeci">std::vector&lt; Interpolation &gt; interpolations</div><div class="ttdef"><b>Definition</b> types.h:98</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_html_aeb94b027d63303da84143506c7ea5028"><div class="ttname"><a href="structgs_1_1animation_1_1Asset.html#aeb94b027d63303da84143506c7ea5028">gs::animation::Asset::keys</a></div><div class="ttdeci">std::vector&lt; Key &gt; keys</div><div class="ttdef"><b>Definition</b> types.h:97</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

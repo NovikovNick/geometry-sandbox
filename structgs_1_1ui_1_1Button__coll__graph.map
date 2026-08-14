@@ -1,0 +1,9 @@
+<map id="gs::ui::Button" name="gs::ui::Button">
+<area shape="rect" id="Node000001" title=" " alt="" coords="32,181,140,207"/>
+<area shape="rect" id="Node000002" href="$structgs_1_1ui_1_1Element.html" title=" " alt="" coords="5,93,124,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,131,86,180,80,181,68,133"/>
+<area shape="rect" id="Node000003" href="$structgs_1_1ui_1_1Button_1_1Props.html" title=" " alt="" coords="149,93,301,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="196,128,106,183,103,179,193,124"/>
+<area shape="rect" id="Node000004" href="$structgs_1_1Color.html" title=" " alt="" coords="185,5,264,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="227,45,227,93,222,93,222,45"/>
+</map>

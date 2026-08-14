@@ -1,0 +1,549 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>geometry-sandbox: gs::reflection Namespace Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="theme-round.css" rel="stylesheet" type="text/css"/>
+<link href="theme-robot.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/NovikovNick/algorithm-visualizer" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">geometry-sandbox
+   </div>
+   <div id="projectbrief">Yet another geometry sandbox project</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacegs.html">gs</a></li><li class="navelem"><a class="el" href="namespacegs_1_1reflection.html">reflection</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">gs::reflection Namespace Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacegs_1_1reflection_1_1detail" id="r_namespacegs_1_1reflection_1_1detail"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1reflection_1_1detail.html">detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1reflection_1_1Property.html">Property</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">member field metadata  <a href="structgs_1_1reflection_1_1Property.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a8a736b068504520acf76314146b6c612" id="r_a8a736b068504520acf76314146b6c612"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1reflection.html#a8a736b068504520acf76314146b6c612">SceneType</a> : std::uint8_t { <br />
+&#160;&#160;<a class="el" href="namespacegs_1_1reflection.html#a8a736b068504520acf76314146b6c612a35c3ace1970663a16e5c65baa5941b13">kNone</a>
+, <a class="el" href="namespacegs_1_1reflection.html#a8a736b068504520acf76314146b6c612a20e722b15a1b587c30633f0a136b7009">kPoint</a>
+, <a class="el" href="namespacegs_1_1reflection.html#a8a736b068504520acf76314146b6c612a37188bf1719fccfc5eb8ed366dd075fd">kPlane</a>
+, <a class="el" href="namespacegs_1_1reflection.html#a8a736b068504520acf76314146b6c612af059e6c07206f2f14d8a1079dee0a1ab">kLayout</a>
+, <br />
+&#160;&#160;<a class="el" href="namespacegs_1_1reflection.html#a8a736b068504520acf76314146b6c612a2973b376fddab10ff52d558664132bef">kButton</a>
+, <a class="el" href="namespacegs_1_1reflection.html#a8a736b068504520acf76314146b6c612ab91a982133fa67e579d45373b64bbe7b">kCamera</a>
+<br />
+ }</td></tr>
+<tr class="separator:a8a736b068504520acf76314146b6c612"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73e10e211ad4d53a85beb6aad21ac6b5" id="r_a73e10e211ad4d53a85beb6aad21ac6b5"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1reflection.html#a73e10e211ad4d53a85beb6aad21ac6b5">EntryType</a> : std::uint8_t { <br />
+&#160;&#160;<a class="el" href="namespacegs_1_1reflection.html#a73e10e211ad4d53a85beb6aad21ac6b5a35c3ace1970663a16e5c65baa5941b13">kNone</a>
+, <a class="el" href="namespacegs_1_1reflection.html#a73e10e211ad4d53a85beb6aad21ac6b5a4da7c0d59f0a416b6e8d636acf1ddfd1">kMainColor</a>
+, <a class="el" href="namespacegs_1_1reflection.html#a73e10e211ad4d53a85beb6aad21ac6b5a07fa7a19aa722c635a15e94cb7f50416">kNormal</a>
+, <a class="el" href="namespacegs_1_1reflection.html#a73e10e211ad4d53a85beb6aad21ac6b5a0e3951ebdc3d5f711eeb5cb1804fd300">kRadius</a>
+, <br />
+&#160;&#160;<a class="el" href="namespacegs_1_1reflection.html#a73e10e211ad4d53a85beb6aad21ac6b5aea78f90b3c3afd64e139a391d6fdd88a">kPosition</a>
+, <a class="el" href="namespacegs_1_1reflection.html#a73e10e211ad4d53a85beb6aad21ac6b5ab9e0bd435e608813fa13aac9a830f9ca">kEndPosition</a>
+, <a class="el" href="namespacegs_1_1reflection.html#a73e10e211ad4d53a85beb6aad21ac6b5aa9955d046704625056c611f785af71d8">kThickness</a>
+, <a class="el" href="namespacegs_1_1reflection.html#a73e10e211ad4d53a85beb6aad21ac6b5ab01982031b1e7078bf3bbb61b7c9b2c7">kUILayout</a>
+, <br />
+&#160;&#160;<a class="el" href="namespacegs_1_1reflection.html#a73e10e211ad4d53a85beb6aad21ac6b5a2973b376fddab10ff52d558664132bef">kButton</a>
+, <a class="el" href="namespacegs_1_1reflection.html#a73e10e211ad4d53a85beb6aad21ac6b5ab91a982133fa67e579d45373b64bbe7b">kCamera</a>
+<br />
+ }</td></tr>
+<tr class="separator:a73e10e211ad4d53a85beb6aad21ac6b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84a4d6d6ea9ae27b817c22145181898f" id="r_a84a4d6d6ea9ae27b817c22145181898f"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1reflection.html#a84a4d6d6ea9ae27b817c22145181898f">PropertyType</a> : std::uint8_t { <br />
+&#160;&#160;<a class="el" href="namespacegs_1_1reflection.html#a84a4d6d6ea9ae27b817c22145181898fa35c3ace1970663a16e5c65baa5941b13">kNone</a>
+, <a class="el" href="namespacegs_1_1reflection.html#a84a4d6d6ea9ae27b817c22145181898fa8425cd882e78bc9251db970b8a1da20e">kFloat</a>
+, <a class="el" href="namespacegs_1_1reflection.html#a84a4d6d6ea9ae27b817c22145181898fa18268c9f691ba5a5f650049d9d0da8dc">kBool</a>
+, <a class="el" href="namespacegs_1_1reflection.html#a84a4d6d6ea9ae27b817c22145181898fa2a5ae455c301cc9f8889814e439b89b6">kVec3</a>
+, <br />
+&#160;&#160;<a class="el" href="namespacegs_1_1reflection.html#a84a4d6d6ea9ae27b817c22145181898faea2f88fa6103d079eb5b94cbddd5347f">kColor</a>
+<br />
+ }</td></tr>
+<tr class="separator:a84a4d6d6ea9ae27b817c22145181898f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a5c1d2bbc59235a4cac7e706d6f1841f8" id="r_a5c1d2bbc59235a4cac7e706d6f1841f8"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">typename</a> <a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">T</a> &gt; </td></tr>
+<tr class="memitem:a5c1d2bbc59235a4cac7e706d6f1841f8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">constexpr</a> <a class="el" href="namespacegs_1_1reflection.html#a8a736b068504520acf76314146b6c612">SceneType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegs_1_1reflection.html#a5c1d2bbc59235a4cac7e706d6f1841f8">sceneType</a> ()</td></tr>
+<tr class="separator:a5c1d2bbc59235a4cac7e706d6f1841f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a827ef5ac7d1e268e64ff75b7f6c3e886" id="r_a827ef5ac7d1e268e64ff75b7f6c3e886"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">typename</a> <a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">T</a> &gt; </td></tr>
+<tr class="memitem:a827ef5ac7d1e268e64ff75b7f6c3e886"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">constexpr</a> <a class="el" href="namespacegs_1_1reflection.html#a84a4d6d6ea9ae27b817c22145181898f">PropertyType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegs_1_1reflection.html#a827ef5ac7d1e268e64ff75b7f6c3e886">propertyType</a> ()</td></tr>
+<tr class="separator:a827ef5ac7d1e268e64ff75b7f6c3e886"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac61197626b8d76e9ae246a37d48e6e50" id="r_ac61197626b8d76e9ae246a37d48e6e50"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">typename</a> <a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">T</a> &gt; </td></tr>
+<tr class="memitem:ac61197626b8d76e9ae246a37d48e6e50"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">constexpr</a> <a class="el" href="namespacegs_1_1reflection.html#a73e10e211ad4d53a85beb6aad21ac6b5">EntryType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegs_1_1reflection.html#ac61197626b8d76e9ae246a37d48e6e50">entryType</a> ()</td></tr>
+<tr class="separator:ac61197626b8d76e9ae246a37d48e6e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a827c71a3a54bb00a7836c8d684caa4" id="r_a6a827c71a3a54bb00a7836c8d684caa4"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
+<tr class="memitem:a6a827c71a3a54bb00a7836c8d684caa4"><td class="memTemplItemLeft" align="right" valign="top">constexpr const <a class="el" href="structgs_1_1reflection_1_1Property.html">Property</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">getSceneTypeProperty</a> ()</td></tr>
+<tr class="separator:a6a827c71a3a54bb00a7836c8d684caa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50423229883f0c5e5f2a1e18144a9919" id="r_a50423229883f0c5e5f2a1e18144a9919"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">constexpr</a> <a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">const</a> <a class="el" href="structgs_1_1reflection_1_1Property.html">Property</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1reflection.html#a50423229883f0c5e5f2a1e18144a9919">findChildProperty</a> (<a class="el" href="structgs_1_1reflection_1_1Property.html#a585b863466b83576bcf430966ce02553">Property::Id</a> propertyId, std::string_view name)</td></tr>
+<tr class="memdesc:a50423229883f0c5e5f2a1e18144a9919"><td class="mdescLeft">&#160;</td><td class="mdescRight">for property path build  <br /></td></tr>
+<tr class="separator:a50423229883f0c5e5f2a1e18144a9919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae59483285ac2ed5d21efe3050a80c37b" id="r_ae59483285ac2ed5d21efe3050a80c37b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">constexpr</a> <a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">const</a> <a class="el" href="structgs_1_1reflection_1_1Property.html">Property</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1reflection.html#ae59483285ac2ed5d21efe3050a80c37b">getPropertyRoot</a> (<a class="el" href="structgs_1_1reflection_1_1Property.html#a585b863466b83576bcf430966ce02553">Property::Id</a> propertyId)</td></tr>
+<tr class="memdesc:ae59483285ac2ed5d21efe3050a80c37b"><td class="mdescLeft">&#160;</td><td class="mdescRight">for key build  <br /></td></tr>
+<tr class="separator:ae59483285ac2ed5d21efe3050a80c37b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8b146ea9cdbe05280ee8ebb5849c1d1" id="r_af8b146ea9cdbe05280ee8ebb5849c1d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">constexpr</a> <a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">auto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1reflection.html#af8b146ea9cdbe05280ee8ebb5849c1d1">nextFloatProperties</a> (<a class="el" href="structgs_1_1reflection_1_1Property.html#a585b863466b83576bcf430966ce02553">Property::Id</a> propertyId, std::size_t <a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">count</a>)</td></tr>
+<tr class="memdesc:af8b146ea9cdbe05280ee8ebb5849c1d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">for channels search  <br /></td></tr>
+<tr class="separator:af8b146ea9cdbe05280ee8ebb5849c1d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9729b56a516076277e42b7f12d0a9a22" id="r_a9729b56a516076277e42b7f12d0a9a22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">constexpr</a> <a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">const</a> <a class="el" href="structgs_1_1reflection_1_1Property.html">Property</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1reflection.html#a9729b56a516076277e42b7f12d0a9a22">getProperty</a> (<a class="el" href="structgs_1_1reflection_1_1Property.html#a585b863466b83576bcf430966ce02553">Property::Id</a> propertyId)</td></tr>
+<tr class="memdesc:a9729b56a516076277e42b7f12d0a9a22"><td class="mdescLeft">&#160;</td><td class="mdescRight">for apply animation  <br /></td></tr>
+<tr class="separator:a9729b56a516076277e42b7f12d0a9a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a73e10e211ad4d53a85beb6aad21ac6b5" name="a73e10e211ad4d53a85beb6aad21ac6b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73e10e211ad4d53a85beb6aad21ac6b5">&#9670;&#160;</a></span>EntryType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">enum</a> <a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">class</a> <a class="el" href="namespacegs_1_1reflection.html#a73e10e211ad4d53a85beb6aad21ac6b5">gs::reflection::EntryType</a> : std::uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a73e10e211ad4d53a85beb6aad21ac6b5a35c3ace1970663a16e5c65baa5941b13" name="a73e10e211ad4d53a85beb6aad21ac6b5a35c3ace1970663a16e5c65baa5941b13"></a>kNone&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a73e10e211ad4d53a85beb6aad21ac6b5a4da7c0d59f0a416b6e8d636acf1ddfd1" name="a73e10e211ad4d53a85beb6aad21ac6b5a4da7c0d59f0a416b6e8d636acf1ddfd1"></a>kMainColor&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a73e10e211ad4d53a85beb6aad21ac6b5a07fa7a19aa722c635a15e94cb7f50416" name="a73e10e211ad4d53a85beb6aad21ac6b5a07fa7a19aa722c635a15e94cb7f50416"></a>kNormal&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a73e10e211ad4d53a85beb6aad21ac6b5a0e3951ebdc3d5f711eeb5cb1804fd300" name="a73e10e211ad4d53a85beb6aad21ac6b5a0e3951ebdc3d5f711eeb5cb1804fd300"></a>kRadius&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a73e10e211ad4d53a85beb6aad21ac6b5aea78f90b3c3afd64e139a391d6fdd88a" name="a73e10e211ad4d53a85beb6aad21ac6b5aea78f90b3c3afd64e139a391d6fdd88a"></a>kPosition&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a73e10e211ad4d53a85beb6aad21ac6b5ab9e0bd435e608813fa13aac9a830f9ca" name="a73e10e211ad4d53a85beb6aad21ac6b5ab9e0bd435e608813fa13aac9a830f9ca"></a>kEndPosition&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a73e10e211ad4d53a85beb6aad21ac6b5aa9955d046704625056c611f785af71d8" name="a73e10e211ad4d53a85beb6aad21ac6b5aa9955d046704625056c611f785af71d8"></a>kThickness&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a73e10e211ad4d53a85beb6aad21ac6b5ab01982031b1e7078bf3bbb61b7c9b2c7" name="a73e10e211ad4d53a85beb6aad21ac6b5ab01982031b1e7078bf3bbb61b7c9b2c7"></a>kUILayout&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a73e10e211ad4d53a85beb6aad21ac6b5a2973b376fddab10ff52d558664132bef" name="a73e10e211ad4d53a85beb6aad21ac6b5a2973b376fddab10ff52d558664132bef"></a>kButton&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a73e10e211ad4d53a85beb6aad21ac6b5ab91a982133fa67e579d45373b64bbe7b" name="a73e10e211ad4d53a85beb6aad21ac6b5ab91a982133fa67e579d45373b64bbe7b"></a>kCamera&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a84a4d6d6ea9ae27b817c22145181898f" name="a84a4d6d6ea9ae27b817c22145181898f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84a4d6d6ea9ae27b817c22145181898f">&#9670;&#160;</a></span>PropertyType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">enum</a> <a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">class</a> <a class="el" href="namespacegs_1_1reflection.html#a84a4d6d6ea9ae27b817c22145181898f">gs::reflection::PropertyType</a> : std::uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a84a4d6d6ea9ae27b817c22145181898fa35c3ace1970663a16e5c65baa5941b13" name="a84a4d6d6ea9ae27b817c22145181898fa35c3ace1970663a16e5c65baa5941b13"></a>kNone&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a84a4d6d6ea9ae27b817c22145181898fa8425cd882e78bc9251db970b8a1da20e" name="a84a4d6d6ea9ae27b817c22145181898fa8425cd882e78bc9251db970b8a1da20e"></a>kFloat&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a84a4d6d6ea9ae27b817c22145181898fa18268c9f691ba5a5f650049d9d0da8dc" name="a84a4d6d6ea9ae27b817c22145181898fa18268c9f691ba5a5f650049d9d0da8dc"></a>kBool&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a84a4d6d6ea9ae27b817c22145181898fa2a5ae455c301cc9f8889814e439b89b6" name="a84a4d6d6ea9ae27b817c22145181898fa2a5ae455c301cc9f8889814e439b89b6"></a>kVec3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a84a4d6d6ea9ae27b817c22145181898faea2f88fa6103d079eb5b94cbddd5347f" name="a84a4d6d6ea9ae27b817c22145181898faea2f88fa6103d079eb5b94cbddd5347f"></a>kColor&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a8a736b068504520acf76314146b6c612" name="a8a736b068504520acf76314146b6c612"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a736b068504520acf76314146b6c612">&#9670;&#160;</a></span>SceneType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">enum</a> <a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">class</a> <a class="el" href="namespacegs_1_1reflection.html#a8a736b068504520acf76314146b6c612">gs::reflection::SceneType</a> : std::uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a8a736b068504520acf76314146b6c612a35c3ace1970663a16e5c65baa5941b13" name="a8a736b068504520acf76314146b6c612a35c3ace1970663a16e5c65baa5941b13"></a>kNone&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a736b068504520acf76314146b6c612a20e722b15a1b587c30633f0a136b7009" name="a8a736b068504520acf76314146b6c612a20e722b15a1b587c30633f0a136b7009"></a>kPoint&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a736b068504520acf76314146b6c612a37188bf1719fccfc5eb8ed366dd075fd" name="a8a736b068504520acf76314146b6c612a37188bf1719fccfc5eb8ed366dd075fd"></a>kPlane&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a736b068504520acf76314146b6c612af059e6c07206f2f14d8a1079dee0a1ab" name="a8a736b068504520acf76314146b6c612af059e6c07206f2f14d8a1079dee0a1ab"></a>kLayout&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a736b068504520acf76314146b6c612a2973b376fddab10ff52d558664132bef" name="a8a736b068504520acf76314146b6c612a2973b376fddab10ff52d558664132bef"></a>kButton&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8a736b068504520acf76314146b6c612ab91a982133fa67e579d45373b64bbe7b" name="a8a736b068504520acf76314146b6c612ab91a982133fa67e579d45373b64bbe7b"></a>kCamera&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ac61197626b8d76e9ae246a37d48e6e50" name="ac61197626b8d76e9ae246a37d48e6e50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac61197626b8d76e9ae246a37d48e6e50">&#9670;&#160;</a></span>entryType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">typename</a> <a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">T</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">constexpr</a> <a class="el" href="namespacegs_1_1reflection.html#a73e10e211ad4d53a85beb6aad21ac6b5">EntryType</a> gs::reflection::entryType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a50423229883f0c5e5f2a1e18144a9919" name="a50423229883f0c5e5f2a1e18144a9919"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50423229883f0c5e5f2a1e18144a9919">&#9670;&#160;</a></span>findChildProperty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">constexpr</a> <a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">const</a> <a class="el" href="structgs_1_1reflection_1_1Property.html">Property</a> * gs::reflection::findChildProperty </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgs_1_1reflection_1_1Property.html#a585b863466b83576bcf430966ce02553">Property::Id</a>&#160;</td>
+          <td class="paramname"><em>propertyId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>for property path build </p>
+
+</div>
+</div>
+<a id="a9729b56a516076277e42b7f12d0a9a22" name="a9729b56a516076277e42b7f12d0a9a22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9729b56a516076277e42b7f12d0a9a22">&#9670;&#160;</a></span>getProperty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">constexpr</a> <a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">const</a> <a class="el" href="structgs_1_1reflection_1_1Property.html">Property</a> &amp; gs::reflection::getProperty </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgs_1_1reflection_1_1Property.html#a585b863466b83576bcf430966ce02553">Property::Id</a>&#160;</td>
+          <td class="paramname"><em>propertyId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>for apply animation </p>
+
+</div>
+</div>
+<a id="ae59483285ac2ed5d21efe3050a80c37b" name="ae59483285ac2ed5d21efe3050a80c37b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae59483285ac2ed5d21efe3050a80c37b">&#9670;&#160;</a></span>getPropertyRoot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">constexpr</a> <a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">const</a> <a class="el" href="structgs_1_1reflection_1_1Property.html">Property</a> &amp; gs::reflection::getPropertyRoot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgs_1_1reflection_1_1Property.html#a585b863466b83576bcf430966ce02553">Property::Id</a>&#160;</td>
+          <td class="paramname"><em>propertyId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>for key build </p>
+
+</div>
+</div>
+<a id="a6a827c71a3a54bb00a7836c8d684caa4" name="a6a827c71a3a54bb00a7836c8d684caa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a827c71a3a54bb00a7836c8d684caa4">&#9670;&#160;</a></span>getSceneTypeProperty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const <a class="el" href="structgs_1_1reflection_1_1Property.html">Property</a> &amp; gs::reflection::getSceneTypeProperty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af8b146ea9cdbe05280ee8ebb5849c1d1" name="af8b146ea9cdbe05280ee8ebb5849c1d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8b146ea9cdbe05280ee8ebb5849c1d1">&#9670;&#160;</a></span>nextFloatProperties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">constexpr</a> <a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">auto</a> gs::reflection::nextFloatProperties </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgs_1_1reflection_1_1Property.html#a585b863466b83576bcf430966ce02553">Property::Id</a>&#160;</td>
+          <td class="paramname"><em>propertyId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>for channels search </p>
+
+</div>
+</div>
+<a id="a827ef5ac7d1e268e64ff75b7f6c3e886" name="a827ef5ac7d1e268e64ff75b7f6c3e886"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a827ef5ac7d1e268e64ff75b7f6c3e886">&#9670;&#160;</a></span>propertyType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">typename</a> <a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">T</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">constexpr</a> <a class="el" href="namespacegs_1_1reflection.html#a84a4d6d6ea9ae27b817c22145181898f">PropertyType</a> gs::reflection::propertyType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c1d2bbc59235a4cac7e706d6f1841f8" name="a5c1d2bbc59235a4cac7e706d6f1841f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c1d2bbc59235a4cac7e706d6f1841f8">&#9670;&#160;</a></span>sceneType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">typename</a> <a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">T</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">constexpr</a> <a class="el" href="namespacegs_1_1reflection.html#a8a736b068504520acf76314146b6c612">SceneType</a> gs::reflection::sceneType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

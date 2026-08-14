@@ -1,0 +1,1346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>geometry-sandbox: gs::Settings Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="theme-round.css" rel="stylesheet" type="text/css"/>
+<link href="theme-robot.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/NovikovNick/algorithm-visualizer" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">geometry-sandbox
+   </div>
+   <div id="projectbrief">Yet another geometry sandbox project</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacegs.html">gs</a></li><li class="navelem"><a class="el" href="structgs_1_1Settings.html">Settings</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="structgs_1_1Settings-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">gs::Settings Struct Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="settings_8h_source.html">settings.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for gs::Settings:</div>
+<div class="dyncontent">
+<div class="center"><img src="structgs_1_1Settings__coll__graph.png" border="0" usemap="#ags_1_1Settings_coll__map" alt="Collaboration graph"/></div>
+<map name="ags_1_1Settings_coll__map" id="ags_1_1Settings_coll__map">
+<area shape="rect" title=" " alt="" coords="271,332,370,357"/>
+<area shape="rect" href="structgs_1_1Color.html" title=" " alt="" coords="5,5,84,31"/>
+<area shape="poly" title=" " alt="" coords="37,44,22,90,11,150,10,181,13,212,22,241,37,268,52,280,75,292,137,311,208,326,272,335,271,340,207,331,136,316,73,297,49,285,33,271,17,243,8,213,5,181,6,149,17,89,32,42"/>
+<area shape="rect" href="structgs_1_1scene_1_1Grid2D.html" title="square 2D grid" alt="" coords="253,176,389,201"/>
+<area shape="poly" title=" " alt="" coords="90,33,160,64,235,106,280,141,312,174,308,178,276,145,233,110,158,68,88,38"/>
+<area shape="rect" href="structgs_1_1Camera.html" title="Camera with coordinate handedness property." alt="" coords="413,176,509,201"/>
+<area shape="poly" title=" " alt="" coords="447,215,403,271,336,334,333,330,399,268,443,211"/>
+<area shape="poly" title=" " alt="" coords="323,215,323,332,318,332,318,215"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a7657039bbd7e15436e1e3e3730061673" id="r_a7657039bbd7e15436e1e3e3730061673"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a7657039bbd7e15436e1e3e3730061673">title</a></td></tr>
+<tr class="separator:a7657039bbd7e15436e1e3e3730061673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77e0150453a038e4b504edd47f126553" id="r_a77e0150453a038e4b504edd47f126553"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a77e0150453a038e4b504edd47f126553">width</a></td></tr>
+<tr class="separator:a77e0150453a038e4b504edd47f126553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a092e9a4eb87ca0f6c1a4c82dced57c2c" id="r_a092e9a4eb87ca0f6c1a4c82dced57c2c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a092e9a4eb87ca0f6c1a4c82dced57c2c">height</a></td></tr>
+<tr class="separator:a092e9a4eb87ca0f6c1a4c82dced57c2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f069cd7049d637f858b1d5a239b0258" id="r_a8f069cd7049d637f858b1d5a239b0258"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a8f069cd7049d637f858b1d5a239b0258">fullscreen</a></td></tr>
+<tr class="separator:a8f069cd7049d637f858b1d5a239b0258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a642d23640ae940e5cfe099d54ea98f9e" id="r_a642d23640ae940e5cfe099d54ea98f9e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a642d23640ae940e5cfe099d54ea98f9e">multiSampleAntiAliasing4X</a></td></tr>
+<tr class="separator:a642d23640ae940e5cfe099d54ea98f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7c8f48bad2aad105638117b10a6d53c" id="r_aa7c8f48bad2aad105638117b10a6d53c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#aa7c8f48bad2aad105638117b10a6d53c">vSync</a></td></tr>
+<tr class="separator:aa7c8f48bad2aad105638117b10a6d53c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12c11a2955ba8a97f08d09e649e4db7d" id="r_a12c11a2955ba8a97f08d09e649e4db7d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a12c11a2955ba8a97f08d09e649e4db7d">footerHeight</a></td></tr>
+<tr class="separator:a12c11a2955ba8a97f08d09e649e4db7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6832452d5e5606c2db2c7bd106b7b1dd" id="r_a6832452d5e5606c2db2c7bd106b7b1dd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a6832452d5e5606c2db2c7bd106b7b1dd">detailsWidth</a></td></tr>
+<tr class="separator:a6832452d5e5606c2db2c7bd106b7b1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00809a27cdc21036c95715577a0bfcc9" id="r_a00809a27cdc21036c95715577a0bfcc9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a00809a27cdc21036c95715577a0bfcc9">showConsole</a></td></tr>
+<tr class="separator:a00809a27cdc21036c95715577a0bfcc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b640ed6bf2d4cc797c38dcab50104b0" id="r_a7b640ed6bf2d4cc797c38dcab50104b0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a7b640ed6bf2d4cc797c38dcab50104b0">showCollisions</a></td></tr>
+<tr class="separator:a7b640ed6bf2d4cc797c38dcab50104b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2332e172af18001da0e9f81478fb4efe" id="r_a2332e172af18001da0e9f81478fb4efe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a2332e172af18001da0e9f81478fb4efe">showCursorRay</a></td></tr>
+<tr class="separator:a2332e172af18001da0e9f81478fb4efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a62a7daf4412e0f56b50f8d9a61bddc" id="r_a4a62a7daf4412e0f56b50f8d9a61bddc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a4a62a7daf4412e0f56b50f8d9a61bddc">animationSpeed</a></td></tr>
+<tr class="separator:a4a62a7daf4412e0f56b50f8d9a61bddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad48d0f3bff0056f0e50af3e83298a4ae" id="r_ad48d0f3bff0056f0e50af3e83298a4ae"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#ad48d0f3bff0056f0e50af3e83298a4ae">iconPlayerBackwardFast</a></td></tr>
+<tr class="separator:ad48d0f3bff0056f0e50af3e83298a4ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae873be1c696c8819d5e455dbd19b182" id="r_aae873be1c696c8819d5e455dbd19b182"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#aae873be1c696c8819d5e455dbd19b182">iconPlayerBackwardStep</a></td></tr>
+<tr class="separator:aae873be1c696c8819d5e455dbd19b182"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40009bc8b0ef7139e336486b7e54d5a3" id="r_a40009bc8b0ef7139e336486b7e54d5a3"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a40009bc8b0ef7139e336486b7e54d5a3">iconPlayerPlay</a></td></tr>
+<tr class="separator:a40009bc8b0ef7139e336486b7e54d5a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d10475458ce16ce9c75aa7b5f2150fb" id="r_a7d10475458ce16ce9c75aa7b5f2150fb"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a7d10475458ce16ce9c75aa7b5f2150fb">iconPlayerPause</a></td></tr>
+<tr class="separator:a7d10475458ce16ce9c75aa7b5f2150fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c848288ec1a2df67ceaa297861b4b3f" id="r_a8c848288ec1a2df67ceaa297861b4b3f"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a8c848288ec1a2df67ceaa297861b4b3f">iconPlayerForwardStep</a></td></tr>
+<tr class="separator:a8c848288ec1a2df67ceaa297861b4b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf56cfb9a483d0ac5beb925d562e1bd9" id="r_adf56cfb9a483d0ac5beb925d562e1bd9"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#adf56cfb9a483d0ac5beb925d562e1bd9">iconPlayerForwardFast</a></td></tr>
+<tr class="separator:adf56cfb9a483d0ac5beb925d562e1bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2714b1f56c157beafbc85b28d10c8dcd" id="r_a2714b1f56c157beafbc85b28d10c8dcd"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a2714b1f56c157beafbc85b28d10c8dcd">iconSettings</a></td></tr>
+<tr class="separator:a2714b1f56c157beafbc85b28d10c8dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcd2165f6dc9a81fdf73047abfa376c6" id="r_abcd2165f6dc9a81fdf73047abfa376c6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#abcd2165f6dc9a81fdf73047abfa376c6">enableQuaternionCameraRotation</a></td></tr>
+<tr class="separator:abcd2165f6dc9a81fdf73047abfa376c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4109f53af278f29e97c910719a177f14" id="r_a4109f53af278f29e97c910719a177f14"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a4109f53af278f29e97c910719a177f14">resetTimelineAfterDataChange</a></td></tr>
+<tr class="separator:a4109f53af278f29e97c910719a177f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95ee4df7658b3ae41c24e5ece2bbd7cd" id="r_a95ee4df7658b3ae41c24e5ece2bbd7cd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a95ee4df7658b3ae41c24e5ece2bbd7cd">gizmoArrowSize</a></td></tr>
+<tr class="separator:a95ee4df7658b3ae41c24e5ece2bbd7cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27ddf8d5f39d1d83fc80357a143b656d" id="r_a27ddf8d5f39d1d83fc80357a143b656d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a27ddf8d5f39d1d83fc80357a143b656d">gizmoColliderAlpha</a></td></tr>
+<tr class="separator:a27ddf8d5f39d1d83fc80357a143b656d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e43720ec07ddf2d50578dc82b32bf56" id="r_a6e43720ec07ddf2d50578dc82b32bf56"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a6e43720ec07ddf2d50578dc82b32bf56">gizmoColliderAlphaSelected</a></td></tr>
+<tr class="separator:a6e43720ec07ddf2d50578dc82b32bf56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9063077371e25f34d0a8afe9d0ae289" id="r_ab9063077371e25f34d0a8afe9d0ae289"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgs_1_1Color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#ab9063077371e25f34d0a8afe9d0ae289">gizmoTranslateAxisX</a></td></tr>
+<tr class="separator:ab9063077371e25f34d0a8afe9d0ae289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83a4411ecf809114375c7be27ceea8a5" id="r_a83a4411ecf809114375c7be27ceea8a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgs_1_1Color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a83a4411ecf809114375c7be27ceea8a5">gizmoTranslateAxisXSelected</a></td></tr>
+<tr class="separator:a83a4411ecf809114375c7be27ceea8a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a87b9daf223e96881a0afc9ff92856a" id="r_a4a87b9daf223e96881a0afc9ff92856a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgs_1_1Color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a4a87b9daf223e96881a0afc9ff92856a">gizmoTranslateAxesXY</a></td></tr>
+<tr class="separator:a4a87b9daf223e96881a0afc9ff92856a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06cad025dde21902a500bc3a8f649f85" id="r_a06cad025dde21902a500bc3a8f649f85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgs_1_1Color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a06cad025dde21902a500bc3a8f649f85">gizmoTranslateAxesXYSelected</a></td></tr>
+<tr class="separator:a06cad025dde21902a500bc3a8f649f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a4d0778618c2fd72c3998955298b114" id="r_a5a4d0778618c2fd72c3998955298b114"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgs_1_1Color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a5a4d0778618c2fd72c3998955298b114">gizmoTranslateAxisY</a></td></tr>
+<tr class="separator:a5a4d0778618c2fd72c3998955298b114"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9281906ba4a4a49bff21041f744ab828" id="r_a9281906ba4a4a49bff21041f744ab828"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgs_1_1Color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a9281906ba4a4a49bff21041f744ab828">gizmoTranslateAxisYSelected</a></td></tr>
+<tr class="separator:a9281906ba4a4a49bff21041f744ab828"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adabaa85a06d6bcf30c89bfe172529c96" id="r_adabaa85a06d6bcf30c89bfe172529c96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgs_1_1Color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#adabaa85a06d6bcf30c89bfe172529c96">gizmoTranslateAxesYZ</a></td></tr>
+<tr class="separator:adabaa85a06d6bcf30c89bfe172529c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b5ac59e7f6e705b208bc2de6834a6a8" id="r_a1b5ac59e7f6e705b208bc2de6834a6a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgs_1_1Color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a1b5ac59e7f6e705b208bc2de6834a6a8">gizmoTranslateAxesYZSelected</a></td></tr>
+<tr class="separator:a1b5ac59e7f6e705b208bc2de6834a6a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a078f227e14b7f1f1c7a3b2dddb401e42" id="r_a078f227e14b7f1f1c7a3b2dddb401e42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgs_1_1Color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a078f227e14b7f1f1c7a3b2dddb401e42">gizmoTranslateAxisZ</a></td></tr>
+<tr class="separator:a078f227e14b7f1f1c7a3b2dddb401e42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a810732e0df02898df453d7d34cd5cc5a" id="r_a810732e0df02898df453d7d34cd5cc5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgs_1_1Color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a810732e0df02898df453d7d34cd5cc5a">gizmoTranslateAxisZSelected</a></td></tr>
+<tr class="separator:a810732e0df02898df453d7d34cd5cc5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c7a138c7e20480a1ed619f0a8cbd8f6" id="r_a0c7a138c7e20480a1ed619f0a8cbd8f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgs_1_1Color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a0c7a138c7e20480a1ed619f0a8cbd8f6">gizmoTranslateAxesZX</a></td></tr>
+<tr class="separator:a0c7a138c7e20480a1ed619f0a8cbd8f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a636e687a2eca88d499e3e97ddce5ad81" id="r_a636e687a2eca88d499e3e97ddce5ad81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgs_1_1Color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a636e687a2eca88d499e3e97ddce5ad81">gizmoTranslateAxesZXSelected</a></td></tr>
+<tr class="separator:a636e687a2eca88d499e3e97ddce5ad81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8985ddfa8cf50b216991adb62b616206" id="r_a8985ddfa8cf50b216991adb62b616206"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a8985ddfa8cf50b216991adb62b616206">gizmoColliderPlaneThickness</a></td></tr>
+<tr class="separator:a8985ddfa8cf50b216991adb62b616206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a596a9cb45d5a4c369e65743f85d70049" id="r_a596a9cb45d5a4c369e65743f85d70049"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a596a9cb45d5a4c369e65743f85d70049">gizmoColliderAxisThickness</a></td></tr>
+<tr class="separator:a596a9cb45d5a4c369e65743f85d70049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac41d51e39c21419ed40bfbeec899db6a" id="r_ac41d51e39c21419ed40bfbeec899db6a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#ac41d51e39c21419ed40bfbeec899db6a">gizmoColliderAxisLength</a></td></tr>
+<tr class="separator:ac41d51e39c21419ed40bfbeec899db6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0b72bf5e52755d20dcbd507b0b08edf" id="r_aa0b72bf5e52755d20dcbd507b0b08edf"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#aa0b72bf5e52755d20dcbd507b0b08edf">gizmoColliderPlaneSize</a></td></tr>
+<tr class="separator:aa0b72bf5e52755d20dcbd507b0b08edf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37fca001aee4000dd92a733b5359cff3" id="r_a37fca001aee4000dd92a733b5359cff3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a37fca001aee4000dd92a733b5359cff3">canvasFontSize</a></td></tr>
+<tr class="separator:a37fca001aee4000dd92a733b5359cff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecd9f8d807c4ade22940f2dc3eef01e6" id="r_aecd9f8d807c4ade22940f2dc3eef01e6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#aecd9f8d807c4ade22940f2dc3eef01e6">uiFontSize</a></td></tr>
+<tr class="separator:aecd9f8d807c4ade22940f2dc3eef01e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a818e526a682cf50cd60866debe51dce6" id="r_a818e526a682cf50cd60866debe51dce6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgs_1_1Color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a818e526a682cf50cd60866debe51dce6">uiButtonColor</a></td></tr>
+<tr class="separator:a818e526a682cf50cd60866debe51dce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d67f44faa0e916df576227e687310bc" id="r_a4d67f44faa0e916df576227e687310bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgs_1_1Color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a4d67f44faa0e916df576227e687310bc">canvasBackgroundColor</a></td></tr>
+<tr class="separator:a4d67f44faa0e916df576227e687310bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b7eb85d5fd0274932dba51a7f970b33" id="r_a2b7eb85d5fd0274932dba51a7f970b33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgs_1_1Color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a2b7eb85d5fd0274932dba51a7f970b33">uiPlayerTimelineBackgroundColor</a></td></tr>
+<tr class="separator:a2b7eb85d5fd0274932dba51a7f970b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5724f45ed421afe67b2b82957085b1da" id="r_a5724f45ed421afe67b2b82957085b1da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgs_1_1Color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a5724f45ed421afe67b2b82957085b1da">uiPlayerTimelineFillColor</a></td></tr>
+<tr class="separator:a5724f45ed421afe67b2b82957085b1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa12f5406e84bbac76fc8fc41cb03f28e" id="r_aa12f5406e84bbac76fc8fc41cb03f28e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgs_1_1Color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#aa12f5406e84bbac76fc8fc41cb03f28e">uiPlayerTimelineGrabberColor</a></td></tr>
+<tr class="separator:aa12f5406e84bbac76fc8fc41cb03f28e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2066f119a16d50563f7a43eab0082e61" id="r_a2066f119a16d50563f7a43eab0082e61"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgs_1_1Color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a2066f119a16d50563f7a43eab0082e61">uiPlayerTimelineGrabberColorActive</a></td></tr>
+<tr class="separator:a2066f119a16d50563f7a43eab0082e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad87bcb3f97b5016e40b936258b403ea4" id="r_ad87bcb3f97b5016e40b936258b403ea4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#ad87bcb3f97b5016e40b936258b403ea4">uiPlayerTimelineGrabberSize</a></td></tr>
+<tr class="separator:ad87bcb3f97b5016e40b936258b403ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26bc1b05a57933a5d9b7fed9f357674e" id="r_a26bc1b05a57933a5d9b7fed9f357674e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a26bc1b05a57933a5d9b7fed9f357674e">uiPlayerTimelineRoundingSize</a></td></tr>
+<tr class="separator:a26bc1b05a57933a5d9b7fed9f357674e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e5c699a3920f6fb7cf63388bff0b605" id="r_a3e5c699a3920f6fb7cf63388bff0b605"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a3e5c699a3920f6fb7cf63388bff0b605">uiPlayerTimelineHeight</a></td></tr>
+<tr class="separator:a3e5c699a3920f6fb7cf63388bff0b605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f75ab725bc513291547dc93bc7256f7" id="r_a7f75ab725bc513291547dc93bc7256f7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a7f75ab725bc513291547dc93bc7256f7">uiPlayerControlButtonWidth</a></td></tr>
+<tr class="separator:a7f75ab725bc513291547dc93bc7256f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99e9335fd8c7bdd4f1ae22c88ee3718b" id="r_a99e9335fd8c7bdd4f1ae22c88ee3718b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a99e9335fd8c7bdd4f1ae22c88ee3718b">uiPlayerControlTextWidth</a></td></tr>
+<tr class="separator:a99e9335fd8c7bdd4f1ae22c88ee3718b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3da8b8ae5d3c33c8c7dcce4b106f02c0" id="r_a3da8b8ae5d3c33c8c7dcce4b106f02c0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a3da8b8ae5d3c33c8c7dcce4b106f02c0">uiPlayerHeight</a></td></tr>
+<tr class="separator:a3da8b8ae5d3c33c8c7dcce4b106f02c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af431a4de6848ac1470cbbb515333c895" id="r_af431a4de6848ac1470cbbb515333c895"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#af431a4de6848ac1470cbbb515333c895">lineThick</a></td></tr>
+<tr class="separator:af431a4de6848ac1470cbbb515333c895"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77404f790475e53a6169bae55b73b46d" id="r_a77404f790475e53a6169bae55b73b46d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a77404f790475e53a6169bae55b73b46d">dashLength</a></td></tr>
+<tr class="separator:a77404f790475e53a6169bae55b73b46d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81f951c65ac70304ebcb564beb9501fd" id="r_a81f951c65ac70304ebcb564beb9501fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgs_1_1Camera.html">Camera</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a81f951c65ac70304ebcb564beb9501fd">defaultCamera</a></td></tr>
+<tr class="separator:a81f951c65ac70304ebcb564beb9501fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae11eb631623265190a096d3ee0928e0" id="r_aae11eb631623265190a096d3ee0928e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgs_1_1scene_1_1Grid2D.html">scene::Grid2D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#aae11eb631623265190a096d3ee0928e0">grid</a></td></tr>
+<tr class="separator:aae11eb631623265190a096d3ee0928e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6d5dc3b4ff128d562db556870d56057" id="r_aa6d5dc3b4ff128d562db556870d56057"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#aa6d5dc3b4ff128d562db556870d56057">idleRotationAnglePerFrame</a></td></tr>
+<tr class="separator:aa6d5dc3b4ff128d562db556870d56057"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4edeb73b124e7f2e1416118c44b45221" id="r_a4edeb73b124e7f2e1416118c44b45221"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacegs.html#a4c28c295b2749cdbca832eb5eb8803b7">Seconds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a4edeb73b124e7f2e1416118c44b45221">idleRotationAnimationStartDelay</a></td></tr>
+<tr class="separator:a4edeb73b124e7f2e1416118c44b45221"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf4988f4d2ae4340e42783f7e0f153dd" id="r_adf4988f4d2ae4340e42783f7e0f153dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacegs.html#a4c28c295b2749cdbca832eb5eb8803b7">Seconds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#adf4988f4d2ae4340e42783f7e0f153dd">idleRotationTransitionDuration</a></td></tr>
+<tr class="separator:adf4988f4d2ae4340e42783f7e0f153dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80e4b308576df4c4d20a89e2a7ca0034" id="r_a80e4b308576df4c4d20a89e2a7ca0034"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a80e4b308576df4c4d20a89e2a7ca0034">idleRotationDistanceMin</a></td></tr>
+<tr class="separator:a80e4b308576df4c4d20a89e2a7ca0034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad939ec73681bd9f4fe6fdece6c13a9a3" id="r_ad939ec73681bd9f4fe6fdece6c13a9a3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#ad939ec73681bd9f4fe6fdece6c13a9a3">idleRotationDistanceMod</a></td></tr>
+<tr class="separator:ad939ec73681bd9f4fe6fdece6c13a9a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02d30dd6eab1b5977b3be834e683f5fe" id="r_a02d30dd6eab1b5977b3be834e683f5fe"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a02d30dd6eab1b5977b3be834e683f5fe">cameraRotateSensitivity</a></td></tr>
+<tr class="separator:a02d30dd6eab1b5977b3be834e683f5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af80753ed6392f2a41b0d9df49c8f22d2" id="r_af80753ed6392f2a41b0d9df49c8f22d2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#af80753ed6392f2a41b0d9df49c8f22d2">cameraMoveSensitivity</a></td></tr>
+<tr class="separator:af80753ed6392f2a41b0d9df49c8f22d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a183b1c3bc516483d4304eb6b0bbd1dcd" id="r_a183b1c3bc516483d4304eb6b0bbd1dcd"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a183b1c3bc516483d4304eb6b0bbd1dcd">kAnimationSpeedMin</a> = 0.01f</td></tr>
+<tr class="separator:a183b1c3bc516483d4304eb6b0bbd1dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5e6575c67af6b1cadb94868f12d8a9c" id="r_af5e6575c67af6b1cadb94868f12d8a9c"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#af5e6575c67af6b1cadb94868f12d8a9c">kAnimationSpeedMax</a> = 10.00f</td></tr>
+<tr class="separator:af5e6575c67af6b1cadb94868f12d8a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac605dc4509588a6d3ad93e84d257731d" id="r_ac605dc4509588a6d3ad93e84d257731d"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#ac605dc4509588a6d3ad93e84d257731d">kCameraRotateSensitivityMin</a></td></tr>
+<tr class="separator:ac605dc4509588a6d3ad93e84d257731d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a230e2ef507df9d78e7cf51b18ec03174" id="r_a230e2ef507df9d78e7cf51b18ec03174"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a230e2ef507df9d78e7cf51b18ec03174">kCameraRotateSensitivityMax</a></td></tr>
+<tr class="separator:a230e2ef507df9d78e7cf51b18ec03174"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e91317370e2bfe6bc464448d3b85d81" id="r_a5e91317370e2bfe6bc464448d3b85d81"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a5e91317370e2bfe6bc464448d3b85d81">kCameraMoveSensitivityMin</a> = 0.02f</td></tr>
+<tr class="separator:a5e91317370e2bfe6bc464448d3b85d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e3a845ac05368eb5317ace9e3d56ac9" id="r_a3e3a845ac05368eb5317ace9e3d56ac9"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1Settings.html#a3e3a845ac05368eb5317ace9e3d56ac9">kCameraMoveSensitivityMax</a> = 1.0f</td></tr>
+<tr class="separator:a3e3a845ac05368eb5317ace9e3d56ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a4a62a7daf4412e0f56b50f8d9a61bddc" name="a4a62a7daf4412e0f56b50f8d9a61bddc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a62a7daf4412e0f56b50f8d9a61bddc">&#9670;&#160;</a></span>animationSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::animationSpeed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af80753ed6392f2a41b0d9df49c8f22d2" name="af80753ed6392f2a41b0d9df49c8f22d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af80753ed6392f2a41b0d9df49c8f22d2">&#9670;&#160;</a></span>cameraMoveSensitivity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::cameraMoveSensitivity</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02d30dd6eab1b5977b3be834e683f5fe" name="a02d30dd6eab1b5977b3be834e683f5fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02d30dd6eab1b5977b3be834e683f5fe">&#9670;&#160;</a></span>cameraRotateSensitivity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::cameraRotateSensitivity</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4d67f44faa0e916df576227e687310bc" name="a4d67f44faa0e916df576227e687310bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d67f44faa0e916df576227e687310bc">&#9670;&#160;</a></span>canvasBackgroundColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgs_1_1Color.html">Color</a> gs::Settings::canvasBackgroundColor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a37fca001aee4000dd92a733b5359cff3" name="a37fca001aee4000dd92a733b5359cff3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37fca001aee4000dd92a733b5359cff3">&#9670;&#160;</a></span>canvasFontSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::canvasFontSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77404f790475e53a6169bae55b73b46d" name="a77404f790475e53a6169bae55b73b46d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77404f790475e53a6169bae55b73b46d">&#9670;&#160;</a></span>dashLength</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::dashLength</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81f951c65ac70304ebcb564beb9501fd" name="a81f951c65ac70304ebcb564beb9501fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81f951c65ac70304ebcb564beb9501fd">&#9670;&#160;</a></span>defaultCamera</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgs_1_1Camera.html">Camera</a> gs::Settings::defaultCamera</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6832452d5e5606c2db2c7bd106b7b1dd" name="a6832452d5e5606c2db2c7bd106b7b1dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6832452d5e5606c2db2c7bd106b7b1dd">&#9670;&#160;</a></span>detailsWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::detailsWidth</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abcd2165f6dc9a81fdf73047abfa376c6" name="abcd2165f6dc9a81fdf73047abfa376c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcd2165f6dc9a81fdf73047abfa376c6">&#9670;&#160;</a></span>enableQuaternionCameraRotation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool gs::Settings::enableQuaternionCameraRotation</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12c11a2955ba8a97f08d09e649e4db7d" name="a12c11a2955ba8a97f08d09e649e4db7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12c11a2955ba8a97f08d09e649e4db7d">&#9670;&#160;</a></span>footerHeight</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::footerHeight</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f069cd7049d637f858b1d5a239b0258" name="a8f069cd7049d637f858b1d5a239b0258"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f069cd7049d637f858b1d5a239b0258">&#9670;&#160;</a></span>fullscreen</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool gs::Settings::fullscreen</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95ee4df7658b3ae41c24e5ece2bbd7cd" name="a95ee4df7658b3ae41c24e5ece2bbd7cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95ee4df7658b3ae41c24e5ece2bbd7cd">&#9670;&#160;</a></span>gizmoArrowSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::gizmoArrowSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a27ddf8d5f39d1d83fc80357a143b656d" name="a27ddf8d5f39d1d83fc80357a143b656d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27ddf8d5f39d1d83fc80357a143b656d">&#9670;&#160;</a></span>gizmoColliderAlpha</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::gizmoColliderAlpha</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e43720ec07ddf2d50578dc82b32bf56" name="a6e43720ec07ddf2d50578dc82b32bf56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e43720ec07ddf2d50578dc82b32bf56">&#9670;&#160;</a></span>gizmoColliderAlphaSelected</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::gizmoColliderAlphaSelected</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac41d51e39c21419ed40bfbeec899db6a" name="ac41d51e39c21419ed40bfbeec899db6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac41d51e39c21419ed40bfbeec899db6a">&#9670;&#160;</a></span>gizmoColliderAxisLength</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::gizmoColliderAxisLength</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a596a9cb45d5a4c369e65743f85d70049" name="a596a9cb45d5a4c369e65743f85d70049"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a596a9cb45d5a4c369e65743f85d70049">&#9670;&#160;</a></span>gizmoColliderAxisThickness</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::gizmoColliderAxisThickness</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0b72bf5e52755d20dcbd507b0b08edf" name="aa0b72bf5e52755d20dcbd507b0b08edf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0b72bf5e52755d20dcbd507b0b08edf">&#9670;&#160;</a></span>gizmoColliderPlaneSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::gizmoColliderPlaneSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8985ddfa8cf50b216991adb62b616206" name="a8985ddfa8cf50b216991adb62b616206"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8985ddfa8cf50b216991adb62b616206">&#9670;&#160;</a></span>gizmoColliderPlaneThickness</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::gizmoColliderPlaneThickness</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a87b9daf223e96881a0afc9ff92856a" name="a4a87b9daf223e96881a0afc9ff92856a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a87b9daf223e96881a0afc9ff92856a">&#9670;&#160;</a></span>gizmoTranslateAxesXY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgs_1_1Color.html">Color</a> gs::Settings::gizmoTranslateAxesXY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a06cad025dde21902a500bc3a8f649f85" name="a06cad025dde21902a500bc3a8f649f85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06cad025dde21902a500bc3a8f649f85">&#9670;&#160;</a></span>gizmoTranslateAxesXYSelected</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgs_1_1Color.html">Color</a> gs::Settings::gizmoTranslateAxesXYSelected</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adabaa85a06d6bcf30c89bfe172529c96" name="adabaa85a06d6bcf30c89bfe172529c96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adabaa85a06d6bcf30c89bfe172529c96">&#9670;&#160;</a></span>gizmoTranslateAxesYZ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgs_1_1Color.html">Color</a> gs::Settings::gizmoTranslateAxesYZ</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b5ac59e7f6e705b208bc2de6834a6a8" name="a1b5ac59e7f6e705b208bc2de6834a6a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b5ac59e7f6e705b208bc2de6834a6a8">&#9670;&#160;</a></span>gizmoTranslateAxesYZSelected</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgs_1_1Color.html">Color</a> gs::Settings::gizmoTranslateAxesYZSelected</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c7a138c7e20480a1ed619f0a8cbd8f6" name="a0c7a138c7e20480a1ed619f0a8cbd8f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c7a138c7e20480a1ed619f0a8cbd8f6">&#9670;&#160;</a></span>gizmoTranslateAxesZX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgs_1_1Color.html">Color</a> gs::Settings::gizmoTranslateAxesZX</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a636e687a2eca88d499e3e97ddce5ad81" name="a636e687a2eca88d499e3e97ddce5ad81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a636e687a2eca88d499e3e97ddce5ad81">&#9670;&#160;</a></span>gizmoTranslateAxesZXSelected</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgs_1_1Color.html">Color</a> gs::Settings::gizmoTranslateAxesZXSelected</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab9063077371e25f34d0a8afe9d0ae289" name="ab9063077371e25f34d0a8afe9d0ae289"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9063077371e25f34d0a8afe9d0ae289">&#9670;&#160;</a></span>gizmoTranslateAxisX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgs_1_1Color.html">Color</a> gs::Settings::gizmoTranslateAxisX</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a83a4411ecf809114375c7be27ceea8a5" name="a83a4411ecf809114375c7be27ceea8a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83a4411ecf809114375c7be27ceea8a5">&#9670;&#160;</a></span>gizmoTranslateAxisXSelected</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgs_1_1Color.html">Color</a> gs::Settings::gizmoTranslateAxisXSelected</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a4d0778618c2fd72c3998955298b114" name="a5a4d0778618c2fd72c3998955298b114"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a4d0778618c2fd72c3998955298b114">&#9670;&#160;</a></span>gizmoTranslateAxisY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgs_1_1Color.html">Color</a> gs::Settings::gizmoTranslateAxisY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9281906ba4a4a49bff21041f744ab828" name="a9281906ba4a4a49bff21041f744ab828"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9281906ba4a4a49bff21041f744ab828">&#9670;&#160;</a></span>gizmoTranslateAxisYSelected</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgs_1_1Color.html">Color</a> gs::Settings::gizmoTranslateAxisYSelected</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a078f227e14b7f1f1c7a3b2dddb401e42" name="a078f227e14b7f1f1c7a3b2dddb401e42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a078f227e14b7f1f1c7a3b2dddb401e42">&#9670;&#160;</a></span>gizmoTranslateAxisZ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgs_1_1Color.html">Color</a> gs::Settings::gizmoTranslateAxisZ</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a810732e0df02898df453d7d34cd5cc5a" name="a810732e0df02898df453d7d34cd5cc5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a810732e0df02898df453d7d34cd5cc5a">&#9670;&#160;</a></span>gizmoTranslateAxisZSelected</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgs_1_1Color.html">Color</a> gs::Settings::gizmoTranslateAxisZSelected</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae11eb631623265190a096d3ee0928e0" name="aae11eb631623265190a096d3ee0928e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae11eb631623265190a096d3ee0928e0">&#9670;&#160;</a></span>grid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgs_1_1scene_1_1Grid2D.html">scene::Grid2D</a> gs::Settings::grid</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a092e9a4eb87ca0f6c1a4c82dced57c2c" name="a092e9a4eb87ca0f6c1a4c82dced57c2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a092e9a4eb87ca0f6c1a4c82dced57c2c">&#9670;&#160;</a></span>height</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int gs::Settings::height</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad48d0f3bff0056f0e50af3e83298a4ae" name="ad48d0f3bff0056f0e50af3e83298a4ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad48d0f3bff0056f0e50af3e83298a4ae">&#9670;&#160;</a></span>iconPlayerBackwardFast</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view gs::Settings::iconPlayerBackwardFast</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae873be1c696c8819d5e455dbd19b182" name="aae873be1c696c8819d5e455dbd19b182"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae873be1c696c8819d5e455dbd19b182">&#9670;&#160;</a></span>iconPlayerBackwardStep</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view gs::Settings::iconPlayerBackwardStep</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf56cfb9a483d0ac5beb925d562e1bd9" name="adf56cfb9a483d0ac5beb925d562e1bd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf56cfb9a483d0ac5beb925d562e1bd9">&#9670;&#160;</a></span>iconPlayerForwardFast</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view gs::Settings::iconPlayerForwardFast</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c848288ec1a2df67ceaa297861b4b3f" name="a8c848288ec1a2df67ceaa297861b4b3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c848288ec1a2df67ceaa297861b4b3f">&#9670;&#160;</a></span>iconPlayerForwardStep</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view gs::Settings::iconPlayerForwardStep</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7d10475458ce16ce9c75aa7b5f2150fb" name="a7d10475458ce16ce9c75aa7b5f2150fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d10475458ce16ce9c75aa7b5f2150fb">&#9670;&#160;</a></span>iconPlayerPause</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view gs::Settings::iconPlayerPause</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40009bc8b0ef7139e336486b7e54d5a3" name="a40009bc8b0ef7139e336486b7e54d5a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40009bc8b0ef7139e336486b7e54d5a3">&#9670;&#160;</a></span>iconPlayerPlay</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view gs::Settings::iconPlayerPlay</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2714b1f56c157beafbc85b28d10c8dcd" name="a2714b1f56c157beafbc85b28d10c8dcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2714b1f56c157beafbc85b28d10c8dcd">&#9670;&#160;</a></span>iconSettings</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view gs::Settings::iconSettings</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa6d5dc3b4ff128d562db556870d56057" name="aa6d5dc3b4ff128d562db556870d56057"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6d5dc3b4ff128d562db556870d56057">&#9670;&#160;</a></span>idleRotationAnglePerFrame</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::idleRotationAnglePerFrame</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4edeb73b124e7f2e1416118c44b45221" name="a4edeb73b124e7f2e1416118c44b45221"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4edeb73b124e7f2e1416118c44b45221">&#9670;&#160;</a></span>idleRotationAnimationStartDelay</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacegs.html#a4c28c295b2749cdbca832eb5eb8803b7">Seconds</a> gs::Settings::idleRotationAnimationStartDelay</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80e4b308576df4c4d20a89e2a7ca0034" name="a80e4b308576df4c4d20a89e2a7ca0034"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80e4b308576df4c4d20a89e2a7ca0034">&#9670;&#160;</a></span>idleRotationDistanceMin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::idleRotationDistanceMin</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad939ec73681bd9f4fe6fdece6c13a9a3" name="ad939ec73681bd9f4fe6fdece6c13a9a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad939ec73681bd9f4fe6fdece6c13a9a3">&#9670;&#160;</a></span>idleRotationDistanceMod</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::idleRotationDistanceMod</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf4988f4d2ae4340e42783f7e0f153dd" name="adf4988f4d2ae4340e42783f7e0f153dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf4988f4d2ae4340e42783f7e0f153dd">&#9670;&#160;</a></span>idleRotationTransitionDuration</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacegs.html#a4c28c295b2749cdbca832eb5eb8803b7">Seconds</a> gs::Settings::idleRotationTransitionDuration</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af5e6575c67af6b1cadb94868f12d8a9c" name="af5e6575c67af6b1cadb94868f12d8a9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5e6575c67af6b1cadb94868f12d8a9c">&#9670;&#160;</a></span>kAnimationSpeedMax</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr float gs::Settings::kAnimationSpeedMax = 10.00f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a183b1c3bc516483d4304eb6b0bbd1dcd" name="a183b1c3bc516483d4304eb6b0bbd1dcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a183b1c3bc516483d4304eb6b0bbd1dcd">&#9670;&#160;</a></span>kAnimationSpeedMin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr float gs::Settings::kAnimationSpeedMin = 0.01f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e3a845ac05368eb5317ace9e3d56ac9" name="a3e3a845ac05368eb5317ace9e3d56ac9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e3a845ac05368eb5317ace9e3d56ac9">&#9670;&#160;</a></span>kCameraMoveSensitivityMax</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr float gs::Settings::kCameraMoveSensitivityMax = 1.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e91317370e2bfe6bc464448d3b85d81" name="a5e91317370e2bfe6bc464448d3b85d81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e91317370e2bfe6bc464448d3b85d81">&#9670;&#160;</a></span>kCameraMoveSensitivityMin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr float gs::Settings::kCameraMoveSensitivityMin = 0.02f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a230e2ef507df9d78e7cf51b18ec03174" name="a230e2ef507df9d78e7cf51b18ec03174"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a230e2ef507df9d78e7cf51b18ec03174">&#9670;&#160;</a></span>kCameraRotateSensitivityMax</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::kCameraRotateSensitivityMax</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac605dc4509588a6d3ad93e84d257731d" name="ac605dc4509588a6d3ad93e84d257731d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac605dc4509588a6d3ad93e84d257731d">&#9670;&#160;</a></span>kCameraRotateSensitivityMin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::kCameraRotateSensitivityMin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af431a4de6848ac1470cbbb515333c895" name="af431a4de6848ac1470cbbb515333c895"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af431a4de6848ac1470cbbb515333c895">&#9670;&#160;</a></span>lineThick</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::lineThick</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a642d23640ae940e5cfe099d54ea98f9e" name="a642d23640ae940e5cfe099d54ea98f9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a642d23640ae940e5cfe099d54ea98f9e">&#9670;&#160;</a></span>multiSampleAntiAliasing4X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool gs::Settings::multiSampleAntiAliasing4X</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4109f53af278f29e97c910719a177f14" name="a4109f53af278f29e97c910719a177f14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4109f53af278f29e97c910719a177f14">&#9670;&#160;</a></span>resetTimelineAfterDataChange</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool gs::Settings::resetTimelineAfterDataChange</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b640ed6bf2d4cc797c38dcab50104b0" name="a7b640ed6bf2d4cc797c38dcab50104b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b640ed6bf2d4cc797c38dcab50104b0">&#9670;&#160;</a></span>showCollisions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool gs::Settings::showCollisions</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00809a27cdc21036c95715577a0bfcc9" name="a00809a27cdc21036c95715577a0bfcc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00809a27cdc21036c95715577a0bfcc9">&#9670;&#160;</a></span>showConsole</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool gs::Settings::showConsole</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2332e172af18001da0e9f81478fb4efe" name="a2332e172af18001da0e9f81478fb4efe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2332e172af18001da0e9f81478fb4efe">&#9670;&#160;</a></span>showCursorRay</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool gs::Settings::showCursorRay</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7657039bbd7e15436e1e3e3730061673" name="a7657039bbd7e15436e1e3e3730061673"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7657039bbd7e15436e1e3e3730061673">&#9670;&#160;</a></span>title</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string gs::Settings::title</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a818e526a682cf50cd60866debe51dce6" name="a818e526a682cf50cd60866debe51dce6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a818e526a682cf50cd60866debe51dce6">&#9670;&#160;</a></span>uiButtonColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgs_1_1Color.html">Color</a> gs::Settings::uiButtonColor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aecd9f8d807c4ade22940f2dc3eef01e6" name="aecd9f8d807c4ade22940f2dc3eef01e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecd9f8d807c4ade22940f2dc3eef01e6">&#9670;&#160;</a></span>uiFontSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::uiFontSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f75ab725bc513291547dc93bc7256f7" name="a7f75ab725bc513291547dc93bc7256f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f75ab725bc513291547dc93bc7256f7">&#9670;&#160;</a></span>uiPlayerControlButtonWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::uiPlayerControlButtonWidth</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99e9335fd8c7bdd4f1ae22c88ee3718b" name="a99e9335fd8c7bdd4f1ae22c88ee3718b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99e9335fd8c7bdd4f1ae22c88ee3718b">&#9670;&#160;</a></span>uiPlayerControlTextWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::uiPlayerControlTextWidth</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3da8b8ae5d3c33c8c7dcce4b106f02c0" name="a3da8b8ae5d3c33c8c7dcce4b106f02c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3da8b8ae5d3c33c8c7dcce4b106f02c0">&#9670;&#160;</a></span>uiPlayerHeight</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::uiPlayerHeight</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2b7eb85d5fd0274932dba51a7f970b33" name="a2b7eb85d5fd0274932dba51a7f970b33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b7eb85d5fd0274932dba51a7f970b33">&#9670;&#160;</a></span>uiPlayerTimelineBackgroundColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgs_1_1Color.html">Color</a> gs::Settings::uiPlayerTimelineBackgroundColor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5724f45ed421afe67b2b82957085b1da" name="a5724f45ed421afe67b2b82957085b1da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5724f45ed421afe67b2b82957085b1da">&#9670;&#160;</a></span>uiPlayerTimelineFillColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgs_1_1Color.html">Color</a> gs::Settings::uiPlayerTimelineFillColor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa12f5406e84bbac76fc8fc41cb03f28e" name="aa12f5406e84bbac76fc8fc41cb03f28e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa12f5406e84bbac76fc8fc41cb03f28e">&#9670;&#160;</a></span>uiPlayerTimelineGrabberColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgs_1_1Color.html">Color</a> gs::Settings::uiPlayerTimelineGrabberColor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2066f119a16d50563f7a43eab0082e61" name="a2066f119a16d50563f7a43eab0082e61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2066f119a16d50563f7a43eab0082e61">&#9670;&#160;</a></span>uiPlayerTimelineGrabberColorActive</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgs_1_1Color.html">Color</a> gs::Settings::uiPlayerTimelineGrabberColorActive</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad87bcb3f97b5016e40b936258b403ea4" name="ad87bcb3f97b5016e40b936258b403ea4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad87bcb3f97b5016e40b936258b403ea4">&#9670;&#160;</a></span>uiPlayerTimelineGrabberSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::uiPlayerTimelineGrabberSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e5c699a3920f6fb7cf63388bff0b605" name="a3e5c699a3920f6fb7cf63388bff0b605"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e5c699a3920f6fb7cf63388bff0b605">&#9670;&#160;</a></span>uiPlayerTimelineHeight</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::uiPlayerTimelineHeight</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a26bc1b05a57933a5d9b7fed9f357674e" name="a26bc1b05a57933a5d9b7fed9f357674e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26bc1b05a57933a5d9b7fed9f357674e">&#9670;&#160;</a></span>uiPlayerTimelineRoundingSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float gs::Settings::uiPlayerTimelineRoundingSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7c8f48bad2aad105638117b10a6d53c" name="aa7c8f48bad2aad105638117b10a6d53c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7c8f48bad2aad105638117b10a6d53c">&#9670;&#160;</a></span>vSync</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool gs::Settings::vSync</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77e0150453a038e4b504edd47f126553" name="a77e0150453a038e4b504edd47f126553"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77e0150453a038e4b504edd47f126553">&#9670;&#160;</a></span>width</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int gs::Settings::width</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>/home/runner/work/geometry-sandbox/geometry-sandbox/src/core/<a class="el" href="settings_8h_source.html">settings.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

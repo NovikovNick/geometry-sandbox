@@ -1,0 +1,16 @@
+<map id="gs::ui::AnimationPlayer" name="gs::ui::AnimationPlayer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="146,332,319,357"/>
+<area shape="rect" id="Node000002" href="$structgs_1_1ui_1_1Element.html" title=" " alt="" coords="173,110,292,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="235,149,235,331,230,331,230,149"/>
+<area shape="rect" id="Node000003" href="$structgs_1_1ui_1_1Button.html" title=" " alt="" coords="271,215,379,240"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="254,144,316,213,312,216,250,147"/>
+<area shape="rect" id="Node000006" href="$structgs_1_1ui_1_1Slider.html" title=" " alt="" coords="65,215,168,240"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="210,147,132,216,128,212,207,143"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="309,252,244,334,240,330,305,249"/>
+<area shape="rect" id="Node000004" href="$structgs_1_1ui_1_1Button_1_1Props.html" title=" " alt="" coords="317,110,469,135"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="380,148,335,216,330,213,375,145"/>
+<area shape="rect" id="Node000005" href="$structgs_1_1Color.html" title=" " alt="" coords="5,5,84,31"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="98,31,305,91,358,107,357,112,304,96,97,36"/>
+<area shape="poly" id="edge8_Node000006_Node000005" title=" " alt="" coords="39,44,31,95,32,124,39,151,51,170,66,187,98,212,95,217,62,191,46,173,34,153,27,125,25,95,34,43"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="113,254,111,281,114,295,120,306,134,320,152,330,149,334,131,324,116,310,109,296,106,282,107,253"/>
+</map>

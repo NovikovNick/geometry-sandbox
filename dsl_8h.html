@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>geometry-sandbox: /home/runner/work/geometry-sandbox/geometry-sandbox/src/animation/dsl.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="theme-round.css" rel="stylesheet" type="text/css"/>
+<link href="theme-robot.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/NovikovNick/algorithm-visualizer" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">geometry-sandbox
+   </div>
+   <div id="projectbrief">Yet another geometry sandbox project</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ef3688935c4dc6a7f1d7ee8410fdb67e.html">animation</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">dsl.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>DSL for animation system with compile-time validation.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="float__span__adaptor_8h_source.html">animation/float_span_adaptor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="reflection_8h_source.html">animation/reflection.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="animation_2types_8h_source.html">animation/types.h</a>&quot;</code><br />
+<code>#include &lt;array&gt;</code><br />
+<code>#include &lt;ranges&gt;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for dsl.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="dsl_8h__incl.png" border="0" usemap="#a_2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2src_2animation_2dsl_8h" alt=""/></div>
+<map name="a_2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2src_2animation_2dsl_8h" id="a_2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2src_2animation_2dsl_8h">
+<area shape="rect" title="DSL for animation system with compile&#45;time validation." alt="" coords="573,5,785,60"/>
+<area shape="rect" href="float__span__adaptor_8h.html" title="adapters for scene types" alt="" coords="192,108,351,148"/>
+<area shape="poly" title=" " alt="" coords="574,61,365,108,364,103,573,56"/>
+<area shape="rect" href="reflection_8h.html" title="static introspection of animatable types" alt="" coords="1671,196,1837,221"/>
+<area shape="poly" title=" " alt="" coords="786,49,1671,191,1670,196,785,54"/>
+<area shape="rect" href="animation_2types_8h.html" title="Core data types and structures for the animation system." alt="" coords="772,115,912,141"/>
+<area shape="poly" title=" " alt="" coords="726,58,812,106,809,111,724,62"/>
+<area shape="rect" title=" " alt="" coords="514,269,581,295"/>
+<area shape="poly" title=" " alt="" coords="668,62,562,258,558,256,663,59"/>
+<area shape="rect" title=" " alt="" coords="5,269,129,295"/>
+<area shape="poly" title=" " alt="" coords="573,42,467,51,353,64,250,84,210,96,181,110,144,143,114,182,93,223,78,257,73,255,88,221,110,180,140,139,178,106,208,91,249,79,352,59,467,45,573,37"/>
+<area shape="rect" title=" " alt="" coords="1861,196,1917,221"/>
+<area shape="poly" title=" " alt="" coords="786,40,982,60,1245,92,1543,136,1696,163,1847,193,1846,199,1696,168,1542,141,1244,97,982,66,785,46"/>
+<area shape="rect" href="core_2types_8h.html" title=" " alt="" coords="256,269,359,295"/>
+<area shape="poly" title=" " alt="" coords="230,150,207,165,187,182,177,201,177,210,182,220,194,235,209,247,244,264,242,269,206,251,190,239,177,223,172,211,172,199,183,179,203,161,228,146"/>
+<area shape="rect" title=" " alt="" coords="706,269,775,295"/>
+<area shape="poly" title=" " alt="" coords="330,146,693,263,692,268,329,151"/>
+<area shape="rect" title=" " alt="" coords="191,196,245,221"/>
+<area shape="poly" title=" " alt="" coords="261,150,236,186,232,183,256,147"/>
+<area shape="rect" href="math_8h.html" title=" " alt="" coords="177,343,277,368"/>
+<area shape="poly" title=" " alt="" coords="296,297,252,336,249,332,293,293"/>
+<area shape="rect" title=" " alt="" coords="939,343,998,368"/>
+<area shape="poly" title=" " alt="" coords="359,290,372,292,689,328,926,348,925,353,689,333,371,297,359,295"/>
+<area shape="rect" title=" " alt="" coords="86,343,153,368"/>
+<area shape="poly" title=" " alt="" coords="278,297,164,340,162,335,276,292"/>
+<area shape="rect" title=" " alt="" coords="301,343,364,368"/>
+<area shape="poly" title=" " alt="" coords="314,294,327,329,322,331,309,296"/>
+<area shape="rect" title=" " alt="" coords="481,343,568,368"/>
+<area shape="poly" title=" " alt="" coords="343,292,477,336,476,341,341,297"/>
+<area shape="rect" title=" " alt="" coords="611,343,654,368"/>
+<area shape="poly" title=" " alt="" coords="359,292,599,344,597,349,358,297"/>
+<area shape="rect" title=" " alt="" coords="389,343,447,368"/>
+<area shape="poly" title=" " alt="" coords="327,292,390,333,387,337,324,297"/>
+<area shape="rect" title=" " alt="" coords="1283,343,1345,368"/>
+<area shape="poly" title=" " alt="" coords="359,290,372,292,564,309,826,326,1269,349,1269,354,825,331,563,314,371,297,359,296"/>
+<area shape="rect" title=" " alt="" coords="60,416,163,441"/>
+<area shape="poly" title=" " alt="" coords="210,370,143,411,141,406,207,366"/>
+<area shape="rect" title=" " alt="" coords="187,416,267,441"/>
+<area shape="poly" title=" " alt="" coords="230,368,230,402,225,402,225,368"/>
+<area shape="rect" title=" " alt="" coords="292,416,371,441"/>
+<area shape="poly" title=" " alt="" coords="246,366,304,406,301,410,243,370"/>
+<area shape="poly" title=" " alt="" coords="801,143,600,199,360,268,358,263,599,193,799,138"/>
+<area shape="poly" title=" " alt="" coords="913,132,1050,146,1215,172,1294,190,1364,212,1420,237,1442,252,1458,268,1464,282,1460,295,1448,306,1429,315,1374,330,1303,341,1143,353,1012,356,1012,351,1143,347,1302,335,1373,325,1427,310,1445,301,1455,292,1458,282,1453,271,1438,256,1418,242,1362,216,1293,195,1214,177,1050,151,912,137"/>
+<area shape="poly" title=" " alt="" coords="772,136,658,144,524,157,397,175,346,186,308,198,256,228,209,265,169,302,140,334,136,330,165,298,205,261,253,223,306,194,345,181,396,170,523,151,658,138,772,130"/>
+<area shape="poly" title=" " alt="" coords="772,142,706,162,674,178,645,198,626,221,618,244,611,268,595,296,554,336,550,332,591,293,606,266,613,242,622,218,642,194,671,173,704,157,771,137"/>
+<area shape="poly" title=" " alt="" coords="836,143,807,180,766,223,747,238,730,247,714,256,696,271,669,302,648,332,644,329,665,299,692,267,711,252,728,243,744,234,763,219,803,177,832,139"/>
+<area shape="poly" title=" " alt="" coords="912,132,1153,155,1275,173,1363,193,1432,218,1457,236,1480,268,1486,287,1481,303,1469,316,1451,327,1406,342,1360,352,1359,346,1405,337,1449,322,1466,312,1477,300,1480,287,1476,271,1454,240,1429,223,1361,199,1274,178,1152,161,912,137"/>
+<area shape="poly" title=" " alt="" coords="843,142,833,179,812,223,793,245,772,263,768,259,789,241,808,220,828,177,837,140"/>
+<area shape="poly" title=" " alt="" coords="772,137,545,159,404,176,264,199,259,200,258,194,263,193,404,171,544,153,771,132"/>
+<area shape="poly" title=" " alt="" coords="912,131,1230,155,1658,193,1657,199,1230,161,912,137"/>
+<area shape="rect" title=" " alt="" coords="1570,196,1647,221"/>
+<area shape="poly" title=" " alt="" coords="912,131,1193,153,1371,170,1552,193,1557,194,1556,199,1551,199,1371,176,1192,158,912,136"/>
+<area shape="rect" href="slot__map_8h.html" title=" " alt="" coords="942,196,1097,221"/>
+<area shape="poly" title=" " alt="" coords="869,138,982,188,980,193,867,143"/>
+<area shape="rect" title=" " alt="" coords="799,269,885,295"/>
+<area shape="poly" title=" " alt="" coords="850,140,861,176,864,199,863,222,854,257,849,256,858,221,859,199,856,178,845,142"/>
+<area shape="rect" title=" " alt="" coords="1352,269,1444,295"/>
+<area shape="poly" title=" " alt="" coords="890,138,1109,193,1348,263,1347,268,1108,199,889,143"/>
+<area shape="rect" href="ecs_8h.html" title=" " alt="" coords="319,196,407,221"/>
+<area shape="poly" title=" " alt="" coords="773,143,422,201,421,195,772,138"/>
+<area shape="poly" title=" " alt="" coords="912,126,1077,128,1307,137,1574,158,1712,173,1848,194,1847,199,1711,179,1573,163,1307,143,1077,134,912,132"/>
+<area shape="rect" title=" " alt="" coords="656,196,753,221"/>
+<area shape="poly" title=" " alt="" coords="823,143,738,191,735,187,820,139"/>
+<area shape="poly" title=" " alt="" coords="1097,216,1208,235,1257,250,1289,267,1300,281,1308,297,1315,328,1310,329,1303,298,1296,284,1286,271,1255,255,1207,240,1096,221"/>
+<area shape="poly" title=" " alt="" coords="975,224,790,271,788,266,974,219"/>
+<area shape="poly" title=" " alt="" coords="992,224,884,267,882,262,990,219"/>
+<area shape="rect" title=" " alt="" coords="909,269,975,295"/>
+<area shape="poly" title=" " alt="" coords="1009,223,967,262,963,258,1005,219"/>
+<area shape="rect" title=" " alt="" coords="1000,269,1063,295"/>
+<area shape="poly" title=" " alt="" coords="1024,221,1030,255,1024,256,1019,222"/>
+<area shape="rect" title=" " alt="" coords="1087,269,1165,295"/>
+<area shape="poly" title=" " alt="" coords="1038,219,1099,259,1096,264,1035,224"/>
+<area shape="poly" title=" " alt="" coords="944,224,595,276,594,271,943,219"/>
+<area shape="rect" title=" " alt="" coords="1189,269,1276,295"/>
+<area shape="poly" title=" " alt="" coords="1054,219,1186,262,1184,267,1053,224"/>
+<area shape="poly" title=" " alt="" coords="1081,219,1339,267,1338,272,1080,224"/>
+<area shape="poly" title=" " alt="" coords="356,223,327,260,323,257,352,220"/>
+<area shape="poly" title=" " alt="" coords="320,224,280,242,261,255,246,271,233,299,229,329,224,328,228,298,241,268,258,251,277,237,318,219"/>
+<area shape="rect" title=" " alt="" coords="383,269,490,295"/>
+<area shape="poly" title=" " alt="" coords="377,220,417,258,413,262,374,224"/>
+<area shape="poly" title=" " alt="" coords="320,223,129,269,127,264,318,218"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="dsl_8h__dep__incl.png" border="0" usemap="#a_2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2src_2animation_2dsl_8hdep" alt=""/></div>
+<map name="a_2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2src_2animation_2dsl_8hdep" id="a_2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2src_2animation_2dsl_8hdep">
+<area shape="rect" title="DSL for animation system with compile&#45;time validation." alt="" coords="172,5,384,60"/>
+<area shape="rect" href="animation_2manager_8h.html" title="Core animation manager &#45; builds assets, spawns instances, and drives playback." alt="" coords="172,211,384,265"/>
+<area shape="poly" title=" " alt="" coords="252,73,235,109,230,135,235,162,246,187,259,209,255,212,241,189,230,163,225,135,230,107,247,70"/>
+<area shape="rect" href="sampler_8h.html" title="Samples animation keyframe data and produces interpolated channel values." alt="" coords="244,108,456,163"/>
+<area shape="poly" title=" " alt="" coords="307,70,333,106,329,109,303,73"/>
+<area shape="rect" href="player__manager_8h.html" title="Manages animation playback for gs::ui::AnimationPlayer." alt="" coords="5,313,241,368"/>
+<area shape="poly" title=" " alt="" coords="228,275,165,315,162,311,225,271"/>
+<area shape="rect" href="configuration_8h.html" title="define all settings and setup dependency injection context" alt="" coords="172,416,384,471"/>
+<area shape="poly" title=" " alt="" coords="281,279,281,415,275,415,275,279"/>
+<area shape="rect" href="animation_2service_8h.html" title="Provides factory methods for creating common animation." alt="" coords="315,313,527,368"/>
+<area shape="poly" title=" " alt="" coords="328,271,385,311,382,315,325,275"/>
+<area shape="poly" title=" " alt="" coords="177,373,239,414,236,418,174,378"/>
+<area shape="poly" title=" " alt="" coords="374,378,317,418,314,414,371,374"/>
+<area shape="poly" title=" " alt="" coords="325,175,299,212,295,209,321,172"/>
+</map>
+</div>
+</div>
+<p><a href="dsl_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1animation_1_1Key.html">gs::animation::Key</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1animation_1_1Keyframe.html">gs::animation::Keyframe</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1animation_1_1PropertyValue.html">gs::animation::PropertyValue&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1animation_1_1KeyframeCollection.html">gs::animation::KeyframeCollection</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1animation_1_1SubProperty.html">gs::animation::SubProperty&lt; Parent, Property &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgs_1_1animation_1_1PropertyPath.html">gs::animation::PropertyPath&lt; Parent, Property &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacegs" id="r_namespacegs"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs.html">gs</a></td></tr>
+<tr class="memdesc:namespacegs"><td class="mdescLeft">&#160;</td><td class="mdescRight">geometry sandbox <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacegs_1_1animation" id="r_namespacegs_1_1animation"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation.html">gs::animation</a></td></tr>
+<tr class="memdesc:namespacegs_1_1animation"><td class="mdescLeft">&#160;</td><td class="mdescRight">animation system <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacegs_1_1animation_1_1dsl" id="r_namespacegs_1_1animation_1_1dsl"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl.html">gs::animation::dsl</a></td></tr>
+<tr class="memdesc:namespacegs_1_1animation_1_1dsl"><td class="mdescLeft">&#160;</td><td class="mdescRight">animation system's domain-specific language <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacegs_1_1animation_1_1dsl_1_1detail" id="r_namespacegs_1_1animation_1_1dsl_1_1detail"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1detail.html">gs::animation::dsl::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacegs_1_1animation_1_1dsl_1_1accessor" id="r_namespacegs_1_1animation_1_1dsl_1_1accessor"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1accessor.html">gs::animation::dsl::accessor</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacegs_1_1animation_1_1dsl_1_1vec3" id="r_namespacegs_1_1animation_1_1dsl_1_1vec3"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1vec3.html">gs::animation::dsl::vec3</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacegs_1_1animation_1_1dsl_1_1color" id="r_namespacegs_1_1animation_1_1dsl_1_1color"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1color.html">gs::animation::dsl::color</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacegs_1_1animation_1_1dsl_1_1point" id="r_namespacegs_1_1animation_1_1dsl_1_1point"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1point.html">gs::animation::dsl::point</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacegs_1_1animation_1_1dsl_1_1plane" id="r_namespacegs_1_1animation_1_1dsl_1_1plane"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1plane.html">gs::animation::dsl::plane</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacegs_1_1animation_1_1dsl_1_1layout" id="r_namespacegs_1_1animation_1_1dsl_1_1layout"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1layout.html">gs::animation::dsl::layout</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacegs_1_1animation_1_1dsl_1_1btn" id="r_namespacegs_1_1animation_1_1dsl_1_1btn"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1btn.html">gs::animation::dsl::btn</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacegs_1_1animation_1_1dsl_1_1camera" id="r_namespacegs_1_1animation_1_1dsl_1_1camera"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1camera.html">gs::animation::dsl::camera</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a724b8b6ea067c2ccfcf2f28b656c33b8" id="r_a724b8b6ea067c2ccfcf2f28b656c33b8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a724b8b6ea067c2ccfcf2f28b656c33b8"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation.html#a724b8b6ea067c2ccfcf2f28b656c33b8">gs::animation::Interpolator</a> = std::function&lt; T(const T &amp;, const T &amp;, float)&gt;</td></tr>
+<tr class="separator:a724b8b6ea067c2ccfcf2f28b656c33b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:adb75cfda1ab71670d68005173221f6f6" id="r_adb75cfda1ab71670d68005173221f6f6"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
+<tr class="memitem:adb75cfda1ab71670d68005173221f6f6"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1detail.html#adb75cfda1ab71670d68005173221f6f6">gs::animation::dsl::detail::propertyPath</a> (auto id)</td></tr>
+<tr class="separator:adb75cfda1ab71670d68005173221f6f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72ff7c6893309df48d17ee2d910cafe0" id="r_a72ff7c6893309df48d17ee2d910cafe0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl.html#a72ff7c6893309df48d17ee2d910cafe0">gs::animation::dsl::operator+=</a> (<a class="el" href="structgs_1_1animation_1_1KeyframeCollection.html">KeyframeCollection</a> &amp;keyframeCollection, <a class="el" href="structgs_1_1animation_1_1Keyframe.html">Keyframe</a> &amp;&amp;<a class="el" href="namespacegs_1_1animation_1_1dsl.html#aee33532faa3837eac74fa2e4e845500b">keyframe</a>)</td></tr>
+<tr class="separator:a72ff7c6893309df48d17ee2d910cafe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d30a3384fee43e1fd27997562b7470a" id="r_a1d30a3384fee43e1fd27997562b7470a"><td class="memTemplParams" colspan="2">template&lt;typename Parent , typename Prop , typename SubProp &gt; </td></tr>
+<tr class="memitem:a1d30a3384fee43e1fd27997562b7470a"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="structgs_1_1animation_1_1PropertyPath.html">PropertyPath</a>&lt; Prop, SubProp &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl.html#a1d30a3384fee43e1fd27997562b7470a">gs::animation::dsl::operator/</a> (const <a class="el" href="structgs_1_1animation_1_1PropertyPath.html">PropertyPath</a>&lt; Parent, Prop &gt; &amp;path, <a class="el" href="structgs_1_1animation_1_1SubProperty.html">SubProperty</a>&lt; Prop, SubProp &gt; next)</td></tr>
+<tr class="separator:a1d30a3384fee43e1fd27997562b7470a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac2ade877ca002efbd889b9da792d458" id="r_aac2ade877ca002efbd889b9da792d458"><td class="memTemplParams" colspan="2">template&lt;typename Parent , typename Prop &gt; </td></tr>
+<tr class="memitem:aac2ade877ca002efbd889b9da792d458"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structgs_1_1animation_1_1Key.html">Key</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl.html#aac2ade877ca002efbd889b9da792d458">gs::animation::dsl::operator&lt;&lt;</a> (const <a class="el" href="structgs_1_1animation_1_1PropertyPath.html">PropertyPath</a>&lt; Parent, Prop &gt; &amp;path, const <a class="el" href="structgs_1_1animation_1_1PropertyValue.html">PropertyValue</a>&lt; Prop &gt; &amp;val)</td></tr>
+<tr class="separator:aac2ade877ca002efbd889b9da792d458"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e123fcdf07a5a90ba7424a9643d178c" id="r_a2e123fcdf07a5a90ba7424a9643d178c"><td class="memTemplParams" colspan="2">template&lt;typename Parent , typename Prop &gt; </td></tr>
+<tr class="memitem:a2e123fcdf07a5a90ba7424a9643d178c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structgs_1_1animation_1_1Key.html">Key</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl.html#a2e123fcdf07a5a90ba7424a9643d178c">gs::animation::dsl::operator&lt;&lt;</a> (const <a class="el" href="structgs_1_1animation_1_1PropertyPath.html">PropertyPath</a>&lt; Parent, Prop &gt; &amp;path, const Prop &amp;val)</td></tr>
+<tr class="separator:a2e123fcdf07a5a90ba7424a9643d178c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2ac5e9f03963b1784c923a1f7b56ae3" id="r_aa2ac5e9f03963b1784c923a1f7b56ae3"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="structgs_1_1animation_1_1Keyframe.html">Keyframe</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl.html#aa2ac5e9f03963b1784c923a1f7b56ae3">gs::animation::dsl::operator|</a> (<a class="el" href="structgs_1_1animation_1_1Keyframe.html">Keyframe</a> &amp;&amp;<a class="el" href="namespacegs_1_1animation_1_1dsl.html#aee33532faa3837eac74fa2e4e845500b">keyframe</a>, <a class="el" href="structgs_1_1animation_1_1Key.html">Key</a> &amp;&amp;<a class="el" href="namespacegs_1_1animation_1_1dsl.html#a18c8de6f050ffc6226d0ae2c89eef152">key</a>)</td></tr>
+<tr class="separator:aa2ac5e9f03963b1784c923a1f7b56ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18c8de6f050ffc6226d0ae2c89eef152" id="r_a18c8de6f050ffc6226d0ae2c89eef152"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a18c8de6f050ffc6226d0ae2c89eef152"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="structgs_1_1animation_1_1PropertyValue.html">PropertyValue</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl.html#a18c8de6f050ffc6226d0ae2c89eef152">gs::animation::dsl::key</a> (const T &amp;val, float(*easing)(float)=nullptr)</td></tr>
+<tr class="separator:a18c8de6f050ffc6226d0ae2c89eef152"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2260a4db8423a0f4f1011d72be96578" id="r_ab2260a4db8423a0f4f1011d72be96578"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ab2260a4db8423a0f4f1011d72be96578"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structgs_1_1animation_1_1PropertyValue.html">PropertyValue</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl.html#ab2260a4db8423a0f4f1011d72be96578">gs::animation::dsl::key</a> (const T &amp;val, <a class="el" href="namespacegs_1_1animation.html#a724b8b6ea067c2ccfcf2f28b656c33b8">Interpolator</a>&lt; T &gt; interpolator)</td></tr>
+<tr class="separator:ab2260a4db8423a0f4f1011d72be96578"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee33532faa3837eac74fa2e4e845500b" id="r_aee33532faa3837eac74fa2e4e845500b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgs_1_1animation_1_1Keyframe.html">Keyframe</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl.html#aee33532faa3837eac74fa2e4e845500b">gs::animation::dsl::keyframe</a> (const <a class="el" href="namespacegs.html#a1b8ca9b0b30ccfd0f669274d09ea899d">Milliseconds</a> &amp;ms)</td></tr>
+<tr class="separator:aee33532faa3837eac74fa2e4e845500b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab55e76a5e154a1b1a16934c3b1d62a7d" id="r_ab55e76a5e154a1b1a16934c3b1d62a7d"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1accessor.html#ab55e76a5e154a1b1a16934c3b1d62a7d">gs::animation::dsl::accessor::point</a> (auto id)</td></tr>
+<tr class="separator:ab55e76a5e154a1b1a16934c3b1d62a7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2d005cece7b6d0c00d325e7bd7a99f2" id="r_ac2d005cece7b6d0c00d325e7bd7a99f2"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1accessor.html#ac2d005cece7b6d0c00d325e7bd7a99f2">gs::animation::dsl::accessor::plane</a> (auto id)</td></tr>
+<tr class="separator:ac2d005cece7b6d0c00d325e7bd7a99f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c33d078bdb9eb97e32e13404079aba9" id="r_a5c33d078bdb9eb97e32e13404079aba9"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1accessor.html#a5c33d078bdb9eb97e32e13404079aba9">gs::animation::dsl::accessor::ui</a> ()</td></tr>
+<tr class="separator:a5c33d078bdb9eb97e32e13404079aba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32e2b2ad6bc27c94d24b45ceea032999" id="r_a32e2b2ad6bc27c94d24b45ceea032999"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1accessor.html#a32e2b2ad6bc27c94d24b45ceea032999">gs::animation::dsl::accessor::button</a> (auto id)</td></tr>
+<tr class="separator:a32e2b2ad6bc27c94d24b45ceea032999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a3dc05cf3e8b0028c93e7772c673c30" id="r_a1a3dc05cf3e8b0028c93e7772c673c30"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1accessor.html#a1a3dc05cf3e8b0028c93e7772c673c30">gs::animation::dsl::accessor::camera</a> (auto id)</td></tr>
+<tr class="separator:a1a3dc05cf3e8b0028c93e7772c673c30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a1bdaacf4b4c3b689c7b8d5947c9ef061" id="r_a1bdaacf4b4c3b689c7b8d5947c9ef061"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1vec3.html#a1bdaacf4b4c3b689c7b8d5947c9ef061">gs::animation::dsl::vec3::x</a> = <a class="el" href="structgs_1_1animation_1_1SubProperty.html">SubProperty</a>&lt;<a class="el" href="namespacegs.html#aff26127e720eeae5a29c485c3eed6d34">Vec3</a>, float&gt;(&quot;x&quot;)</td></tr>
+<tr class="separator:a1bdaacf4b4c3b689c7b8d5947c9ef061"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c911caf5a1d227a8dd38d10fbc0a7b7" id="r_a6c911caf5a1d227a8dd38d10fbc0a7b7"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1vec3.html#a6c911caf5a1d227a8dd38d10fbc0a7b7">gs::animation::dsl::vec3::y</a> = <a class="el" href="structgs_1_1animation_1_1SubProperty.html">SubProperty</a>&lt;<a class="el" href="namespacegs.html#aff26127e720eeae5a29c485c3eed6d34">Vec3</a>, float&gt;(&quot;y&quot;)</td></tr>
+<tr class="separator:a6c911caf5a1d227a8dd38d10fbc0a7b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52e216a46db6930e58c75c93e510afea" id="r_a52e216a46db6930e58c75c93e510afea"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1vec3.html#a52e216a46db6930e58c75c93e510afea">gs::animation::dsl::vec3::z</a> = <a class="el" href="structgs_1_1animation_1_1SubProperty.html">SubProperty</a>&lt;<a class="el" href="namespacegs.html#aff26127e720eeae5a29c485c3eed6d34">Vec3</a>, float&gt;(&quot;z&quot;)</td></tr>
+<tr class="separator:a52e216a46db6930e58c75c93e510afea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7fa0b4c37515829c51b3b5b1bf5857a" id="r_ae7fa0b4c37515829c51b3b5b1bf5857a"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1color.html#ae7fa0b4c37515829c51b3b5b1bf5857a">gs::animation::dsl::color::r</a> = <a class="el" href="structgs_1_1animation_1_1SubProperty.html">SubProperty</a>{&amp;Color::r, &quot;r&quot;}</td></tr>
+<tr class="separator:ae7fa0b4c37515829c51b3b5b1bf5857a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0106b821ce62a62a0576f46f5410327" id="r_ac0106b821ce62a62a0576f46f5410327"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1color.html#ac0106b821ce62a62a0576f46f5410327">gs::animation::dsl::color::g</a> = <a class="el" href="structgs_1_1animation_1_1SubProperty.html">SubProperty</a>{&amp;Color::g, &quot;g&quot;}</td></tr>
+<tr class="separator:ac0106b821ce62a62a0576f46f5410327"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8842992d68bb32ee5b9928ab6ecc134" id="r_ac8842992d68bb32ee5b9928ab6ecc134"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1color.html#ac8842992d68bb32ee5b9928ab6ecc134">gs::animation::dsl::color::b</a> = <a class="el" href="structgs_1_1animation_1_1SubProperty.html">SubProperty</a>{&amp;Color::b, &quot;b&quot;}</td></tr>
+<tr class="separator:ac8842992d68bb32ee5b9928ab6ecc134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a685a8fb09f7d4aae946fdaa185b6992d" id="r_a685a8fb09f7d4aae946fdaa185b6992d"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1color.html#a685a8fb09f7d4aae946fdaa185b6992d">gs::animation::dsl::color::a</a> = <a class="el" href="structgs_1_1animation_1_1SubProperty.html">SubProperty</a>{&amp;Color::a, &quot;a&quot;}</td></tr>
+<tr class="separator:a685a8fb09f7d4aae946fdaa185b6992d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae97be89afb3b5702129180bab6335c05" id="r_ae97be89afb3b5702129180bab6335c05"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1point.html#ae97be89afb3b5702129180bab6335c05">gs::animation::dsl::point::position</a> = <a class="el" href="structgs_1_1animation_1_1SubProperty.html">SubProperty</a>{&amp;scene::Point::position, &quot;position&quot;}</td></tr>
+<tr class="separator:ae97be89afb3b5702129180bab6335c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeee9d6169002c520973510f1012d6faf" id="r_aeee9d6169002c520973510f1012d6faf"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1point.html#aeee9d6169002c520973510f1012d6faf">gs::animation::dsl::point::color</a> = <a class="el" href="structgs_1_1animation_1_1SubProperty.html">SubProperty</a>{&amp;scene::Point::color, &quot;color&quot;}</td></tr>
+<tr class="separator:aeee9d6169002c520973510f1012d6faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d656812f0b848e8fd1d0fe575ec77e2" id="r_a7d656812f0b848e8fd1d0fe575ec77e2"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1point.html#a7d656812f0b848e8fd1d0fe575ec77e2">gs::animation::dsl::point::radius</a> = <a class="el" href="structgs_1_1animation_1_1SubProperty.html">SubProperty</a>{&amp;scene::Point::radius, &quot;radius&quot;}</td></tr>
+<tr class="separator:a7d656812f0b848e8fd1d0fe575ec77e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfdc570c37e7d2f663f0d2a27dc1cfe9" id="r_adfdc570c37e7d2f663f0d2a27dc1cfe9"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1plane.html#adfdc570c37e7d2f663f0d2a27dc1cfe9">gs::animation::dsl::plane::color</a> = <a class="el" href="structgs_1_1animation_1_1SubProperty.html">SubProperty</a>{&amp;scene::Plane::color, &quot;color&quot;}</td></tr>
+<tr class="separator:adfdc570c37e7d2f663f0d2a27dc1cfe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdc252bdd8b8270d68374dec1f33b114" id="r_abdc252bdd8b8270d68374dec1f33b114"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1plane.html#abdc252bdd8b8270d68374dec1f33b114">gs::animation::dsl::plane::normal</a> = <a class="el" href="structgs_1_1animation_1_1SubProperty.html">SubProperty</a>{&amp;scene::Plane::normal, &quot;normal&quot;}</td></tr>
+<tr class="separator:abdc252bdd8b8270d68374dec1f33b114"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcada5ce53321c2bd17f787342f63afe" id="r_afcada5ce53321c2bd17f787342f63afe"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1layout.html#afcada5ce53321c2bd17f787342f63afe">gs::animation::dsl::layout::opacity</a> = <a class="el" href="structgs_1_1animation_1_1SubProperty.html">SubProperty</a>{&amp;ui::Layout::opacity, &quot;opacity&quot;}</td></tr>
+<tr class="separator:afcada5ce53321c2bd17f787342f63afe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a700145d0ad7b524518fbf2aa9df51a0e" id="r_a700145d0ad7b524518fbf2aa9df51a0e"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1btn.html#a700145d0ad7b524518fbf2aa9df51a0e">gs::animation::dsl::btn::color</a> = <a class="el" href="structgs_1_1animation_1_1SubProperty.html">SubProperty</a>{&amp;ui::Button::Props::color, &quot;color&quot;}</td></tr>
+<tr class="separator:a700145d0ad7b524518fbf2aa9df51a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6421e7efafb6acaea5873c313fee3914" id="r_a6421e7efafb6acaea5873c313fee3914"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1camera.html#a6421e7efafb6acaea5873c313fee3914">gs::animation::dsl::camera::position</a> = <a class="el" href="structgs_1_1animation_1_1SubProperty.html">SubProperty</a>{&amp;Camera::position, &quot;position&quot;}</td></tr>
+<tr class="separator:a6421e7efafb6acaea5873c313fee3914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68471f5ba9ed57a86aeadb9bf50c5638" id="r_a68471f5ba9ed57a86aeadb9bf50c5638"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation_1_1dsl_1_1camera.html#a68471f5ba9ed57a86aeadb9bf50c5638">gs::animation::dsl::camera::target</a> = <a class="el" href="structgs_1_1animation_1_1SubProperty.html">SubProperty</a>{&amp;Camera::target, &quot;target&quot;}</td></tr>
+<tr class="separator:a68471f5ba9ed57a86aeadb9bf50c5638"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>DSL for animation system with compile-time validation. </p>
+<p>The animation DSL is validated <b>at compile time</b> — syntax errors, invalid property paths, and type mismatches</p>
+<dl class="section author"><dt>Author</dt><dd>MetalHeart </dd></dl>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

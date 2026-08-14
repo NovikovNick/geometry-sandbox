@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>geometry-sandbox: /home/runner/work/geometry-sandbox/geometry-sandbox/src/animation/types.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="theme-round.css" rel="stylesheet" type="text/css"/>
+<link href="theme-robot.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/NovikovNick/algorithm-visualizer" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">geometry-sandbox
+   </div>
+   <div id="projectbrief">Yet another geometry sandbox project</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ef3688935c4dc6a7f1d7ee8410fdb67e.html">animation</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">types.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="animation_2types_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef GEOMETRY_SANDBOX_ANIMATION_TYPES_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define GEOMETRY_SANDBOX_ANIMATION_TYPES_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;easing.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="reflection_8h.html">animation/reflection.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="slot__map_8h.html">common/slot_map.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="ecs_8h.html">core/ecs.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="core_2types_8h.html">core/types.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;bitset&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;set&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;span&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;type_traits&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacegs_1_1animation.html">gs::animation</a></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Target.html">   36</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1animation_1_1Target.html">Target</a></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>{</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Target.html#ad8e7234cb58bf87f01af807462c4a285">   38</a></span>    std::uint32_t <a class="code hl_variable" href="structgs_1_1animation_1_1Target.html#ad8e7234cb58bf87f01af807462c4a285">entityId</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Target.html#a0a7bf161d56c447cca51fa032cfaf2c8">   39</a></span>    std::uint32_t <a class="code hl_variable" href="structgs_1_1animation_1_1Target.html#a0a7bf161d56c447cca51fa032cfaf2c8">propertyId</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Target.html#a8559655f762d6acc6cb020cf1e034993">   41</a></span>    <span class="keyword">auto</span> <a class="code hl_function" href="structgs_1_1animation_1_1Target.html#a8559655f762d6acc6cb020cf1e034993">operator&lt;=&gt;</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structgs_1_1animation_1_1Target.html">Target</a>&amp;) <span class="keyword">const</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
+</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="namespacegs_1_1animation.html#a46ee9881331d6cff4a055305f5e0e4da">   56</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacegs_1_1animation.html#a46ee9881331d6cff4a055305f5e0e4da">SampleInterpolator</a> = std::function&lt;void(<span class="keyword">const</span> std::span&lt;float&gt;, <span class="keyword">const</span> std::span&lt;float&gt;, std::span&lt;float&gt;, <span class="keywordtype">float</span>)&gt;;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="};">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Asset.html">   64</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1animation_1_1Asset.html">Asset</a></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>{</div>
+<div class="foldopen" id="foldopen00066" data-start="{" data-end="};">
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Asset_1_1KeyframeTime.html">   66</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1animation_1_1Asset_1_1KeyframeTime.html">KeyframeTime</a></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Asset_1_1KeyframeTime.html#a5967beb15bf5853890327f24314d7be9">   68</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structgs_1_1animation_1_1Asset_1_1KeyframeTime.html#a5967beb15bf5853890327f24314d7be9">index</a>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Asset_1_1KeyframeTime.html#ac0a0e1a94ae219787d52ae1a58f8d8ec">   69</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="structgs_1_1animation_1_1Asset_1_1KeyframeTime.html#ac0a0e1a94ae219787d52ae1a58f8d8ec">time</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    };</div>
+</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="};">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Asset_1_1Channel.html">   72</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1animation_1_1Asset_1_1Channel.html">Channel</a></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Asset_1_1Channel.html#ad46b9c973bb4266d902623fce93cf3b7">   74</a></span>        <a class="code hl_typedef" href="structgs_1_1reflection_1_1Property.html#a585b863466b83576bcf430966ce02553">reflection::Property::Id</a> <a class="code hl_variable" href="structgs_1_1animation_1_1Asset_1_1Channel.html#ad46b9c973bb4266d902623fce93cf3b7">propertyId</a>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Asset_1_1Channel.html#a68eda24963973de333351ac714c13102">   75</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structgs_1_1animation_1_1Asset_1_1Channel.html#a68eda24963973de333351ac714c13102">keyBeginIndex</a>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Asset_1_1Channel.html#a0b2a9ecb803b76d4c741eb8324a6382d">   76</a></span>        std::size_t <a class="code hl_variable" href="structgs_1_1animation_1_1Asset_1_1Channel.html#a0b2a9ecb803b76d4c741eb8324a6382d">keyCount</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Asset_1_1Channel.html#a08986e4320bb3dac6a761d1524b8a22a">   78</a></span>        std::span&lt;const KeyframeTime&gt; <a class="code hl_function" href="structgs_1_1animation_1_1Asset_1_1Channel.html#a08986e4320bb3dac6a761d1524b8a22a">keyframeTimes</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structgs_1_1animation_1_1Asset_1_1KeyframeTime.html">KeyframeTime</a>* times)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> {times + <a class="code hl_variable" href="structgs_1_1animation_1_1Asset_1_1Channel.html#a68eda24963973de333351ac714c13102">keyBeginIndex</a>, <a class="code hl_variable" href="structgs_1_1animation_1_1Asset_1_1Channel.html#a0b2a9ecb803b76d4c741eb8324a6382d">keyCount</a>}; }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    };</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="};">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Asset_1_1Key.html">   81</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1animation_1_1Asset_1_1Key.html">Key</a></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Asset_1_1Key.html#ad9f80afe3b4f6f07de49f70cc1e3267d">   83</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structgs_1_1animation_1_1Asset_1_1Key.html#ad9f80afe3b4f6f07de49f70cc1e3267d">interpolationIndex</a>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Asset_1_1Key.html#a74b51fcf200a2b33a2995f23b51aede8">   84</a></span>        <a class="code hl_typedef" href="structgs_1_1reflection_1_1Property.html#a585b863466b83576bcf430966ce02553">reflection::Property::Id</a> <a class="code hl_variable" href="structgs_1_1animation_1_1Asset_1_1Key.html#a74b51fcf200a2b33a2995f23b51aede8">propertyId</a>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Asset_1_1Key.html#acf8a61c129f185a5e726427a2df11970">   85</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="structgs_1_1animation_1_1Asset_1_1Key.html#acf8a61c129f185a5e726427a2df11970">value</a>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    };</div>
+</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="foldopen" id="foldopen00088" data-start="{" data-end="};">
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Asset_1_1Interpolation.html">   88</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1animation_1_1Asset_1_1Interpolation.html">Interpolation</a></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Asset_1_1Interpolation.html#ac3d58cd051bd0e54887a2d6fd2f53914">   90</a></span>        float (*<a class="code hl_variable" href="structgs_1_1animation_1_1Asset_1_1Interpolation.html#ac3d58cd051bd0e54887a2d6fd2f53914">easing</a>)(float);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Asset_1_1Interpolation.html#add28f4a236ec1bf451dcf3ff77863efb">   91</a></span>        <a class="code hl_typedef" href="namespacegs_1_1animation.html#a46ee9881331d6cff4a055305f5e0e4da">SampleInterpolator</a> <a class="code hl_variable" href="structgs_1_1animation_1_1Asset_1_1Interpolation.html#add28f4a236ec1bf451dcf3ff77863efb">interpolator</a>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    };</div>
+</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Asset.html#a76781ad87f5f165325b1d3961bdd25df">   94</a></span>    <a class="code hl_typedef" href="namespacegs.html#aecdb6262343f502c148df1385417fad0">Nanoseconds</a> <a class="code hl_variable" href="structgs_1_1animation_1_1Asset.html#a76781ad87f5f165325b1d3961bdd25df">duration</a>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Asset.html#a62fa91bb42fd54d8ea9b698c6b90aedd">   95</a></span>    std::vector&lt;Channel&gt; <a class="code hl_variable" href="structgs_1_1animation_1_1Asset.html#a62fa91bb42fd54d8ea9b698c6b90aedd">channels</a>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Asset.html#a557a8074ed2ffe612fc52621d697ad4a">   96</a></span>    std::vector&lt;KeyframeTime&gt; <a class="code hl_variable" href="structgs_1_1animation_1_1Asset.html#a557a8074ed2ffe612fc52621d697ad4a">keyframeTimes</a>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Asset.html#aeb94b027d63303da84143506c7ea5028">   97</a></span>    std::vector&lt;Key&gt; <a class="code hl_variable" href="structgs_1_1animation_1_1Asset.html#aeb94b027d63303da84143506c7ea5028">keys</a>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Asset.html#adee470b217247241cc1f3264d8108af1">   98</a></span>    std::vector&lt;Interpolation&gt; <a class="code hl_variable" href="structgs_1_1animation_1_1Asset.html#adee470b217247241cc1f3264d8108af1">interpolations</a>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="foldopen" id="foldopen00100" data-start="{" data-end="}">
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Asset.html#aa8cf8a5d03ae7af9b22abb4542759211">  100</a></span>    std::span&lt;const KeyframeTime&gt; <a class="code hl_function" href="structgs_1_1animation_1_1Asset.html#aa8cf8a5d03ae7af9b22abb4542759211">channelKeyframeTimes</a>(<span class="keywordtype">int</span> channelIndex)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="structgs_1_1animation_1_1Asset.html#a62fa91bb42fd54d8ea9b698c6b90aedd">channels</a>[channelIndex].keyframeTimes(<a class="code hl_variable" href="structgs_1_1animation_1_1Asset.html#a557a8074ed2ffe612fc52621d697ad4a">keyframeTimes</a>.data());</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
+</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>};</div>
+</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="foldopen" id="foldopen00109" data-start="{" data-end="};">
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Instance.html">  109</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1animation_1_1Instance.html">Instance</a></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>{</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Instance.html#a8b527489f4f317cf65b92d25908eb2ce">  111</a></span>    <a class="code hl_typedef" href="namespacegs.html#a868b91a41e47a8a5ef7cd5a0473f165f">Timepoint</a> <a class="code hl_variable" href="structgs_1_1animation_1_1Instance.html#a8b527489f4f317cf65b92d25908eb2ce">startedAt</a>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Instance.html#a3595922a6d09339e812bfbb94a7d277d">  112</a></span>    <a class="code hl_typedef" href="namespacegs.html#aecdb6262343f502c148df1385417fad0">Nanoseconds</a> <a class="code hl_variable" href="structgs_1_1animation_1_1Instance.html#a3595922a6d09339e812bfbb94a7d277d">duration</a>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Instance.html#acf215b9fcd62ab82273b142dd73ffaca">  113</a></span>    <a class="code hl_typedef" href="namespacegs.html#aecdb6262343f502c148df1385417fad0">Nanoseconds</a> <a class="code hl_variable" href="structgs_1_1animation_1_1Instance.html#acf215b9fcd62ab82273b142dd73ffaca">elapsed</a>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Instance.html#a78e80bea7f7c73ccee005f33bfce8f6a">  114</a></span>    std::set&lt;float&gt; <a class="code hl_variable" href="structgs_1_1animation_1_1Instance.html#a78e80bea7f7c73ccee005f33bfce8f6a">markers</a>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Instance.html#a2c5091031c90cdd6c820c2e67e9ae9e2">  115</a></span>    std::vector&lt;std::pair&lt;Target, Asset*&gt;&gt; <a class="code hl_variable" href="structgs_1_1animation_1_1Instance.html#a2c5091031c90cdd6c820c2e67e9ae9e2">animations</a>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="foldopen" id="foldopen00117" data-start="{" data-end="}">
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Instance.html#a3fa80a8072ca04711d5dfde4e1bc413f">  117</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#a3fa80a8072ca04711d5dfde4e1bc413f">isComplete</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordtype">bool</span> completeAsBackwardPlaying = <a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#a232347b060ec859e8180d935a523068f">isReversed</a>() &amp;&amp; <a class="code hl_variable" href="structgs_1_1animation_1_1Instance.html#acf215b9fcd62ab82273b142dd73ffaca">elapsed</a> == <a class="code hl_typedef" href="namespacegs.html#aecdb6262343f502c148df1385417fad0">Nanoseconds</a>{0};</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keywordtype">bool</span> completeAsForwardPlaying  = !<a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#a232347b060ec859e8180d935a523068f">isReversed</a>() &amp;&amp; <a class="code hl_variable" href="structgs_1_1animation_1_1Instance.html#acf215b9fcd62ab82273b142dd73ffaca">elapsed</a> == <a class="code hl_variable" href="structgs_1_1animation_1_1Instance.html#a3595922a6d09339e812bfbb94a7d277d">duration</a>;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keywordflow">return</span> !<a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#a050a19fb568fc30825b1d0c23b83e0e0">isLooping</a>() &amp;&amp; (completeAsBackwardPlaying || completeAsForwardPlaying);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    }</div>
+</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="foldopen" id="foldopen00124" data-start="{" data-end="}">
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Instance.html#a10f8eafdedb379ede74aba7d44618a49">  124</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#a10f8eafdedb379ede74aba7d44618a49">forceToComplete</a>()</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#a1174a1ab6186283b64e90261114b4f42">setLooping</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <a class="code hl_variable" href="structgs_1_1animation_1_1Instance.html#acf215b9fcd62ab82273b142dd73ffaca">elapsed</a> = <a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#a232347b060ec859e8180d935a523068f">isReversed</a>() ? <a class="code hl_typedef" href="namespacegs.html#aecdb6262343f502c148df1385417fad0">Nanoseconds</a>{0} : <a class="code hl_variable" href="structgs_1_1animation_1_1Instance.html#a3595922a6d09339e812bfbb94a7d277d">duration</a>;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    }</div>
+</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Instance.html#aa77c23e924564019b0cb37ecfaf51a35">  130</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#aa77c23e924564019b0cb37ecfaf51a35">atBegin</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="structgs_1_1animation_1_1Instance.html#acf215b9fcd62ab82273b142dd73ffaca">elapsed</a>.count() == 0; }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Instance.html#aa5b262f7f8191625d82d8873934afe0f">  131</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#aa5b262f7f8191625d82d8873934afe0f">atEnd</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="structgs_1_1animation_1_1Instance.html#acf215b9fcd62ab82273b142dd73ffaca">elapsed</a> == <a class="code hl_variable" href="structgs_1_1animation_1_1Instance.html#a3595922a6d09339e812bfbb94a7d277d">duration</a>; }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Instance.html#a050a19fb568fc30825b1d0c23b83e0e0">  132</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#a050a19fb568fc30825b1d0c23b83e0e0">isLooping</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> flags[looping]; }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Instance.html#a232347b060ec859e8180d935a523068f">  133</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#a232347b060ec859e8180d935a523068f">isReversed</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> flags[reversed]; }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Instance.html#a68ba9b4cc033f95c6df5ba33f99ddc2e">  134</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#a68ba9b4cc033f95c6df5ba33f99ddc2e">isForward</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> !<a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#a232347b060ec859e8180d935a523068f">isReversed</a>(); }</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Instance.html#a48cc6e0bf83f016a1a11e86e8dfe997e">  135</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#a48cc6e0bf83f016a1a11e86e8dfe997e">isPaused</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> flags[paused]; }</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Instance.html#ac63349c70f8b71509ac772a2dd1ed78e">  136</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#ac63349c70f8b71509ac772a2dd1ed78e">isPlaying</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> !<a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#a48cc6e0bf83f016a1a11e86e8dfe997e">isPaused</a>(); }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Instance.html#a24316684bdaab2e5afa52ac513cce10e">  137</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#a24316684bdaab2e5afa52ac513cce10e">isRemoveOnComplete</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> flags[removeOnComplete]; }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Instance.html#a766d1378fe5202c475980a915f19292e">  138</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#a766d1378fe5202c475980a915f19292e">isPauseOnMarker</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> !<a class="code hl_variable" href="structgs_1_1animation_1_1Instance.html#a78e80bea7f7c73ccee005f33bfce8f6a">markers</a>.empty() &amp;&amp; flags[pauseOnMarker]; }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Instance.html#afa11c9c87c88276951592cdddb221c84">  139</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#afa11c9c87c88276951592cdddb221c84">isFinished</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> flags[finished]; }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="foldopen" id="foldopen00141" data-start="{" data-end="}">
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Instance.html#a623bb245b2c2b84e34e3431809b74c5b">  141</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#a623bb245b2c2b84e34e3431809b74c5b">getProgress</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        assert(<a class="code hl_variable" href="structgs_1_1animation_1_1Instance.html#a3595922a6d09339e812bfbb94a7d277d">duration</a>.count() &gt; 0);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keywordflow">return</span> std::clamp(<span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="structgs_1_1animation_1_1Instance.html#acf215b9fcd62ab82273b142dd73ffaca">elapsed</a>.count()) / <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="structgs_1_1animation_1_1Instance.html#a3595922a6d09339e812bfbb94a7d277d">duration</a>.count()), 0.0F, 1.0F);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    };</div>
+</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Instance.html#a1174a1ab6186283b64e90261114b4f42">  147</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#a1174a1ab6186283b64e90261114b4f42">setLooping</a>(<span class="keywordtype">bool</span> v) { flags[looping] = v; }</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Instance.html#ab51e3ba750fda190f2a500724ecbeea3">  148</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#ab51e3ba750fda190f2a500724ecbeea3">setReversed</a>(<span class="keywordtype">bool</span> v) { flags[reversed] = v; }</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Instance.html#a8475386f2cb97432d8d92a3a47a6e693">  149</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#a8475386f2cb97432d8d92a3a47a6e693">setPaused</a>(<span class="keywordtype">bool</span> v) { flags[paused] = v; }</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Instance.html#a13f4e6ee92a9ccf7cd3fa65d3c4a2eac">  150</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#a13f4e6ee92a9ccf7cd3fa65d3c4a2eac">setRemoveOnComplete</a>(<span class="keywordtype">bool</span> v) { flags[removeOnComplete] = v; }</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Instance.html#afdf33d1b1efec5f0a7cbe3c801d705d8">  151</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#afdf33d1b1efec5f0a7cbe3c801d705d8">setPauseOnMarker</a>(<span class="keywordtype">bool</span> v) { flags[pauseOnMarker] = v; }</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Instance.html#acd43ea00acb21fceaea10c82a354ae14">  152</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structgs_1_1animation_1_1Instance.html#acd43ea00acb21fceaea10c82a354ae14">setFinished</a>(<span class="keywordtype">bool</span> v) { flags[finished] = v; }</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> std::size_t looping          = 0;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> std::size_t reversed         = 1;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> std::size_t paused           = 2;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> std::size_t removeOnComplete = 3;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> std::size_t pauseOnMarker    = 4;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> std::size_t finished         = 5;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    std::bitset&lt;6&gt; flags;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>};</div>
+</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="namespacegs_1_1animation.html#acd54b5fe37e299971bce9ec9c1bd5641">  171</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacegs_1_1animation.html#acd54b5fe37e299971bce9ec9c1bd5641">InstanceId</a> = <a class="code hl_struct" href="structSlotMap_1_1Key.html">SlotMap&lt;Instance&gt;::Key</a>;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="foldopen" id="foldopen00178" data-start="{" data-end="};">
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1AssetCollection.html">  178</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1animation_1_1AssetCollection.html">AssetCollection</a></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>{</div>
+<div class="foldopen" id="foldopen00180" data-start="{" data-end="};">
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1AssetCollection_1_1AnimationTargetHash.html">  180</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1animation_1_1AssetCollection_1_1AnimationTargetHash.html">AnimationTargetHash</a></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    {</div>
+<div class="foldopen" id="foldopen00182" data-start="{" data-end="}">
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1AssetCollection_1_1AnimationTargetHash.html#ab1b133c5d87f9408d992d1d23cc12880">  182</a></span>        <span class="keywordtype">size_t</span> <a class="code hl_function" href="structgs_1_1animation_1_1AssetCollection_1_1AnimationTargetHash.html#ab1b133c5d87f9408d992d1d23cc12880">operator()</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structgs_1_1animation_1_1Target.html">Target</a>&amp; target) <span class="keyword">const</span> <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        {</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            <span class="keyword">const</span> uint64_t combined = (<span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(target.entityId) &lt;&lt; 32) | target.propertyId;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            <span class="keywordflow">return</span> std::hash&lt;uint64_t&gt;{}(combined);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        }</div>
+</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    };</div>
+</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1AssetCollection.html#ad58de64167c3d67e9dec5f4648e8e4a9">  188</a></span>    std::unordered_map&lt;Target, Asset*, AnimationTargetHash&gt; <a class="code hl_variable" href="structgs_1_1animation_1_1AssetCollection.html#ad58de64167c3d67e9dec5f4648e8e4a9">map</a>;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1AssetCollection.html#a5f3515f22bd57c57404a32d5d9969a79">  189</a></span>    <a class="code hl_typedef" href="namespacegs.html#a1b8ca9b0b30ccfd0f669274d09ea899d">Milliseconds</a> <a class="code hl_variable" href="structgs_1_1animation_1_1AssetCollection.html#a5f3515f22bd57c57404a32d5d9969a79">duration</a>;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>};</div>
+</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="foldopen" id="foldopen00199" data-start="{" data-end="};">
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Clip.html">  199</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1animation_1_1Clip.html">Clip</a></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>{</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Clip.html#a0facb906704b639397c8f66338105ac3">  201</a></span>    std::vector&lt;std::pair&lt;Target, Asset*&gt;&gt; <a class="code hl_variable" href="structgs_1_1animation_1_1Clip.html#a0facb906704b639397c8f66338105ac3">animations</a>;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Clip.html#a7febe071bf974675c9ba0c1044bef8c3">  202</a></span>    std::vector&lt;Milliseconds&gt; <a class="code hl_variable" href="structgs_1_1animation_1_1Clip.html#a7febe071bf974675c9ba0c1044bef8c3">markers</a>;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Clip.html#ab96c7e241bfd390761b00d3698346f78">  203</a></span>    <a class="code hl_typedef" href="namespacegs.html#a1b8ca9b0b30ccfd0f669274d09ea899d">Milliseconds</a> <a class="code hl_variable" href="structgs_1_1animation_1_1Clip.html#ab96c7e241bfd390761b00d3698346f78">duration</a>;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Clip.html#a9d166b3987c3552034ad7f823f51fa38">  204</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structgs_1_1animation_1_1Clip.html#a9d166b3987c3552034ad7f823f51fa38">loop</a>             = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Clip.html#afc7e892ce54f1373da45a5e8fa68df2e">  205</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structgs_1_1animation_1_1Clip.html#afc7e892ce54f1373da45a5e8fa68df2e">removeOnComplete</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno"><a class="line" href="structgs_1_1animation_1_1Clip.html#a2c93c76568e728cb478fe29e94dc903d">  206</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structgs_1_1animation_1_1Clip.html#a2c93c76568e728cb478fe29e94dc903d">pauseOnMarker</a>    = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>};</div>
+</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>}  <span class="comment">// namespace gs::animation</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="preprocessor">#endif  </span><span class="comment">// GEOMETRY_SANDBOX_ANIMATION_TYPES_H</span></div>
+<div class="ttc" id="acore_2types_8h_html"><div class="ttname"><a href="core_2types_8h.html">types.h</a></div></div>
+<div class="ttc" id="aecs_8h_html"><div class="ttname"><a href="ecs_8h.html">ecs.h</a></div></div>
+<div class="ttc" id="anamespacegs_1_1animation_html"><div class="ttname"><a href="namespacegs_1_1animation.html">gs::animation</a></div><div class="ttdoc">animation system</div><div class="ttdef"><b>Definition</b> dsl.h:21</div></div>
+<div class="ttc" id="anamespacegs_1_1animation_html_a46ee9881331d6cff4a055305f5e0e4da"><div class="ttname"><a href="namespacegs_1_1animation.html#a46ee9881331d6cff4a055305f5e0e4da">gs::animation::SampleInterpolator</a></div><div class="ttdeci">std::function&lt; void(const std::span&lt; float &gt;, const std::span&lt; float &gt;, std::span&lt; float &gt;, float)&gt; SampleInterpolator</div><div class="ttdoc">Callback type for custom multi-channel interpolation.</div><div class="ttdef"><b>Definition</b> types.h:56</div></div>
+<div class="ttc" id="anamespacegs_1_1animation_html_acd54b5fe37e299971bce9ec9c1bd5641"><div class="ttname"><a href="namespacegs_1_1animation.html#acd54b5fe37e299971bce9ec9c1bd5641">gs::animation::InstanceId</a></div><div class="ttdeci">SlotMap&lt; Instance &gt;::Key InstanceId</div><div class="ttdoc">Opaque key type for referencing animation instances in the animation::Manager.</div><div class="ttdef"><b>Definition</b> types.h:171</div></div>
+<div class="ttc" id="anamespacegs_html_a1b8ca9b0b30ccfd0f669274d09ea899d"><div class="ttname"><a href="namespacegs.html#a1b8ca9b0b30ccfd0f669274d09ea899d">gs::Milliseconds</a></div><div class="ttdeci">std::chrono::milliseconds Milliseconds</div><div class="ttdef"><b>Definition</b> types.h:21</div></div>
+<div class="ttc" id="anamespacegs_html_a868b91a41e47a8a5ef7cd5a0473f165f"><div class="ttname"><a href="namespacegs.html#a868b91a41e47a8a5ef7cd5a0473f165f">gs::Timepoint</a></div><div class="ttdeci">Clock::time_point Timepoint</div><div class="ttdef"><b>Definition</b> types.h:19</div></div>
+<div class="ttc" id="anamespacegs_html_aecdb6262343f502c148df1385417fad0"><div class="ttname"><a href="namespacegs.html#aecdb6262343f502c148df1385417fad0">gs::Nanoseconds</a></div><div class="ttdeci">std::chrono::nanoseconds Nanoseconds</div><div class="ttdef"><b>Definition</b> types.h:22</div></div>
+<div class="ttc" id="areflection_8h_html"><div class="ttname"><a href="reflection_8h.html">reflection.h</a></div><div class="ttdoc">static introspection of animatable types</div></div>
+<div class="ttc" id="aslot__map_8h_html"><div class="ttname"><a href="slot__map_8h.html">slot_map.h</a></div></div>
+<div class="ttc" id="astructSlotMap_1_1Key_html"><div class="ttname"><a href="structSlotMap_1_1Key.html">SlotMap::Key</a></div><div class="ttdef"><b>Definition</b> slot_map.h:38</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1AssetCollection_1_1AnimationTargetHash_html"><div class="ttname"><a href="structgs_1_1animation_1_1AssetCollection_1_1AnimationTargetHash.html">gs::animation::AssetCollection::AnimationTargetHash</a></div><div class="ttdef"><b>Definition</b> types.h:181</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1AssetCollection_1_1AnimationTargetHash_html_ab1b133c5d87f9408d992d1d23cc12880"><div class="ttname"><a href="structgs_1_1animation_1_1AssetCollection_1_1AnimationTargetHash.html#ab1b133c5d87f9408d992d1d23cc12880">gs::animation::AssetCollection::AnimationTargetHash::operator()</a></div><div class="ttdeci">size_t operator()(const Target &amp;target) const noexcept</div><div class="ttdef"><b>Definition</b> types.h:182</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1AssetCollection_html"><div class="ttname"><a href="structgs_1_1animation_1_1AssetCollection.html">gs::animation::AssetCollection</a></div><div class="ttdoc">A collection of refs to animation assets grouped by their target.</div><div class="ttdef"><b>Definition</b> types.h:179</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1AssetCollection_html_a5f3515f22bd57c57404a32d5d9969a79"><div class="ttname"><a href="structgs_1_1animation_1_1AssetCollection.html#a5f3515f22bd57c57404a32d5d9969a79">gs::animation::AssetCollection::duration</a></div><div class="ttdeci">Milliseconds duration</div><div class="ttdef"><b>Definition</b> types.h:189</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1AssetCollection_html_ad58de64167c3d67e9dec5f4648e8e4a9"><div class="ttname"><a href="structgs_1_1animation_1_1AssetCollection.html#ad58de64167c3d67e9dec5f4648e8e4a9">gs::animation::AssetCollection::map</a></div><div class="ttdeci">std::unordered_map&lt; Target, Asset *, AnimationTargetHash &gt; map</div><div class="ttdef"><b>Definition</b> types.h:188</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_1_1Channel_html"><div class="ttname"><a href="structgs_1_1animation_1_1Asset_1_1Channel.html">gs::animation::Asset::Channel</a></div><div class="ttdef"><b>Definition</b> types.h:73</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_1_1Channel_html_a08986e4320bb3dac6a761d1524b8a22a"><div class="ttname"><a href="structgs_1_1animation_1_1Asset_1_1Channel.html#a08986e4320bb3dac6a761d1524b8a22a">gs::animation::Asset::Channel::keyframeTimes</a></div><div class="ttdeci">std::span&lt; const KeyframeTime &gt; keyframeTimes(const KeyframeTime *times) const</div><div class="ttdef"><b>Definition</b> types.h:78</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_1_1Channel_html_a0b2a9ecb803b76d4c741eb8324a6382d"><div class="ttname"><a href="structgs_1_1animation_1_1Asset_1_1Channel.html#a0b2a9ecb803b76d4c741eb8324a6382d">gs::animation::Asset::Channel::keyCount</a></div><div class="ttdeci">std::size_t keyCount</div><div class="ttdef"><b>Definition</b> types.h:76</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_1_1Channel_html_a68eda24963973de333351ac714c13102"><div class="ttname"><a href="structgs_1_1animation_1_1Asset_1_1Channel.html#a68eda24963973de333351ac714c13102">gs::animation::Asset::Channel::keyBeginIndex</a></div><div class="ttdeci">int keyBeginIndex</div><div class="ttdef"><b>Definition</b> types.h:75</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_1_1Channel_html_ad46b9c973bb4266d902623fce93cf3b7"><div class="ttname"><a href="structgs_1_1animation_1_1Asset_1_1Channel.html#ad46b9c973bb4266d902623fce93cf3b7">gs::animation::Asset::Channel::propertyId</a></div><div class="ttdeci">reflection::Property::Id propertyId</div><div class="ttdef"><b>Definition</b> types.h:74</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_1_1Interpolation_html"><div class="ttname"><a href="structgs_1_1animation_1_1Asset_1_1Interpolation.html">gs::animation::Asset::Interpolation</a></div><div class="ttdef"><b>Definition</b> types.h:89</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_1_1Interpolation_html_ac3d58cd051bd0e54887a2d6fd2f53914"><div class="ttname"><a href="structgs_1_1animation_1_1Asset_1_1Interpolation.html#ac3d58cd051bd0e54887a2d6fd2f53914">gs::animation::Asset::Interpolation::easing</a></div><div class="ttdeci">float(* easing)(float)</div><div class="ttdef"><b>Definition</b> types.h:90</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_1_1Interpolation_html_add28f4a236ec1bf451dcf3ff77863efb"><div class="ttname"><a href="structgs_1_1animation_1_1Asset_1_1Interpolation.html#add28f4a236ec1bf451dcf3ff77863efb">gs::animation::Asset::Interpolation::interpolator</a></div><div class="ttdeci">SampleInterpolator interpolator</div><div class="ttdef"><b>Definition</b> types.h:91</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_1_1Key_html"><div class="ttname"><a href="structgs_1_1animation_1_1Asset_1_1Key.html">gs::animation::Asset::Key</a></div><div class="ttdef"><b>Definition</b> types.h:82</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_1_1Key_html_a74b51fcf200a2b33a2995f23b51aede8"><div class="ttname"><a href="structgs_1_1animation_1_1Asset_1_1Key.html#a74b51fcf200a2b33a2995f23b51aede8">gs::animation::Asset::Key::propertyId</a></div><div class="ttdeci">reflection::Property::Id propertyId</div><div class="ttdef"><b>Definition</b> types.h:84</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_1_1Key_html_acf8a61c129f185a5e726427a2df11970"><div class="ttname"><a href="structgs_1_1animation_1_1Asset_1_1Key.html#acf8a61c129f185a5e726427a2df11970">gs::animation::Asset::Key::value</a></div><div class="ttdeci">float value</div><div class="ttdef"><b>Definition</b> types.h:85</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_1_1Key_html_ad9f80afe3b4f6f07de49f70cc1e3267d"><div class="ttname"><a href="structgs_1_1animation_1_1Asset_1_1Key.html#ad9f80afe3b4f6f07de49f70cc1e3267d">gs::animation::Asset::Key::interpolationIndex</a></div><div class="ttdeci">int interpolationIndex</div><div class="ttdef"><b>Definition</b> types.h:83</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_1_1KeyframeTime_html"><div class="ttname"><a href="structgs_1_1animation_1_1Asset_1_1KeyframeTime.html">gs::animation::Asset::KeyframeTime</a></div><div class="ttdef"><b>Definition</b> types.h:67</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_1_1KeyframeTime_html_a5967beb15bf5853890327f24314d7be9"><div class="ttname"><a href="structgs_1_1animation_1_1Asset_1_1KeyframeTime.html#a5967beb15bf5853890327f24314d7be9">gs::animation::Asset::KeyframeTime::index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition</b> types.h:68</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_1_1KeyframeTime_html_ac0a0e1a94ae219787d52ae1a58f8d8ec"><div class="ttname"><a href="structgs_1_1animation_1_1Asset_1_1KeyframeTime.html#ac0a0e1a94ae219787d52ae1a58f8d8ec">gs::animation::Asset::KeyframeTime::time</a></div><div class="ttdeci">float time</div><div class="ttdef"><b>Definition</b> types.h:69</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_html"><div class="ttname"><a href="structgs_1_1animation_1_1Asset.html">gs::animation::Asset</a></div><div class="ttdoc">Describes a complete, immutable animation asset.</div><div class="ttdef"><b>Definition</b> types.h:65</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_html_a557a8074ed2ffe612fc52621d697ad4a"><div class="ttname"><a href="structgs_1_1animation_1_1Asset.html#a557a8074ed2ffe612fc52621d697ad4a">gs::animation::Asset::keyframeTimes</a></div><div class="ttdeci">std::vector&lt; KeyframeTime &gt; keyframeTimes</div><div class="ttdef"><b>Definition</b> types.h:96</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_html_a62fa91bb42fd54d8ea9b698c6b90aedd"><div class="ttname"><a href="structgs_1_1animation_1_1Asset.html#a62fa91bb42fd54d8ea9b698c6b90aedd">gs::animation::Asset::channels</a></div><div class="ttdeci">std::vector&lt; Channel &gt; channels</div><div class="ttdef"><b>Definition</b> types.h:95</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_html_a76781ad87f5f165325b1d3961bdd25df"><div class="ttname"><a href="structgs_1_1animation_1_1Asset.html#a76781ad87f5f165325b1d3961bdd25df">gs::animation::Asset::duration</a></div><div class="ttdeci">Nanoseconds duration</div><div class="ttdef"><b>Definition</b> types.h:94</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_html_aa8cf8a5d03ae7af9b22abb4542759211"><div class="ttname"><a href="structgs_1_1animation_1_1Asset.html#aa8cf8a5d03ae7af9b22abb4542759211">gs::animation::Asset::channelKeyframeTimes</a></div><div class="ttdeci">std::span&lt; const KeyframeTime &gt; channelKeyframeTimes(int channelIndex) const</div><div class="ttdef"><b>Definition</b> types.h:100</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_html_adee470b217247241cc1f3264d8108af1"><div class="ttname"><a href="structgs_1_1animation_1_1Asset.html#adee470b217247241cc1f3264d8108af1">gs::animation::Asset::interpolations</a></div><div class="ttdeci">std::vector&lt; Interpolation &gt; interpolations</div><div class="ttdef"><b>Definition</b> types.h:98</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Asset_html_aeb94b027d63303da84143506c7ea5028"><div class="ttname"><a href="structgs_1_1animation_1_1Asset.html#aeb94b027d63303da84143506c7ea5028">gs::animation::Asset::keys</a></div><div class="ttdeci">std::vector&lt; Key &gt; keys</div><div class="ttdef"><b>Definition</b> types.h:97</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Clip_html"><div class="ttname"><a href="structgs_1_1animation_1_1Clip.html">gs::animation::Clip</a></div><div class="ttdoc">Describes a pre-baked animation clip for convenient playback.</div><div class="ttdef"><b>Definition</b> types.h:200</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Clip_html_a0facb906704b639397c8f66338105ac3"><div class="ttname"><a href="structgs_1_1animation_1_1Clip.html#a0facb906704b639397c8f66338105ac3">gs::animation::Clip::animations</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; Target, Asset * &gt; &gt; animations</div><div class="ttdef"><b>Definition</b> types.h:201</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Clip_html_a2c93c76568e728cb478fe29e94dc903d"><div class="ttname"><a href="structgs_1_1animation_1_1Clip.html#a2c93c76568e728cb478fe29e94dc903d">gs::animation::Clip::pauseOnMarker</a></div><div class="ttdeci">bool pauseOnMarker</div><div class="ttdef"><b>Definition</b> types.h:206</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Clip_html_a7febe071bf974675c9ba0c1044bef8c3"><div class="ttname"><a href="structgs_1_1animation_1_1Clip.html#a7febe071bf974675c9ba0c1044bef8c3">gs::animation::Clip::markers</a></div><div class="ttdeci">std::vector&lt; Milliseconds &gt; markers</div><div class="ttdef"><b>Definition</b> types.h:202</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Clip_html_a9d166b3987c3552034ad7f823f51fa38"><div class="ttname"><a href="structgs_1_1animation_1_1Clip.html#a9d166b3987c3552034ad7f823f51fa38">gs::animation::Clip::loop</a></div><div class="ttdeci">bool loop</div><div class="ttdef"><b>Definition</b> types.h:204</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Clip_html_ab96c7e241bfd390761b00d3698346f78"><div class="ttname"><a href="structgs_1_1animation_1_1Clip.html#ab96c7e241bfd390761b00d3698346f78">gs::animation::Clip::duration</a></div><div class="ttdeci">Milliseconds duration</div><div class="ttdef"><b>Definition</b> types.h:203</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Clip_html_afc7e892ce54f1373da45a5e8fa68df2e"><div class="ttname"><a href="structgs_1_1animation_1_1Clip.html#afc7e892ce54f1373da45a5e8fa68df2e">gs::animation::Clip::removeOnComplete</a></div><div class="ttdeci">bool removeOnComplete</div><div class="ttdef"><b>Definition</b> types.h:205</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Instance_html"><div class="ttname"><a href="structgs_1_1animation_1_1Instance.html">gs::animation::Instance</a></div><div class="ttdoc">Runtime state of a playing animation instance.</div><div class="ttdef"><b>Definition</b> types.h:110</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Instance_html_a050a19fb568fc30825b1d0c23b83e0e0"><div class="ttname"><a href="structgs_1_1animation_1_1Instance.html#a050a19fb568fc30825b1d0c23b83e0e0">gs::animation::Instance::isLooping</a></div><div class="ttdeci">bool isLooping() const</div><div class="ttdef"><b>Definition</b> types.h:132</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Instance_html_a10f8eafdedb379ede74aba7d44618a49"><div class="ttname"><a href="structgs_1_1animation_1_1Instance.html#a10f8eafdedb379ede74aba7d44618a49">gs::animation::Instance::forceToComplete</a></div><div class="ttdeci">void forceToComplete()</div><div class="ttdef"><b>Definition</b> types.h:124</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Instance_html_a1174a1ab6186283b64e90261114b4f42"><div class="ttname"><a href="structgs_1_1animation_1_1Instance.html#a1174a1ab6186283b64e90261114b4f42">gs::animation::Instance::setLooping</a></div><div class="ttdeci">void setLooping(bool v)</div><div class="ttdef"><b>Definition</b> types.h:147</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Instance_html_a13f4e6ee92a9ccf7cd3fa65d3c4a2eac"><div class="ttname"><a href="structgs_1_1animation_1_1Instance.html#a13f4e6ee92a9ccf7cd3fa65d3c4a2eac">gs::animation::Instance::setRemoveOnComplete</a></div><div class="ttdeci">void setRemoveOnComplete(bool v)</div><div class="ttdef"><b>Definition</b> types.h:150</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Instance_html_a232347b060ec859e8180d935a523068f"><div class="ttname"><a href="structgs_1_1animation_1_1Instance.html#a232347b060ec859e8180d935a523068f">gs::animation::Instance::isReversed</a></div><div class="ttdeci">bool isReversed() const</div><div class="ttdef"><b>Definition</b> types.h:133</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Instance_html_a24316684bdaab2e5afa52ac513cce10e"><div class="ttname"><a href="structgs_1_1animation_1_1Instance.html#a24316684bdaab2e5afa52ac513cce10e">gs::animation::Instance::isRemoveOnComplete</a></div><div class="ttdeci">bool isRemoveOnComplete() const</div><div class="ttdef"><b>Definition</b> types.h:137</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Instance_html_a2c5091031c90cdd6c820c2e67e9ae9e2"><div class="ttname"><a href="structgs_1_1animation_1_1Instance.html#a2c5091031c90cdd6c820c2e67e9ae9e2">gs::animation::Instance::animations</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; Target, Asset * &gt; &gt; animations</div><div class="ttdef"><b>Definition</b> types.h:115</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Instance_html_a3595922a6d09339e812bfbb94a7d277d"><div class="ttname"><a href="structgs_1_1animation_1_1Instance.html#a3595922a6d09339e812bfbb94a7d277d">gs::animation::Instance::duration</a></div><div class="ttdeci">Nanoseconds duration</div><div class="ttdef"><b>Definition</b> types.h:112</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Instance_html_a3fa80a8072ca04711d5dfde4e1bc413f"><div class="ttname"><a href="structgs_1_1animation_1_1Instance.html#a3fa80a8072ca04711d5dfde4e1bc413f">gs::animation::Instance::isComplete</a></div><div class="ttdeci">bool isComplete() const</div><div class="ttdef"><b>Definition</b> types.h:117</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Instance_html_a48cc6e0bf83f016a1a11e86e8dfe997e"><div class="ttname"><a href="structgs_1_1animation_1_1Instance.html#a48cc6e0bf83f016a1a11e86e8dfe997e">gs::animation::Instance::isPaused</a></div><div class="ttdeci">bool isPaused() const</div><div class="ttdef"><b>Definition</b> types.h:135</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Instance_html_a623bb245b2c2b84e34e3431809b74c5b"><div class="ttname"><a href="structgs_1_1animation_1_1Instance.html#a623bb245b2c2b84e34e3431809b74c5b">gs::animation::Instance::getProgress</a></div><div class="ttdeci">float getProgress() const</div><div class="ttdef"><b>Definition</b> types.h:141</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Instance_html_a68ba9b4cc033f95c6df5ba33f99ddc2e"><div class="ttname"><a href="structgs_1_1animation_1_1Instance.html#a68ba9b4cc033f95c6df5ba33f99ddc2e">gs::animation::Instance::isForward</a></div><div class="ttdeci">bool isForward() const</div><div class="ttdef"><b>Definition</b> types.h:134</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Instance_html_a766d1378fe5202c475980a915f19292e"><div class="ttname"><a href="structgs_1_1animation_1_1Instance.html#a766d1378fe5202c475980a915f19292e">gs::animation::Instance::isPauseOnMarker</a></div><div class="ttdeci">bool isPauseOnMarker() const</div><div class="ttdef"><b>Definition</b> types.h:138</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Instance_html_a78e80bea7f7c73ccee005f33bfce8f6a"><div class="ttname"><a href="structgs_1_1animation_1_1Instance.html#a78e80bea7f7c73ccee005f33bfce8f6a">gs::animation::Instance::markers</a></div><div class="ttdeci">std::set&lt; float &gt; markers</div><div class="ttdef"><b>Definition</b> types.h:114</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Instance_html_a8475386f2cb97432d8d92a3a47a6e693"><div class="ttname"><a href="structgs_1_1animation_1_1Instance.html#a8475386f2cb97432d8d92a3a47a6e693">gs::animation::Instance::setPaused</a></div><div class="ttdeci">void setPaused(bool v)</div><div class="ttdef"><b>Definition</b> types.h:149</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Instance_html_a8b527489f4f317cf65b92d25908eb2ce"><div class="ttname"><a href="structgs_1_1animation_1_1Instance.html#a8b527489f4f317cf65b92d25908eb2ce">gs::animation::Instance::startedAt</a></div><div class="ttdeci">Timepoint startedAt</div><div class="ttdef"><b>Definition</b> types.h:111</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Instance_html_aa5b262f7f8191625d82d8873934afe0f"><div class="ttname"><a href="structgs_1_1animation_1_1Instance.html#aa5b262f7f8191625d82d8873934afe0f">gs::animation::Instance::atEnd</a></div><div class="ttdeci">bool atEnd() const</div><div class="ttdef"><b>Definition</b> types.h:131</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Instance_html_aa77c23e924564019b0cb37ecfaf51a35"><div class="ttname"><a href="structgs_1_1animation_1_1Instance.html#aa77c23e924564019b0cb37ecfaf51a35">gs::animation::Instance::atBegin</a></div><div class="ttdeci">bool atBegin() const</div><div class="ttdef"><b>Definition</b> types.h:130</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Instance_html_ab51e3ba750fda190f2a500724ecbeea3"><div class="ttname"><a href="structgs_1_1animation_1_1Instance.html#ab51e3ba750fda190f2a500724ecbeea3">gs::animation::Instance::setReversed</a></div><div class="ttdeci">void setReversed(bool v)</div><div class="ttdef"><b>Definition</b> types.h:148</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Instance_html_ac63349c70f8b71509ac772a2dd1ed78e"><div class="ttname"><a href="structgs_1_1animation_1_1Instance.html#ac63349c70f8b71509ac772a2dd1ed78e">gs::animation::Instance::isPlaying</a></div><div class="ttdeci">bool isPlaying() const</div><div class="ttdef"><b>Definition</b> types.h:136</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Instance_html_acd43ea00acb21fceaea10c82a354ae14"><div class="ttname"><a href="structgs_1_1animation_1_1Instance.html#acd43ea00acb21fceaea10c82a354ae14">gs::animation::Instance::setFinished</a></div><div class="ttdeci">void setFinished(bool v)</div><div class="ttdef"><b>Definition</b> types.h:152</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Instance_html_acf215b9fcd62ab82273b142dd73ffaca"><div class="ttname"><a href="structgs_1_1animation_1_1Instance.html#acf215b9fcd62ab82273b142dd73ffaca">gs::animation::Instance::elapsed</a></div><div class="ttdeci">Nanoseconds elapsed</div><div class="ttdef"><b>Definition</b> types.h:113</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Instance_html_afa11c9c87c88276951592cdddb221c84"><div class="ttname"><a href="structgs_1_1animation_1_1Instance.html#afa11c9c87c88276951592cdddb221c84">gs::animation::Instance::isFinished</a></div><div class="ttdeci">bool isFinished() const</div><div class="ttdef"><b>Definition</b> types.h:139</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Instance_html_afdf33d1b1efec5f0a7cbe3c801d705d8"><div class="ttname"><a href="structgs_1_1animation_1_1Instance.html#afdf33d1b1efec5f0a7cbe3c801d705d8">gs::animation::Instance::setPauseOnMarker</a></div><div class="ttdeci">void setPauseOnMarker(bool v)</div><div class="ttdef"><b>Definition</b> types.h:151</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Target_html"><div class="ttname"><a href="structgs_1_1animation_1_1Target.html">gs::animation::Target</a></div><div class="ttdoc">Uniquely identifies an animation target by entity and property.</div><div class="ttdef"><b>Definition</b> types.h:37</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Target_html_a0a7bf161d56c447cca51fa032cfaf2c8"><div class="ttname"><a href="structgs_1_1animation_1_1Target.html#a0a7bf161d56c447cca51fa032cfaf2c8">gs::animation::Target::propertyId</a></div><div class="ttdeci">std::uint32_t propertyId</div><div class="ttdef"><b>Definition</b> types.h:39</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Target_html_a8559655f762d6acc6cb020cf1e034993"><div class="ttname"><a href="structgs_1_1animation_1_1Target.html#a8559655f762d6acc6cb020cf1e034993">gs::animation::Target::operator&lt;=&gt;</a></div><div class="ttdeci">auto operator&lt;=&gt;(const Target &amp;) const =default</div></div>
+<div class="ttc" id="astructgs_1_1animation_1_1Target_html_ad8e7234cb58bf87f01af807462c4a285"><div class="ttname"><a href="structgs_1_1animation_1_1Target.html#ad8e7234cb58bf87f01af807462c4a285">gs::animation::Target::entityId</a></div><div class="ttdeci">std::uint32_t entityId</div><div class="ttdef"><b>Definition</b> types.h:38</div></div>
+<div class="ttc" id="astructgs_1_1reflection_1_1Property_html_a585b863466b83576bcf430966ce02553"><div class="ttname"><a href="structgs_1_1reflection_1_1Property.html#a585b863466b83576bcf430966ce02553">gs::reflection::Property::Id</a></div><div class="ttdeci">std::uint32_t Id</div><div class="ttdef"><b>Definition</b> reflection.h:120</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

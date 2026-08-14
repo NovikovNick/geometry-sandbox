@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>geometry-sandbox: /home/runner/work/geometry-sandbox/geometry-sandbox/src/animation/sampler.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="theme-round.css" rel="stylesheet" type="text/css"/>
+<link href="theme-robot.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/NovikovNick/algorithm-visualizer" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">geometry-sandbox
+   </div>
+   <div id="projectbrief">Yet another geometry sandbox project</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ef3688935c4dc6a7f1d7ee8410fdb67e.html">animation</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a>  </div>
+  <div class="headertitle"><div class="title">sampler.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Samples animation keyframe data and produces interpolated channel values.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="dsl_8h_source.html">animation/dsl.h</a>&quot;</code><br />
+<code>#include &lt;array&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;span&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for sampler.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="sampler_8h__incl.png" border="0" usemap="#a_2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2src_2animation_2sampler_8h" alt=""/></div>
+<map name="a_2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2src_2animation_2sampler_8h" id="a_2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2src_2animation_2sampler_8h">
+<area shape="rect" title="Samples animation keyframe data and produces interpolated channel values." alt="" coords="1368,5,1580,60"/>
+<area shape="rect" href="dsl_8h.html" title="DSL for animation system with compile&#45;time validation." alt="" coords="1245,108,1367,133"/>
+<area shape="poly" title=" " alt="" coords="1424,62,1342,104,1340,99,1421,58"/>
+<area shape="rect" title=" " alt="" coords="1401,269,1454,295"/>
+<area shape="poly" title=" " alt="" coords="1472,61,1435,256,1429,256,1466,60"/>
+<area shape="rect" title=" " alt="" coords="1478,269,1534,295"/>
+<area shape="poly" title=" " alt="" coords="1480,60,1505,255,1500,256,1475,61"/>
+<area shape="rect" title=" " alt="" coords="1562,108,1629,133"/>
+<area shape="poly" title=" " alt="" coords="1513,58,1569,98,1566,102,1510,62"/>
+<area shape="rect" href="float__span__adaptor_8h.html" title="adapters for scene types" alt="" coords="1227,181,1385,221"/>
+<area shape="poly" title=" " alt="" coords="1309,134,1309,168,1303,168,1303,134"/>
+<area shape="rect" href="reflection_8h.html" title="static introspection of animatable types" alt="" coords="1161,269,1326,295"/>
+<area shape="poly" title=" " alt="" coords="1276,136,1243,154,1229,167,1218,182,1213,201,1214,220,1230,256,1225,259,1209,221,1207,200,1213,180,1225,164,1240,150,1273,131"/>
+<area shape="rect" href="animation_2types_8h.html" title="Core data types and structures for the animation system." alt="" coords="723,189,863,214"/>
+<area shape="poly" title=" " alt="" coords="1245,134,877,190,876,185,1244,129"/>
+<area shape="rect" title=" " alt="" coords="1521,343,1587,368"/>
+<area shape="poly" title=" " alt="" coords="1349,131,1399,149,1455,177,1508,216,1530,241,1548,268,1558,299,1559,328,1554,329,1552,300,1544,270,1526,244,1504,220,1452,182,1397,154,1347,136"/>
+<area shape="rect" title=" " alt="" coords="11,343,135,368"/>
+<area shape="poly" title=" " alt="" coords="1244,125,1003,130,841,137,668,150,497,168,340,194,271,210,210,228,158,249,118,271,105,284,95,299,81,330,76,328,90,296,101,280,115,267,156,244,208,223,270,205,339,189,497,163,668,144,840,132,1002,125,1244,119"/>
+<area shape="poly" title=" " alt="" coords="1327,131,1400,179,1447,220,1487,257,1483,261,1444,224,1396,183,1324,136"/>
+<area shape="rect" href="core_2types_8h.html" title=" " alt="" coords="392,343,495,368"/>
+<area shape="poly" title=" " alt="" coords="1227,216,869,272,509,343,508,338,868,267,1226,211"/>
+<area shape="rect" title=" " alt="" coords="1363,343,1433,368"/>
+<area shape="poly" title=" " alt="" coords="1320,220,1386,329,1382,332,1315,223"/>
+<area shape="poly" title=" " alt="" coords="1337,219,1399,260,1397,264,1334,224"/>
+<area shape="rect" href="math_8h.html" title=" " alt="" coords="123,416,223,441"/>
+<area shape="poly" title=" " alt="" coords="401,371,230,415,229,410,399,365"/>
+<area shape="rect" title=" " alt="" coords="246,416,305,441"/>
+<area shape="poly" title=" " alt="" coords="417,370,316,413,314,408,415,366"/>
+<area shape="rect" title=" " alt="" coords="499,416,566,441"/>
+<area shape="poly" title=" " alt="" coords="459,366,509,405,506,409,456,370"/>
+<area shape="rect" title=" " alt="" coords="329,416,392,441"/>
+<area shape="poly" title=" " alt="" coords="432,370,386,409,383,405,428,366"/>
+<area shape="rect" title=" " alt="" coords="1088,416,1175,441"/>
+<area shape="poly" title=" " alt="" coords="495,359,1074,419,1074,424,495,365"/>
+<area shape="rect" title=" " alt="" coords="590,416,633,441"/>
+<area shape="poly" title=" " alt="" coords="471,366,578,411,576,415,469,370"/>
+<area shape="rect" title=" " alt="" coords="417,416,475,441"/>
+<area shape="poly" title=" " alt="" coords="446,368,448,402,442,403,441,368"/>
+<area shape="rect" title=" " alt="" coords="657,416,720,441"/>
+<area shape="poly" title=" " alt="" coords="483,365,645,412,644,417,482,371"/>
+<area shape="rect" title=" " alt="" coords="5,489,108,515"/>
+<area shape="poly" title=" " alt="" coords="155,444,89,484,86,480,153,439"/>
+<area shape="rect" title=" " alt="" coords="133,489,213,515"/>
+<area shape="poly" title=" " alt="" coords="175,442,175,476,170,476,170,442"/>
+<area shape="rect" title=" " alt="" coords="237,489,316,515"/>
+<area shape="poly" title=" " alt="" coords="191,439,250,479,247,483,188,444"/>
+<area shape="poly" title=" " alt="" coords="723,212,653,220,579,233,514,250,489,260,472,271,462,284,455,298,447,329,442,328,449,297,457,281,468,267,487,255,512,245,578,227,652,215,722,206"/>
+<area shape="poly" title=" " alt="" coords="723,208,662,214,592,225,519,244,450,272,417,295,375,332,298,408,294,404,372,328,414,290,447,267,518,239,591,220,661,209,722,203"/>
+<area shape="poly" title=" " alt="" coords="723,212,663,221,601,233,548,250,529,260,516,271,510,293,513,328,528,402,523,403,507,329,505,293,512,268,526,256,546,245,599,228,662,216,722,207"/>
+<area shape="poly" title=" " alt="" coords="864,211,974,233,1096,267,1123,280,1149,292,1178,298,1216,301,1305,304,1390,314,1423,324,1447,341,1453,355,1447,370,1429,384,1404,395,1336,412,1259,422,1189,428,1188,422,1258,417,1335,407,1402,390,1426,379,1443,366,1447,355,1443,344,1421,329,1389,319,1304,310,1216,306,1178,303,1148,297,1121,285,1094,272,973,238,862,216"/>
+<area shape="poly" title=" " alt="" coords="774,216,739,240,704,271,678,305,655,341,624,405,619,402,651,338,674,302,700,268,736,235,771,212"/>
+<area shape="poly" title=" " alt="" coords="781,216,730,267,704,303,685,343,681,373,684,402,679,402,675,373,679,342,700,301,726,264,777,212"/>
+<area shape="poly" title=" " alt="" coords="847,211,941,235,1048,267,1077,280,1105,292,1218,318,1350,343,1349,348,1217,323,1104,297,1075,285,1046,272,940,240,845,217"/>
+<area shape="poly" title=" " alt="" coords="863,208,1338,267,1387,273,1387,278,1338,272,863,214"/>
+<area shape="poly" title=" " alt="" coords="859,211,1165,264,1164,270,858,217"/>
+<area shape="rect" title=" " alt="" coords="526,269,603,295"/>
+<area shape="poly" title=" " alt="" coords="760,217,612,267,610,262,759,211"/>
+<area shape="rect" href="slot__map_8h.html" title=" " alt="" coords="881,269,1035,295"/>
+<area shape="poly" title=" " alt="" coords="818,212,923,261,920,266,816,216"/>
+<area shape="rect" title=" " alt="" coords="811,343,897,368"/>
+<area shape="poly" title=" " alt="" coords="800,213,847,329,842,331,795,215"/>
+<area shape="rect" title=" " alt="" coords="695,343,787,368"/>
+<area shape="poly" title=" " alt="" coords="791,215,752,330,747,329,786,213"/>
+<area shape="rect" href="ecs_8h.html" title=" " alt="" coords="129,269,217,295"/>
+<area shape="poly" title=" " alt="" coords="723,212,507,235,231,272,230,267,506,229,722,206"/>
+<area shape="poly" title=" " alt="" coords="863,203,1125,221,1293,240,1465,267,1464,272,1292,245,1124,227,863,208"/>
+<area shape="rect" title=" " alt="" coords="241,269,339,295"/>
+<area shape="poly" title=" " alt="" coords="723,216,358,272,353,273,352,268,358,267,722,210"/>
+<area shape="poly" title=" " alt="" coords="1036,292,1202,317,1270,330,1302,341,1309,355,1303,370,1272,385,1215,397,1054,414,874,424,734,429,734,424,874,419,1053,409,1215,392,1270,380,1299,366,1304,355,1299,345,1269,335,1201,323,1035,297"/>
+<area shape="poly" title=" " alt="" coords="1036,291,1345,340,1350,341,1349,346,1344,345,1035,297"/>
+<area shape="poly" title=" " alt="" coords="943,297,884,337,881,332,940,292"/>
+<area shape="rect" title=" " alt="" coords="921,343,987,368"/>
+<area shape="poly" title=" " alt="" coords="960,295,958,329,953,329,955,295"/>
+<area shape="rect" title=" " alt="" coords="1012,343,1075,368"/>
+<area shape="poly" title=" " alt="" coords="973,293,1021,332,1017,336,970,297"/>
+<area shape="rect" title=" " alt="" coords="1099,343,1177,368"/>
+<area shape="poly" title=" " alt="" coords="988,292,1097,335,1095,340,986,297"/>
+<area shape="poly" title=" " alt="" coords="1036,290,1507,346,1506,351,1036,295"/>
+<area shape="rect" title=" " alt="" coords="1201,343,1288,368"/>
+<area shape="poly" title=" " alt="" coords="1005,292,1189,337,1187,343,1003,297"/>
+<area shape="poly" title=" " alt="" coords="924,297,790,341,788,336,922,292"/>
+<area shape="poly" title=" " alt="" coords="217,292,387,337,386,342,215,297"/>
+<area shape="poly" title=" " alt="" coords="175,295,175,402,170,402,170,295"/>
+<area shape="rect" title=" " alt="" coords="210,343,317,368"/>
+<area shape="poly" title=" " alt="" coords="189,293,239,332,236,336,186,297"/>
+<area shape="poly" title=" " alt="" coords="158,297,102,337,99,332,155,293"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="sampler_8h__dep__incl.png" border="0" usemap="#a_2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2src_2animation_2sampler_8hdep" alt=""/></div>
+<map name="a_2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2src_2animation_2sampler_8hdep" id="a_2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2src_2animation_2sampler_8hdep">
+<area shape="rect" title="Samples animation keyframe data and produces interpolated channel values." alt="" coords="172,5,384,60"/>
+<area shape="rect" href="animation_2manager_8h.html" title="Core animation manager &#45; builds assets, spawns instances, and drives playback." alt="" coords="172,108,384,163"/>
+<area shape="poly" title=" " alt="" coords="281,74,281,108,275,108,275,74"/>
+<area shape="rect" href="player__manager_8h.html" title="Manages animation playback for gs::ui::AnimationPlayer." alt="" coords="5,211,241,265"/>
+<area shape="poly" title=" " alt="" coords="228,172,165,213,162,208,225,168"/>
+<area shape="rect" href="configuration_8h.html" title="define all settings and setup dependency injection context" alt="" coords="172,313,384,368"/>
+<area shape="poly" title=" " alt="" coords="281,177,281,313,275,313,275,177"/>
+<area shape="rect" href="animation_2service_8h.html" title="Provides factory methods for creating common animation." alt="" coords="315,211,527,265"/>
+<area shape="poly" title=" " alt="" coords="328,168,385,208,382,213,325,173"/>
+<area shape="poly" title=" " alt="" coords="177,271,239,311,236,315,174,275"/>
+<area shape="poly" title=" " alt="" coords="374,275,317,315,314,311,371,271"/>
+</map>
+</div>
+</div>
+<p><a href="sampler_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgs_1_1animation_1_1Sampler.html">gs::animation::Sampler&lt; Size &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Samples animation keyframe data and produces interpolated channel values.  <a href="classgs_1_1animation_1_1Sampler.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacegs" id="r_namespacegs"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs.html">gs</a></td></tr>
+<tr class="memdesc:namespacegs"><td class="mdescLeft">&#160;</td><td class="mdescRight">geometry sandbox <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacegs_1_1animation" id="r_namespacegs_1_1animation"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegs_1_1animation.html">gs::animation</a></td></tr>
+<tr class="memdesc:namespacegs_1_1animation"><td class="mdescLeft">&#160;</td><td class="mdescRight">animation system <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Samples animation keyframe data and produces interpolated channel values. </p>
+<dl class="section author"><dt>Author</dt><dd>MetalHeart </dd></dl>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

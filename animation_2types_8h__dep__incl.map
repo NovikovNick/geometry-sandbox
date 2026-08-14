@@ -1,0 +1,33 @@
+<map id="/home/runner/work/geometry&#45;sandbox/geometry&#45;sandbox/src/animation/types.h" name="/home/runner/work/geometry&#45;sandbox/geometry&#45;sandbox/src/animation/types.h">
+<area shape="rect" id="Node000001" title="Core data types and structures for the animation system." alt="" coords="237,5,449,60"/>
+<area shape="rect" id="Node000002" href="$dsl_8h.html" title="DSL for animation system with compile&#45;time validation." alt="" coords="43,108,255,163"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="282,69,201,110,199,106,279,64"/>
+<area shape="rect" id="Node000003" href="$animation_2manager_8h.html" title="Core animation manager &#45; builds assets, spawns instances, and drives playback." alt="" coords="43,321,255,375"/>
+<area shape="poly" id="edge17_Node000001_Node000003" title=" " alt="" coords="336,74,306,180,287,232,269,267,238,298,203,323,200,318,235,294,265,264,282,229,300,179,331,73"/>
+<area shape="rect" id="Node000006" href="$animation_2service_8h.html" title="Provides factory methods for creating common animation." alt="" coords="31,438,243,493"/>
+<area shape="poly" id="edge18_Node000001_Node000006" title=" " alt="" coords="347,74,345,138,334,219,325,263,311,305,293,346,269,384,237,416,200,440,197,435,234,412,265,381,288,344,306,304,320,261,329,219,340,138,342,74"/>
+<area shape="rect" id="Node000008" href="$handle_8h.html" title="Lightweight handle for controlling a playing animation instance." alt="" coords="379,211,591,265"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="371,70,469,209,465,212,367,73"/>
+<area shape="rect" id="Node000011" href="$application_8h.html" title="main entry class" alt="" coords="570,108,782,163"/>
+<area shape="poly" id="edge19_Node000001_Node000011" title=" " alt="" coords="443,61,590,105,589,110,442,66"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="72,172,50,190,33,212,25,238,33,264,58,295,91,318,87,323,54,299,28,267,19,238,28,209,46,186,69,168"/>
+<area shape="rect" id="Node000007" href="$sampler_8h.html" title="Samples animation keyframe data and produces interpolated channel values." alt="" coords="43,211,255,265"/>
+<area shape="poly" id="edge8_Node000002_Node000007" title=" " alt="" coords="152,176,152,211,147,211,147,176"/>
+<area shape="rect" id="Node000004" href="$player__manager_8h.html" title="Manages animation playback for gs::ui::AnimationPlayer." alt="" coords="267,438,503,493"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="216,379,333,435,331,440,214,384"/>
+<area shape="rect" id="Node000005" href="$configuration_8h.html" title="define all settings and setup dependency injection context" alt="" coords="410,548,622,603"/>
+<area shape="poly" id="edge7_Node000003_Node000005" title=" " alt="" coords="70,384,42,405,21,432,12,450,8,467,11,482,21,498,46,517,83,533,130,545,184,555,301,566,410,571,410,576,300,572,183,560,129,550,82,538,43,522,17,502,6,484,3,467,7,449,17,429,39,401,67,380"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="148,389,143,438,138,437,143,389"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="430,499,486,546,482,550,426,504"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="243,494,425,545,424,551,242,499"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="152,280,152,320,147,320,147,280"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="391,272,232,323,230,318,390,267"/>
+<area shape="poly" id="edge12_Node000008_Node000004" title=" " alt="" coords="471,279,400,439,395,437,466,277"/>
+<area shape="rect" id="Node000009" href="$camera__idle__rotation__manager_8h.html" title=" " alt="" coords="527,431,766,500"/>
+<area shape="poly" id="edge13_Node000008_Node000009" title=" " alt="" coords="508,276,537,327,573,381,615,429,611,432,569,384,532,330,503,279"/>
+<area shape="rect" id="Node000010" href="$ortho__projection__view__manager_8h.html" title=" " alt="" coords="582,313,794,383"/>
+<area shape="poly" id="edge15_Node000008_Node000010" title=" " alt="" coords="548,269,626,311,624,316,546,274"/>
+<area shape="poly" id="edge14_Node000009_Node000005" title=" " alt="" coords="598,511,550,550,546,546,594,506"/>
+<area shape="poly" id="edge16_Node000010_Node000005" title=" " alt="" coords="752,390,768,408,781,430,793,466,791,484,781,502,757,520,718,536,623,560,622,555,716,531,754,516,777,498,786,482,788,467,776,432,764,412,748,394"/>
+<area shape="poly" id="edge20_Node000011_Node000005" title=" " alt="" coords="716,171,767,233,791,271,809,313,814,352,814,413,811,470,805,501,776,522,732,539,623,563,622,557,730,534,774,517,801,499,806,470,809,413,809,353,804,314,787,274,763,236,712,174"/>
+</map>
