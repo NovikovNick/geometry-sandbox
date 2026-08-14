@@ -1,0 +1,27 @@
+var structgs_1_1animation_1_1Instance =
+[
+    [ "atBegin", "structgs_1_1animation_1_1Instance.html#aa77c23e924564019b0cb37ecfaf51a35", null ],
+    [ "atEnd", "structgs_1_1animation_1_1Instance.html#aa5b262f7f8191625d82d8873934afe0f", null ],
+    [ "forceToComplete", "structgs_1_1animation_1_1Instance.html#a10f8eafdedb379ede74aba7d44618a49", null ],
+    [ "getProgress", "structgs_1_1animation_1_1Instance.html#a623bb245b2c2b84e34e3431809b74c5b", null ],
+    [ "isComplete", "structgs_1_1animation_1_1Instance.html#a3fa80a8072ca04711d5dfde4e1bc413f", null ],
+    [ "isFinished", "structgs_1_1animation_1_1Instance.html#afa11c9c87c88276951592cdddb221c84", null ],
+    [ "isForward", "structgs_1_1animation_1_1Instance.html#a68ba9b4cc033f95c6df5ba33f99ddc2e", null ],
+    [ "isLooping", "structgs_1_1animation_1_1Instance.html#a050a19fb568fc30825b1d0c23b83e0e0", null ],
+    [ "isPaused", "structgs_1_1animation_1_1Instance.html#a48cc6e0bf83f016a1a11e86e8dfe997e", null ],
+    [ "isPauseOnMarker", "structgs_1_1animation_1_1Instance.html#a766d1378fe5202c475980a915f19292e", null ],
+    [ "isPlaying", "structgs_1_1animation_1_1Instance.html#ac63349c70f8b71509ac772a2dd1ed78e", null ],
+    [ "isRemoveOnComplete", "structgs_1_1animation_1_1Instance.html#a24316684bdaab2e5afa52ac513cce10e", null ],
+    [ "isReversed", "structgs_1_1animation_1_1Instance.html#a232347b060ec859e8180d935a523068f", null ],
+    [ "setFinished", "structgs_1_1animation_1_1Instance.html#acd43ea00acb21fceaea10c82a354ae14", null ],
+    [ "setLooping", "structgs_1_1animation_1_1Instance.html#a1174a1ab6186283b64e90261114b4f42", null ],
+    [ "setPaused", "structgs_1_1animation_1_1Instance.html#a8475386f2cb97432d8d92a3a47a6e693", null ],
+    [ "setPauseOnMarker", "structgs_1_1animation_1_1Instance.html#afdf33d1b1efec5f0a7cbe3c801d705d8", null ],
+    [ "setRemoveOnComplete", "structgs_1_1animation_1_1Instance.html#a13f4e6ee92a9ccf7cd3fa65d3c4a2eac", null ],
+    [ "setReversed", "structgs_1_1animation_1_1Instance.html#ab51e3ba750fda190f2a500724ecbeea3", null ],
+    [ "animations", "structgs_1_1animation_1_1Instance.html#a2c5091031c90cdd6c820c2e67e9ae9e2", null ],
+    [ "duration", "structgs_1_1animation_1_1Instance.html#a3595922a6d09339e812bfbb94a7d277d", null ],
+    [ "elapsed", "structgs_1_1animation_1_1Instance.html#acf215b9fcd62ab82273b142dd73ffaca", null ],
+    [ "markers", "structgs_1_1animation_1_1Instance.html#a78e80bea7f7c73ccee005f33bfce8f6a", null ],
+    [ "startedAt", "structgs_1_1animation_1_1Instance.html#a8b527489f4f317cf65b92d25908eb2ce", null ]
+];

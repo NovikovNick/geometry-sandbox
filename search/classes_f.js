@@ -1,7 +1,7 @@
 var searchData=
 [
   ['performancestats_0',['PerformanceStats',['../structgs_1_1PerformanceStats.html',1,'gs']]],
-  ['plane_1',['plane',['../structgs_1_1Plane.html',1,'gs::Plane'],['../structgs_1_1scene_1_1Plane.html',1,'gs::scene::Plane']]],
+  ['plane_1',['Plane',['../structgs_1_1Plane.html',1,'gs::Plane'],['../structgs_1_1scene_1_1Plane.html',1,'gs::scene::Plane']]],
   ['playermanager_2',['PlayerManager',['../classgs_1_1animation_1_1PlayerManager.html',1,'gs::animation']]],
   ['point_3',['Point',['../structgs_1_1scene_1_1Point.html',1,'gs::scene']]],
   ['position_4',['Position',['../structgs_1_1ecs_1_1component_1_1Position.html',1,'gs::ecs::component']]],

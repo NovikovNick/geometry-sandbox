@@ -1,0 +1,51 @@
+var namespacegs_1_1animation_1_1dsl =
+[
+    [ "detail", "namespacegs_1_1animation_1_1dsl_1_1detail.html", [
+      [ "propertyPath", "namespacegs_1_1animation_1_1dsl_1_1detail.html#adb75cfda1ab71670d68005173221f6f6", null ]
+    ] ],
+    [ "accessor", "namespacegs_1_1animation_1_1dsl_1_1accessor.html", [
+      [ "button", "namespacegs_1_1animation_1_1dsl_1_1accessor.html#a32e2b2ad6bc27c94d24b45ceea032999", null ],
+      [ "camera", "namespacegs_1_1animation_1_1dsl_1_1accessor.html#a1a3dc05cf3e8b0028c93e7772c673c30", null ],
+      [ "plane", "namespacegs_1_1animation_1_1dsl_1_1accessor.html#ac2d005cece7b6d0c00d325e7bd7a99f2", null ],
+      [ "point", "namespacegs_1_1animation_1_1dsl_1_1accessor.html#ab55e76a5e154a1b1a16934c3b1d62a7d", null ],
+      [ "ui", "namespacegs_1_1animation_1_1dsl_1_1accessor.html#a5c33d078bdb9eb97e32e13404079aba9", null ]
+    ] ],
+    [ "vec3", "namespacegs_1_1animation_1_1dsl_1_1vec3.html", [
+      [ "x", "namespacegs_1_1animation_1_1dsl_1_1vec3.html#a1bdaacf4b4c3b689c7b8d5947c9ef061", null ],
+      [ "y", "namespacegs_1_1animation_1_1dsl_1_1vec3.html#a6c911caf5a1d227a8dd38d10fbc0a7b7", null ],
+      [ "z", "namespacegs_1_1animation_1_1dsl_1_1vec3.html#a52e216a46db6930e58c75c93e510afea", null ]
+    ] ],
+    [ "color", "namespacegs_1_1animation_1_1dsl_1_1color.html", [
+      [ "a", "namespacegs_1_1animation_1_1dsl_1_1color.html#a685a8fb09f7d4aae946fdaa185b6992d", null ],
+      [ "b", "namespacegs_1_1animation_1_1dsl_1_1color.html#ac8842992d68bb32ee5b9928ab6ecc134", null ],
+      [ "g", "namespacegs_1_1animation_1_1dsl_1_1color.html#ac0106b821ce62a62a0576f46f5410327", null ],
+      [ "r", "namespacegs_1_1animation_1_1dsl_1_1color.html#ae7fa0b4c37515829c51b3b5b1bf5857a", null ]
+    ] ],
+    [ "point", "namespacegs_1_1animation_1_1dsl_1_1point.html", [
+      [ "color", "namespacegs_1_1animation_1_1dsl_1_1point.html#aeee9d6169002c520973510f1012d6faf", null ],
+      [ "position", "namespacegs_1_1animation_1_1dsl_1_1point.html#ae97be89afb3b5702129180bab6335c05", null ],
+      [ "radius", "namespacegs_1_1animation_1_1dsl_1_1point.html#a7d656812f0b848e8fd1d0fe575ec77e2", null ]
+    ] ],
+    [ "plane", "namespacegs_1_1animation_1_1dsl_1_1plane.html", [
+      [ "color", "namespacegs_1_1animation_1_1dsl_1_1plane.html#adfdc570c37e7d2f663f0d2a27dc1cfe9", null ],
+      [ "normal", "namespacegs_1_1animation_1_1dsl_1_1plane.html#abdc252bdd8b8270d68374dec1f33b114", null ]
+    ] ],
+    [ "layout", "namespacegs_1_1animation_1_1dsl_1_1layout.html", [
+      [ "opacity", "namespacegs_1_1animation_1_1dsl_1_1layout.html#afcada5ce53321c2bd17f787342f63afe", null ]
+    ] ],
+    [ "btn", "namespacegs_1_1animation_1_1dsl_1_1btn.html", [
+      [ "color", "namespacegs_1_1animation_1_1dsl_1_1btn.html#a700145d0ad7b524518fbf2aa9df51a0e", null ]
+    ] ],
+    [ "camera", "namespacegs_1_1animation_1_1dsl_1_1camera.html", [
+      [ "position", "namespacegs_1_1animation_1_1dsl_1_1camera.html#a6421e7efafb6acaea5873c313fee3914", null ],
+      [ "target", "namespacegs_1_1animation_1_1dsl_1_1camera.html#a68471f5ba9ed57a86aeadb9bf50c5638", null ]
+    ] ],
+    [ "key", "namespacegs_1_1animation_1_1dsl.html#a18c8de6f050ffc6226d0ae2c89eef152", null ],
+    [ "key", "namespacegs_1_1animation_1_1dsl.html#ab2260a4db8423a0f4f1011d72be96578", null ],
+    [ "keyframe", "namespacegs_1_1animation_1_1dsl.html#aee33532faa3837eac74fa2e4e845500b", null ],
+    [ "operator+=", "namespacegs_1_1animation_1_1dsl.html#a72ff7c6893309df48d17ee2d910cafe0", null ],
+    [ "operator/", "namespacegs_1_1animation_1_1dsl.html#a1d30a3384fee43e1fd27997562b7470a", null ],
+    [ "operator<<", "namespacegs_1_1animation_1_1dsl.html#a2e123fcdf07a5a90ba7424a9643d178c", null ],
+    [ "operator<<", "namespacegs_1_1animation_1_1dsl.html#aac2ade877ca002efbd889b9da792d458", null ],
+    [ "operator|", "namespacegs_1_1animation_1_1dsl.html#aa2ac5e9f03963b1784c923a1f7b56ae3", null ]
+];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['registry_0',['Registry',['../namespacegs_1_1ecs.html#a00b8065ae2ea7cd01ded9b0c561074ed',1,'gs::ecs']]]
+  ['registry_0',['Registry',['../namespacegs_1_1ecs.html#a48041250f226f69c0aa9075efcbcb8b9',1,'gs::ecs']]]
 ];
