@@ -1,7 +1,0 @@
-<map id="gs::animation::Handle" name="gs::animation::Handle">
-<area shape="rect" id="Node000001" title="Lightweight handle for controlling a playing animation instance." alt="" coords="110,93,275,119"/>
-<area shape="rect" id="Node000002" href="$classgs_1_1animation_1_1IManager.html" title="Provides the complete lifecycle for animations: building and playing." alt="" coords="5,5,185,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,38,181,91,177,95,117,42"/>
-<area shape="rect" id="Node000003" href="$classSlotMap.html" title=" " alt="" coords="210,5,370,31"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="268,42,208,95,204,91,265,38"/>
-</map>

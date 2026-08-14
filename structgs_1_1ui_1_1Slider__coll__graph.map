@@ -1,7 +1,0 @@
-<map id="gs::ui::Slider" name="gs::ui::Slider">
-<area shape="rect" id="Node000001" title=" " alt="" coords="75,137,177,163"/>
-<area shape="rect" id="Node000002" href="$structgs_1_1ui_1_1Element.html" title=" " alt="" coords="5,5,124,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,42,123,136,118,138,73,44"/>
-<area shape="rect" id="Node000003" href="$structgs_1_1Color.html" title=" " alt="" coords="148,5,227,31"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="179,44,134,138,129,136,174,42"/>
-</map>

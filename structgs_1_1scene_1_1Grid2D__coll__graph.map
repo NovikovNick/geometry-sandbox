@@ -1,5 +1,0 @@
-<map id="gs::scene::Grid2D" name="gs::scene::Grid2D">
-<area shape="rect" id="Node000001" title="square 2D grid" alt="" coords="5,108,141,133"/>
-<area shape="rect" id="Node000002" href="$structgs_1_1Color.html" title=" " alt="" coords="34,5,113,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,45,76,108,71,108,71,45"/>
-</map>
