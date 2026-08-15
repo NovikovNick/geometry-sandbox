@@ -148,9 +148,9 @@ Inheritance diagram for gs::ILogManager:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac4411331afc24c074be56c35f24ef1f0" id="r_ac4411331afc24c074be56c35f24ef1f0"><td class="memTemplParams" colspan="2">template&lt;class... _Types&gt; </td></tr>
-<tr class="memitem:ac4411331afc24c074be56c35f24ef1f0 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac4411331afc24c074be56c35f24ef1f0">frameLog</a> (const std::format_string&lt; _Types... &gt; _Fmt, _Types &amp;&amp;... _Args)</td></tr>
-<tr class="memdesc:ac4411331afc24c074be56c35f24ef1f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">log, which is cleared every frame  <br /></td></tr>
+<tr class="memitem:afb13d468310f1034201a3116bbe78627" id="r_afb13d468310f1034201a3116bbe78627"><td class="memTemplParams" colspan="2">template&lt;class... Args&gt; </td></tr>
+<tr class="memitem:afb13d468310f1034201a3116bbe78627 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afb13d468310f1034201a3116bbe78627">frameLog</a> (const std::format_string&lt; Args... &gt; format, Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:afb13d468310f1034201a3116bbe78627"><td class="mdescLeft">&#160;</td><td class="mdescRight">log, which is cleared every frame  <br /></td></tr>
 <tr class="memitem:a46e25d30b2effbcc292613554123a981" id="r_a46e25d30b2effbcc292613554123a981"><td class="memItemLeft">virtual const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a46e25d30b2effbcc292613554123a981">getFrameLog</a> () const =0</td></tr>
 <tr class="memdesc:a46e25d30b2effbcc292613554123a981"><td class="mdescLeft">&#160;</td><td class="mdescRight">It is convenient to display this log in the overlay console.  <br /></td></tr>
 <tr class="memitem:a59003beb8a3e8cc6798a6f92df1f6532" id="r_a59003beb8a3e8cc6798a6f92df1f6532"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a59003beb8a3e8cc6798a6f92df1f6532">clearFrameLog</a> ()=0</td></tr>
@@ -248,13 +248,13 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac4411331afc24c074be56c35f24ef1f0" name="ac4411331afc24c074be56c35f24ef1f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4411331afc24c074be56c35f24ef1f0">&#9670;&#160;</a></span>frameLog()</h2>
+<a id="afb13d468310f1034201a3116bbe78627" name="afb13d468310f1034201a3116bbe78627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb13d468310f1034201a3116bbe78627">&#9670;&#160;</a></span>frameLog()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class... _Types&gt; </div>
+template&lt;class... Args&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -262,12 +262,12 @@ template&lt;class... _Types&gt; </div>
         <tr>
           <td class="memname">void gs::ILogManager::frameLog </td>
           <td>(</td>
-          <td class="paramtype">const std::format_string&lt; _Types... &gt;</td>          <td class="paramname"><span class="paramname"><em>_Fmt</em></span>, </td>
+          <td class="paramtype">const std::format_string&lt; Args... &gt;</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">_Types &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>_Args</em></span>&#160;)</td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
