@@ -54,7 +54,6 @@ window.MathJax = {
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 <link href="theme-round.css" rel="stylesheet" type="text/css"/>
-<link href="theme-robot.css" rel="stylesheet" type="text/css"/>
 <link href="custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
@@ -136,115 +135,97 @@ $(function(){initNavTree('todo.html','',''); });
 <div class="contents">
 <div class="textblock"><dl class="reflist">
 <dt>File <a class="el" href="application_8h.html">application.h</a>  </dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000003"></a>========== CHECKSTYLE =========== </p>
+<dd><p class="startdd"><a class="anchor" id="_todo000003"></a>[ci/cd]: setup WSL with clang 24 </p>
 <p class="interdd"></p>
-<p class="interdd">★★★ Уменьшить render_system </p>
+<p class="interdd">[ci/cd]: ★★★★ linter. Unable to reproduce error on local machince: function 'animate' has cognitive complexity of 32 </p>
 <p class="interdd"></p>
-<p class="interdd">★★ Перенести web folder в samples </p>
+<p class="interdd">[linter]: ★★★ Reduce render_system </p>
 <p class="interdd"></p>
-<p class="interdd">★★★ все названия методов, переменных и т.п. должны проверяться в clang-tidy. Всякие active, hover, constrained </p>
+<p class="interdd">[linter]: ★★ Move web folder into samples </p>
 <p class="interdd"></p>
-<p class="interdd">★★★ -Wall/W4 </p>
+<p class="interdd">[linter]: ★★★ Check names in clang-tidy (active, hover, constrained...) </p>
 <p class="interdd"></p>
-<p class="interdd">★★★★ noexcept </p>
+<p class="interdd">[bugfix]: ★★★ Похоже слоты в анимациях не переиспользуются </p>
 <p class="interdd"></p>
-<p class="interdd">★★★★ Вынести все платформозависимые методы в отдельный класс</p>
-<p class="interdd"><a class="anchor" id="_todo000004"></a>========== DOCS ========== </p>
+<p class="interdd">[bugfix]: ★★★ UI не перекрывает ввод на canvas </p>
 <p class="interdd"></p>
-<p class="interdd">★★★★ animation system page doc </p>
+<p class="interdd">[improvement]: ★★★ template accessor instead of std::span&lt;std::byte&gt;? </p>
 <p class="interdd"></p>
-<p class="interdd">★★★ вложенный namespace detail не должен попадать в docs </p>
+<p class="interdd">[improvement]: ★★★★ template &lt;typename T&gt; using Animator = std::function&lt;T(Nanoseconds)&gt;;Добавить аниматор c (dt) </p>
 <p class="interdd"></p>
-<p class="interdd">★★★ File List javadocs </p>
+<p class="interdd">[improvement]: ★★★★ Move platform specific code to separate class </p>
 <p class="interdd"></p>
-<p class="interdd">★★★ interaction system page doc </p>
+<p class="interdd">[docs]: ★★★★ dark/light theme toggle in docs doesn't work correctly </p>
 <p class="interdd"></p>
-<p class="interdd">★★★ Class List javadocs </p>
+<p class="interdd">[docs]: ★★★ license link is incorrect </p>
 <p class="interdd"></p>
-<p class="interdd">★★★★ Namespace List javadocs?</p>
-<p class="interdd"><a class="anchor" id="_todo000005"></a>========== BUGFIX ========== </p>
+<p class="interdd">[docs]: ★★★★ animation system page doc </p>
 <p class="interdd"></p>
-<p class="interdd">★★★ Похоже слоты в анимациях не переиспользуются </p>
+<p class="interdd">[docs]: ★★★ вложенный namespace detail не должен попадать в docs </p>
 <p class="interdd"></p>
-<p class="interdd">★★★ UI не перекрывает ввод на canvas </p>
+<p class="interdd">[docs]: ★★★ File List javadocs </p>
 <p class="interdd"></p>
-<p class="interdd">★★★ UI отдельный laout для UI и смена курсора </p>
+<p class="interdd">[docs]: ★★★ interaction system page doc </p>
 <p class="interdd"></p>
-<p class="interdd">★★★★ review UI animation logic</p>
-<p class="interdd"><a class="anchor" id="_todo000006"></a>========== TECHDEBT ========== </p>
+<p class="interdd">[docs]: ★★★ Class List javadocs </p>
 <p class="interdd"></p>
-<p class="interdd">★★★ template accessor instead of std::span&lt;std::byte&gt;? </p>
+<p class="interdd">[docs]: ★★★★ Namespace List javadocs? </p>
 <p class="interdd"></p>
-<p class="interdd">★★★★ template &lt;typename T&gt; using Animator = std::function&lt;T(Nanoseconds)&gt;;Добавить аниматор, в который приходит (dt)</p>
-<p class="interdd"><a class="anchor" id="_todo000007"></a>========== RELEASE ========== </p>
+<p class="interdd">[sample]: ★★★ duck SceneService::addMesh to the scene as camera target. </p>
 <p class="interdd"></p>
-<p class="interdd">★★★★ CI/CD: dark/light theme toggle in docs doesn't work correctly </p>
+<p class="interdd">[sample]: ★★★ camera SceneService::addMesh to the scene as camera position. </p>
 <p class="interdd"></p>
-<p class="interdd">★★★★ CI/CD: linter </p>
+<p class="interdd">[sample]: ★★★ mirrored viewport for backface. </p>
 <p class="interdd"></p>
-<p class="interdd">★★★★ CI/CD: test No tests were found!!! </p>
+<p class="interdd">[sample]: ★★★★ fix camera right/left coords system </p>
 <p class="interdd"></p>
-<p class="interdd">★★★ duck SceneService::addMesh to the scene as camera target. </p>
+<p class="interdd">[sample]: ★★★ 1. Ортографическая: изометрическая, диметрической и триметрической проекции </p>
 <p class="interdd"></p>
-<p class="interdd">★★★ camera SceneService::addMesh to the scene as camera position. </p>
+<p class="interdd">[sample]: ★★★ 2. Перспективная: Показать сверху как меняется fov и его тригонометрию </p>
 <p class="interdd"></p>
-<p class="interdd">★★★ В зависимости от угла обзора на viewport рисовать LH или RH. </p>
+<p class="interdd">[sample]: ★★★ 3. Сравнить как меняется fov со стороны и из самой камеры </p>
 <p class="interdd"></p>
-<p class="interdd">★★★★ fix camera right/left coords system </p>
+<p class="interdd">[sample]: ★★★ 4. Показать смену перспективной проекции на ортографическую </p>
 <p class="interdd"></p>
-<p class="interdd">★★★ 1. Ортографическая: изометрическая, диметрической и триметрической проекции </p>
+<p class="interdd">[sample]: ★★★ 5. Показать что смена right/left coords system это просто отзеркаливание </p>
 <p class="interdd"></p>
-<p class="interdd">★★★ 2. Перспективная: Показать сверху как меняется fov и его тригонометрию </p>
+<p class="interdd">[sample]: ★★★ 6. Показать математику project/deproject</p>
+<p class="interdd"><a class="anchor" id="_todo000004"></a>[sample]: ★★★ add samples for all <a href="https://gamemath.com/book/geomtests.html">https://gamemath.com/book/geomtests.html</a> </p>
 <p class="interdd"></p>
-<p class="interdd">★★★ 3. Сравнить как меняется fov со стороны и из самой камеры </p>
+<p class="interdd">[sample]: ★★★ Boids simulation for benchmark: <a href="https://github.com/SkitzFist/Boids">https://github.com/SkitzFist/Boids</a> </p>
 <p class="interdd"></p>
-<p class="interdd">★★★ 4. Показать смену перспективной проекции на ортографическую </p>
+<p class="interdd">[improvement]: ★★★ All samples should be build in web and deploy </p>
 <p class="interdd"></p>
-<p class="interdd">★★★ 5. Показать что смена right/left coords system это просто отзеркаливание </p>
+<p class="interdd">[improvement]: ★★★★ ASAN for unit-tests on clang </p>
 <p class="interdd"></p>
-<p class="interdd">★★★ 6. Показать математику project/deproject</p>
-<p class="interdd"><a class="anchor" id="_todo000008"></a>========== SAMPLES ========== </p>
+<p class="interdd">[performance]: ★★★★ animation build should be at compile-time </p>
 <p class="interdd"></p>
-<p class="interdd">★★★ Сделать все демки Geometric Tests из книги </p>
+<p class="interdd">[performance]: ★★★★ arena allocator should improve animation build's performance </p>
 <p class="interdd"></p>
-<p class="interdd">★★★ Сделать все демки математики, которая используется в самом приложении: project/deproject vectors </p>
+<p class="interdd">[performance]: ★★★★ concurrency for animation system </p>
 <p class="interdd"></p>
-<p class="interdd">★★★ Boids simulation for benchmark: <a href="https://github.com/SkitzFist/Boids">https://github.com/SkitzFist/Boids</a> </p>
+<p class="interdd">[performance]: ★★★ frustum culling? scene manager and octree </p>
 <p class="interdd"></p>
-<p class="interdd">★★★ Все алгоритмы должны собираться в сайт при web build'е. </p>
+<p class="interdd">[feature]: ★★★ add color chooser and setup app's color theme </p>
 <p class="interdd"></p>
-<p class="interdd">★★ добавить настройки палитры приложения </p>
+<p class="interdd">[feature]: ★★★ select scene objects with rectable </p>
 <p class="interdd"></p>
-<p class="interdd">★★ выделение объектов прямоугольником</p>
-<p class="interdd"><a class="anchor" id="_todo000009"></a>========== PERFORMANCE ========== </p>
+<p class="interdd">[feature]: ★★★★ show Tutorial if buttons haven't been pressed for a long time. </p>
 <p class="interdd"></p>
-<p class="interdd">★★★★ animation build should be at compile-time </p>
+<p class="interdd">[feature]: ★★★★ Ru/En lang switcher? Asset manager to load i18n? </p>
 <p class="interdd"></p>
-<p class="interdd">★★★★ arena allocator should improve animation build's performance </p>
+<p class="interdd">[feature]: ★★★★ rotation gizmo пример: <a href="https://github.com/CedricGuillemet/ImGuizmo">https://github.com/CedricGuillemet/ImGuizmo</a> </p>
 <p class="interdd"></p>
-<p class="interdd">★★★★ concurrency for animation system </p>
-<p class="interdd"></p>
-<p class="interdd">★★★ frustum culling? scene manager and octree </p>
-<p class="interdd"></p>
-<p class="interdd">★★★★ compare player implementation in (<a href="https://github.com/tsl0922/ImPlay">https://github.com/tsl0922/ImPlay</a>)</p>
-<p class="interdd"><a class="anchor" id="_todo000010"></a>========== FEATURES ========== </p>
-<p class="interdd"></p>
-<p class="interdd">★★★★ show Tutorial if buttons haven't been pressed for a long time. </p>
-<p class="interdd"></p>
-<p class="interdd">★★★★ Ru/En lang switcher? Asset manager to load i18n? </p>
-<p class="interdd"></p>
-<p class="interdd">★★★★ rotation gizmo пример: <a href="https://github.com/CedricGuillemet/ImGuizmo">https://github.com/CedricGuillemet/ImGuizmo</a> </p>
-<p class="interdd"></p>
-<p class="enddd">★★★★ add <a href="https://github.com/NanoMichael/MicroTeX">https://github.com/NanoMichael/MicroTeX</a> </p>
+<p class="enddd">[feature]: ★★★★ add <a href="https://github.com/NanoMichael/MicroTeX">https://github.com/NanoMichael/MicroTeX</a> </p>
 </dd>
 <dt>Class <a class="el" href="classgs_1_1animation_1_1IManager.html">gs::animation::IManager</a>  </dt>
 <dd><a class="anchor" id="_todo000001"></a><a class="el" href="structgs_1_1animation_1_1Handle.html" title="Lightweight handle for controlling a playing animation instance.">Handle</a> <a class="el" href="classgs_1_1animation_1_1IManager.html#a16922405e9678fefec182a005c3a372b">play(Clip&amp;)</a> smells because it partially moved in the implementation  </dd>
 <dt>Member <a class="el" href="classgs_1_1animation_1_1Sampler.html#a9f96006bc8a06b0b46985de363a94da1">gs::animation::Sampler&lt; Size &gt;::sample</a>  (const float progress, const <a class="el" href="structgs_1_1animation_1_1Asset.html" title="Describes a complete, immutable animation asset.">Asset</a> &amp;asset)</dt>
 <dd><a class="anchor" id="_todo000002"></a>think about an Accessor abstraction to avoid using ordered properties invariant  </dd>
 <dt>Member <a class="el" href="classgs_1_1CameraService.html#a584ac6606a332d1e5df8f58ffc5c82d4">gs::CameraService::getScreenToWorldRay</a>  (<a class="el" href="namespacegs.html#a4cfe276f17208d89cd0dfee026fef598">Vec2</a> screenPos, const <a class="el" href="structgs_1_1Camera.html" title="Camera with coordinate handedness property.">Camera</a> &amp;) override</dt>
-<dd><a class="anchor" id="_todo000011"></a>add support for orthographic projection  </dd>
+<dd><a class="anchor" id="_todo000005"></a>add support for orthographic projection  </dd>
 <dt>Class <a class="el" href="classgs_1_1UIManager.html">gs::UIManager</a>  </dt>
-<dd><a class="anchor" id="_todo000012"></a>move drawFooter and drawDetailsView to UI service? </dd>
+<dd><a class="anchor" id="_todo000006"></a>move drawFooter and drawDetailsView to UI service? </dd>
 </dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
