@@ -112,6 +112,12 @@ var namespacegs =
       [ "kMouseRight", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423dab99a644db9ce2f922dd6cccee8231171", null ],
       [ "kCount", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423da5a162d352f3b3603e03fc9b2f043fb40", null ]
     ] ],
+    [ "ModelType", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891", [
+      [ "kPoint", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891a20e722b15a1b587c30633f0a136b7009", null ],
+      [ "kDuck", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891af7e828ca0dfaa3805b1fa346a78b1740", null ],
+      [ "kCamera", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891ab91a982133fa67e579d45373b64bbe7b", null ],
+      [ "kCount", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891a5a162d352f3b3603e03fc9b2f043fb40", null ]
+    ] ],
     [ "ViewProjection", "namespacegs.html#aadb077c0fe8d52e082378aff90c800de", [
       [ "kPerspective", "namespacegs.html#aadb077c0fe8d52e082378aff90c800dea866b118414b1f193988f21ea58b70898", null ],
       [ "kOrthoFront", "namespacegs.html#aadb077c0fe8d52e082378aff90c800dea4f3660d27a6957d83b5eee013032892d", null ],
@@ -126,6 +132,7 @@ var namespacegs =
     [ "createDefaultSettings", "namespacegs.html#a532871a295d8339eff3e40164250c00b", null ],
     [ "degToRad", "namespacegs.html#ac83422d112496a1b6aedc9944fd04d31", null ],
     [ "deprojectVector", "namespacegs.html#ac4eba4b28307822c1aa1cb849eea66c0", null ],
+    [ "drawCombo", "namespacegs.html#a72acfafc5d0b618078352e913854fea2", null ],
     [ "intersect", "namespacegs.html#ac459095642e6b43ff573a35fdfa39a7b", null ],
     [ "intersect", "namespacegs.html#a8a01b8555e0d30201a5603fe93fc80bc", null ],
     [ "intersect", "namespacegs.html#aeb0260dc359d383de34e72be804b0854", null ],

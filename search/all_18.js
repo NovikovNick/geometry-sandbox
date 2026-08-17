@@ -29,6 +29,6 @@ var searchData=
   ['translategizmoupdateservice_26',['TranslateGizmoUpdateService',['../classgs_1_1TranslateGizmoUpdateService.html',1,'gs::TranslateGizmoUpdateService'],['../classgs_1_1TranslateGizmoUpdateService.html#afe96e24e842e524f6f1c3b885c13f6c3',1,'gs::TranslateGizmoUpdateService::TranslateGizmoUpdateService()']]],
   ['translategizmoupdateservice_27',['translateGizmoUpdateService',['../namespacegs_1_1di.html#a814122a0411f5a7c3398f0b55278c20f',1,'gs::di']]],
   ['transparent_28',['transparent',['../structgs_1_1Color.html#a1e73b5f500d279202c64388a2ee0cb57',1,'gs::Color']]],
-  ['type_29',['type',['../structgs_1_1reflection_1_1Property.html#af5713588eb06ccb7061f53a13928619b',1,'gs::reflection::Property']]],
+  ['type_29',['type',['../structgs_1_1reflection_1_1Property.html#af5713588eb06ccb7061f53a13928619b',1,'gs::reflection::Property::type'],['../structgs_1_1ecs_1_1component_1_1Mesh.html#afd71a78c0ae5d918bc3fa65a2e58f016',1,'gs::ecs::component::Mesh::type'],['../structgs_1_1scene_1_1Model.html#adf7c1eeca195f98b3aec352a349f588b',1,'gs::scene::Model::type']]],
   ['types_2eh_30',['types.h',['../animation_2types_8h.html',1,'(Global Namespace)'],['../core_2types_8h.html',1,'(Global Namespace)']]]
 ];

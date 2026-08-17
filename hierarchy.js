@@ -103,6 +103,8 @@ var hierarchy =
     [ "gs::ecs::component::Label", "structgs_1_1ecs_1_1component_1_1Label.html", null ],
     [ "gs::ui::Layout", "structgs_1_1ui_1_1Layout.html", null ],
     [ "gs::ecs::component::MainColor", "structgs_1_1ecs_1_1component_1_1MainColor.html", null ],
+    [ "gs::ecs::component::Mesh", "structgs_1_1ecs_1_1component_1_1Mesh.html", null ],
+    [ "gs::scene::Model", "structgs_1_1scene_1_1Model.html", null ],
     [ "gs::ecs::component::Normal", "structgs_1_1ecs_1_1component_1_1Normal.html", null ],
     [ "gs::ecs::component::OnHoverCallback", "structgs_1_1ecs_1_1component_1_1OnHoverCallback.html", null ],
     [ "gs::ecs::component::OnSelectCallback", "structgs_1_1ecs_1_1component_1_1OnSelectCallback.html", null ],

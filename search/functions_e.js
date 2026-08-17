@@ -9,11 +9,8 @@ var searchData=
   ['playermanager_6',['PlayerManager',['../classgs_1_1animation_1_1PlayerManager.html#a9760377805fa76b726f8e51a61eee534',1,'gs::animation::PlayerManager']]],
   ['playforward_7',['playForward',['../structgs_1_1animation_1_1Handle.html#a41062f98fc2c1e37400c3c28bb85869b',1,'gs::animation::Handle']]],
   ['point_8',['point',['../namespacegs_1_1animation_1_1dsl_1_1accessor.html#ab55e76a5e154a1b1a16934c3b1d62a7d',1,'gs::animation::dsl::accessor']]],
-  ['pointmaterial_9',['pointMaterial',['../classgs_1_1IResourceManager.html#afd8e4537515076d062d53584b9c1ef48',1,'gs::IResourceManager::pointMaterial()'],['../classgs_1_1ResourceManager.html#af0c403164754e3ccbb82563da86d2bf3',1,'gs::ResourceManager::pointMaterial()']]],
-  ['pointmesh_10',['pointMesh',['../classgs_1_1IResourceManager.html#a771096f0b1431a039258478a825fd07d',1,'gs::IResourceManager::pointMesh()'],['../classgs_1_1ResourceManager.html#a96c34fce425c3ede48e06ef3282f47a5',1,'gs::ResourceManager::pointMesh()']]],
-  ['pointshader_11',['pointShader',['../classgs_1_1IResourceManager.html#ae90e03b4998acfad34f861461668e4ad',1,'gs::IResourceManager::pointShader()'],['../classgs_1_1ResourceManager.html#a1aca4dfbdd40520c0a23c61b3a72ad8f',1,'gs::ResourceManager::pointShader()']]],
-  ['projectvector_12',['projectVector',['../namespacegs.html#a5f889e9ef07b53ba658e1eb802dd1ee0',1,'gs']]],
-  ['propertypath_13',['PropertyPath',['../structgs_1_1animation_1_1PropertyPath.html#a03e86cb3a671a6cbf81cf2ccc8536043',1,'gs::animation::PropertyPath']]],
-  ['propertypath_14',['propertyPath',['../namespacegs_1_1animation_1_1dsl_1_1detail.html#adb75cfda1ab71670d68005173221f6f6',1,'gs::animation::dsl::detail']]],
-  ['propertytype_15',['propertyType',['../namespacegs_1_1reflection.html#a827ef5ac7d1e268e64ff75b7f6c3e886',1,'gs::reflection']]]
+  ['projectvector_9',['projectVector',['../namespacegs.html#a5f889e9ef07b53ba658e1eb802dd1ee0',1,'gs']]],
+  ['propertypath_10',['PropertyPath',['../structgs_1_1animation_1_1PropertyPath.html#a03e86cb3a671a6cbf81cf2ccc8536043',1,'gs::animation::PropertyPath']]],
+  ['propertypath_11',['propertyPath',['../namespacegs_1_1animation_1_1dsl_1_1detail.html#adb75cfda1ab71670d68005173221f6f6',1,'gs::animation::dsl::detail']]],
+  ['propertytype_12',['propertyType',['../namespacegs_1_1reflection.html#a827ef5ac7d1e268e64ff75b7f6c3e886',1,'gs::reflection']]]
 ];

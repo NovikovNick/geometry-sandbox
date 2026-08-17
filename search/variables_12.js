@@ -10,5 +10,5 @@ var searchData=
   ['tooltipconverter_7',['tooltipConverter',['../structgs_1_1ui_1_1Slider.html#acc704d9ac8c38a6a573df67938808caf',1,'gs::ui::Slider']]],
   ['total_8',['total',['../structgs_1_1PerformanceStats.html#ab64e03c5435955b8b431b4319f76f6f4',1,'gs::PerformanceStats']]],
   ['transformgizmo_9',['transformGizmo',['../structgs_1_1ui_1_1State.html#a507fd6b09fc6be5519c2c6773d639046',1,'gs::ui::State']]],
-  ['type_10',['type',['../structgs_1_1reflection_1_1Property.html#af5713588eb06ccb7061f53a13928619b',1,'gs::reflection::Property']]]
+  ['type_10',['type',['../structgs_1_1reflection_1_1Property.html#af5713588eb06ccb7061f53a13928619b',1,'gs::reflection::Property::type'],['../structgs_1_1ecs_1_1component_1_1Mesh.html#afd71a78c0ae5d918bc3fa65a2e58f016',1,'gs::ecs::component::Mesh::type'],['../structgs_1_1scene_1_1Model.html#adf7c1eeca195f98b3aec352a349f588b',1,'gs::scene::Model::type']]]
 ];

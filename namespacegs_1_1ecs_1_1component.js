@@ -13,6 +13,7 @@ var namespacegs_1_1ecs_1_1component =
     [ "SphereCollider", "structgs_1_1ecs_1_1component_1_1SphereCollider.html", "structgs_1_1ecs_1_1component_1_1SphereCollider" ],
     [ "AABBCollider", "structgs_1_1ecs_1_1component_1_1AABBCollider.html", "structgs_1_1ecs_1_1component_1_1AABBCollider" ],
     [ "Dashed", "structgs_1_1ecs_1_1component_1_1Dashed.html", "structgs_1_1ecs_1_1component_1_1Dashed" ],
+    [ "Mesh", "structgs_1_1ecs_1_1component_1_1Mesh.html", "structgs_1_1ecs_1_1component_1_1Mesh" ],
     [ "Selected", "structgs_1_1ecs_1_1component_1_1Selected.html", null ],
     [ "OnSelectCallback", "structgs_1_1ecs_1_1component_1_1OnSelectCallback.html", "structgs_1_1ecs_1_1component_1_1OnSelectCallback" ],
     [ "Hovered", "structgs_1_1ecs_1_1component_1_1Hovered.html", null ],

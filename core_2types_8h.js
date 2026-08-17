@@ -9,6 +9,7 @@ var core_2types_8h =
     [ "gs::scene::Text", "structgs_1_1scene_1_1Text.html", "structgs_1_1scene_1_1Text" ],
     [ "gs::scene::Vector", "structgs_1_1scene_1_1Vector.html", "structgs_1_1scene_1_1Vector" ],
     [ "gs::scene::AABB", "structgs_1_1scene_1_1AABB.html", "structgs_1_1scene_1_1AABB" ],
+    [ "gs::scene::Model", "structgs_1_1scene_1_1Model.html", "structgs_1_1scene_1_1Model" ],
     [ "gs::TranslateGizmo", "structgs_1_1TranslateGizmo.html", "structgs_1_1TranslateGizmo" ],
     [ "gs::Camera", "structgs_1_1Camera.html", "structgs_1_1Camera" ],
     [ "gs::PerformanceStats", "structgs_1_1PerformanceStats.html", "structgs_1_1PerformanceStats" ],
@@ -42,6 +43,12 @@ var core_2types_8h =
       [ "gs::CursorType::kArrow", "namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49eab9915b027f3c5c3f045c880f99f22bc4", null ],
       [ "gs::CursorType::kPointingHand", "namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49ea12457a3de4a1c8fe5d7234d514a05848", null ],
       [ "gs::CursorType::kHidden", "namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49ea7c5019af37cb66b2492ac211b28eedc1", null ]
+    ] ],
+    [ "gs::ModelType", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891", [
+      [ "gs::ModelType::kPoint", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891a20e722b15a1b587c30633f0a136b7009", null ],
+      [ "gs::ModelType::kDuck", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891af7e828ca0dfaa3805b1fa346a78b1740", null ],
+      [ "gs::ModelType::kCamera", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891ab91a982133fa67e579d45373b64bbe7b", null ],
+      [ "gs::ModelType::kCount", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891a5a162d352f3b3603e03fc9b2f043fb40", null ]
     ] ],
     [ "std::lerp", "namespacestd.html#a9f3fd0f1374b543ea83b1486200bed52", null ]
 ];

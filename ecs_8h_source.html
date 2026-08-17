@@ -49,7 +49,7 @@
 </head>
 <body>
 <!-- https://tholman.com/github-corners/ -->
-<a href="https://github.com/NovikovNick/algorithm-visualizer" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+<a href="https://github.com/NovikovNick/geometry-sandbox" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
     <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
     <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -124,161 +124,169 @@ $(function(){initNavTree('ecs_8h_source.html','',''); });
   <div class="headertitle"><div class="title">ecs.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="ecs_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// created by MetalHeart</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#ifndef GEOMETRY_SANDBOX_ESC_H</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#define GEOMETRY_SANDBOX_ESC_H</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="math_8h.html">core/math.h</a>&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="core_2types_8h.html">core/types.h</a>&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;entt/entt.hpp&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="foldopen" id="foldopen00012" data-start="{" data-end="}">
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="namespacegs_1_1ecs.html">   12</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacegs_1_1ecs.html">gs::ecs</a></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="namespacegs_1_1ecs.html#a4145124e7eea2c05f14660b198671de2">   14</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacegs_1_1ecs.html#a4145124e7eea2c05f14660b198671de2">Entity</a>   = entt::entity;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="namespacegs_1_1ecs.html#a48041250f226f69c0aa9075efcbcb8b9">   15</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacegs_1_1ecs.html#a48041250f226f69c0aa9075efcbcb8b9">Registry</a> = entt::basic_registry&lt;Entity&gt;;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="namespacegs_1_1ecs_1_1component.html">   17</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacegs_1_1ecs_1_1component.html">component</a></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
-<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Arrow.html">   19</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1Arrow.html">Arrow</a></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Arrow.html#a66d0db16ddf34438e58c68c77f5ad2a7">   21</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1Arrow.html#a66d0db16ddf34438e58c68c77f5ad2a7">size</a>;  <span class="comment">// arrow head size</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
+<a href="ecs_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef GEOMETRY_SANDBOX_ESC_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define GEOMETRY_SANDBOX_ESC_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="math_8h.html">core/math.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="core_2types_8h.html">core/types.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;entt/entt.hpp&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="namespacegs_1_1ecs.html">   16</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacegs_1_1ecs.html">gs::ecs</a></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="namespacegs_1_1ecs.html#a4145124e7eea2c05f14660b198671de2">   18</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacegs_1_1ecs.html#a4145124e7eea2c05f14660b198671de2">Entity</a>   = entt::entity;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="namespacegs_1_1ecs.html#a48041250f226f69c0aa9075efcbcb8b9">   19</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacegs_1_1ecs.html#a48041250f226f69c0aa9075efcbcb8b9">Registry</a> = entt::basic_registry&lt;Entity&gt;;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="namespacegs_1_1ecs_1_1component.html">   21</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacegs_1_1ecs_1_1component.html">component</a></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>{</div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Arrow.html">   23</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1Arrow.html">Arrow</a></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Arrow.html#a66d0db16ddf34438e58c68c77f5ad2a7">   25</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1Arrow.html#a66d0db16ddf34438e58c68c77f5ad2a7">size</a>;  <span class="comment">// arrow head size</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>};</div>
 </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1MainColor.html">   24</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1MainColor.html">MainColor</a></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1MainColor.html#a1da305ab7f4592572f7942e46a53a5ee">   26</a></span>    <a class="code hl_struct" href="structgs_1_1Color.html">Color</a> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1MainColor.html#a1da305ab7f4592572f7942e46a53a5ee">val</a>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>};</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1MainColor.html">   28</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1MainColor.html">MainColor</a></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1MainColor.html#a1da305ab7f4592572f7942e46a53a5ee">   30</a></span>    <a class="code hl_struct" href="structgs_1_1Color.html">Color</a> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1MainColor.html#a1da305ab7f4592572f7942e46a53a5ee">val</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>};</div>
 </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="foldopen" id="foldopen00029" data-start="{" data-end="};">
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Normal.html">   29</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1Normal.html">Normal</a></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>{</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Normal.html#a2726228c8a5332d562fdc9bcc3b8c298">   31</a></span>    <a class="code hl_typedef" href="namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e">Vec3</a> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1Normal.html#a2726228c8a5332d562fdc9bcc3b8c298">val</a>;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>};</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Normal.html">   33</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1Normal.html">Normal</a></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>{</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Normal.html#a2726228c8a5332d562fdc9bcc3b8c298">   35</a></span>    <a class="code hl_typedef" href="namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e">Vec3</a> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1Normal.html#a2726228c8a5332d562fdc9bcc3b8c298">val</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>};</div>
 </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="foldopen" id="foldopen00034" data-start="{" data-end="};">
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Distance.html">   34</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1Distance.html">Distance</a></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>{</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Distance.html#a87fe19b1b036a5d0843bd47f60a80a31">   36</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1Distance.html#a87fe19b1b036a5d0843bd47f60a80a31">val</a>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>};</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="};">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Distance.html">   38</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1Distance.html">Distance</a></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Distance.html#a87fe19b1b036a5d0843bd47f60a80a31">   40</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1Distance.html#a87fe19b1b036a5d0843bd47f60a80a31">val</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>};</div>
 </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="foldopen" id="foldopen00039" data-start="{" data-end="};">
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Position.html">   39</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1Position.html">Position</a></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Position.html#af8c73f36e10cf16fc6b6703e5009914b">   41</a></span>    <a class="code hl_typedef" href="namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e">Vec3</a> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1Position.html#af8c73f36e10cf16fc6b6703e5009914b">val</a>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Position.html">   43</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1Position.html">Position</a></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Position.html#af8c73f36e10cf16fc6b6703e5009914b">   45</a></span>    <a class="code hl_typedef" href="namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e">Vec3</a> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1Position.html#af8c73f36e10cf16fc6b6703e5009914b">val</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
 </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="foldopen" id="foldopen00044" data-start="{" data-end="};">
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1EndPosition.html">   44</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1EndPosition.html">EndPosition</a></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1EndPosition.html#aeae9f1ff61b0245e4c32afebacb7e2b3">   46</a></span>    <a class="code hl_typedef" href="namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e">Vec3</a> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1EndPosition.html#aeae9f1ff61b0245e4c32afebacb7e2b3">val</a>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>};</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="};">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1EndPosition.html">   48</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1EndPosition.html">EndPosition</a></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>{</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1EndPosition.html#aeae9f1ff61b0245e4c32afebacb7e2b3">   50</a></span>    <a class="code hl_typedef" href="namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e">Vec3</a> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1EndPosition.html#aeae9f1ff61b0245e4c32afebacb7e2b3">val</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>};</div>
 </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="foldopen" id="foldopen00049" data-start="{" data-end="};">
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Radius.html">   49</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1Radius.html">Radius</a></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>{</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Radius.html#a30e6696609f1dc864ffe806daed4d280">   51</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1Radius.html#a30e6696609f1dc864ffe806daed4d280">val</a>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>};</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="};">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Radius.html">   53</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1Radius.html">Radius</a></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>{</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Radius.html#a30e6696609f1dc864ffe806daed4d280">   55</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1Radius.html#a30e6696609f1dc864ffe806daed4d280">val</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>};</div>
 </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="foldopen" id="foldopen00054" data-start="{" data-end="};">
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1AABBSize.html">   54</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1AABBSize.html">AABBSize</a></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>{</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1AABBSize.html#a79849de0f39ff2f9eeaa882b44973d00">   56</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1AABBSize.html#a79849de0f39ff2f9eeaa882b44973d00">val</a>;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>};</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="};">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1AABBSize.html">   58</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1AABBSize.html">AABBSize</a></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>{</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1AABBSize.html#a79849de0f39ff2f9eeaa882b44973d00">   60</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1AABBSize.html#a79849de0f39ff2f9eeaa882b44973d00">val</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>};</div>
 </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="foldopen" id="foldopen00059" data-start="{" data-end="};">
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Thickness.html">   59</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1Thickness.html">Thickness</a></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>{</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Thickness.html#a52b4240b01f3a04924e497c4edfc630e">   61</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1Thickness.html#a52b4240b01f3a04924e497c4edfc630e">val</a>;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>};</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="};">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Thickness.html">   63</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1Thickness.html">Thickness</a></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>{</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Thickness.html#a52b4240b01f3a04924e497c4edfc630e">   65</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1Thickness.html#a52b4240b01f3a04924e497c4edfc630e">val</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>};</div>
 </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="foldopen" id="foldopen00064" data-start="{" data-end="};">
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Label.html">   64</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1Label.html">Label</a></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>{</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Label.html#a84606bd351b627c070d5c546883e4047">   66</a></span>    std::string <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1Label.html#a84606bd351b627c070d5c546883e4047">text</a>;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Label.html#a29d6aaa8f967d511150455b392581d82">   67</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1Label.html#a29d6aaa8f967d511150455b392581d82">fontSize</a>;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>};</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="};">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Label.html">   68</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1Label.html">Label</a></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>{</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Label.html#a84606bd351b627c070d5c546883e4047">   70</a></span>    std::string <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1Label.html#a84606bd351b627c070d5c546883e4047">text</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Label.html#a29d6aaa8f967d511150455b392581d82">   71</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1Label.html#a29d6aaa8f967d511150455b392581d82">fontSize</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>};</div>
 </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="foldopen" id="foldopen00070" data-start="{" data-end="};">
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1SphereCollider.html">   70</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1SphereCollider.html">SphereCollider</a></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>{</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1SphereCollider.html#aa2eb5cab3a5d51a10455fbfd3f34f11e">   72</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1SphereCollider.html#aa2eb5cab3a5d51a10455fbfd3f34f11e">radius</a>;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>};</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="foldopen" id="foldopen00074" data-start="{" data-end="};">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1SphereCollider.html">   74</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1SphereCollider.html">SphereCollider</a></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>{</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1SphereCollider.html#aa2eb5cab3a5d51a10455fbfd3f34f11e">   76</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1SphereCollider.html#aa2eb5cab3a5d51a10455fbfd3f34f11e">radius</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>};</div>
 </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="foldopen" id="foldopen00075" data-start="{" data-end="};">
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1AABBCollider.html">   75</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1AABBCollider.html">AABBCollider</a></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>{</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1AABBCollider.html#a8b03adc81bb5512886743fd438b917eb">   77</a></span>    <a class="code hl_typedef" href="namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e">Vec3</a> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1AABBCollider.html#a8b03adc81bb5512886743fd438b917eb">size</a>;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>};</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="foldopen" id="foldopen00079" data-start="{" data-end="};">
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1AABBCollider.html">   79</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1AABBCollider.html">AABBCollider</a></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>{</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1AABBCollider.html#a8b03adc81bb5512886743fd438b917eb">   81</a></span>    <a class="code hl_typedef" href="namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e">Vec3</a> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1AABBCollider.html#a8b03adc81bb5512886743fd438b917eb">size</a>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>};</div>
 </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="foldopen" id="foldopen00080" data-start="{" data-end="};">
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Dashed.html">   80</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1Dashed.html">Dashed</a></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>{</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Dashed.html#a1483cdb77e9a2a1fcedc8002b9c26984">   82</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1Dashed.html#a1483cdb77e9a2a1fcedc8002b9c26984">dashLength</a>;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Dashed.html#a3ab9b91307f69513059eb107747ee312">   83</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1Dashed.html#a3ab9b91307f69513059eb107747ee312">gapLength</a>;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>};</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="foldopen" id="foldopen00084" data-start="{" data-end="};">
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Dashed.html">   84</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1Dashed.html">Dashed</a></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>{</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Dashed.html#a1483cdb77e9a2a1fcedc8002b9c26984">   86</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1Dashed.html#a1483cdb77e9a2a1fcedc8002b9c26984">dashLength</a>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Dashed.html#a3ab9b91307f69513059eb107747ee312">   87</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1Dashed.html#a3ab9b91307f69513059eb107747ee312">gapLength</a>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>};</div>
 </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}  <span class="comment">// namespace component</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="};">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Mesh.html">   90</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1ecs_1_1component_1_1Mesh.html">Mesh</a></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>{</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="structgs_1_1ecs_1_1component_1_1Mesh.html#afd71a78c0ae5d918bc3fa65a2e58f016">   92</a></span>    <a class="code hl_enumeration" href="namespacegs.html#a1128ba681e8ea24f5adf987d81149891">ModelType</a> <a class="code hl_variable" href="structgs_1_1ecs_1_1component_1_1Mesh.html#afd71a78c0ae5d918bc3fa65a2e58f016">type</a>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>};</div>
 </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>}  <span class="comment">// namespace gs::ecs</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>}  <span class="comment">// namespace component</span></div>
 </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif  </span><span class="comment">// M8T_ALGOVIS_ESC_H</span></div>
-<div class="ttc" id="acore_2types_8h_html"><div class="ttname"><a href="core_2types_8h.html">types.h</a></div></div>
-<div class="ttc" id="amath_8h_html"><div class="ttname"><a href="math_8h.html">math.h</a></div></div>
-<div class="ttc" id="anamespacegs_1_1ecs_1_1component_html"><div class="ttname"><a href="namespacegs_1_1ecs_1_1component.html">gs::ecs::component</a></div><div class="ttdef"><b>Definition</b> ecs.h:18</div></div>
-<div class="ttc" id="anamespacegs_1_1ecs_html"><div class="ttname"><a href="namespacegs_1_1ecs.html">gs::ecs</a></div><div class="ttdef"><b>Definition</b> ecs.h:13</div></div>
-<div class="ttc" id="anamespacegs_1_1ecs_html_a4145124e7eea2c05f14660b198671de2"><div class="ttname"><a href="namespacegs_1_1ecs.html#a4145124e7eea2c05f14660b198671de2">gs::ecs::Entity</a></div><div class="ttdeci">entt::entity Entity</div><div class="ttdef"><b>Definition</b> ecs.h:14</div></div>
-<div class="ttc" id="anamespacegs_1_1ecs_html_a48041250f226f69c0aa9075efcbcb8b9"><div class="ttname"><a href="namespacegs_1_1ecs.html#a48041250f226f69c0aa9075efcbcb8b9">gs::ecs::Registry</a></div><div class="ttdeci">entt::basic_registry&lt; Entity &gt; Registry</div><div class="ttdef"><b>Definition</b> ecs.h:15</div></div>
-<div class="ttc" id="anamespacegs_html_a0766b5dedc2e7f6c167225296cac0a9e"><div class="ttname"><a href="namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e">gs::Vec3</a></div><div class="ttdeci">Eigen::Vector3f Vec3</div><div class="ttdef"><b>Definition</b> math.h:14</div></div>
-<div class="ttc" id="astructgs_1_1Color_html"><div class="ttname"><a href="structgs_1_1Color.html">gs::Color</a></div><div class="ttdef"><b>Definition</b> types.h:31</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1AABBCollider_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1AABBCollider.html">gs::ecs::component::AABBCollider</a></div><div class="ttdef"><b>Definition</b> ecs.h:76</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1AABBCollider_html_a8b03adc81bb5512886743fd438b917eb"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1AABBCollider.html#a8b03adc81bb5512886743fd438b917eb">gs::ecs::component::AABBCollider::size</a></div><div class="ttdeci">Vec3 size</div><div class="ttdef"><b>Definition</b> ecs.h:77</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1AABBSize_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1AABBSize.html">gs::ecs::component::AABBSize</a></div><div class="ttdef"><b>Definition</b> ecs.h:55</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1AABBSize_html_a79849de0f39ff2f9eeaa882b44973d00"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1AABBSize.html#a79849de0f39ff2f9eeaa882b44973d00">gs::ecs::component::AABBSize::val</a></div><div class="ttdeci">float val</div><div class="ttdef"><b>Definition</b> ecs.h:56</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Arrow_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Arrow.html">gs::ecs::component::Arrow</a></div><div class="ttdef"><b>Definition</b> ecs.h:20</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Arrow_html_a66d0db16ddf34438e58c68c77f5ad2a7"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Arrow.html#a66d0db16ddf34438e58c68c77f5ad2a7">gs::ecs::component::Arrow::size</a></div><div class="ttdeci">float size</div><div class="ttdef"><b>Definition</b> ecs.h:21</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Dashed_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Dashed.html">gs::ecs::component::Dashed</a></div><div class="ttdef"><b>Definition</b> ecs.h:81</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Dashed_html_a1483cdb77e9a2a1fcedc8002b9c26984"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Dashed.html#a1483cdb77e9a2a1fcedc8002b9c26984">gs::ecs::component::Dashed::dashLength</a></div><div class="ttdeci">float dashLength</div><div class="ttdef"><b>Definition</b> ecs.h:82</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Dashed_html_a3ab9b91307f69513059eb107747ee312"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Dashed.html#a3ab9b91307f69513059eb107747ee312">gs::ecs::component::Dashed::gapLength</a></div><div class="ttdeci">float gapLength</div><div class="ttdef"><b>Definition</b> ecs.h:83</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Distance_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Distance.html">gs::ecs::component::Distance</a></div><div class="ttdef"><b>Definition</b> ecs.h:35</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Distance_html_a87fe19b1b036a5d0843bd47f60a80a31"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Distance.html#a87fe19b1b036a5d0843bd47f60a80a31">gs::ecs::component::Distance::val</a></div><div class="ttdeci">float val</div><div class="ttdef"><b>Definition</b> ecs.h:36</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1EndPosition_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1EndPosition.html">gs::ecs::component::EndPosition</a></div><div class="ttdef"><b>Definition</b> ecs.h:45</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1EndPosition_html_aeae9f1ff61b0245e4c32afebacb7e2b3"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1EndPosition.html#aeae9f1ff61b0245e4c32afebacb7e2b3">gs::ecs::component::EndPosition::val</a></div><div class="ttdeci">Vec3 val</div><div class="ttdef"><b>Definition</b> ecs.h:46</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Label_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Label.html">gs::ecs::component::Label</a></div><div class="ttdef"><b>Definition</b> ecs.h:65</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Label_html_a29d6aaa8f967d511150455b392581d82"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Label.html#a29d6aaa8f967d511150455b392581d82">gs::ecs::component::Label::fontSize</a></div><div class="ttdeci">float fontSize</div><div class="ttdef"><b>Definition</b> ecs.h:67</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Label_html_a84606bd351b627c070d5c546883e4047"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Label.html#a84606bd351b627c070d5c546883e4047">gs::ecs::component::Label::text</a></div><div class="ttdeci">std::string text</div><div class="ttdef"><b>Definition</b> ecs.h:66</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1MainColor_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1MainColor.html">gs::ecs::component::MainColor</a></div><div class="ttdef"><b>Definition</b> ecs.h:25</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1MainColor_html_a1da305ab7f4592572f7942e46a53a5ee"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1MainColor.html#a1da305ab7f4592572f7942e46a53a5ee">gs::ecs::component::MainColor::val</a></div><div class="ttdeci">Color val</div><div class="ttdef"><b>Definition</b> ecs.h:26</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Normal_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Normal.html">gs::ecs::component::Normal</a></div><div class="ttdef"><b>Definition</b> ecs.h:30</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Normal_html_a2726228c8a5332d562fdc9bcc3b8c298"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Normal.html#a2726228c8a5332d562fdc9bcc3b8c298">gs::ecs::component::Normal::val</a></div><div class="ttdeci">Vec3 val</div><div class="ttdef"><b>Definition</b> ecs.h:31</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Position_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Position.html">gs::ecs::component::Position</a></div><div class="ttdef"><b>Definition</b> ecs.h:40</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Position_html_af8c73f36e10cf16fc6b6703e5009914b"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Position.html#af8c73f36e10cf16fc6b6703e5009914b">gs::ecs::component::Position::val</a></div><div class="ttdeci">Vec3 val</div><div class="ttdef"><b>Definition</b> ecs.h:41</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Radius_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Radius.html">gs::ecs::component::Radius</a></div><div class="ttdef"><b>Definition</b> ecs.h:50</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Radius_html_a30e6696609f1dc864ffe806daed4d280"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Radius.html#a30e6696609f1dc864ffe806daed4d280">gs::ecs::component::Radius::val</a></div><div class="ttdeci">float val</div><div class="ttdef"><b>Definition</b> ecs.h:51</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1SphereCollider_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1SphereCollider.html">gs::ecs::component::SphereCollider</a></div><div class="ttdef"><b>Definition</b> ecs.h:71</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1SphereCollider_html_aa2eb5cab3a5d51a10455fbfd3f34f11e"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1SphereCollider.html#aa2eb5cab3a5d51a10455fbfd3f34f11e">gs::ecs::component::SphereCollider::radius</a></div><div class="ttdeci">float radius</div><div class="ttdef"><b>Definition</b> ecs.h:72</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Thickness_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Thickness.html">gs::ecs::component::Thickness</a></div><div class="ttdef"><b>Definition</b> ecs.h:60</div></div>
-<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Thickness_html_a52b4240b01f3a04924e497c4edfc630e"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Thickness.html#a52b4240b01f3a04924e497c4edfc630e">gs::ecs::component::Thickness::val</a></div><div class="ttdeci">float val</div><div class="ttdef"><b>Definition</b> ecs.h:61</div></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}  <span class="comment">// namespace gs::ecs</span></div>
+</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">#endif  </span><span class="comment">// M8T_ALGOVIS_ESC_H</span></div>
+<div class="ttc" id="acore_2types_8h_html"><div class="ttname"><a href="core_2types_8h.html">types.h</a></div><div class="ttdoc">core types</div></div>
+<div class="ttc" id="amath_8h_html"><div class="ttname"><a href="math_8h.html">math.h</a></div><div class="ttdoc">Defines math types, geometric primitives, utility functions.</div></div>
+<div class="ttc" id="anamespacegs_1_1ecs_1_1component_html"><div class="ttname"><a href="namespacegs_1_1ecs_1_1component.html">gs::ecs::component</a></div><div class="ttdef"><b>Definition</b> ecs.h:22</div></div>
+<div class="ttc" id="anamespacegs_1_1ecs_html"><div class="ttname"><a href="namespacegs_1_1ecs.html">gs::ecs</a></div><div class="ttdoc">Entity Component System.</div><div class="ttdef"><b>Definition</b> ecs.h:17</div></div>
+<div class="ttc" id="anamespacegs_1_1ecs_html_a4145124e7eea2c05f14660b198671de2"><div class="ttname"><a href="namespacegs_1_1ecs.html#a4145124e7eea2c05f14660b198671de2">gs::ecs::Entity</a></div><div class="ttdeci">entt::entity Entity</div><div class="ttdef"><b>Definition</b> ecs.h:18</div></div>
+<div class="ttc" id="anamespacegs_1_1ecs_html_a48041250f226f69c0aa9075efcbcb8b9"><div class="ttname"><a href="namespacegs_1_1ecs.html#a48041250f226f69c0aa9075efcbcb8b9">gs::ecs::Registry</a></div><div class="ttdeci">entt::basic_registry&lt; Entity &gt; Registry</div><div class="ttdef"><b>Definition</b> ecs.h:19</div></div>
+<div class="ttc" id="anamespacegs_html_a0766b5dedc2e7f6c167225296cac0a9e"><div class="ttname"><a href="namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e">gs::Vec3</a></div><div class="ttdeci">Eigen::Vector3f Vec3</div><div class="ttdef"><b>Definition</b> math.h:17</div></div>
+<div class="ttc" id="anamespacegs_html_a1128ba681e8ea24f5adf987d81149891"><div class="ttname"><a href="namespacegs.html#a1128ba681e8ea24f5adf987d81149891">gs::ModelType</a></div><div class="ttdeci">ModelType</div><div class="ttdef"><b>Definition</b> types.h:86</div></div>
+<div class="ttc" id="astructgs_1_1Color_html"><div class="ttname"><a href="structgs_1_1Color.html">gs::Color</a></div><div class="ttdoc">RGBA color with float values [0, 255].</div><div class="ttdef"><b>Definition</b> types.h:39</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1AABBCollider_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1AABBCollider.html">gs::ecs::component::AABBCollider</a></div><div class="ttdef"><b>Definition</b> ecs.h:80</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1AABBCollider_html_a8b03adc81bb5512886743fd438b917eb"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1AABBCollider.html#a8b03adc81bb5512886743fd438b917eb">gs::ecs::component::AABBCollider::size</a></div><div class="ttdeci">Vec3 size</div><div class="ttdef"><b>Definition</b> ecs.h:81</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1AABBSize_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1AABBSize.html">gs::ecs::component::AABBSize</a></div><div class="ttdef"><b>Definition</b> ecs.h:59</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1AABBSize_html_a79849de0f39ff2f9eeaa882b44973d00"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1AABBSize.html#a79849de0f39ff2f9eeaa882b44973d00">gs::ecs::component::AABBSize::val</a></div><div class="ttdeci">float val</div><div class="ttdef"><b>Definition</b> ecs.h:60</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Arrow_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Arrow.html">gs::ecs::component::Arrow</a></div><div class="ttdef"><b>Definition</b> ecs.h:24</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Arrow_html_a66d0db16ddf34438e58c68c77f5ad2a7"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Arrow.html#a66d0db16ddf34438e58c68c77f5ad2a7">gs::ecs::component::Arrow::size</a></div><div class="ttdeci">float size</div><div class="ttdef"><b>Definition</b> ecs.h:25</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Dashed_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Dashed.html">gs::ecs::component::Dashed</a></div><div class="ttdef"><b>Definition</b> ecs.h:85</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Dashed_html_a1483cdb77e9a2a1fcedc8002b9c26984"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Dashed.html#a1483cdb77e9a2a1fcedc8002b9c26984">gs::ecs::component::Dashed::dashLength</a></div><div class="ttdeci">float dashLength</div><div class="ttdef"><b>Definition</b> ecs.h:86</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Dashed_html_a3ab9b91307f69513059eb107747ee312"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Dashed.html#a3ab9b91307f69513059eb107747ee312">gs::ecs::component::Dashed::gapLength</a></div><div class="ttdeci">float gapLength</div><div class="ttdef"><b>Definition</b> ecs.h:87</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Distance_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Distance.html">gs::ecs::component::Distance</a></div><div class="ttdef"><b>Definition</b> ecs.h:39</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Distance_html_a87fe19b1b036a5d0843bd47f60a80a31"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Distance.html#a87fe19b1b036a5d0843bd47f60a80a31">gs::ecs::component::Distance::val</a></div><div class="ttdeci">float val</div><div class="ttdef"><b>Definition</b> ecs.h:40</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1EndPosition_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1EndPosition.html">gs::ecs::component::EndPosition</a></div><div class="ttdef"><b>Definition</b> ecs.h:49</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1EndPosition_html_aeae9f1ff61b0245e4c32afebacb7e2b3"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1EndPosition.html#aeae9f1ff61b0245e4c32afebacb7e2b3">gs::ecs::component::EndPosition::val</a></div><div class="ttdeci">Vec3 val</div><div class="ttdef"><b>Definition</b> ecs.h:50</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Label_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Label.html">gs::ecs::component::Label</a></div><div class="ttdef"><b>Definition</b> ecs.h:69</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Label_html_a29d6aaa8f967d511150455b392581d82"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Label.html#a29d6aaa8f967d511150455b392581d82">gs::ecs::component::Label::fontSize</a></div><div class="ttdeci">float fontSize</div><div class="ttdef"><b>Definition</b> ecs.h:71</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Label_html_a84606bd351b627c070d5c546883e4047"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Label.html#a84606bd351b627c070d5c546883e4047">gs::ecs::component::Label::text</a></div><div class="ttdeci">std::string text</div><div class="ttdef"><b>Definition</b> ecs.h:70</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1MainColor_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1MainColor.html">gs::ecs::component::MainColor</a></div><div class="ttdef"><b>Definition</b> ecs.h:29</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1MainColor_html_a1da305ab7f4592572f7942e46a53a5ee"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1MainColor.html#a1da305ab7f4592572f7942e46a53a5ee">gs::ecs::component::MainColor::val</a></div><div class="ttdeci">Color val</div><div class="ttdef"><b>Definition</b> ecs.h:30</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Mesh_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Mesh.html">gs::ecs::component::Mesh</a></div><div class="ttdef"><b>Definition</b> ecs.h:91</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Mesh_html_afd71a78c0ae5d918bc3fa65a2e58f016"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Mesh.html#afd71a78c0ae5d918bc3fa65a2e58f016">gs::ecs::component::Mesh::type</a></div><div class="ttdeci">ModelType type</div><div class="ttdef"><b>Definition</b> ecs.h:92</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Normal_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Normal.html">gs::ecs::component::Normal</a></div><div class="ttdef"><b>Definition</b> ecs.h:34</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Normal_html_a2726228c8a5332d562fdc9bcc3b8c298"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Normal.html#a2726228c8a5332d562fdc9bcc3b8c298">gs::ecs::component::Normal::val</a></div><div class="ttdeci">Vec3 val</div><div class="ttdef"><b>Definition</b> ecs.h:35</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Position_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Position.html">gs::ecs::component::Position</a></div><div class="ttdef"><b>Definition</b> ecs.h:44</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Position_html_af8c73f36e10cf16fc6b6703e5009914b"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Position.html#af8c73f36e10cf16fc6b6703e5009914b">gs::ecs::component::Position::val</a></div><div class="ttdeci">Vec3 val</div><div class="ttdef"><b>Definition</b> ecs.h:45</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Radius_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Radius.html">gs::ecs::component::Radius</a></div><div class="ttdef"><b>Definition</b> ecs.h:54</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Radius_html_a30e6696609f1dc864ffe806daed4d280"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Radius.html#a30e6696609f1dc864ffe806daed4d280">gs::ecs::component::Radius::val</a></div><div class="ttdeci">float val</div><div class="ttdef"><b>Definition</b> ecs.h:55</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1SphereCollider_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1SphereCollider.html">gs::ecs::component::SphereCollider</a></div><div class="ttdef"><b>Definition</b> ecs.h:75</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1SphereCollider_html_aa2eb5cab3a5d51a10455fbfd3f34f11e"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1SphereCollider.html#aa2eb5cab3a5d51a10455fbfd3f34f11e">gs::ecs::component::SphereCollider::radius</a></div><div class="ttdeci">float radius</div><div class="ttdef"><b>Definition</b> ecs.h:76</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Thickness_html"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Thickness.html">gs::ecs::component::Thickness</a></div><div class="ttdef"><b>Definition</b> ecs.h:64</div></div>
+<div class="ttc" id="astructgs_1_1ecs_1_1component_1_1Thickness_html_a52b4240b01f3a04924e497c4edfc630e"><div class="ttname"><a href="structgs_1_1ecs_1_1component_1_1Thickness.html#a52b4240b01f3a04924e497c4edfc630e">gs::ecs::component::Thickness::val</a></div><div class="ttdeci">float val</div><div class="ttdef"><b>Definition</b> ecs.h:65</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

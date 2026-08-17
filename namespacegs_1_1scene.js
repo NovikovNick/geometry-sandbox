@@ -6,5 +6,6 @@ var namespacegs_1_1scene =
     [ "DashedLine", "structgs_1_1scene_1_1DashedLine.html", "structgs_1_1scene_1_1DashedLine" ],
     [ "Text", "structgs_1_1scene_1_1Text.html", "structgs_1_1scene_1_1Text" ],
     [ "Vector", "structgs_1_1scene_1_1Vector.html", "structgs_1_1scene_1_1Vector" ],
-    [ "AABB", "structgs_1_1scene_1_1AABB.html", "structgs_1_1scene_1_1AABB" ]
+    [ "AABB", "structgs_1_1scene_1_1AABB.html", "structgs_1_1scene_1_1AABB" ],
+    [ "Model", "structgs_1_1scene_1_1Model.html", "structgs_1_1scene_1_1Model" ]
 ];

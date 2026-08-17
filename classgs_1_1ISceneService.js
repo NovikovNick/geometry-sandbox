@@ -3,6 +3,7 @@ var classgs_1_1ISceneService =
     [ "~ISceneService", "classgs_1_1ISceneService.html#a4934f823a6a38e57c85fc3f4d257d2dc", null ],
     [ "addAABB", "classgs_1_1ISceneService.html#aecf1d2ae6ee1f2c85806811e296fcdd0", null ],
     [ "addDashedLine", "classgs_1_1ISceneService.html#ac3ff2e568a2932e02bbea950820cca86", null ],
+    [ "addModel", "classgs_1_1ISceneService.html#a8f7455b30562fb171cc68a15f1be640d", null ],
     [ "addPlane", "classgs_1_1ISceneService.html#a0d4fef4fb9e5e5909cae5ae1fcc1ac78", null ],
     [ "addPoint", "classgs_1_1ISceneService.html#a5cbf4474b8f6b7f7a26c0c2bb626d33b", null ],
     [ "addText", "classgs_1_1ISceneService.html#ade555caed8d6135d986d532a339c11d8", null ],

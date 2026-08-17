@@ -58,7 +58,7 @@ window.MathJax = {
 </head>
 <body>
 <!-- https://tholman.com/github-corners/ -->
-<a href="https://github.com/NovikovNick/algorithm-visualizer" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+<a href="https://github.com/NovikovNick/geometry-sandbox" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
     <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
     <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -151,9 +151,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adbe011a39d2cf3109832869ce7c45b1e" id="r_adbe011a39d2cf3109832869ce7c45b1e"><td class="memItemLeft">virtual const Font &amp;&#160;</td><td class="memItemRight"><a class="el" href="#adbe011a39d2cf3109832869ce7c45b1e">defaultCanvasFont</a> () const =0</td></tr>
 <tr class="memitem:a11afbd901dcdd0a83a236cb1b32b2b02" id="r_a11afbd901dcdd0a83a236cb1b32b2b02"><td class="memItemLeft">virtual ImFont *&#160;</td><td class="memItemRight"><a class="el" href="#a11afbd901dcdd0a83a236cb1b32b2b02">defaultUIFont</a> () const =0</td></tr>
 <tr class="memitem:a689aa657db48dcc50d82252c624eab01" id="r_a689aa657db48dcc50d82252c624eab01"><td class="memItemLeft">virtual ImFont *&#160;</td><td class="memItemRight"><a class="el" href="#a689aa657db48dcc50d82252c624eab01">iconFont</a> () const =0</td></tr>
-<tr class="memitem:ae90e03b4998acfad34f861461668e4ad" id="r_ae90e03b4998acfad34f861461668e4ad"><td class="memItemLeft">virtual const Shader &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae90e03b4998acfad34f861461668e4ad">pointShader</a> () const =0</td></tr>
-<tr class="memitem:afd8e4537515076d062d53584b9c1ef48" id="r_afd8e4537515076d062d53584b9c1ef48"><td class="memItemLeft">virtual const Material &amp;&#160;</td><td class="memItemRight"><a class="el" href="#afd8e4537515076d062d53584b9c1ef48">pointMaterial</a> () const =0</td></tr>
-<tr class="memitem:a771096f0b1431a039258478a825fd07d" id="r_a771096f0b1431a039258478a825fd07d"><td class="memItemLeft">virtual const Mesh &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a771096f0b1431a039258478a825fd07d">pointMesh</a> () const =0</td></tr>
+<tr class="memitem:a2d195a670a6001485f527375e5afe9a4" id="r_a2d195a670a6001485f527375e5afe9a4"><td class="memItemLeft">virtual const Shader &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2d195a670a6001485f527375e5afe9a4">getIntansingShader</a> () const =0</td></tr>
+<tr class="memitem:aca425959dfeb3fe255a349f29f170d0e" id="r_aca425959dfeb3fe255a349f29f170d0e"><td class="memItemLeft">virtual const Model &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aca425959dfeb3fe255a349f29f170d0e">getModel</a> (<a class="el" href="namespacegs.html#a1128ba681e8ea24f5adf987d81149891">ModelType</a>) const =0</td></tr>
 <tr class="memitem:a80b913f2ec2ce3d36debfdb7f8676380" id="r_a80b913f2ec2ce3d36debfdb7f8676380"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a80b913f2ec2ce3d36debfdb7f8676380">~IResourceManager</a> ()=default</td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -237,6 +236,60 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a2d195a670a6001485f527375e5afe9a4" name="a2d195a670a6001485f527375e5afe9a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d195a670a6001485f527375e5afe9a4">&#9670;&#160;</a></span>getIntansingShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const Shader &amp; gs::IResourceManager::getIntansingShader </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classgs_1_1ResourceManager.html#a618031661d3571b23d1c68531c62ae74">gs::ResourceManager</a>.</p>
+
+</div>
+</div>
+<a id="aca425959dfeb3fe255a349f29f170d0e" name="aca425959dfeb3fe255a349f29f170d0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca425959dfeb3fe255a349f29f170d0e">&#9670;&#160;</a></span>getModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const Model &amp; gs::IResourceManager::getModel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacegs.html#a1128ba681e8ea24f5adf987d81149891">ModelType</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classgs_1_1ResourceManager.html#aec66fe81a97a9fd50bc4a63e4d2c7a88">gs::ResourceManager</a>.</p>
+
+</div>
+</div>
 <a id="a689aa657db48dcc50d82252c624eab01" name="a689aa657db48dcc50d82252c624eab01"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a689aa657db48dcc50d82252c624eab01">&#9670;&#160;</a></span>iconFont()</h2>
 
@@ -288,87 +341,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classgs_1_1ResourceManager.html#a5f0c3b928d9bba96d150186208849205">gs::ResourceManager</a>.</p>
-
-</div>
-</div>
-<a id="afd8e4537515076d062d53584b9c1ef48" name="afd8e4537515076d062d53584b9c1ef48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd8e4537515076d062d53584b9c1ef48">&#9670;&#160;</a></span>pointMaterial()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual const Material &amp; gs::IResourceManager::pointMaterial </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="classgs_1_1ResourceManager.html#af0c403164754e3ccbb82563da86d2bf3">gs::ResourceManager</a>.</p>
-
-</div>
-</div>
-<a id="a771096f0b1431a039258478a825fd07d" name="a771096f0b1431a039258478a825fd07d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a771096f0b1431a039258478a825fd07d">&#9670;&#160;</a></span>pointMesh()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual const Mesh &amp; gs::IResourceManager::pointMesh </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="classgs_1_1ResourceManager.html#a96c34fce425c3ede48e06ef3282f47a5">gs::ResourceManager</a>.</p>
-
-</div>
-</div>
-<a id="ae90e03b4998acfad34f861461668e4ad" name="ae90e03b4998acfad34f861461668e4ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae90e03b4998acfad34f861461668e4ad">&#9670;&#160;</a></span>pointShader()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual const Shader &amp; gs::IResourceManager::pointShader </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="classgs_1_1ResourceManager.html#a1aca4dfbdd40520c0a23c61b3a72ad8f">gs::ResourceManager</a>.</p>
 
 </div>
 </div>
