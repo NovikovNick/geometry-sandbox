@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['tech_20stack_0',['🛠 Tech Stack',['../index.html#autotoc_md3',1,'']]],
-  ['todo_20list_1',['Todo List',['../todo.html',1,'']]]
+  ['⚖_20license_0',['⚖ License',['../index.html#autotoc_md7',1,'']]]
 ];

@@ -40,15 +40,15 @@ var core_2types_8h =
       [ "gs::CoordinateHandedness::Count", "namespacegs.html#aec7a1ecf393e9dd407f46ea71f6204bbae93f994f01c537c4e2f7d8528c3eb5e9", null ]
     ] ],
     [ "gs::CursorType", "namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49e", [
-      [ "gs::CursorType::kArrow", "namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49eab9915b027f3c5c3f045c880f99f22bc4", null ],
-      [ "gs::CursorType::kPointingHand", "namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49ea12457a3de4a1c8fe5d7234d514a05848", null ],
-      [ "gs::CursorType::kHidden", "namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49ea7c5019af37cb66b2492ac211b28eedc1", null ]
+      [ "gs::CursorType::Arrow", "namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49ea0f4e1aaabd074689b7d3ead824d1ee8e", null ],
+      [ "gs::CursorType::PointingHand", "namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49ea0dced855888015c82814dacbd3afdd87", null ],
+      [ "gs::CursorType::Hidden", "namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49ea7acdf85c69cc3c5305456a293524386e", null ]
     ] ],
     [ "gs::ModelType", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891", [
-      [ "gs::ModelType::kPoint", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891a20e722b15a1b587c30633f0a136b7009", null ],
-      [ "gs::ModelType::kDuck", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891af7e828ca0dfaa3805b1fa346a78b1740", null ],
-      [ "gs::ModelType::kCamera", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891ab91a982133fa67e579d45373b64bbe7b", null ],
-      [ "gs::ModelType::kCount", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891a5a162d352f3b3603e03fc9b2f043fb40", null ]
+      [ "gs::ModelType::Point", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891a2a3cd5946cfd317eb99c3d32e35e2d4c", null ],
+      [ "gs::ModelType::Duck", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891af97ca8decb3a5f04d11d0e3c6ff3f0cd", null ],
+      [ "gs::ModelType::Camera", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891a967d35e40f3f95b1f538bd248640bf3b", null ],
+      [ "gs::ModelType::Count", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891ae93f994f01c537c4e2f7d8528c3eb5e9", null ]
     ] ],
     [ "std::lerp", "namespacestd.html#a9f3fd0f1374b543ea83b1486200bed52", null ]
 ];

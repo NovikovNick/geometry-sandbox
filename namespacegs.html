@@ -146,10 +146,13 @@ Namespaces</h2></td></tr>
 <tr class="memitem:reflection" id="r_reflection"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacegs_1_1reflection.html">reflection</a></td></tr>
 <tr class="memdesc:namespacegs_1_1reflection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static introspection of animatable types. <br /></td></tr>
 <tr class="memitem:render" id="r_render"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacegs_1_1render.html">render</a></td></tr>
+<tr class="memdesc:namespacegs_1_1render"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains services and managers for rendering. <br /></td></tr>
 <tr class="memitem:ecs" id="r_ecs"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacegs_1_1ecs.html">ecs</a></td></tr>
 <tr class="memdesc:namespacegs_1_1ecs"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespacegs_1_1ecs.html#a4145124e7eea2c05f14660b198671de2">Entity</a> Component System. <br /></td></tr>
 <tr class="memitem:scene" id="r_scene"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacegs_1_1scene.html">scene</a></td></tr>
+<tr class="memdesc:namespacegs_1_1scene"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains data classes for scene rendering. <br /></td></tr>
 <tr class="memitem:ui" id="r_ui"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacegs_1_1ui.html">ui</a></td></tr>
+<tr class="memdesc:namespacegs_1_1ui"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI system with ui elemets, state, services and managers. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -180,9 +183,11 @@ Classes</h2></td></tr>
 <tr class="memitem:Color" id="r_Color"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structgs_1_1Color.html">Color</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RGBA color with float values [0, 255].  <a href="structgs_1_1Color.html#details">More...</a><br /></td></tr>
 <tr class="memitem:TranslateGizmo" id="r_TranslateGizmo"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structgs_1_1TranslateGizmo.html">TranslateGizmo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic vieport widget to translate scene objects.  <a href="structgs_1_1TranslateGizmo.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Camera" id="r_Camera"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structgs_1_1Camera.html">Camera</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structgs_1_1Camera.html" title="Camera with coordinate handedness property.">Camera</a> with coordinate handedness property.  <a href="structgs_1_1Camera.html#details">More...</a><br /></td></tr>
 <tr class="memitem:PerformanceStats" id="r_PerformanceStats"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structgs_1_1PerformanceStats.html">PerformanceStats</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds per-frame timings for each stage of the update/render pipeline.  <a href="structgs_1_1PerformanceStats.html#details">More...</a><br /></td></tr>
 <tr class="memitem:IWindowManager" id="r_IWindowManager"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1IWindowManager.html">IWindowManager</a></td></tr>
 <tr class="memitem:WindowManager" id="r_WindowManager"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1WindowManager.html">WindowManager</a></td></tr>
 <tr class="memitem:ICameraIdleRotationManager" id="r_ICameraIdleRotationManager"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1ICameraIdleRotationManager.html">ICameraIdleRotationManager</a></td></tr>
@@ -220,21 +225,21 @@ Typedefs</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:ad9d1d8e9eebf5bba662109072118423d" id="r_ad9d1d8e9eebf5bba662109072118423d"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#ad9d1d8e9eebf5bba662109072118423d">InputKey</a> : int { <br />
-&#160;&#160;<a class="el" href="#ad9d1d8e9eebf5bba662109072118423daa911496266a5f7555ac2d2a205ceb4a7">kTest</a>
-, <a class="el" href="#ad9d1d8e9eebf5bba662109072118423dae7c3602dce09c755e09250077a601a51">kForward</a>
-, <a class="el" href="#ad9d1d8e9eebf5bba662109072118423da5cc7cc1518100eae9e3f2d83673a74ed">kBackward</a>
-, <a class="el" href="#ad9d1d8e9eebf5bba662109072118423da2d5fde1d924910a2a01ecd8e70a87c28">kLeft</a>
+&#160;&#160;<a class="el" href="#ad9d1d8e9eebf5bba662109072118423da0cbc6611f5540bd0809a388dc95a615b">Test</a>
+, <a class="el" href="#ad9d1d8e9eebf5bba662109072118423da67d2f6740a8eaebf4d5c6f79be8da481">Forward</a>
+, <a class="el" href="#ad9d1d8e9eebf5bba662109072118423dab3263eb38f8903efc271cc7a760da510">Backward</a>
+, <a class="el" href="#ad9d1d8e9eebf5bba662109072118423da945d5e233cf7d6240f6b783b36a374ff">Left</a>
 , <br />
-&#160;&#160;<a class="el" href="#ad9d1d8e9eebf5bba662109072118423da2dd2b017192f8a09367d48c7648213c9">kRight</a>
-, <a class="el" href="#ad9d1d8e9eebf5bba662109072118423daaf73bec2cf4f4674b3ed9bf2fc23c716">kMouseLeft</a>
-, <a class="el" href="#ad9d1d8e9eebf5bba662109072118423dab99a644db9ce2f922dd6cccee8231171">kMouseRight</a>
-, <a class="el" href="#ad9d1d8e9eebf5bba662109072118423da5a162d352f3b3603e03fc9b2f043fb40">kCount</a>
+&#160;&#160;<a class="el" href="#ad9d1d8e9eebf5bba662109072118423da92b09c7c48c520c3c55e497875da437c">Right</a>
+, <a class="el" href="#ad9d1d8e9eebf5bba662109072118423dabce0118bd8f5bf5e7f849dff486de57f">MouseLeft</a>
+, <a class="el" href="#ad9d1d8e9eebf5bba662109072118423da64be76bfebee9b86f0963be88b3de177">MouseRight</a>
+, <a class="el" href="#ad9d1d8e9eebf5bba662109072118423dae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>
 <br />
  }</td></tr>
-<tr class="memitem:a68c5fca11ec6441e37ca6acbd57bcf2c" id="r_a68c5fca11ec6441e37ca6acbd57bcf2c"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a68c5fca11ec6441e37ca6acbd57bcf2c">ShaderType</a> { <a class="el" href="#a68c5fca11ec6441e37ca6acbd57bcf2ca959496d1f8f4d98720a947d1ea0018ec">kMeshInstancing</a>
-, <a class="el" href="#a68c5fca11ec6441e37ca6acbd57bcf2ca43ecac9f6c5e9074995a12119f390599">kBlur</a>
-, <a class="el" href="#a68c5fca11ec6441e37ca6acbd57bcf2ca17b859bc8f8df782a6660e756eac3a3e">kFXAA</a>
-, <a class="el" href="#a68c5fca11ec6441e37ca6acbd57bcf2ca5a162d352f3b3603e03fc9b2f043fb40">kCount</a>
+<tr class="memitem:a68c5fca11ec6441e37ca6acbd57bcf2c" id="r_a68c5fca11ec6441e37ca6acbd57bcf2c"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a68c5fca11ec6441e37ca6acbd57bcf2c">ShaderType</a> { <a class="el" href="#a68c5fca11ec6441e37ca6acbd57bcf2cab6421f1c412f17c55538ea038aadfd48">MeshInstancing</a>
+, <a class="el" href="#a68c5fca11ec6441e37ca6acbd57bcf2ca8b52de510bc5497ac43abfe566be48ab">Blur</a>
+, <a class="el" href="#a68c5fca11ec6441e37ca6acbd57bcf2caaa9ebfd80da9bf23f763a63c052a452a">FXAA</a>
+, <a class="el" href="#a68c5fca11ec6441e37ca6acbd57bcf2cae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>
  }</td></tr>
 <tr class="memitem:aec7a1ecf393e9dd407f46ea71f6204bb" id="r_aec7a1ecf393e9dd407f46ea71f6204bb"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#aec7a1ecf393e9dd407f46ea71f6204bb">CoordinateHandedness</a> { <a class="el" href="#aec7a1ecf393e9dd407f46ea71f6204bba945d5e233cf7d6240f6b783b36a374ff">Left</a>
 , <a class="el" href="#aec7a1ecf393e9dd407f46ea71f6204bba92b09c7c48c520c3c55e497875da437c">Right</a>
@@ -251,24 +256,24 @@ Enumerations</h2></td></tr>
 , <a class="el" href="#ab12d4497e42e30b14afc4aae1c3b496ca7d40f0d6c4baa81950b1759d3712a225">ZX</a> = 0b101
 <br />
  }</td></tr>
-<tr class="memitem:a4da6060adb53d0d30d513dfe7c69d49e" id="r_a4da6060adb53d0d30d513dfe7c69d49e"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a4da6060adb53d0d30d513dfe7c69d49e">CursorType</a> { <a class="el" href="#a4da6060adb53d0d30d513dfe7c69d49eab9915b027f3c5c3f045c880f99f22bc4">kArrow</a>
-, <a class="el" href="#a4da6060adb53d0d30d513dfe7c69d49ea12457a3de4a1c8fe5d7234d514a05848">kPointingHand</a>
-, <a class="el" href="#a4da6060adb53d0d30d513dfe7c69d49ea7c5019af37cb66b2492ac211b28eedc1">kHidden</a>
+<tr class="memitem:a4da6060adb53d0d30d513dfe7c69d49e" id="r_a4da6060adb53d0d30d513dfe7c69d49e"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a4da6060adb53d0d30d513dfe7c69d49e">CursorType</a> { <a class="el" href="#a4da6060adb53d0d30d513dfe7c69d49ea0f4e1aaabd074689b7d3ead824d1ee8e">Arrow</a>
+, <a class="el" href="#a4da6060adb53d0d30d513dfe7c69d49ea0dced855888015c82814dacbd3afdd87">PointingHand</a>
+, <a class="el" href="#a4da6060adb53d0d30d513dfe7c69d49ea7acdf85c69cc3c5305456a293524386e">Hidden</a>
  }</td></tr>
-<tr class="memitem:a1128ba681e8ea24f5adf987d81149891" id="r_a1128ba681e8ea24f5adf987d81149891"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a1128ba681e8ea24f5adf987d81149891">ModelType</a> : std::uint8_t { <a class="el" href="#a1128ba681e8ea24f5adf987d81149891a20e722b15a1b587c30633f0a136b7009">kPoint</a> = 0
-, <a class="el" href="#a1128ba681e8ea24f5adf987d81149891af7e828ca0dfaa3805b1fa346a78b1740">kDuck</a>
-, <a class="el" href="#a1128ba681e8ea24f5adf987d81149891ab91a982133fa67e579d45373b64bbe7b">kCamera</a>
-, <a class="el" href="#a1128ba681e8ea24f5adf987d81149891a5a162d352f3b3603e03fc9b2f043fb40">kCount</a>
+<tr class="memitem:a1128ba681e8ea24f5adf987d81149891" id="r_a1128ba681e8ea24f5adf987d81149891"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#a1128ba681e8ea24f5adf987d81149891">ModelType</a> : std::uint8_t { <a class="el" href="#a1128ba681e8ea24f5adf987d81149891a2a3cd5946cfd317eb99c3d32e35e2d4c">Point</a> = 0
+, <a class="el" href="#a1128ba681e8ea24f5adf987d81149891af97ca8decb3a5f04d11d0e3c6ff3f0cd">Duck</a>
+, <a class="el" href="#a1128ba681e8ea24f5adf987d81149891a967d35e40f3f95b1f538bd248640bf3b">Camera</a>
+, <a class="el" href="#a1128ba681e8ea24f5adf987d81149891ae93f994f01c537c4e2f7d8528c3eb5e9">Count</a>
  }</td></tr>
 <tr class="memitem:aadb077c0fe8d52e082378aff90c800de" id="r_aadb077c0fe8d52e082378aff90c800de"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#aadb077c0fe8d52e082378aff90c800de">ViewProjection</a> { <br />
-&#160;&#160;<a class="el" href="#aadb077c0fe8d52e082378aff90c800dea866b118414b1f193988f21ea58b70898">kPerspective</a>
-, <a class="el" href="#aadb077c0fe8d52e082378aff90c800dea4f3660d27a6957d83b5eee013032892d">kOrthoFront</a>
-, <a class="el" href="#aadb077c0fe8d52e082378aff90c800dea2c8683c08f91f1bd1b8321361ce5fd86">kOrthoBack</a>
-, <a class="el" href="#aadb077c0fe8d52e082378aff90c800deae7e6e64944736f0858c9469404d401c4">kOrthoRight</a>
+&#160;&#160;<a class="el" href="#aadb077c0fe8d52e082378aff90c800deaa80420eef88d11f77532f1b9cb467fa3">Perspective</a>
+, <a class="el" href="#aadb077c0fe8d52e082378aff90c800deaa88e3f2f35f90a0b6f39005b56cde596">OrthoFront</a>
+, <a class="el" href="#aadb077c0fe8d52e082378aff90c800dead9f07028975503acaece5495d8e0d9ef">OrthoBack</a>
+, <a class="el" href="#aadb077c0fe8d52e082378aff90c800dea2f25d3467fabe0af295859047f7722ed">OrthoRight</a>
 , <br />
-&#160;&#160;<a class="el" href="#aadb077c0fe8d52e082378aff90c800deafc7a6224b727f0f3ea3441eacd022b81">kOrthoLeft</a>
-, <a class="el" href="#aadb077c0fe8d52e082378aff90c800dea8a27cd477e122203b3c37e851ed8e1a0">kOrthoTop</a>
-, <a class="el" href="#aadb077c0fe8d52e082378aff90c800dea5f8ac56e8889fab728e340a1ea66cc3d">kOrthoBottom</a>
+&#160;&#160;<a class="el" href="#aadb077c0fe8d52e082378aff90c800dea790cdb92017d1fe3fab5e731d2302a73">OrthoLeft</a>
+, <a class="el" href="#aadb077c0fe8d52e082378aff90c800dea8256184f23cd48af645dd48006b69d1b">OrthoTop</a>
+, <a class="el" href="#aadb077c0fe8d52e082378aff90c800dead015e6000fdfad0dde27a9f4c0ef496a">OrthoBottom</a>
 <br />
  }</td></tr>
 </table><table class="memberdecls">
@@ -295,7 +300,7 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a0ae623ed43327cdaa0ac0c90e2fa031e" id="r_a0ae623ed43327cdaa0ac0c90e2fa031e"><td class="memItemLeft">constexpr size_t&#160;</td><td class="memItemRight"><a class="el" href="#a0ae623ed43327cdaa0ac0c90e2fa031e">kInputKeyCount</a> = static_cast&lt;size_t&gt;(<a class="el" href="#ad9d1d8e9eebf5bba662109072118423da5a162d352f3b3603e03fc9b2f043fb40">InputKey::kCount</a>)</td></tr>
+<tr class="memitem:a0ae623ed43327cdaa0ac0c90e2fa031e" id="r_a0ae623ed43327cdaa0ac0c90e2fa031e"><td class="memItemLeft">constexpr size_t&#160;</td><td class="memItemRight"><a class="el" href="#a0ae623ed43327cdaa0ac0c90e2fa031e">kInputKeyCount</a> = static_cast&lt;size_t&gt;(<a class="el" href="#ad9d1d8e9eebf5bba662109072118423dae93f994f01c537c4e2f7d8528c3eb5e9">InputKey::Count</a>)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>geometry sandbox </p>
@@ -519,9 +524,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4da6060adb53d0d30d513dfe7c69d49eab9915b027f3c5c3f045c880f99f22bc4" name="a4da6060adb53d0d30d513dfe7c69d49eab9915b027f3c5c3f045c880f99f22bc4"></a>kArrow&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a4da6060adb53d0d30d513dfe7c69d49ea12457a3de4a1c8fe5d7234d514a05848" name="a4da6060adb53d0d30d513dfe7c69d49ea12457a3de4a1c8fe5d7234d514a05848"></a>kPointingHand&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a4da6060adb53d0d30d513dfe7c69d49ea7c5019af37cb66b2492ac211b28eedc1" name="a4da6060adb53d0d30d513dfe7c69d49ea7c5019af37cb66b2492ac211b28eedc1"></a>kHidden&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4da6060adb53d0d30d513dfe7c69d49ea0f4e1aaabd074689b7d3ead824d1ee8e" name="a4da6060adb53d0d30d513dfe7c69d49ea0f4e1aaabd074689b7d3ead824d1ee8e"></a>Arrow&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4da6060adb53d0d30d513dfe7c69d49ea0dced855888015c82814dacbd3afdd87" name="a4da6060adb53d0d30d513dfe7c69d49ea0dced855888015c82814dacbd3afdd87"></a>PointingHand&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4da6060adb53d0d30d513dfe7c69d49ea7acdf85c69cc3c5305456a293524386e" name="a4da6060adb53d0d30d513dfe7c69d49ea7acdf85c69cc3c5305456a293524386e"></a>Hidden&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -546,14 +551,14 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad9d1d8e9eebf5bba662109072118423daa911496266a5f7555ac2d2a205ceb4a7" name="ad9d1d8e9eebf5bba662109072118423daa911496266a5f7555ac2d2a205ceb4a7"></a>kTest&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad9d1d8e9eebf5bba662109072118423dae7c3602dce09c755e09250077a601a51" name="ad9d1d8e9eebf5bba662109072118423dae7c3602dce09c755e09250077a601a51"></a>kForward&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad9d1d8e9eebf5bba662109072118423da5cc7cc1518100eae9e3f2d83673a74ed" name="ad9d1d8e9eebf5bba662109072118423da5cc7cc1518100eae9e3f2d83673a74ed"></a>kBackward&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad9d1d8e9eebf5bba662109072118423da2d5fde1d924910a2a01ecd8e70a87c28" name="ad9d1d8e9eebf5bba662109072118423da2d5fde1d924910a2a01ecd8e70a87c28"></a>kLeft&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad9d1d8e9eebf5bba662109072118423da2dd2b017192f8a09367d48c7648213c9" name="ad9d1d8e9eebf5bba662109072118423da2dd2b017192f8a09367d48c7648213c9"></a>kRight&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad9d1d8e9eebf5bba662109072118423daaf73bec2cf4f4674b3ed9bf2fc23c716" name="ad9d1d8e9eebf5bba662109072118423daaf73bec2cf4f4674b3ed9bf2fc23c716"></a>kMouseLeft&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad9d1d8e9eebf5bba662109072118423dab99a644db9ce2f922dd6cccee8231171" name="ad9d1d8e9eebf5bba662109072118423dab99a644db9ce2f922dd6cccee8231171"></a>kMouseRight&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad9d1d8e9eebf5bba662109072118423da5a162d352f3b3603e03fc9b2f043fb40" name="ad9d1d8e9eebf5bba662109072118423da5a162d352f3b3603e03fc9b2f043fb40"></a>kCount&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad9d1d8e9eebf5bba662109072118423da0cbc6611f5540bd0809a388dc95a615b" name="ad9d1d8e9eebf5bba662109072118423da0cbc6611f5540bd0809a388dc95a615b"></a>Test&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad9d1d8e9eebf5bba662109072118423da67d2f6740a8eaebf4d5c6f79be8da481" name="ad9d1d8e9eebf5bba662109072118423da67d2f6740a8eaebf4d5c6f79be8da481"></a>Forward&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad9d1d8e9eebf5bba662109072118423dab3263eb38f8903efc271cc7a760da510" name="ad9d1d8e9eebf5bba662109072118423dab3263eb38f8903efc271cc7a760da510"></a>Backward&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad9d1d8e9eebf5bba662109072118423da945d5e233cf7d6240f6b783b36a374ff" name="ad9d1d8e9eebf5bba662109072118423da945d5e233cf7d6240f6b783b36a374ff"></a>Left&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad9d1d8e9eebf5bba662109072118423da92b09c7c48c520c3c55e497875da437c" name="ad9d1d8e9eebf5bba662109072118423da92b09c7c48c520c3c55e497875da437c"></a>Right&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad9d1d8e9eebf5bba662109072118423dabce0118bd8f5bf5e7f849dff486de57f" name="ad9d1d8e9eebf5bba662109072118423dabce0118bd8f5bf5e7f849dff486de57f"></a>MouseLeft&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad9d1d8e9eebf5bba662109072118423da64be76bfebee9b86f0963be88b3de177" name="ad9d1d8e9eebf5bba662109072118423da64be76bfebee9b86f0963be88b3de177"></a>MouseRight&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad9d1d8e9eebf5bba662109072118423dae93f994f01c537c4e2f7d8528c3eb5e9" name="ad9d1d8e9eebf5bba662109072118423dae93f994f01c537c4e2f7d8528c3eb5e9"></a>Count&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -578,10 +583,10 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="3">Enumerator</th></tr><tr><td class="fieldname"><a id="a1128ba681e8ea24f5adf987d81149891a20e722b15a1b587c30633f0a136b7009" name="a1128ba681e8ea24f5adf987d81149891a20e722b15a1b587c30633f0a136b7009"></a>kPoint&#160;</td><td class="fieldinit">0&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a1128ba681e8ea24f5adf987d81149891af7e828ca0dfaa3805b1fa346a78b1740" name="a1128ba681e8ea24f5adf987d81149891af7e828ca0dfaa3805b1fa346a78b1740"></a>kDuck&#160;</td><td class="fieldinit">&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a1128ba681e8ea24f5adf987d81149891ab91a982133fa67e579d45373b64bbe7b" name="a1128ba681e8ea24f5adf987d81149891ab91a982133fa67e579d45373b64bbe7b"></a>kCamera&#160;</td><td class="fieldinit">&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a1128ba681e8ea24f5adf987d81149891a5a162d352f3b3603e03fc9b2f043fb40" name="a1128ba681e8ea24f5adf987d81149891a5a162d352f3b3603e03fc9b2f043fb40"></a>kCount&#160;</td><td class="fieldinit">&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="3">Enumerator</th></tr><tr><td class="fieldname"><a id="a1128ba681e8ea24f5adf987d81149891a2a3cd5946cfd317eb99c3d32e35e2d4c" name="a1128ba681e8ea24f5adf987d81149891a2a3cd5946cfd317eb99c3d32e35e2d4c"></a>Point&#160;</td><td class="fieldinit">0&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1128ba681e8ea24f5adf987d81149891af97ca8decb3a5f04d11d0e3c6ff3f0cd" name="a1128ba681e8ea24f5adf987d81149891af97ca8decb3a5f04d11d0e3c6ff3f0cd"></a>Duck&#160;</td><td class="fieldinit">&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1128ba681e8ea24f5adf987d81149891a967d35e40f3f95b1f538bd248640bf3b" name="a1128ba681e8ea24f5adf987d81149891a967d35e40f3f95b1f538bd248640bf3b"></a>Camera&#160;</td><td class="fieldinit">&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1128ba681e8ea24f5adf987d81149891ae93f994f01c537c4e2f7d8528c3eb5e9" name="a1128ba681e8ea24f5adf987d81149891ae93f994f01c537c4e2f7d8528c3eb5e9"></a>Count&#160;</td><td class="fieldinit">&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -606,10 +611,10 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a68c5fca11ec6441e37ca6acbd57bcf2ca959496d1f8f4d98720a947d1ea0018ec" name="a68c5fca11ec6441e37ca6acbd57bcf2ca959496d1f8f4d98720a947d1ea0018ec"></a>kMeshInstancing&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a68c5fca11ec6441e37ca6acbd57bcf2ca43ecac9f6c5e9074995a12119f390599" name="a68c5fca11ec6441e37ca6acbd57bcf2ca43ecac9f6c5e9074995a12119f390599"></a>kBlur&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a68c5fca11ec6441e37ca6acbd57bcf2ca17b859bc8f8df782a6660e756eac3a3e" name="a68c5fca11ec6441e37ca6acbd57bcf2ca17b859bc8f8df782a6660e756eac3a3e"></a>kFXAA&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a68c5fca11ec6441e37ca6acbd57bcf2ca5a162d352f3b3603e03fc9b2f043fb40" name="a68c5fca11ec6441e37ca6acbd57bcf2ca5a162d352f3b3603e03fc9b2f043fb40"></a>kCount&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a68c5fca11ec6441e37ca6acbd57bcf2cab6421f1c412f17c55538ea038aadfd48" name="a68c5fca11ec6441e37ca6acbd57bcf2cab6421f1c412f17c55538ea038aadfd48"></a>MeshInstancing&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a68c5fca11ec6441e37ca6acbd57bcf2ca8b52de510bc5497ac43abfe566be48ab" name="a68c5fca11ec6441e37ca6acbd57bcf2ca8b52de510bc5497ac43abfe566be48ab"></a>Blur&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a68c5fca11ec6441e37ca6acbd57bcf2caaa9ebfd80da9bf23f763a63c052a452a" name="a68c5fca11ec6441e37ca6acbd57bcf2caaa9ebfd80da9bf23f763a63c052a452a"></a>FXAA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a68c5fca11ec6441e37ca6acbd57bcf2cae93f994f01c537c4e2f7d8528c3eb5e9" name="a68c5fca11ec6441e37ca6acbd57bcf2cae93f994f01c537c4e2f7d8528c3eb5e9"></a>Count&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -634,13 +639,13 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aadb077c0fe8d52e082378aff90c800dea866b118414b1f193988f21ea58b70898" name="aadb077c0fe8d52e082378aff90c800dea866b118414b1f193988f21ea58b70898"></a>kPerspective&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aadb077c0fe8d52e082378aff90c800dea4f3660d27a6957d83b5eee013032892d" name="aadb077c0fe8d52e082378aff90c800dea4f3660d27a6957d83b5eee013032892d"></a>kOrthoFront&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aadb077c0fe8d52e082378aff90c800dea2c8683c08f91f1bd1b8321361ce5fd86" name="aadb077c0fe8d52e082378aff90c800dea2c8683c08f91f1bd1b8321361ce5fd86"></a>kOrthoBack&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aadb077c0fe8d52e082378aff90c800deae7e6e64944736f0858c9469404d401c4" name="aadb077c0fe8d52e082378aff90c800deae7e6e64944736f0858c9469404d401c4"></a>kOrthoRight&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aadb077c0fe8d52e082378aff90c800deafc7a6224b727f0f3ea3441eacd022b81" name="aadb077c0fe8d52e082378aff90c800deafc7a6224b727f0f3ea3441eacd022b81"></a>kOrthoLeft&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aadb077c0fe8d52e082378aff90c800dea8a27cd477e122203b3c37e851ed8e1a0" name="aadb077c0fe8d52e082378aff90c800dea8a27cd477e122203b3c37e851ed8e1a0"></a>kOrthoTop&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aadb077c0fe8d52e082378aff90c800dea5f8ac56e8889fab728e340a1ea66cc3d" name="aadb077c0fe8d52e082378aff90c800dea5f8ac56e8889fab728e340a1ea66cc3d"></a>kOrthoBottom&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aadb077c0fe8d52e082378aff90c800deaa80420eef88d11f77532f1b9cb467fa3" name="aadb077c0fe8d52e082378aff90c800deaa80420eef88d11f77532f1b9cb467fa3"></a>Perspective&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aadb077c0fe8d52e082378aff90c800deaa88e3f2f35f90a0b6f39005b56cde596" name="aadb077c0fe8d52e082378aff90c800deaa88e3f2f35f90a0b6f39005b56cde596"></a>OrthoFront&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aadb077c0fe8d52e082378aff90c800dead9f07028975503acaece5495d8e0d9ef" name="aadb077c0fe8d52e082378aff90c800dead9f07028975503acaece5495d8e0d9ef"></a>OrthoBack&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aadb077c0fe8d52e082378aff90c800dea2f25d3467fabe0af295859047f7722ed" name="aadb077c0fe8d52e082378aff90c800dea2f25d3467fabe0af295859047f7722ed"></a>OrthoRight&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aadb077c0fe8d52e082378aff90c800dea790cdb92017d1fe3fab5e731d2302a73" name="aadb077c0fe8d52e082378aff90c800dea790cdb92017d1fe3fab5e731d2302a73"></a>OrthoLeft&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aadb077c0fe8d52e082378aff90c800dea8256184f23cd48af645dd48006b69d1b" name="aadb077c0fe8d52e082378aff90c800dea8256184f23cd48af645dd48006b69d1b"></a>OrthoTop&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aadb077c0fe8d52e082378aff90c800dead015e6000fdfad0dde27a9f4c0ef496a" name="aadb077c0fe8d52e082378aff90c800dead015e6000fdfad0dde27a9f4c0ef496a"></a>OrthoBottom&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -1074,7 +1079,7 @@ template&lt;std::floating_point T = double&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t gs::kInputKeyCount = static_cast&lt;size_t&gt;(<a class="el" href="#ad9d1d8e9eebf5bba662109072118423da5a162d352f3b3603e03fc9b2f043fb40">InputKey::kCount</a>)</td>
+          <td class="memname">size_t gs::kInputKeyCount = static_cast&lt;size_t&gt;(<a class="el" href="#ad9d1d8e9eebf5bba662109072118423dae93f994f01c537c4e2f7d8528c3eb5e9">InputKey::Count</a>)</td>
         </tr>
       </table>
   </td>

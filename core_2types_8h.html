@@ -162,9 +162,11 @@ Classes</h2></td></tr>
 <tr class="memitem:gs_3A_3Ascene_3A_3AAABB" id="r_gs_3A_3Ascene_3A_3AAABB"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structgs_1_1scene_1_1AABB.html">gs::scene::AABB</a></td></tr>
 <tr class="memitem:gs_3A_3Ascene_3A_3AModel" id="r_gs_3A_3Ascene_3A_3AModel"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structgs_1_1scene_1_1Model.html">gs::scene::Model</a></td></tr>
 <tr class="memitem:gs_3A_3ATranslateGizmo" id="r_gs_3A_3ATranslateGizmo"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structgs_1_1TranslateGizmo.html">gs::TranslateGizmo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic vieport widget to translate scene objects.  <a href="structgs_1_1TranslateGizmo.html#details">More...</a><br /></td></tr>
 <tr class="memitem:gs_3A_3ACamera" id="r_gs_3A_3ACamera"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structgs_1_1Camera.html">gs::Camera</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structgs_1_1Camera.html" title="Camera with coordinate handedness property.">Camera</a> with coordinate handedness property.  <a href="structgs_1_1Camera.html#details">More...</a><br /></td></tr>
 <tr class="memitem:gs_3A_3APerformanceStats" id="r_gs_3A_3APerformanceStats"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structgs_1_1PerformanceStats.html">gs::PerformanceStats</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds per-frame timings for each stage of the update/render pipeline.  <a href="structgs_1_1PerformanceStats.html#details">More...</a><br /></td></tr>
 <tr class="memitem:gs_3A_3Aui_3A_3ALayout" id="r_gs_3A_3Aui_3A_3ALayout"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structgs_1_1ui_1_1Layout.html">gs::ui::Layout</a></td></tr>
 <tr class="memitem:gs_3A_3Aui_3A_3AElement" id="r_gs_3A_3Aui_3A_3AElement"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structgs_1_1ui_1_1Element.html">gs::ui::Element</a></td></tr>
 <tr class="memitem:gs_3A_3Aui_3A_3AButton" id="r_gs_3A_3Aui_3A_3AButton"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structgs_1_1ui_1_1Button.html">gs::ui::Button</a></td></tr>
@@ -178,7 +180,9 @@ Namespaces</h2></td></tr>
 <tr class="memitem:gs" id="r_gs"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacegs.html">gs</a></td></tr>
 <tr class="memdesc:namespacegs"><td class="mdescLeft">&#160;</td><td class="mdescRight">geometry sandbox <br /></td></tr>
 <tr class="memitem:gs_3A_3Ascene" id="r_gs_3A_3Ascene"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacegs_1_1scene.html">gs::scene</a></td></tr>
+<tr class="memdesc:namespacegs_1_1scene"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains data classes for scene rendering. <br /></td></tr>
 <tr class="memitem:gs_3A_3Aui" id="r_gs_3A_3Aui"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacegs_1_1ui.html">gs::ui</a></td></tr>
+<tr class="memdesc:namespacegs_1_1ui"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI system with ui elemets, state, services and managers. <br /></td></tr>
 <tr class="memitem:std" id="r_std"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacestd.html">std</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
@@ -206,14 +210,14 @@ Enumerations</h2></td></tr>
 , <a class="el" href="namespacegs.html#ab12d4497e42e30b14afc4aae1c3b496ca7d40f0d6c4baa81950b1759d3712a225">gs::ZX</a> = 0b101
 <br />
  }</td></tr>
-<tr class="memitem:a4da6060adb53d0d30d513dfe7c69d49e" id="r_a4da6060adb53d0d30d513dfe7c69d49e"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49e">gs::CursorType</a> { <a class="el" href="namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49eab9915b027f3c5c3f045c880f99f22bc4">gs::kArrow</a>
-, <a class="el" href="namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49ea12457a3de4a1c8fe5d7234d514a05848">gs::kPointingHand</a>
-, <a class="el" href="namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49ea7c5019af37cb66b2492ac211b28eedc1">gs::kHidden</a>
+<tr class="memitem:a4da6060adb53d0d30d513dfe7c69d49e" id="r_a4da6060adb53d0d30d513dfe7c69d49e"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49e">gs::CursorType</a> { <a class="el" href="namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49ea0f4e1aaabd074689b7d3ead824d1ee8e">gs::Arrow</a>
+, <a class="el" href="namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49ea0dced855888015c82814dacbd3afdd87">gs::PointingHand</a>
+, <a class="el" href="namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49ea7acdf85c69cc3c5305456a293524386e">gs::Hidden</a>
  }</td></tr>
-<tr class="memitem:a1128ba681e8ea24f5adf987d81149891" id="r_a1128ba681e8ea24f5adf987d81149891"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespacegs.html#a1128ba681e8ea24f5adf987d81149891">gs::ModelType</a> : std::uint8_t { <a class="el" href="namespacegs.html#a1128ba681e8ea24f5adf987d81149891a20e722b15a1b587c30633f0a136b7009">gs::kPoint</a> = 0
-, <a class="el" href="namespacegs.html#a1128ba681e8ea24f5adf987d81149891af7e828ca0dfaa3805b1fa346a78b1740">gs::kDuck</a>
-, <a class="el" href="namespacegs.html#a1128ba681e8ea24f5adf987d81149891ab91a982133fa67e579d45373b64bbe7b">gs::kCamera</a>
-, <a class="el" href="namespacegs.html#a1128ba681e8ea24f5adf987d81149891a5a162d352f3b3603e03fc9b2f043fb40">gs::kCount</a>
+<tr class="memitem:a1128ba681e8ea24f5adf987d81149891" id="r_a1128ba681e8ea24f5adf987d81149891"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespacegs.html#a1128ba681e8ea24f5adf987d81149891">gs::ModelType</a> : std::uint8_t { <a class="el" href="namespacegs.html#a1128ba681e8ea24f5adf987d81149891a2a3cd5946cfd317eb99c3d32e35e2d4c">gs::Point</a> = 0
+, <a class="el" href="namespacegs.html#a1128ba681e8ea24f5adf987d81149891af97ca8decb3a5f04d11d0e3c6ff3f0cd">gs::Duck</a>
+, <a class="el" href="namespacegs.html#a1128ba681e8ea24f5adf987d81149891a967d35e40f3f95b1f538bd248640bf3b">gs::Camera</a>
+, <a class="el" href="namespacegs.html#a1128ba681e8ea24f5adf987d81149891ae93f994f01c537c4e2f7d8528c3eb5e9">gs::Count</a>
  }</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>

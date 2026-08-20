@@ -206,6 +206,8 @@ $(function(){initNavTree('todo.html','',''); });
 <p class="interdd"></p>
 <p class="enddd">[feature]: ★★★★ add <a href="https://github.com/NanoMichael/MicroTeX">https://github.com/NanoMichael/MicroTeX</a> </p>
 </dd>
+<dt>File <a class="el" href="frustum__draw__service_8h.html">frustum_draw_service.h</a>  </dt>
+<dd><a class="anchor" id="_todo000009"></a>std::size_t cameraIndex should be used as alias CameraId or something... </dd>
 <dt>Class <a class="el" href="classgs_1_1animation_1_1IManager.html">gs::animation::IManager</a>  </dt>
 <dd><a class="anchor" id="_todo000001"></a><a class="el" href="structgs_1_1animation_1_1Handle.html" title="Lightweight handle for controlling a playing animation instance.">Handle</a> <a class="el" href="classgs_1_1animation_1_1IManager.html#a16922405e9678fefec182a005c3a372b">play(Clip&amp;)</a> smells because it partially moved in the implementation  </dd>
 <dt>Member <a class="el" href="classgs_1_1animation_1_1Sampler.html#a9f96006bc8a06b0b46985de363a94da1">gs::animation::Sampler&lt; Size &gt;::sample</a>  (const float progress, const <a class="el" href="structgs_1_1animation_1_1Asset.html" title="Describes a complete, immutable animation asset.">Asset</a> &amp;asset)</dt>
@@ -215,11 +217,11 @@ $(function(){initNavTree('todo.html','',''); });
 <dt>Struct <a class="el" href="structgs_1_1Color.html">gs::Color</a>  </dt>
 <dd><a class="anchor" id="_todo000006"></a>compress to 255UI8  </dd>
 <dt>Class <a class="el" href="classgs_1_1render_1_1Facade.html">gs::render::Facade</a>  </dt>
-<dd><a class="anchor" id="_todo000007"></a>pointTransforms_ and pointColors_ should be in ecs after implemented rotation  </dd>
-<dt>Class <a class="el" href="classgs_1_1render_1_1IFrustumDrawService.html">gs::render::IFrustumDrawService</a>  </dt>
-<dd><a class="anchor" id="_todo000008"></a>std::size_t cameraIndex should be used as alias CameraId or something...  </dd>
+<dd><a class="anchor" id="_todo000008"></a>pointTransforms_ and pointColors_ is a TMP solution. They should be in moved to ecs after implemented rotation  </dd>
+<dt>Struct <a class="el" href="structgs_1_1TranslateGizmo.html">gs::TranslateGizmo</a>  </dt>
+<dd><a class="anchor" id="_todo000007"></a>In the next release, a rotation gizmo will be added, and scene objects will move by updating the Transform matrix, not just the position vectors as now.  </dd>
 <dt>Class <a class="el" href="classgs_1_1UIManager.html">gs::UIManager</a>  </dt>
-<dd><a class="anchor" id="_todo000009"></a>move drawFooter and drawDetailsView to UI service? </dd>
+<dd><a class="anchor" id="_todo000010"></a>move drawFooter and drawDetailsView to UI service? </dd>
 </dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

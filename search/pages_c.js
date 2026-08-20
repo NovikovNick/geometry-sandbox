@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['high_20performance_20rendering_0',['⚡ High-Performance Rendering',['../index.html#autotoc_md2',1,'']]]
+  ['offset_0',['Drag Offset',['../md__2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2docs_2pages_2interaction.html#autotoc_md35',1,'']]]
 ];

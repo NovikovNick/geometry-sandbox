@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['1_20базовый_20синтаксис_0',['2.1. Базовый синтаксис',['../md__2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2docs_2pages_2animation.html#autotoc_md13',1,'']]],
-  ['1_20прямая_20байтовая_20запись_1',['3.1. Прямая байтовая запись',['../md__2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2docs_2pages_2animation.html#autotoc_md15',1,'']]],
-  ['1_20слои_20абстракции_2',['1.1. Слои абстракции',['../md__2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2docs_2pages_2animation.html#autotoc_md9',1,'']]],
-  ['1_201_20слои_20абстракции_3',['1.1. Слои абстракции',['../md__2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2docs_2pages_2animation.html#autotoc_md9',1,'']]],
-  ['1_202_20подсистема_20рефлексии_4',['1.2. Подсистема рефлексии',['../md__2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2docs_2pages_2animation.html#autotoc_md10',1,'']]]
+  ['adapter_20float_5fspan_5fadaptor_20h_0',['Float Span Adapter (&lt;span class=&quot;tt&quot;&gt;float_span_adaptor.h&lt;/span&gt;)',['../md__2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2docs_2pages_2animation.html#autotoc_md12',1,'']]],
+  ['animation_20core_1',['⚙️ Animation Core',['../index.html#autotoc_md1',1,'']]],
+  ['animation_20system_2',['DSL-based animation system',['../md__2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2docs_2pages_2animation.html',1,'']]],
+  ['asset_20types_20h_3',['Asset (&lt;span class=&quot;tt&quot;&gt;types.h&lt;/span&gt;)',['../md__2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2docs_2pages_2animation.html#autotoc_md14',1,'']]]
 ];

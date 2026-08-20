@@ -98,40 +98,40 @@ var namespacegs =
       [ "Count", "namespacegs.html#aec7a1ecf393e9dd407f46ea71f6204bbae93f994f01c537c4e2f7d8528c3eb5e9", null ]
     ] ],
     [ "CursorType", "namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49e", [
-      [ "kArrow", "namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49eab9915b027f3c5c3f045c880f99f22bc4", null ],
-      [ "kPointingHand", "namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49ea12457a3de4a1c8fe5d7234d514a05848", null ],
-      [ "kHidden", "namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49ea7c5019af37cb66b2492ac211b28eedc1", null ]
+      [ "Arrow", "namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49ea0f4e1aaabd074689b7d3ead824d1ee8e", null ],
+      [ "PointingHand", "namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49ea0dced855888015c82814dacbd3afdd87", null ],
+      [ "Hidden", "namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49ea7acdf85c69cc3c5305456a293524386e", null ]
     ] ],
     [ "InputKey", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423d", [
-      [ "kTest", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423daa911496266a5f7555ac2d2a205ceb4a7", null ],
-      [ "kForward", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423dae7c3602dce09c755e09250077a601a51", null ],
-      [ "kBackward", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423da5cc7cc1518100eae9e3f2d83673a74ed", null ],
-      [ "kLeft", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423da2d5fde1d924910a2a01ecd8e70a87c28", null ],
-      [ "kRight", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423da2dd2b017192f8a09367d48c7648213c9", null ],
-      [ "kMouseLeft", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423daaf73bec2cf4f4674b3ed9bf2fc23c716", null ],
-      [ "kMouseRight", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423dab99a644db9ce2f922dd6cccee8231171", null ],
-      [ "kCount", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423da5a162d352f3b3603e03fc9b2f043fb40", null ]
+      [ "Test", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423da0cbc6611f5540bd0809a388dc95a615b", null ],
+      [ "Forward", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423da67d2f6740a8eaebf4d5c6f79be8da481", null ],
+      [ "Backward", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423dab3263eb38f8903efc271cc7a760da510", null ],
+      [ "Left", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423da945d5e233cf7d6240f6b783b36a374ff", null ],
+      [ "Right", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423da92b09c7c48c520c3c55e497875da437c", null ],
+      [ "MouseLeft", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423dabce0118bd8f5bf5e7f849dff486de57f", null ],
+      [ "MouseRight", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423da64be76bfebee9b86f0963be88b3de177", null ],
+      [ "Count", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423dae93f994f01c537c4e2f7d8528c3eb5e9", null ]
     ] ],
     [ "ModelType", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891", [
-      [ "kPoint", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891a20e722b15a1b587c30633f0a136b7009", null ],
-      [ "kDuck", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891af7e828ca0dfaa3805b1fa346a78b1740", null ],
-      [ "kCamera", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891ab91a982133fa67e579d45373b64bbe7b", null ],
-      [ "kCount", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891a5a162d352f3b3603e03fc9b2f043fb40", null ]
+      [ "Point", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891a2a3cd5946cfd317eb99c3d32e35e2d4c", null ],
+      [ "Duck", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891af97ca8decb3a5f04d11d0e3c6ff3f0cd", null ],
+      [ "Camera", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891a967d35e40f3f95b1f538bd248640bf3b", null ],
+      [ "Count", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891ae93f994f01c537c4e2f7d8528c3eb5e9", null ]
     ] ],
     [ "ShaderType", "namespacegs.html#a68c5fca11ec6441e37ca6acbd57bcf2c", [
-      [ "kMeshInstancing", "namespacegs.html#a68c5fca11ec6441e37ca6acbd57bcf2ca959496d1f8f4d98720a947d1ea0018ec", null ],
-      [ "kBlur", "namespacegs.html#a68c5fca11ec6441e37ca6acbd57bcf2ca43ecac9f6c5e9074995a12119f390599", null ],
-      [ "kFXAA", "namespacegs.html#a68c5fca11ec6441e37ca6acbd57bcf2ca17b859bc8f8df782a6660e756eac3a3e", null ],
-      [ "kCount", "namespacegs.html#a68c5fca11ec6441e37ca6acbd57bcf2ca5a162d352f3b3603e03fc9b2f043fb40", null ]
+      [ "MeshInstancing", "namespacegs.html#a68c5fca11ec6441e37ca6acbd57bcf2cab6421f1c412f17c55538ea038aadfd48", null ],
+      [ "Blur", "namespacegs.html#a68c5fca11ec6441e37ca6acbd57bcf2ca8b52de510bc5497ac43abfe566be48ab", null ],
+      [ "FXAA", "namespacegs.html#a68c5fca11ec6441e37ca6acbd57bcf2caaa9ebfd80da9bf23f763a63c052a452a", null ],
+      [ "Count", "namespacegs.html#a68c5fca11ec6441e37ca6acbd57bcf2cae93f994f01c537c4e2f7d8528c3eb5e9", null ]
     ] ],
     [ "ViewProjection", "namespacegs.html#aadb077c0fe8d52e082378aff90c800de", [
-      [ "kPerspective", "namespacegs.html#aadb077c0fe8d52e082378aff90c800dea866b118414b1f193988f21ea58b70898", null ],
-      [ "kOrthoFront", "namespacegs.html#aadb077c0fe8d52e082378aff90c800dea4f3660d27a6957d83b5eee013032892d", null ],
-      [ "kOrthoBack", "namespacegs.html#aadb077c0fe8d52e082378aff90c800dea2c8683c08f91f1bd1b8321361ce5fd86", null ],
-      [ "kOrthoRight", "namespacegs.html#aadb077c0fe8d52e082378aff90c800deae7e6e64944736f0858c9469404d401c4", null ],
-      [ "kOrthoLeft", "namespacegs.html#aadb077c0fe8d52e082378aff90c800deafc7a6224b727f0f3ea3441eacd022b81", null ],
-      [ "kOrthoTop", "namespacegs.html#aadb077c0fe8d52e082378aff90c800dea8a27cd477e122203b3c37e851ed8e1a0", null ],
-      [ "kOrthoBottom", "namespacegs.html#aadb077c0fe8d52e082378aff90c800dea5f8ac56e8889fab728e340a1ea66cc3d", null ]
+      [ "Perspective", "namespacegs.html#aadb077c0fe8d52e082378aff90c800deaa80420eef88d11f77532f1b9cb467fa3", null ],
+      [ "OrthoFront", "namespacegs.html#aadb077c0fe8d52e082378aff90c800deaa88e3f2f35f90a0b6f39005b56cde596", null ],
+      [ "OrthoBack", "namespacegs.html#aadb077c0fe8d52e082378aff90c800dead9f07028975503acaece5495d8e0d9ef", null ],
+      [ "OrthoRight", "namespacegs.html#aadb077c0fe8d52e082378aff90c800dea2f25d3467fabe0af295859047f7722ed", null ],
+      [ "OrthoLeft", "namespacegs.html#aadb077c0fe8d52e082378aff90c800dea790cdb92017d1fe3fab5e731d2302a73", null ],
+      [ "OrthoTop", "namespacegs.html#aadb077c0fe8d52e082378aff90c800dea8256184f23cd48af645dd48006b69d1b", null ],
+      [ "OrthoBottom", "namespacegs.html#aadb077c0fe8d52e082378aff90c800dead015e6000fdfad0dde27a9f4c0ef496a", null ]
     ] ],
     [ "almostEquals", "namespacegs.html#aceeca3f18d770e958695077a698cf2d7", null ],
     [ "convert", "namespacegs.html#a355ae8bbe590d52fc8932d351fe82b32", null ],

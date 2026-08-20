@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['development_20build_0',['🦴 Development &amp;amp; Build',['../index.html#autotoc_md4',1,'']]],
-  ['documentation_20samples_1',['📚 Documentation &amp;amp; Samples',['../index.html#autotoc_md6',1,'']]],
-  ['dsl_20анимационной_20системы_2',['2. DSL анимационной системы',['../md__2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2docs_2pages_2animation.html#autotoc_md12',1,'']]],
-  ['dsl_20based_20animation_20system_3',['DSL-based animation system',['../md__2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2docs_2pages_2animation.html',1,'']]]
+  ['instance_20types_20h_0',['Instance (&lt;span class=&quot;tt&quot;&gt;types.h&lt;/span&gt;)',['../md__2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2docs_2pages_2animation.html#autotoc_md15',1,'']]],
+  ['interaction_20flow_1',['Interaction Flow',['../md__2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2docs_2pages_2interaction.html#autotoc_md28',1,'']]],
+  ['interaction_20service_20service_20h_2',['Interaction Service (&lt;span class=&quot;tt&quot;&gt;service.h&lt;/span&gt;)',['../md__2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2docs_2pages_2interaction.html#autotoc_md25',1,'']]],
+  ['interaction_20system_3',['ECS-based interaction system',['../md__2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2docs_2pages_2interaction.html',1,'']]]
 ];

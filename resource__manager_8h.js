@@ -3,10 +3,10 @@ var resource__manager_8h =
     [ "gs::IResourceManager", "classgs_1_1IResourceManager.html", "classgs_1_1IResourceManager" ],
     [ "gs::ResourceManager", "classgs_1_1ResourceManager.html", "classgs_1_1ResourceManager" ],
     [ "gs::ShaderType", "namespacegs.html#a68c5fca11ec6441e37ca6acbd57bcf2c", [
-      [ "gs::ShaderType::kMeshInstancing", "namespacegs.html#a68c5fca11ec6441e37ca6acbd57bcf2ca959496d1f8f4d98720a947d1ea0018ec", null ],
-      [ "gs::ShaderType::kBlur", "namespacegs.html#a68c5fca11ec6441e37ca6acbd57bcf2ca43ecac9f6c5e9074995a12119f390599", null ],
-      [ "gs::ShaderType::kFXAA", "namespacegs.html#a68c5fca11ec6441e37ca6acbd57bcf2ca17b859bc8f8df782a6660e756eac3a3e", null ],
-      [ "gs::ShaderType::kCount", "namespacegs.html#a68c5fca11ec6441e37ca6acbd57bcf2ca5a162d352f3b3603e03fc9b2f043fb40", null ]
+      [ "gs::ShaderType::MeshInstancing", "namespacegs.html#a68c5fca11ec6441e37ca6acbd57bcf2cab6421f1c412f17c55538ea038aadfd48", null ],
+      [ "gs::ShaderType::Blur", "namespacegs.html#a68c5fca11ec6441e37ca6acbd57bcf2ca8b52de510bc5497ac43abfe566be48ab", null ],
+      [ "gs::ShaderType::FXAA", "namespacegs.html#a68c5fca11ec6441e37ca6acbd57bcf2caaa9ebfd80da9bf23f763a63c052a452a", null ],
+      [ "gs::ShaderType::Count", "namespacegs.html#a68c5fca11ec6441e37ca6acbd57bcf2cae93f994f01c537c4e2f7d8528c3eb5e9", null ]
     ] ],
     [ "gs::di::resourceManager", "namespacegs_1_1di.html#a3a51fbb24898c71e3eded81ee0b9d5a1", null ]
 ];
