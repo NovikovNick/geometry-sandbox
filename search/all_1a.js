@@ -7,7 +7,9 @@ var searchData=
   ['vec3_4',['Vec3',['../namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e',1,'gs']]],
   ['vec4_5',['Vec4',['../namespacegs.html#a2510f3d6b1ff6981e61437cb63369012',1,'gs']]],
   ['vector_6',['Vector',['../structgs_1_1scene_1_1Vector.html',1,'gs::scene']]],
-  ['viewport_7',['Viewport',['../structgs_1_1RenderService_1_1Viewport.html',1,'gs::RenderService']]],
-  ['viewprojection_8',['ViewProjection',['../namespacegs.html#aadb077c0fe8d52e082378aff90c800de',1,'gs']]],
-  ['vsync_9',['vSync',['../structgs_1_1Settings.html#aa7c8f48bad2aad105638117b10a6d53c',1,'gs::Settings']]]
+  ['viewport_5fmanager_2eh_7',['viewport_manager.h',['../viewport__manager_8h.html',1,'']]],
+  ['viewportmanager_8',['ViewportManager',['../classgs_1_1render_1_1ViewportManager.html',1,'gs::render::ViewportManager'],['../classgs_1_1render_1_1ViewportManager.html#ac9026a287ab075556a8067d4c76df431',1,'gs::render::ViewportManager::ViewportManager()']]],
+  ['viewportmanager_9',['viewportManager',['../namespacegs_1_1di.html#a9334d630f35702ad400518073f2bfc97',1,'gs::di']]],
+  ['viewprojection_10',['ViewProjection',['../namespacegs.html#aadb077c0fe8d52e082378aff90c800de',1,'gs']]],
+  ['vsync_11',['vSync',['../structgs_1_1Settings.html#aa7c8f48bad2aad105638117b10a6d53c',1,'gs::Settings']]]
 ];

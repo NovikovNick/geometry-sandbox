@@ -13,5 +13,8 @@ var searchData=
   ['log_5fmanager_2eh_10',['log_manager.h',['../log__manager_8h.html',1,'']]],
   ['logmanager_11',['LogManager',['../classgs_1_1LogManager.html',1,'gs']]],
   ['logmanager_12',['logManager',['../namespacegs_1_1di.html#a1ba605dde6f732cede638df812909a7b',1,'gs::di']]],
-  ['loop_13',['loop',['../structgs_1_1animation_1_1Clip.html#a9d166b3987c3552034ad7f823f51fa38',1,'gs::animation::Clip']]]
+  ['loop_13',['loop',['../structgs_1_1animation_1_1Clip.html#a9d166b3987c3552034ad7f823f51fa38',1,'gs::animation::Clip']]],
+  ['low_5flevel_5fservice_2eh_14',['low_level_service.h',['../low__level__service_8h.html',1,'']]],
+  ['lowlevelrenderservice_15',['lowLevelRenderService',['../namespacegs_1_1di.html#a932db564580757d244d72f1443190d6a',1,'gs::di']]],
+  ['lowlevelservice_16',['LowLevelService',['../classgs_1_1render_1_1LowLevelService.html',1,'gs::render::LowLevelService'],['../classgs_1_1render_1_1LowLevelService.html#adf2fbd9d0e24a1ea6f8d70f25096ac10',1,'gs::render::LowLevelService::LowLevelService()']]]
 ];

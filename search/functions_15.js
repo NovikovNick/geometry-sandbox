@@ -1,26 +1,4 @@
 var searchData=
 [
-  ['_7eelement_0',['~Element',['../structgs_1_1ui_1_1Element.html#a6713025af17f920768e0b80d4e9ec0d3',1,'gs::ui::Element']]],
-  ['_7eicameracontrollerservice_1',['~ICameraControllerService',['../classgs_1_1ICameraControllerService.html#aa1d2ff557c04a0bb8eb3ee6251d1feda',1,'gs::ICameraControllerService']]],
-  ['_7eicameraidlerotationmanager_2',['~ICameraIdleRotationManager',['../classgs_1_1ICameraIdleRotationManager.html#a84427ce4c734d62ec83cb6c7a168c696',1,'gs::ICameraIdleRotationManager']]],
-  ['_7eicameraservice_3',['~ICameraService',['../classgs_1_1ICameraService.html#a24143184147f0927920b992923388e75',1,'gs::ICameraService']]],
-  ['_7eicanvasservice_4',['~ICanvasService',['../classgs_1_1ICanvasService.html#a3a7d833eea7b190bd2b8ace73eaee5c2',1,'gs::ICanvasService']]],
-  ['_7eiinputmanager_5',['~IInputManager',['../classgs_1_1IInputManager.html#ae4bb81c3dcacd4e9daa3d0f0f28d0fa1',1,'gs::IInputManager']]],
-  ['_7eiinteractionservice_6',['~IInteractionService',['../classgs_1_1IInteractionService.html#ab3c2ad1a9b9710f4fc772afa9cfbc2ee',1,'gs::IInteractionService']]],
-  ['_7eijsonservice_7',['~IJsonService',['../classgs_1_1IJsonService.html#a2796ee49e847ec2042bacb7d9a1eae10',1,'gs::IJsonService']]],
-  ['_7eilogmanager_8',['~ILogManager',['../classgs_1_1ILogManager.html#a64916438d1161c05d9cb774df34c2bdf',1,'gs::ILogManager']]],
-  ['_7eimanager_9',['~IManager',['../classgs_1_1animation_1_1IManager.html#a195b10ff2b93b3e76e0771d9f9cbe564',1,'gs::animation::IManager']]],
-  ['_7eiorthoprojectionviewmanager_10',['~IOrthoProjectionViewManager',['../classgs_1_1IOrthoProjectionViewManager.html#acee8d6707fb043dceadfe7c74507b68c',1,'gs::IOrthoProjectionViewManager']]],
-  ['_7eiplayermanager_11',['~IPlayerManager',['../classgs_1_1animation_1_1IPlayerManager.html#a668341f68f15e158be3a15f79f4c7da8',1,'gs::animation::IPlayerManager']]],
-  ['_7eirenderservice_12',['~IRenderService',['../classgs_1_1IRenderService.html#ac69cc011a87ecae0fc0b0a378c44afb9',1,'gs::IRenderService']]],
-  ['_7eiresourcemanager_13',['~IResourceManager',['../classgs_1_1IResourceManager.html#a80b913f2ec2ce3d36debfdb7f8676380',1,'gs::IResourceManager']]],
-  ['_7eisceneservice_14',['~ISceneService',['../classgs_1_1ISceneService.html#a4934f823a6a38e57c85fc3f4d257d2dc',1,'gs::ISceneService']]],
-  ['_7eiservice_15',['~IService',['../classgs_1_1animation_1_1IService.html#a620038236139c33d033217d377b38d45',1,'gs::animation::IService']]],
-  ['_7eitranslategizmorenderservice_16',['~ITranslateGizmoRenderService',['../classgs_1_1ITranslateGizmoRenderService.html#adce2d6b5398e84310b1abd78150d2166',1,'gs::ITranslateGizmoRenderService']]],
-  ['_7eitranslategizmoupdateservice_17',['~ITranslateGizmoUpdateService',['../classgs_1_1ITranslateGizmoUpdateService.html#a0ed8b6f78816cec6dcb44dc2bc80f708',1,'gs::ITranslateGizmoUpdateService']]],
-  ['_7eiuimanager_18',['~IUIManager',['../classgs_1_1IUIManager.html#ab11a00360fe6d1bfcff943b5adbd12e9',1,'gs::IUIManager']]],
-  ['_7eiuiservice_19',['~IUIService',['../classgs_1_1IUIService.html#aa78b084ad474e1176c9d7725625d2f04',1,'gs::IUIService']]],
-  ['_7eiwindowmanager_20',['~IWindowManager',['../classgs_1_1IWindowManager.html#af91b72edc67270790112409b7c36750f',1,'gs::IWindowManager']]],
-  ['_7eresourcemanager_21',['~ResourceManager',['../classgs_1_1ResourceManager.html#afa66afa0d42060aeaaff8274c8768d78',1,'gs::ResourceManager']]],
-  ['_7ewindowmanager_22',['~WindowManager',['../classgs_1_1WindowManager.html#a83ab4fa50c46e4b74d6ddba57bdcc391',1,'gs::WindowManager']]]
+  ['yellow_0',['yellow',['../structgs_1_1Color.html#a3410d5c600d4e3e1518513c74be19f2a',1,'gs::Color']]]
 ];

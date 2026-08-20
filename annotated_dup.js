@@ -32,6 +32,18 @@ var annotated_dup =
       [ "reflection", "namespacegs_1_1reflection.html", [
         [ "Property", "structgs_1_1reflection_1_1Property.html", "structgs_1_1reflection_1_1Property" ]
       ] ],
+      [ "render", "namespacegs_1_1render.html", [
+        [ "IFacade", "classgs_1_1render_1_1IFacade.html", "classgs_1_1render_1_1IFacade" ],
+        [ "Facade", "classgs_1_1render_1_1Facade.html", "classgs_1_1render_1_1Facade" ],
+        [ "IFrustumDrawService", "classgs_1_1render_1_1IFrustumDrawService.html", "classgs_1_1render_1_1IFrustumDrawService" ],
+        [ "FrustumDrawService", "classgs_1_1render_1_1FrustumDrawService.html", "classgs_1_1render_1_1FrustumDrawService" ],
+        [ "ILowLevelService", "classgs_1_1render_1_1ILowLevelService.html", "classgs_1_1render_1_1ILowLevelService" ],
+        [ "LowLevelService", "classgs_1_1render_1_1LowLevelService.html", "classgs_1_1render_1_1LowLevelService" ],
+        [ "IMeshInstancedDrawService", "classgs_1_1render_1_1IMeshInstancedDrawService.html", "classgs_1_1render_1_1IMeshInstancedDrawService" ],
+        [ "MeshInstancedDrawService", "classgs_1_1render_1_1MeshInstancedDrawService.html", "classgs_1_1render_1_1MeshInstancedDrawService" ],
+        [ "IViewportManager", "classgs_1_1render_1_1IViewportManager.html", "classgs_1_1render_1_1IViewportManager" ],
+        [ "ViewportManager", "classgs_1_1render_1_1ViewportManager.html", "classgs_1_1render_1_1ViewportManager" ]
+      ] ],
       [ "ecs", "namespacegs_1_1ecs.html", [
         [ "component", "namespacegs_1_1ecs_1_1component.html", [
           [ "Arrow", "structgs_1_1ecs_1_1component_1_1Arrow.html", "structgs_1_1ecs_1_1component_1_1Arrow" ],
@@ -79,8 +91,6 @@ var annotated_dup =
       [ "CameraControllerService", "classgs_1_1CameraControllerService.html", "classgs_1_1CameraControllerService" ],
       [ "ICameraService", "classgs_1_1ICameraService.html", "classgs_1_1ICameraService" ],
       [ "CameraService", "classgs_1_1CameraService.html", "classgs_1_1CameraService" ],
-      [ "ICanvasService", "classgs_1_1ICanvasService.html", "classgs_1_1ICanvasService" ],
-      [ "CanvasService", "classgs_1_1CanvasService.html", "classgs_1_1CanvasService" ],
       [ "IInputManager", "classgs_1_1IInputManager.html", "classgs_1_1IInputManager" ],
       [ "InputManager", "classgs_1_1InputManager.html", "classgs_1_1InputManager" ],
       [ "IJsonService", "classgs_1_1IJsonService.html", "classgs_1_1IJsonService" ],
@@ -92,8 +102,6 @@ var annotated_dup =
       [ "AABB", "structgs_1_1AABB.html", "structgs_1_1AABB" ],
       [ "Plane", "structgs_1_1Plane.html", "structgs_1_1Plane" ],
       [ "Intersection", "structgs_1_1Intersection.html", "structgs_1_1Intersection" ],
-      [ "IRenderService", "classgs_1_1IRenderService.html", "classgs_1_1IRenderService" ],
-      [ "RenderService", "classgs_1_1RenderService.html", "classgs_1_1RenderService" ],
       [ "IResourceManager", "classgs_1_1IResourceManager.html", "classgs_1_1IResourceManager" ],
       [ "ResourceManager", "classgs_1_1ResourceManager.html", "classgs_1_1ResourceManager" ],
       [ "ISceneService", "classgs_1_1ISceneService.html", "classgs_1_1ISceneService" ],

@@ -17,6 +17,7 @@ var searchData=
   ['gs_3a_3aecs_3a_3acomponent_14',['component',['../namespacegs_1_1ecs_1_1component.html',1,'gs::ecs']]],
   ['gs_3a_3areflection_15',['reflection',['../namespacegs_1_1reflection.html',1,'gs']]],
   ['gs_3a_3areflection_3a_3adetail_16',['detail',['../namespacegs_1_1reflection_1_1detail.html',1,'gs::reflection']]],
-  ['gs_3a_3ascene_17',['scene',['../namespacegs_1_1scene.html',1,'gs']]],
-  ['gs_3a_3aui_18',['ui',['../namespacegs_1_1ui.html',1,'gs']]]
+  ['gs_3a_3arender_17',['render',['../namespacegs_1_1render.html',1,'gs']]],
+  ['gs_3a_3ascene_18',['scene',['../namespacegs_1_1scene.html',1,'gs']]],
+  ['gs_3a_3aui_19',['ui',['../namespacegs_1_1ui.html',1,'gs']]]
 ];

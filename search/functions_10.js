@@ -19,12 +19,14 @@ var searchData=
   ['setremoveoncomplete_16',['setRemoveOnComplete',['../structgs_1_1animation_1_1Instance.html#a13f4e6ee92a9ccf7cd3fa65d3c4a2eac',1,'gs::animation::Instance']]],
   ['setreversed_17',['setReversed',['../structgs_1_1animation_1_1Instance.html#ab51e3ba750fda190f2a500724ecbeea3',1,'gs::animation::Instance']]],
   ['settingsbutton_18',['settingsButton',['../classgs_1_1IUIService.html#a3525e489525295e5ab81195e9c6154c0',1,'gs::IUIService::settingsButton()'],['../classgs_1_1UIService.html#ac7922035703ed57de011c1f6575c17e5',1,'gs::UIService::settingsButton()']]],
-  ['size_19',['size',['../classSlotMap.html#ab1ae7b6f9581a88ceb2ea38d9700397c',1,'SlotMap']]],
-  ['slider_20',['slider',['../namespacegs.html#a917105522a61e4289dcfea005b74472c',1,'gs']]],
-  ['slotmap_21',['SlotMap',['../classSlotMap.html#a7bbbf68bf099f63b9b4f0e65d0c5bb6c',1,'SlotMap']]],
-  ['stepbacktoprevmarker_22',['stepBackToPrevMarker',['../structgs_1_1animation_1_1Handle.html#a003fdbd9ee09fef1ae309cd31fc758b9',1,'gs::animation::Handle']]],
-  ['stepforwardtonextmarker_23',['stepForwardToNextMarker',['../structgs_1_1animation_1_1Handle.html#a0ec38e1f42346e51e8539f0aa897e752',1,'gs::animation::Handle']]],
-  ['stop_24',['stop',['../structgs_1_1animation_1_1Handle.html#a38be1113e304cb07ac31f02675864ead',1,'gs::animation::Handle']]],
-  ['subproperty_25',['SubProperty',['../structgs_1_1animation_1_1SubProperty.html#a18a47ee8694047951c59e57142e5a3cd',1,'gs::animation::SubProperty::SubProperty(Property Parent::*, const std::string_view &amp;name)'],['../structgs_1_1animation_1_1SubProperty.html#ae5ef5f0727ec8c64160f14f894ae3f18',1,'gs::animation::SubProperty::SubProperty(const std::string_view &amp;name)']]],
-  ['switchto_26',['switchTo',['../classgs_1_1IOrthoProjectionViewManager.html#a75ead0a5fe944e8f0513e76a55460fda',1,'gs::IOrthoProjectionViewManager::switchTo()'],['../classgs_1_1OrthoProjectionViewManager.html#aa2b7a496b83ad1962dce35d671e5b948',1,'gs::OrthoProjectionViewManager::switchTo()']]]
+  ['setupcamera_19',['setupCamera',['../classgs_1_1render_1_1ILowLevelService.html#aa97672182b0fa49fff2a010d56b348f0',1,'gs::render::ILowLevelService::setupCamera()'],['../classgs_1_1render_1_1LowLevelService.html#a1fae09caa2a9015ecaee4a542e4fc494',1,'gs::render::LowLevelService::setupCamera()']]],
+  ['setupviewport_20',['setupViewport',['../classgs_1_1render_1_1IViewportManager.html#a761176968a6fb392b924cf7d1d2ad855',1,'gs::render::IViewportManager::setupViewport()'],['../classgs_1_1render_1_1ViewportManager.html#af415cbf57809dc80d1390f9af0143364',1,'gs::render::ViewportManager::setupViewport()']]],
+  ['size_21',['size',['../classSlotMap.html#ab1ae7b6f9581a88ceb2ea38d9700397c',1,'SlotMap']]],
+  ['slider_22',['slider',['../namespacegs.html#a917105522a61e4289dcfea005b74472c',1,'gs']]],
+  ['slotmap_23',['SlotMap',['../classSlotMap.html#a7bbbf68bf099f63b9b4f0e65d0c5bb6c',1,'SlotMap']]],
+  ['stepbacktoprevmarker_24',['stepBackToPrevMarker',['../structgs_1_1animation_1_1Handle.html#a003fdbd9ee09fef1ae309cd31fc758b9',1,'gs::animation::Handle']]],
+  ['stepforwardtonextmarker_25',['stepForwardToNextMarker',['../structgs_1_1animation_1_1Handle.html#a0ec38e1f42346e51e8539f0aa897e752',1,'gs::animation::Handle']]],
+  ['stop_26',['stop',['../structgs_1_1animation_1_1Handle.html#a38be1113e304cb07ac31f02675864ead',1,'gs::animation::Handle']]],
+  ['subproperty_27',['SubProperty',['../structgs_1_1animation_1_1SubProperty.html#a18a47ee8694047951c59e57142e5a3cd',1,'gs::animation::SubProperty::SubProperty(Property Parent::*, const std::string_view &amp;name)'],['../structgs_1_1animation_1_1SubProperty.html#ae5ef5f0727ec8c64160f14f894ae3f18',1,'gs::animation::SubProperty::SubProperty(const std::string_view &amp;name)']]],
+  ['switchto_28',['switchTo',['../classgs_1_1IOrthoProjectionViewManager.html#a75ead0a5fe944e8f0513e76a55460fda',1,'gs::IOrthoProjectionViewManager::switchTo()'],['../classgs_1_1OrthoProjectionViewManager.html#aa2b7a496b83ad1962dce35d671e5b948',1,'gs::OrthoProjectionViewManager::switchTo()']]]
 ];

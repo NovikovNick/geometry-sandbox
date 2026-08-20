@@ -78,12 +78,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "animation_2manager_8h.html",
-"classgs_1_1ISceneService.html#ac3ff2e568a2932e02bbea950820cca86",
-"classgs_1_1animation_1_1IManager.html#a195b10ff2b93b3e76e0771d9f9cbe564",
-"namespacegs.html#aadb077c0fe8d52e082378aff90c800dea8a27cd477e122203b3c37e851ed8e1a0",
-"structgs_1_1RectSize.html#ab248643b5cdc3653d4678ba816dead3f",
-"structgs_1_1animation_1_1Handle.html#a1ec07f8c6c4fd50ab0655f30e0a540e6",
-"structgs_1_1scene_1_1DashedLine.html#aaf3b8b053f859e7499a4bce61db5c223"
+"classgs_1_1IWindowManager.html",
+"classgs_1_1animation_1_1PlayerManager.html#a2fe2243f6f9dae96d10826ebbbbb334d",
+"functions_vars_u.html",
+"structgs_1_1AABB.html",
+"structgs_1_1animation_1_1Asset.html#a76781ad87f5f165325b1d3961bdd25df",
+"structgs_1_1ecs_1_1component_1_1OnHoverCallback.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

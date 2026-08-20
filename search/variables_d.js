@@ -5,5 +5,5 @@ var searchData=
   ['onhover_2',['onHover',['../structgs_1_1ui_1_1Element.html#a0b66b996ab1626dd815ba4fbed3379a1',1,'gs::ui::Element']]],
   ['onupdate_3',['onUpdate',['../structgs_1_1ui_1_1Slider.html#af760db535fa66767d19235f481c4ad67',1,'gs::ui::Slider']]],
   ['opacity_4',['opacity',['../structgs_1_1ui_1_1Layout.html#aa83adef1d0b7ea8fca75a42ed4ad2d36',1,'gs::ui::Layout::opacity'],['../namespacegs_1_1animation_1_1dsl_1_1layout.html#afcada5ce53321c2bd17f787342f63afe',1,'gs::animation::dsl::layout::opacity']]],
-  ['origin_5',['origin',['../structgs_1_1Ray.html#af5e20b7003bd5da56bd933f5f352f7f6',1,'gs::Ray']]]
+  ['origin_5',['origin',['../structgs_1_1ecs_1_1component_1_1Mesh.html#a3299c33de84f057caab58cf6eae84811',1,'gs::ecs::component::Mesh::origin'],['../structgs_1_1Ray.html#af5e20b7003bd5da56bd933f5f352f7f6',1,'gs::Ray::origin'],['../structgs_1_1scene_1_1Model.html#a46e628731ab536e044a0e20aa9cc0a74',1,'gs::scene::Model::origin']]]
 ];

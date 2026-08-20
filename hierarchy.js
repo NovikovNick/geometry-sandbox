@@ -40,8 +40,11 @@ var hierarchy =
     [ "gs::ICameraService", "classgs_1_1ICameraService.html", [
       [ "gs::CameraService", "classgs_1_1CameraService.html", null ]
     ] ],
-    [ "gs::ICanvasService", "classgs_1_1ICanvasService.html", [
-      [ "gs::CanvasService", "classgs_1_1CanvasService.html", null ]
+    [ "gs::render::IFacade", "classgs_1_1render_1_1IFacade.html", [
+      [ "gs::render::Facade", "classgs_1_1render_1_1Facade.html", null ]
+    ] ],
+    [ "gs::render::IFrustumDrawService", "classgs_1_1render_1_1IFrustumDrawService.html", [
+      [ "gs::render::FrustumDrawService", "classgs_1_1render_1_1FrustumDrawService.html", null ]
     ] ],
     [ "gs::IInputManager", "classgs_1_1IInputManager.html", [
       [ "gs::InputManager", "classgs_1_1InputManager.html", null ]
@@ -55,8 +58,14 @@ var hierarchy =
     [ "gs::ILogManager", "classgs_1_1ILogManager.html", [
       [ "gs::LogManager", "classgs_1_1LogManager.html", null ]
     ] ],
+    [ "gs::render::ILowLevelService", "classgs_1_1render_1_1ILowLevelService.html", [
+      [ "gs::render::LowLevelService", "classgs_1_1render_1_1LowLevelService.html", null ]
+    ] ],
     [ "gs::animation::IManager", "classgs_1_1animation_1_1IManager.html", [
       [ "gs::animation::Manager", "classgs_1_1animation_1_1Manager.html", null ]
+    ] ],
+    [ "gs::render::IMeshInstancedDrawService", "classgs_1_1render_1_1IMeshInstancedDrawService.html", [
+      [ "gs::render::MeshInstancedDrawService", "classgs_1_1render_1_1MeshInstancedDrawService.html", null ]
     ] ],
     [ "gs::animation::Instance", "structgs_1_1animation_1_1Instance.html", null ],
     [ "gs::animation::Asset::Interpolation", "structgs_1_1animation_1_1Asset_1_1Interpolation.html", null ],
@@ -66,9 +75,6 @@ var hierarchy =
     ] ],
     [ "gs::animation::IPlayerManager", "classgs_1_1animation_1_1IPlayerManager.html", [
       [ "gs::animation::PlayerManager", "classgs_1_1animation_1_1PlayerManager.html", null ]
-    ] ],
-    [ "gs::IRenderService", "classgs_1_1IRenderService.html", [
-      [ "gs::RenderService", "classgs_1_1RenderService.html", null ]
     ] ],
     [ "gs::IResourceManager", "classgs_1_1IResourceManager.html", [
       [ "gs::ResourceManager", "classgs_1_1ResourceManager.html", null ]
@@ -90,6 +96,9 @@ var hierarchy =
     ] ],
     [ "gs::IUIService", "classgs_1_1IUIService.html", [
       [ "gs::UIService", "classgs_1_1UIService.html", null ]
+    ] ],
+    [ "gs::render::IViewportManager", "classgs_1_1render_1_1IViewportManager.html", [
+      [ "gs::render::ViewportManager", "classgs_1_1render_1_1ViewportManager.html", null ]
     ] ],
     [ "gs::IWindowManager", "classgs_1_1IWindowManager.html", [
       [ "gs::WindowManager", "classgs_1_1WindowManager.html", null ]
@@ -135,6 +144,5 @@ var hierarchy =
     [ "gs::ecs::component::Thickness", "structgs_1_1ecs_1_1component_1_1Thickness.html", null ],
     [ "gs::ecs::component::Translated", "structgs_1_1ecs_1_1component_1_1Translated.html", null ],
     [ "gs::TranslateGizmo", "structgs_1_1TranslateGizmo.html", null ],
-    [ "gs::scene::Vector", "structgs_1_1scene_1_1Vector.html", null ],
-    [ "gs::RenderService::Viewport", "structgs_1_1RenderService_1_1Viewport.html", null ]
+    [ "gs::scene::Vector", "structgs_1_1scene_1_1Vector.html", null ]
 ];

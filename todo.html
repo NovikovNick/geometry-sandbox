@@ -135,10 +135,7 @@ $(function(){initNavTree('todo.html','',''); });
 <div class="contents">
 <div class="textblock"><dl class="reflist">
 <dt>File <a class="el" href="application_8h.html">application.h</a>  </dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000003"></a>[sample]: ★★★ duck SceneService::addMesh to the scene as camera target. </p>
-<p class="interdd"></p>
-<p class="interdd">[sample]: ★★★ camera SceneService::addMesh to the scene as camera position.</p>
-<p class="interdd"><a class="anchor" id="_todo000004"></a>[linter]: ★★ Move web folder into samples </p>
+<dd><p class="startdd"><a class="anchor" id="_todo000003"></a>[linter]: ★★ Move web folder into samples </p>
 <p class="interdd"></p>
 <p class="interdd">[linter]: ★★★ Check names in clang-tidy (active, hover, constrained...) </p>
 <p class="interdd"></p>
@@ -157,8 +154,6 @@ $(function(){initNavTree('todo.html','',''); });
 <p class="interdd">[docs]: ★★★★ animation system page doc </p>
 <p class="interdd"></p>
 <p class="interdd">[docs]: ★★★ вложенный namespace detail не должен попадать в docs </p>
-<p class="interdd"></p>
-<p class="interdd">[docs]: ★★★ File List javadocs </p>
 <p class="interdd"></p>
 <p class="interdd">[docs]: ★★★ interaction system page doc </p>
 <p class="interdd"></p>
@@ -180,8 +175,10 @@ $(function(){initNavTree('todo.html','',''); });
 <p class="interdd"></p>
 <p class="interdd">[sample]: ★★★ 5. Показать что смена right/left coords system это просто отзеркаливание </p>
 <p class="interdd"></p>
-<p class="interdd">[sample]: ★★★ 6. Показать математику project/deproject</p>
-<p class="interdd"><a class="anchor" id="_todo000005"></a>[sample]: ★★★ add samples for all <a href="https://gamemath.com/book/geomtests.html">https://gamemath.com/book/geomtests.html</a> </p>
+<p class="interdd">[sample]: ★★★ 6. Показать математику project/deproject </p>
+<p class="interdd"></p>
+<p class="interdd">[sample]: ★★★ Причесать .bat скрипты</p>
+<p class="interdd"><a class="anchor" id="_todo000004"></a>[sample]: ★★★ add samples for all <a href="https://gamemath.com/book/geomtests.html">https://gamemath.com/book/geomtests.html</a> </p>
 <p class="interdd"></p>
 <p class="interdd">[sample]: ★★★ Boids simulation for benchmark: <a href="https://github.com/SkitzFist/Boids">https://github.com/SkitzFist/Boids</a> </p>
 <p class="interdd"></p>
@@ -214,16 +211,13 @@ $(function(){initNavTree('todo.html','',''); });
 <dt>Member <a class="el" href="classgs_1_1animation_1_1Sampler.html#a9f96006bc8a06b0b46985de363a94da1">gs::animation::Sampler&lt; Size &gt;::sample</a>  (const float progress, const <a class="el" href="structgs_1_1animation_1_1Asset.html" title="Describes a complete, immutable animation asset.">Asset</a> &amp;asset)</dt>
 <dd><a class="anchor" id="_todo000002"></a>think about an Accessor abstraction to avoid using ordered properties invariant  </dd>
 <dt>Member <a class="el" href="classgs_1_1CameraService.html#a584ac6606a332d1e5df8f58ffc5c82d4">gs::CameraService::getScreenToWorldRay</a>  (<a class="el" href="namespacegs.html#a4cfe276f17208d89cd0dfee026fef598">Vec2</a> screenPos, const <a class="el" href="structgs_1_1Camera.html" title="Camera with coordinate handedness property.">Camera</a> &amp;) override</dt>
-<dd><a class="anchor" id="_todo000006"></a>add support for orthographic projection  </dd>
+<dd><a class="anchor" id="_todo000005"></a>add support for orthographic projection  </dd>
 <dt>Struct <a class="el" href="structgs_1_1Color.html">gs::Color</a>  </dt>
-<dd><a class="anchor" id="_todo000008"></a>compress to 255UI8  </dd>
-<dt>Class <a class="el" href="classgs_1_1RenderService.html">gs::RenderService</a>  </dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000007"></a>camera mesh should be setup in client code. The current temporary solution is made only because there is no rotation function. </p>
-<p class="interdd"></p>
-<p class="interdd">move plane creation into resource manager. </p>
-<p class="interdd"></p>
-<p class="enddd">reduce implementation, split to several files  </p>
-</dd>
+<dd><a class="anchor" id="_todo000006"></a>compress to 255UI8  </dd>
+<dt>Class <a class="el" href="classgs_1_1render_1_1Facade.html">gs::render::Facade</a>  </dt>
+<dd><a class="anchor" id="_todo000007"></a>pointTransforms_ and pointColors_ should be in ecs after implemented rotation  </dd>
+<dt>Class <a class="el" href="classgs_1_1render_1_1IFrustumDrawService.html">gs::render::IFrustumDrawService</a>  </dt>
+<dd><a class="anchor" id="_todo000008"></a>std::size_t cameraIndex should be used as alias CameraId or something...  </dd>
 <dt>Class <a class="el" href="classgs_1_1UIManager.html">gs::UIManager</a>  </dt>
 <dd><a class="anchor" id="_todo000009"></a>move drawFooter and drawDetailsView to UI service? </dd>
 </dl>

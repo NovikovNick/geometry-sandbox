@@ -151,7 +151,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adbe011a39d2cf3109832869ce7c45b1e" id="r_adbe011a39d2cf3109832869ce7c45b1e"><td class="memItemLeft">virtual const Font &amp;&#160;</td><td class="memItemRight"><a class="el" href="#adbe011a39d2cf3109832869ce7c45b1e">defaultCanvasFont</a> () const =0</td></tr>
 <tr class="memitem:a11afbd901dcdd0a83a236cb1b32b2b02" id="r_a11afbd901dcdd0a83a236cb1b32b2b02"><td class="memItemLeft">virtual ImFont *&#160;</td><td class="memItemRight"><a class="el" href="#a11afbd901dcdd0a83a236cb1b32b2b02">defaultUIFont</a> () const =0</td></tr>
 <tr class="memitem:a689aa657db48dcc50d82252c624eab01" id="r_a689aa657db48dcc50d82252c624eab01"><td class="memItemLeft">virtual ImFont *&#160;</td><td class="memItemRight"><a class="el" href="#a689aa657db48dcc50d82252c624eab01">iconFont</a> () const =0</td></tr>
-<tr class="memitem:a2d195a670a6001485f527375e5afe9a4" id="r_a2d195a670a6001485f527375e5afe9a4"><td class="memItemLeft">virtual const Shader &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2d195a670a6001485f527375e5afe9a4">getIntansingShader</a> () const =0</td></tr>
+<tr class="memitem:a206a8aeed8224e1269678bbee149616f" id="r_a206a8aeed8224e1269678bbee149616f"><td class="memItemLeft">virtual const Shader &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a206a8aeed8224e1269678bbee149616f">getShader</a> (<a class="el" href="namespacegs.html#a68c5fca11ec6441e37ca6acbd57bcf2c">ShaderType</a>) const =0</td></tr>
 <tr class="memitem:aca425959dfeb3fe255a349f29f170d0e" id="r_aca425959dfeb3fe255a349f29f170d0e"><td class="memItemLeft">virtual const Model &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aca425959dfeb3fe255a349f29f170d0e">getModel</a> (<a class="el" href="namespacegs.html#a1128ba681e8ea24f5adf987d81149891">ModelType</a>) const =0</td></tr>
 <tr class="memitem:a80b913f2ec2ce3d36debfdb7f8676380" id="r_a80b913f2ec2ce3d36debfdb7f8676380"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#a80b913f2ec2ce3d36debfdb7f8676380">~IResourceManager</a> ()=default</td></tr>
 </table>
@@ -236,33 +236,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a2d195a670a6001485f527375e5afe9a4" name="a2d195a670a6001485f527375e5afe9a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d195a670a6001485f527375e5afe9a4">&#9670;&#160;</a></span>getIntansingShader()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual const Shader &amp; gs::IResourceManager::getIntansingShader </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="classgs_1_1ResourceManager.html#a618031661d3571b23d1c68531c62ae74">gs::ResourceManager</a>.</p>
-
-</div>
-</div>
 <a id="aca425959dfeb3fe255a349f29f170d0e" name="aca425959dfeb3fe255a349f29f170d0e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aca425959dfeb3fe255a349f29f170d0e">&#9670;&#160;</a></span>getModel()</h2>
 
@@ -287,6 +260,33 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classgs_1_1ResourceManager.html#aec66fe81a97a9fd50bc4a63e4d2c7a88">gs::ResourceManager</a>.</p>
+
+</div>
+</div>
+<a id="a206a8aeed8224e1269678bbee149616f" name="a206a8aeed8224e1269678bbee149616f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a206a8aeed8224e1269678bbee149616f">&#9670;&#160;</a></span>getShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const Shader &amp; gs::IResourceManager::getShader </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacegs.html#a68c5fca11ec6441e37ca6acbd57bcf2c">ShaderType</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classgs_1_1ResourceManager.html#a64f9bf21856c077cbe2c5a73c74c85a7">gs::ResourceManager</a>.</p>
 
 </div>
 </div>

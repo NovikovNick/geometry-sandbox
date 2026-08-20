@@ -8,7 +8,6 @@ var searchData=
   ['max_5',['max',['../structgs_1_1AABB.html#af15e9b987b2777cc7c60cca73aa4f85d',1,'gs::AABB']]],
   ['min_6',['min',['../structgs_1_1AABB.html#a6178cd61f2457ae6e7a7ce69b2fac1dd',1,'gs::AABB']]],
   ['minorlinecolor_7',['minorLineColor',['../structgs_1_1scene_1_1Grid2D.html#a48832aeb80b661610ec2150920a471eb',1,'gs::scene::Grid2D']]],
-  ['model_8',['model',['../structgs_1_1RenderService_1_1Viewport.html#a341670cd70247c4581ed4d1bb3b9465c',1,'gs::RenderService::Viewport']]],
-  ['mouseray_9',['mouseRay',['../structgs_1_1ui_1_1State.html#a669de69a94e8a8a7eb48e505a7e7750a',1,'gs::ui::State']]],
-  ['multisampleantialiasing4x_10',['multiSampleAntiAliasing4X',['../structgs_1_1Settings.html#a642d23640ae940e5cfe099d54ea98f9e',1,'gs::Settings']]]
+  ['mouseray_8',['mouseRay',['../structgs_1_1ui_1_1State.html#a669de69a94e8a8a7eb48e505a7e7750a',1,'gs::ui::State']]],
+  ['multisampleantialiasing4x_9',['multiSampleAntiAliasing4X',['../structgs_1_1Settings.html#a642d23640ae940e5cfe099d54ea98f9e',1,'gs::Settings']]]
 ];
