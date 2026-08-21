@@ -140,60 +140,60 @@ $(function(){initNavTree('camera__controller__service_8h_source.html','',''); })
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">struct </span><a class="code hl_struct" href="structgs_1_1Settings.html">Settings</a>;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">class </span><a class="code hl_class" href="classgs_1_1IInputManager.html">IInputManager</a>;</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">class </span><a class="code hl_class" href="classgs_1_1ICameraService.html">ICameraService</a>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classgs_1_1ICameraControllerService.html">   22</a></span><span class="keyword">class </span><a class="code hl_class" href="classgs_1_1ICameraControllerService.html">ICameraControllerService</a></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classgs_1_1ICameraControllerService.html#ac4dc0744cc1bb17e7395952b4db0cea6">   25</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classgs_1_1ICameraControllerService.html#ac4dc0744cc1bb17e7395952b4db0cea6">update</a>(<a class="code hl_struct" href="structgs_1_1Camera.html">Camera</a>&amp;) <span class="keyword">const</span>  = 0;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classgs_1_1ICameraControllerService.html#aa1d2ff557c04a0bb8eb3ee6251d1feda">   26</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="classgs_1_1ICameraControllerService.html#aa1d2ff557c04a0bb8eb3ee6251d1feda">~ICameraControllerService</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>};</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classgs_1_1ICameraControllerService.html">   23</a></span><span class="keyword">class </span><a class="code hl_class" href="classgs_1_1ICameraControllerService.html">ICameraControllerService</a></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classgs_1_1ICameraControllerService.html#ac4dc0744cc1bb17e7395952b4db0cea6">   26</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classgs_1_1ICameraControllerService.html#ac4dc0744cc1bb17e7395952b4db0cea6">update</a>(<a class="code hl_struct" href="structgs_1_1Camera.html">Camera</a>&amp;) <span class="keyword">const</span>  = 0;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classgs_1_1ICameraControllerService.html#aa1d2ff557c04a0bb8eb3ee6251d1feda">   27</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="classgs_1_1ICameraControllerService.html#aa1d2ff557c04a0bb8eb3ee6251d1feda">~ICameraControllerService</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
 </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="foldopen" id="foldopen00029" data-start="{" data-end="};">
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classgs_1_1CameraControllerService.html">   29</a></span><span class="keyword">class </span><a class="code hl_function" href="classgs_1_1CameraControllerService.html#acbf1e6c405d3e82eeda02762f22f758c">CameraControllerService</a> : <span class="keyword">public</span> <a class="code hl_class" href="classgs_1_1ICameraControllerService.html">ICameraControllerService</a></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>{</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    std::shared_ptr&lt;Settings&gt; settings_;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    std::shared_ptr&lt;IInputManager&gt; inputManager_;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    std::shared_ptr&lt;ICameraService&gt; cameraService_;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">bool</span> rotateCamera_ = <span class="keyword">false</span>;  <span class="comment">// should be in input manager, service should be stateless</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classgs_1_1CameraControllerService.html">   31</a></span><span class="keyword">class </span><a class="code hl_function" href="classgs_1_1CameraControllerService.html#acbf1e6c405d3e82eeda02762f22f758c">CameraControllerService</a> : <span class="keyword">public</span> <a class="code hl_class" href="classgs_1_1ICameraControllerService.html">ICameraControllerService</a></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>{</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    std::shared_ptr&lt;Settings&gt; settings_;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    std::shared_ptr&lt;IInputManager&gt; inputManager_;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    std::shared_ptr&lt;ICameraService&gt; cameraService_;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classgs_1_1CameraControllerService.html#acbf1e6c405d3e82eeda02762f22f758c">   38</a></span>    <a class="code hl_function" href="classgs_1_1CameraControllerService.html#acbf1e6c405d3e82eeda02762f22f758c">CameraControllerService</a>(<span class="keyword">const</span> std::shared_ptr&lt;Settings&gt;&amp; settings,</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                            <span class="keyword">const</span> std::shared_ptr&lt;IInputManager&gt;&amp; inputManager,</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                            <span class="keyword">const</span> std::shared_ptr&lt;ICameraService&gt;&amp; cameraService);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classgs_1_1CameraControllerService.html#ad7e3ea6fe1d9b82a72efeffca82981a3">   42</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classgs_1_1CameraControllerService.html#ad7e3ea6fe1d9b82a72efeffca82981a3">update</a>(<a class="code hl_struct" href="structgs_1_1Camera.html">Camera</a>&amp;) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>};</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">bool</span> rotateCamera_ = <span class="keyword">false</span>;  <span class="comment">// should be in input manager, service should be stateless</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classgs_1_1CameraControllerService.html#acbf1e6c405d3e82eeda02762f22f758c">   40</a></span>    <a class="code hl_function" href="classgs_1_1CameraControllerService.html#acbf1e6c405d3e82eeda02762f22f758c">CameraControllerService</a>(<span class="keyword">const</span> std::shared_ptr&lt;Settings&gt;&amp; settings,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                            <span class="keyword">const</span> std::shared_ptr&lt;IInputManager&gt;&amp; inputManager,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                            <span class="keyword">const</span> std::shared_ptr&lt;ICameraService&gt;&amp; cameraService);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classgs_1_1CameraControllerService.html#ad7e3ea6fe1d9b82a72efeffca82981a3">   44</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classgs_1_1CameraControllerService.html#ad7e3ea6fe1d9b82a72efeffca82981a3">update</a>(<a class="code hl_struct" href="structgs_1_1Camera.html">Camera</a>&amp;) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>};</div>
 </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacegs_1_1di.html">di</a></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>{</div>
-<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="namespacegs_1_1di.html#a2d41064c134b651208b878bf14d425fd">   47</a></span><span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code hl_function" href="namespacegs_1_1di.html#a2d41064c134b651208b878bf14d425fd">cameraControllerSystem</a>() noexcept</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacegs_1_1di.html">di</a></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>{</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">return</span> boost::di::bind&lt;ICameraControllerService&gt;.to&lt;<a class="code hl_class" href="classgs_1_1CameraControllerService.html">CameraControllerService</a>&gt;();</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="namespacegs_1_1di.html#a2d41064c134b651208b878bf14d425fd">   49</a></span><span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code hl_function" href="namespacegs_1_1di.html#a2d41064c134b651208b878bf14d425fd">cameraControllerSystem</a>() noexcept</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>{</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">return</span> boost::di::bind&lt;ICameraControllerService&gt;.to&lt;<a class="code hl_class" href="classgs_1_1CameraControllerService.html">CameraControllerService</a>&gt;();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
 </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}  <span class="comment">// namespace di</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}  <span class="comment">// namespace gs</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#endif  </span><span class="comment">// CAMERA_CONTROLLER_SYSTEM_H</span></div>
-<div class="ttc" id="aclassgs_1_1CameraControllerService_html"><div class="ttname"><a href="classgs_1_1CameraControllerService.html">gs::CameraControllerService</a></div><div class="ttdef"><b>Definition</b> camera_controller_service.h:30</div></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}  <span class="comment">// namespace di</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}  <span class="comment">// namespace gs</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#endif  </span><span class="comment">// CAMERA_CONTROLLER_SYSTEM_H</span></div>
+<div class="ttc" id="aclassgs_1_1CameraControllerService_html"><div class="ttname"><a href="classgs_1_1CameraControllerService.html">gs::CameraControllerService</a></div><div class="ttdoc">basic ICameraControllerService implementation</div><div class="ttdef"><b>Definition</b> camera_controller_service.h:32</div></div>
 <div class="ttc" id="aclassgs_1_1CameraControllerService_html_acbf1e6c405d3e82eeda02762f22f758c"><div class="ttname"><a href="classgs_1_1CameraControllerService.html#acbf1e6c405d3e82eeda02762f22f758c">gs::CameraControllerService::CameraControllerService</a></div><div class="ttdeci">CameraControllerService(const std::shared_ptr&lt; Settings &gt; &amp;settings, const std::shared_ptr&lt; IInputManager &gt; &amp;inputManager, const std::shared_ptr&lt; ICameraService &gt; &amp;cameraService)</div></div>
 <div class="ttc" id="aclassgs_1_1CameraControllerService_html_ad7e3ea6fe1d9b82a72efeffca82981a3"><div class="ttname"><a href="classgs_1_1CameraControllerService.html#ad7e3ea6fe1d9b82a72efeffca82981a3">gs::CameraControllerService::update</a></div><div class="ttdeci">virtual void update(Camera &amp;) const override</div></div>
-<div class="ttc" id="aclassgs_1_1ICameraControllerService_html"><div class="ttname"><a href="classgs_1_1ICameraControllerService.html">gs::ICameraControllerService</a></div><div class="ttdef"><b>Definition</b> camera_controller_service.h:23</div></div>
+<div class="ttc" id="aclassgs_1_1ICameraControllerService_html"><div class="ttname"><a href="classgs_1_1ICameraControllerService.html">gs::ICameraControllerService</a></div><div class="ttdoc">Camera movement and rotation logic driven by user input.</div><div class="ttdef"><b>Definition</b> camera_controller_service.h:24</div></div>
 <div class="ttc" id="aclassgs_1_1ICameraControllerService_html_aa1d2ff557c04a0bb8eb3ee6251d1feda"><div class="ttname"><a href="classgs_1_1ICameraControllerService.html#aa1d2ff557c04a0bb8eb3ee6251d1feda">gs::ICameraControllerService::~ICameraControllerService</a></div><div class="ttdeci">virtual ~ICameraControllerService()=default</div></div>
 <div class="ttc" id="aclassgs_1_1ICameraControllerService_html_ac4dc0744cc1bb17e7395952b4db0cea6"><div class="ttname"><a href="classgs_1_1ICameraControllerService.html#ac4dc0744cc1bb17e7395952b4db0cea6">gs::ICameraControllerService::update</a></div><div class="ttdeci">virtual void update(Camera &amp;) const =0</div></div>
 <div class="ttc" id="aclassgs_1_1ICameraService_html"><div class="ttname"><a href="classgs_1_1ICameraService.html">gs::ICameraService</a></div><div class="ttdoc">various camera operations: orientation, rotation, math</div><div class="ttdef"><b>Definition</b> camera_service.h:21</div></div>
-<div class="ttc" id="aclassgs_1_1IInputManager_html"><div class="ttname"><a href="classgs_1_1IInputManager.html">gs::IInputManager</a></div><div class="ttdef"><b>Definition</b> input_manager.h:35</div></div>
+<div class="ttc" id="aclassgs_1_1IInputManager_html"><div class="ttname"><a href="classgs_1_1IInputManager.html">gs::IInputManager</a></div><div class="ttdoc">tracks key states and handles press/release callbacks</div><div class="ttdef"><b>Definition</b> input_manager.h:36</div></div>
 <div class="ttc" id="aecs_8h_html"><div class="ttname"><a href="ecs_8h.html">ecs.h</a></div><div class="ttdoc">defines types and components for ECS</div></div>
 <div class="ttc" id="anamespacegs_1_1di_html"><div class="ttname"><a href="namespacegs_1_1di.html">gs::di</a></div><div class="ttdoc">Dependency injection.</div><div class="ttdef"><b>Definition</b> manager.h:91</div></div>
-<div class="ttc" id="anamespacegs_1_1di_html_a2d41064c134b651208b878bf14d425fd"><div class="ttname"><a href="namespacegs_1_1di.html#a2d41064c134b651208b878bf14d425fd">gs::di::cameraControllerSystem</a></div><div class="ttdeci">auto cameraControllerSystem() noexcept</div><div class="ttdef"><b>Definition</b> camera_controller_service.h:47</div></div>
+<div class="ttc" id="anamespacegs_1_1di_html_a2d41064c134b651208b878bf14d425fd"><div class="ttname"><a href="namespacegs_1_1di.html#a2d41064c134b651208b878bf14d425fd">gs::di::cameraControllerSystem</a></div><div class="ttdeci">auto cameraControllerSystem() noexcept</div><div class="ttdef"><b>Definition</b> camera_controller_service.h:49</div></div>
 <div class="ttc" id="anamespacegs_html"><div class="ttname"><a href="namespacegs.html">gs</a></div><div class="ttdoc">geometry sandbox</div><div class="ttdef"><b>Definition</b> dsl.h:21</div></div>
-<div class="ttc" id="astructgs_1_1Camera_html"><div class="ttname"><a href="structgs_1_1Camera.html">gs::Camera</a></div><div class="ttdoc">Camera with coordinate handedness property.</div><div class="ttdef"><b>Definition</b> types.h:195</div></div>
-<div class="ttc" id="astructgs_1_1Settings_html"><div class="ttname"><a href="structgs_1_1Settings.html">gs::Settings</a></div><div class="ttdef"><b>Definition</b> settings.h:16</div></div>
+<div class="ttc" id="astructgs_1_1Camera_html"><div class="ttname"><a href="structgs_1_1Camera.html">gs::Camera</a></div><div class="ttdoc">Camera with coordinate handedness property.</div><div class="ttdef"><b>Definition</b> types.h:215</div></div>
+<div class="ttc" id="astructgs_1_1Settings_html"><div class="ttname"><a href="structgs_1_1Settings.html">gs::Settings</a></div><div class="ttdoc">Contains all configurable application parameters.</div><div class="ttdef"><b>Definition</b> settings.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

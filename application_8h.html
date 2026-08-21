@@ -147,6 +147,7 @@ $(function(){initNavTree('application_8h.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:gs_3A_3AApplication" id="r_gs_3A_3AApplication"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1Application.html">gs::Application</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">main entry class  <a href="classgs_1_1Application.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -159,38 +160,33 @@ Namespaces</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>main entry class </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo</a></b></dt><dd><p class="startdd">[linter]: ★★ Move web folder into samples </p>
-<p class="interdd">[linter]: ★★★ Check names in clang-tidy (active, hover, constrained...) </p>
-<p class="interdd">[bugfix]: ★★★ Похоже слоты в анимациях не переиспользуются </p>
-<p class="interdd">[bugfix]: ★★★ UI не перекрывает ввод на canvas </p>
-<p class="interdd">[improvement]: ★★★ template accessor instead of std::span&lt;std::byte&gt;? </p>
-<p class="interdd">[improvement]: ★★★★ template &lt;typename T&gt; using Animator = std::function&lt;T(Nanoseconds)&gt;;Добавить аниматор c (dt) </p>
-<p class="interdd">[improvement]: ★★★★ Move platform specific code to separate class </p>
-<p class="interdd">[docs]: ★★★★ dark/light theme toggle in docs doesn't work correctly </p>
-<p class="interdd">[docs]: ★★★★ animation system page doc </p>
-<p class="interdd">[docs]: ★★★ вложенный namespace detail не должен попадать в docs </p>
-<p class="interdd">[docs]: ★★★ interaction system page doc </p>
-<p class="interdd">[docs]: ★★★ Class List javadocs </p>
-<p class="interdd">[docs]: ★★★★ Namespace List javadocs? </p>
-<p class="interdd">[sample]: ★★★ mirrored viewport for backface. </p>
-<p class="interdd">[sample]: ★★★★ fix camera right/left coords system </p>
-<p class="interdd">[sample]: ★★★ </p>
-<p class="enddd">[sample]: ★★★ Причесать .bat скрипты</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo</a></b></dt><dd><p class="startdd">[docs]: ★★★ Class List javadocs </p>
+<p class="interdd">[bugfix]: ★★★ Looks like slots in <a class="el" href="classSlotMap.html" title="stores values and returns a unique, stable, generation-checked key">SlotMap</a> is not reuse </p>
+<p class="interdd">[bugfix]: ★★★ Details panel annoyingly blocks the translate gizmo </p>
+<p class="interdd">[docs]: ★★★★ Dark/light theme toggle in docs doesn't work correctly </p>
+<p class="interdd">[sample]: ★★★★ Fix camera right/left coords system </p>
+<p class="enddd">[sample]: ★★★ Camera sample</p>
 </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo</a></b></dt><dd><p class="startdd">[sample]: ★★★ add samples for all <a href="https://gamemath.com/book/geomtests.html">https://gamemath.com/book/geomtests.html</a> </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo</a></b></dt><dd><p class="startdd">[linter]: ★★★ Check names in clang-tidy (active, hover, constrained...) </p>
+<p class="interdd">[improvement]: ★★★ Template accessor instead of std::span&lt;std::byte&gt;? </p>
+<p class="interdd">[improvement]: ★★★★ Template &lt;typename T&gt; using Animator = std::function&lt;T(Nanoseconds)&gt;;Добавить аниматор c (dt) </p>
+<p class="interdd">[improvement]: ★★★★ Move platform specific code to separate class </p>
+<p class="enddd">[sample]: ★★★ Cleanup .bat and .sh scripts</p>
+</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo</a></b></dt><dd><p class="startdd">[sample]: ★★★ Add samples for all <a href="https://gamemath.com/book/geomtests.html">https://gamemath.com/book/geomtests.html</a> </p>
 <p class="interdd">[sample]: ★★★ Boids simulation for benchmark: <a href="https://github.com/SkitzFist/Boids">https://github.com/SkitzFist/Boids</a> </p>
 <p class="interdd">[improvement]: ★★★ All samples should be build in web and deploy </p>
 <p class="interdd">[improvement]: ★★★★ ASAN for unit-tests on clang </p>
-<p class="interdd">[performance]: ★★★★ animation build should be at compile-time </p>
-<p class="interdd">[performance]: ★★★★ arena allocator should improve animation build's performance </p>
-<p class="interdd">[performance]: ★★★★ concurrency for animation system </p>
-<p class="interdd">[performance]: ★★★ frustum culling? scene manager and octree </p>
-<p class="interdd">[feature]: ★★★ add color chooser and setup app's color theme </p>
-<p class="interdd">[feature]: ★★★ select scene objects with rectable </p>
-<p class="interdd">[feature]: ★★★★ show Tutorial if buttons haven't been pressed for a long time. </p>
+<p class="interdd">[performance]: ★★★★ Animation build should be at compile-time </p>
+<p class="interdd">[performance]: ★★★★ Arena allocator should improve animation build's performance </p>
+<p class="interdd">[performance]: ★★★★ Concurrency for animation system. Does -pthread work on github pages? </p>
+<p class="interdd">[performance]: ★★★ Frustum culling? scene manager and octree </p>
+<p class="interdd">[feature]: ★★★ Add color chooser and setup app's color theme </p>
+<p class="interdd">[feature]: ★★★ Select scene objects with rectable </p>
+<p class="interdd">[feature]: ★★★★ Show Tutorial if buttons haven't been pressed for a long time. </p>
 <p class="interdd">[feature]: ★★★★ Ru/En lang switcher? Asset manager to load i18n? </p>
-<p class="interdd">[feature]: ★★★★ rotation gizmo пример: <a href="https://github.com/CedricGuillemet/ImGuizmo">https://github.com/CedricGuillemet/ImGuizmo</a> </p>
-<p class="enddd">[feature]: ★★★★ add <a href="https://github.com/NanoMichael/MicroTeX">https://github.com/NanoMichael/MicroTeX</a></p>
+<p class="interdd">[feature]: ★★★★ Rotation gizmo example: <a href="https://github.com/CedricGuillemet/ImGuizmo">https://github.com/CedricGuillemet/ImGuizmo</a> </p>
+<p class="enddd">[feature]: ★★★★ Add <a href="https://github.com/NanoMichael/MicroTeX">https://github.com/NanoMichael/MicroTeX</a></p>
 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>MetalHeart </dd></dl>
 </div></div><!-- contents -->
