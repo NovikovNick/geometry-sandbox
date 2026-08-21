@@ -10,6 +10,5 @@ var searchData=
   ['prevbutton_7',['prevButton',['../structgs_1_1ui_1_1AnimationPlayer.html#a3926f450542e53d2aa7d868126b455c6',1,'gs::ui::AnimationPlayer']]],
   ['propertyid_8',['propertyId',['../structgs_1_1animation_1_1Target.html#a0a7bf161d56c447cca51fa032cfaf2c8',1,'gs::animation::Target::propertyId'],['../structgs_1_1animation_1_1Asset_1_1Channel.html#ad46b9c973bb4266d902623fce93cf3b7',1,'gs::animation::Asset::Channel::propertyId'],['../structgs_1_1animation_1_1Asset_1_1Key.html#a74b51fcf200a2b33a2995f23b51aede8',1,'gs::animation::Asset::Key::propertyId']]],
   ['propertyname_9',['propertyName',['../structgs_1_1animation_1_1SubProperty.html#a2f7479be6a1877da6617869f38c8fad2',1,'gs::animation::SubProperty']]],
-  ['propertyregistry_10',['propertyRegistry',['../namespacegs_1_1reflection_1_1detail.html#a798e38abb173d620cbe2174ec105b5fe',1,'gs::reflection::detail']]],
-  ['props_11',['props',['../structgs_1_1ui_1_1Button.html#a5df0ea507da9dffe57df3db5bd10390b',1,'gs::ui::Button']]]
+  ['props_10',['props',['../structgs_1_1ui_1_1Button.html#a5df0ea507da9dffe57df3db5bd10390b',1,'gs::ui::Button']]]
 ];

@@ -35,6 +35,5 @@ var reflection_8h =
     [ "gs::reflection::getSceneTypeProperty", "namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4", null ],
     [ "gs::reflection::nextFloatProperties", "namespacegs_1_1reflection.html#af8b146ea9cdbe05280ee8ebb5849c1d1", null ],
     [ "gs::reflection::propertyType", "namespacegs_1_1reflection.html#a827ef5ac7d1e268e64ff75b7f6c3e886", null ],
-    [ "gs::reflection::sceneType", "namespacegs_1_1reflection.html#a5c1d2bbc59235a4cac7e706d6f1841f8", null ],
-    [ "gs::reflection::detail::propertyRegistry", "namespacegs_1_1reflection_1_1detail.html#a798e38abb173d620cbe2174ec105b5fe", null ]
+    [ "gs::reflection::sceneType", "namespacegs_1_1reflection.html#a5c1d2bbc59235a4cac7e706d6f1841f8", null ]
 ];

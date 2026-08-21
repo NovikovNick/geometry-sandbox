@@ -1,8 +1,5 @@
 var namespacegs_1_1animation_1_1dsl =
 [
-    [ "detail", "namespacegs_1_1animation_1_1dsl_1_1detail.html", [
-      [ "propertyPath", "namespacegs_1_1animation_1_1dsl_1_1detail.html#adb75cfda1ab71670d68005173221f6f6", null ]
-    ] ],
     [ "accessor", "namespacegs_1_1animation_1_1dsl_1_1accessor.html", [
       [ "button", "namespacegs_1_1animation_1_1dsl_1_1accessor.html#a32e2b2ad6bc27c94d24b45ceea032999", null ],
       [ "camera", "namespacegs_1_1animation_1_1dsl_1_1accessor.html#a1a3dc05cf3e8b0028c93e7772c673c30", null ],

@@ -144,17 +144,22 @@ Inheritance diagram for gs::animation::IService:</div>
  <div class="center">
   <img src="classgs_1_1animation_1_1IService.png" usemap="#gs_3A_3Aanimation_3A_3AIService_map" alt=""/>
   <map id="gs_3A_3Aanimation_3A_3AIService_map" name="gs_3A_3Aanimation_3A_3AIService_map">
-<area href="classgs_1_1animation_1_1Service.html" alt="gs::animation::Service" shape="rect" coords="0,56,137,80"/>
+<area href="classgs_1_1animation_1_1Service.html" title="gs::animation::IService implementation" alt="gs::animation::Service" shape="rect" coords="0,56,137,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1106fafb6be5606d47c67f62bc262c21" id="r_a1106fafb6be5606d47c67f62bc262c21"><td class="memItemLeft">virtual <a class="el" href="classgs_1_1animation_1_1ReversableAnimation.html">ReversableAnimation</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1106fafb6be5606d47c67f62bc262c21">createHoverPointAnimation</a> (entt::entity entity)=0</td></tr>
+<tr class="memdesc:a1106fafb6be5606d47c67f62bc262c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">color-based hover  <br /></td></tr>
 <tr class="memitem:a6ae85432b63d92b405bedf5373997054" id="r_a6ae85432b63d92b405bedf5373997054"><td class="memItemLeft">virtual std::function&lt; void()&gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6ae85432b63d92b405bedf5373997054">createSelectPointAnimation</a> (entt::entity entity)=0</td></tr>
+<tr class="memdesc:a6ae85432b63d92b405bedf5373997054"><td class="mdescLeft">&#160;</td><td class="mdescRight">bounce selection pulse  <br /></td></tr>
 <tr class="memitem:a344b72a0cde11c8d7da0f96b56cb43f7" id="r_a344b72a0cde11c8d7da0f96b56cb43f7"><td class="memItemLeft">virtual <a class="el" href="classgs_1_1animation_1_1ReversableAnimation.html">ReversableAnimation</a>&#160;</td><td class="memItemRight"><a class="el" href="#a344b72a0cde11c8d7da0f96b56cb43f7">createHoverPlaneAnimation</a> (entt::entity entity)=0</td></tr>
+<tr class="memdesc:a344b72a0cde11c8d7da0f96b56cb43f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">opacity-based hover  <br /></td></tr>
 <tr class="memitem:acc4c8f48ec48c28f89c0363e3962c7aa" id="r_acc4c8f48ec48c28f89c0363e3962c7aa"><td class="memItemLeft">virtual <a class="el" href="classgs_1_1animation_1_1ReversableAnimation.html">ReversableAnimation</a>&#160;</td><td class="memItemRight"><a class="el" href="#acc4c8f48ec48c28f89c0363e3962c7aa">createHoverButtonAnimation</a> (const <a class="el" href="structgs_1_1ui_1_1Element.html">ui::Element</a> &amp;elem)=0</td></tr>
+<tr class="memdesc:acc4c8f48ec48c28f89c0363e3962c7aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">color-based hover  <br /></td></tr>
 <tr class="memitem:ae25a1213481aa5c0d5fb324170a58161" id="r_ae25a1213481aa5c0d5fb324170a58161"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ae25a1213481aa5c0d5fb324170a58161">playAppearUIAnimation</a> ()=0</td></tr>
+<tr class="memdesc:ae25a1213481aa5c0d5fb324170a58161"><td class="mdescLeft">&#160;</td><td class="mdescRight">fade-in for UI layout  <br /></td></tr>
 <tr class="memitem:a620038236139c33d033217d377b38d45" id="r_a620038236139c33d033217d377b38d45"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a620038236139c33d033217d377b38d45">~IService</a> ()=default</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
@@ -209,6 +214,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>color-based hover </p>
+
 <p>Implemented in <a class="el" href="classgs_1_1animation_1_1Service.html#a011877fc4db96818f621fe93a62a9ceb">gs::animation::Service</a>.</p>
 
 </div>
@@ -235,6 +242,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>opacity-based hover </p>
 
 <p>Implemented in <a class="el" href="classgs_1_1animation_1_1Service.html#a22587ccecd333751cf302270824df992">gs::animation::Service</a>.</p>
 
@@ -263,6 +272,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>color-based hover </p>
+
 <p>Implemented in <a class="el" href="classgs_1_1animation_1_1Service.html#a06c930af6e2fe905c27c863d2aa20f6a">gs::animation::Service</a>.</p>
 
 </div>
@@ -290,6 +301,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>bounce selection pulse </p>
+
 <p>Implemented in <a class="el" href="classgs_1_1animation_1_1Service.html#a6bc91928ad9e25d584a5c3f98b617be6">gs::animation::Service</a>.</p>
 
 </div>
@@ -316,6 +329,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>fade-in for UI layout </p>
 
 <p>Implemented in <a class="el" href="classgs_1_1animation_1_1Service.html#a7f7f9e53ee6e2a17d7d559ec6f0d253b">gs::animation::Service</a>.</p>
 

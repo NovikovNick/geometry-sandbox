@@ -243,8 +243,7 @@ $(function(){initNavTree('reflection_8h_source.html','',''); });
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>};</div>
 </div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
-<div class="foldopen" id="foldopen00131" data-start="{" data-end="}">
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="namespacegs_1_1reflection_1_1detail.html">  131</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacegs_1_1reflection_1_1detail.html">detail</a></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="keyword">namespace </span>detail</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>{</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="keyword">template</span> &lt;std::<span class="keywordtype">size_t</span> N&gt;</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="keyword">class </span>PropertyRegistry  <span class="comment">// it is like &quot;join&quot; table</span></div>
@@ -430,24 +429,21 @@ $(function(){initNavTree('reflection_8h_source.html','',''); });
 <div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    };</div>
 <div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>};</div>
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> </div>
-<div class="foldopen" id="foldopen00317" data-start="{" data-end="};">
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno"><a class="line" href="namespacegs_1_1reflection_1_1detail.html#a798e38abb173d620cbe2174ec105b5fe">  317</a></span><span class="keyword">constexpr</span> PropertyRegistry&lt;64&gt; <a class="code hl_variable" href="namespacegs_1_1reflection_1_1detail.html#a798e38abb173d620cbe2174ec105b5fe">propertyRegistry</a>{std::type_identity&lt;scene::Point&gt;{},</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span><span class="keyword">constexpr</span> PropertyRegistry&lt;64&gt; propertyRegistry{std::type_identity&lt;scene::Point&gt;{},</div>
 <div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                                                std::type_identity&lt;scene::Plane&gt;{},</div>
 <div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                                                std::type_identity&lt;ui::Layout&gt;{},</div>
 <div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                                                std::type_identity&lt;ui::Button::Props&gt;{},</div>
 <div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                                                std::type_identity&lt;Camera&gt;{}};</div>
-</div>
 <div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>}  <span class="comment">// namespace detail</span></div>
-</div>
 <div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
 <div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> F&gt;</div>
 <div class="foldopen" id="foldopen00325" data-start="{" data-end="}">
 <div class="line"><a id="l00325" name="l00325"></a><span class="lineno"><a class="line" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">  325</a></span><span class="keyword">constexpr</span> <span class="keyword">const</span> <a class="code hl_struct" href="structgs_1_1reflection_1_1Property.html">Property</a>&amp; <a class="code hl_function" href="namespacegs_1_1reflection.html#a6a827c71a3a54bb00a7836c8d684caa4">getSceneTypeProperty</a>()</div>
 <div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>{</div>
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    <span class="keyword">const</span> <span class="keyword">auto</span> predicate = [](<span class="keyword">const</span> <a class="code hl_struct" href="structgs_1_1reflection_1_1Property.html">Property</a>&amp; p) { <span class="keywordflow">return</span> p.depth == 0 &amp;&amp; p.sceneType == <a class="code hl_function" href="namespacegs_1_1reflection.html#a5c1d2bbc59235a4cac7e706d6f1841f8">sceneType&lt;F&gt;</a>(); };</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> it    = std::ranges::find_if(<a class="code hl_variable" href="namespacegs_1_1reflection_1_1detail.html#a798e38abb173d620cbe2174ec105b5fe">detail::propertyRegistry</a>.properties, predicate);</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> it    = std::ranges::find_if(detail::propertyRegistry.properties, predicate);</div>
 <div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> </div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (it != <a class="code hl_variable" href="namespacegs_1_1reflection_1_1detail.html#a798e38abb173d620cbe2174ec105b5fe">detail::propertyRegistry</a>.properties.end())</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (it != detail::propertyRegistry.properties.end())</div>
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    {</div>
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>        <span class="keywordflow">return</span> *it;</div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    }</div>
@@ -461,14 +457,14 @@ $(function(){initNavTree('reflection_8h_source.html','',''); });
 <div class="foldopen" id="foldopen00341" data-start="{" data-end="}">
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno"><a class="line" href="namespacegs_1_1reflection.html#a50423229883f0c5e5f2a1e18144a9919">  341</a></span><span class="keyword">constexpr</span> <span class="keyword">const</span> <a class="code hl_struct" href="structgs_1_1reflection_1_1Property.html">Property</a>* <a class="code hl_function" href="namespacegs_1_1reflection.html#a50423229883f0c5e5f2a1e18144a9919">findChildProperty</a>(<a class="code hl_typedef" href="structgs_1_1reflection_1_1Property.html#a585b863466b83576bcf430966ce02553">Property::Id</a> propertyId, std::string_view name)</div>
 <div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>{</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="namespacegs_1_1reflection_1_1detail.html#a798e38abb173d620cbe2174ec105b5fe">detail::propertyRegistry</a>.findPropertyChild(propertyId, name);</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    <span class="keywordflow">return</span> detail::propertyRegistry.findPropertyChild(propertyId, name);</div>
 <div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>}</div>
 </div>
 <div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span></div>
 <div class="foldopen" id="foldopen00347" data-start="{" data-end="}">
 <div class="line"><a id="l00347" name="l00347"></a><span class="lineno"><a class="line" href="namespacegs_1_1reflection.html#ae59483285ac2ed5d21efe3050a80c37b">  347</a></span><span class="keyword">constexpr</span> <span class="keyword">const</span> <a class="code hl_struct" href="structgs_1_1reflection_1_1Property.html">Property</a>&amp; <a class="code hl_function" href="namespacegs_1_1reflection.html#ae59483285ac2ed5d21efe3050a80c37b">getPropertyRoot</a>(<a class="code hl_typedef" href="structgs_1_1reflection_1_1Property.html#a585b863466b83576bcf430966ce02553">Property::Id</a> propertyId)</div>
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>{</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="namespacegs_1_1reflection_1_1detail.html#a798e38abb173d620cbe2174ec105b5fe">detail::propertyRegistry</a>.getPropertyRoot(propertyId);</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    <span class="keywordflow">return</span> detail::propertyRegistry.getPropertyRoot(propertyId);</div>
 <div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>}</div>
 </div>
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span></div>
@@ -476,7 +472,7 @@ $(function(){initNavTree('reflection_8h_source.html','',''); });
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno"><a class="line" href="namespacegs_1_1reflection.html#af8b146ea9cdbe05280ee8ebb5849c1d1">  353</a></span><span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="namespacegs_1_1reflection.html#af8b146ea9cdbe05280ee8ebb5849c1d1">nextFloatProperties</a>(<a class="code hl_typedef" href="structgs_1_1reflection_1_1Property.html#a585b863466b83576bcf430966ce02553">Property::Id</a> propertyId, std::size_t count)</div>
 <div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>{</div>
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>    <span class="comment">// clang-format off</span></div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="namespacegs_1_1reflection_1_1detail.html#a798e38abb173d620cbe2174ec105b5fe">detail::propertyRegistry</a>.properties                                                                     </div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>    <span class="keywordflow">return</span> detail::propertyRegistry.properties                                                                     </div>
 <div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>           | std::views::drop_while([propertyId](<span class="keyword">const</span> <a class="code hl_struct" href="structgs_1_1reflection_1_1Property.html">Property</a>&amp; property) { <span class="keywordflow">return</span> <span class="keyword">property</span>.id != propertyId; })  </div>
 <div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>           | std::views::filter([](<span class="keyword">const</span> <a class="code hl_struct" href="structgs_1_1reflection_1_1Property.html">Property</a>&amp; property) { <span class="keywordflow">return</span> <span class="keyword">property</span>.type == <a class="code hl_enumvalue" href="namespacegs_1_1reflection.html#a84a4d6d6ea9ae27b817c22145181898fa22ae0e2b89e5e3d477f988cc36d3272b">PropertyType::Float</a> ||  <span class="keyword">property</span>.type == <a class="code hl_enumvalue" href="namespacegs_1_1reflection.html#a84a4d6d6ea9ae27b817c22145181898fac26f15e86e3de4c398a8273272aba034">PropertyType::Bool</a>; })             </div>
 <div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>           | std::views::take(count);</div>
@@ -487,7 +483,7 @@ $(function(){initNavTree('reflection_8h_source.html','',''); });
 <div class="foldopen" id="foldopen00364" data-start="{" data-end="}">
 <div class="line"><a id="l00364" name="l00364"></a><span class="lineno"><a class="line" href="namespacegs_1_1reflection.html#a9729b56a516076277e42b7f12d0a9a22">  364</a></span><span class="keyword">constexpr</span> <span class="keyword">const</span> <a class="code hl_struct" href="structgs_1_1reflection_1_1Property.html">Property</a>&amp; <a class="code hl_function" href="namespacegs_1_1reflection.html#a9729b56a516076277e42b7f12d0a9a22">getProperty</a>(<a class="code hl_typedef" href="structgs_1_1reflection_1_1Property.html#a585b863466b83576bcf430966ce02553">Property::Id</a> propertyId)</div>
 <div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>{</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="namespacegs_1_1reflection_1_1detail.html#a798e38abb173d620cbe2174ec105b5fe">detail::propertyRegistry</a>.getProperty(propertyId);</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>    <span class="keywordflow">return</span> detail::propertyRegistry.getProperty(propertyId);</div>
 <div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>}</div>
 </div>
 <div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span> </div>
@@ -497,8 +493,6 @@ $(function(){initNavTree('reflection_8h_source.html','',''); });
 <div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span><span class="preprocessor">#endif  </span><span class="comment">// GEOMETRY_SANDBOX_REFLECTION_H</span></div>
 <div class="ttc" id="acore_2types_8h_html"><div class="ttname"><a href="core_2types_8h.html">types.h</a></div><div class="ttdoc">core types</div></div>
 <div class="ttc" id="aecs_8h_html"><div class="ttname"><a href="ecs_8h.html">ecs.h</a></div><div class="ttdoc">defines types and components for ECS</div></div>
-<div class="ttc" id="anamespacegs_1_1reflection_1_1detail_html"><div class="ttname"><a href="namespacegs_1_1reflection_1_1detail.html">gs::reflection::detail</a></div><div class="ttdef"><b>Definition</b> reflection.h:132</div></div>
-<div class="ttc" id="anamespacegs_1_1reflection_1_1detail_html_a798e38abb173d620cbe2174ec105b5fe"><div class="ttname"><a href="namespacegs_1_1reflection_1_1detail.html#a798e38abb173d620cbe2174ec105b5fe">gs::reflection::detail::propertyRegistry</a></div><div class="ttdeci">constexpr PropertyRegistry&lt; 64 &gt; propertyRegistry</div><div class="ttdef"><b>Definition</b> reflection.h:317</div></div>
 <div class="ttc" id="anamespacegs_1_1reflection_html"><div class="ttname"><a href="namespacegs_1_1reflection.html">gs::reflection</a></div><div class="ttdoc">Static introspection of animatable types.</div><div class="ttdef"><b>Definition</b> reflection.h:42</div></div>
 <div class="ttc" id="anamespacegs_1_1reflection_html_a50423229883f0c5e5f2a1e18144a9919"><div class="ttname"><a href="namespacegs_1_1reflection.html#a50423229883f0c5e5f2a1e18144a9919">gs::reflection::findChildProperty</a></div><div class="ttdeci">constexpr const Property * findChildProperty(Property::Id propertyId, std::string_view name)</div><div class="ttdoc">for property path build</div><div class="ttdef"><b>Definition</b> reflection.h:341</div></div>
 <div class="ttc" id="anamespacegs_1_1reflection_html_a5c1d2bbc59235a4cac7e706d6f1841f8"><div class="ttname"><a href="namespacegs_1_1reflection.html#a5c1d2bbc59235a4cac7e706d6f1841f8">gs::reflection::sceneType</a></div><div class="ttdeci">constexpr SceneType sceneType()</div><div class="ttdef"><b>Definition</b> reflection.h:77</div></div>

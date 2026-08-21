@@ -19,7 +19,6 @@ var dsl_8h =
     [ "gs::animation::dsl::operator|", "namespacegs_1_1animation_1_1dsl.html#aa2ac5e9f03963b1784c923a1f7b56ae3", null ],
     [ "gs::animation::dsl::accessor::plane", "namespacegs_1_1animation_1_1dsl_1_1accessor.html#ac2d005cece7b6d0c00d325e7bd7a99f2", null ],
     [ "gs::animation::dsl::accessor::point", "namespacegs_1_1animation_1_1dsl_1_1accessor.html#ab55e76a5e154a1b1a16934c3b1d62a7d", null ],
-    [ "gs::animation::dsl::detail::propertyPath", "namespacegs_1_1animation_1_1dsl_1_1detail.html#adb75cfda1ab71670d68005173221f6f6", null ],
     [ "gs::animation::dsl::accessor::ui", "namespacegs_1_1animation_1_1dsl_1_1accessor.html#a5c33d078bdb9eb97e32e13404079aba9", null ],
     [ "gs::animation::dsl::color::a", "namespacegs_1_1animation_1_1dsl_1_1color.html#a685a8fb09f7d4aae946fdaa185b6992d", null ],
     [ "gs::animation::dsl::color::b", "namespacegs_1_1animation_1_1dsl_1_1color.html#ac8842992d68bb32ee5b9928ab6ecc134", null ],

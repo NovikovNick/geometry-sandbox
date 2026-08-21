@@ -1,8 +1,5 @@
 var namespacegs_1_1reflection =
 [
-    [ "detail", "namespacegs_1_1reflection_1_1detail.html", [
-      [ "propertyRegistry", "namespacegs_1_1reflection_1_1detail.html#a798e38abb173d620cbe2174ec105b5fe", null ]
-    ] ],
     [ "Property", "structgs_1_1reflection_1_1Property.html", "structgs_1_1reflection_1_1Property" ],
     [ "EntryType", "namespacegs_1_1reflection.html#a73e10e211ad4d53a85beb6aad21ac6b5", [
       [ "None", "namespacegs_1_1reflection.html#a73e10e211ad4d53a85beb6aad21ac6b5a6adf97f83acf6453d4a6a4b1070f3754", null ],

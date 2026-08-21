@@ -101,10 +101,10 @@ var NAVTREEINDEX =
 "classgs_1_1IWindowManager.html",
 "classgs_1_1animation_1_1PlayerManager.html#a2fe2243f6f9dae96d10826ebbbbb334d",
 "functions_vars_u.html",
-"pages.html",
-"structgs_1_1TranslateGizmo.html#a5aad721e91a3f6e91a14cf71be6aed73",
-"structgs_1_1ecs_1_1component_1_1Label.html#a29d6aaa8f967d511150455b392581d82",
-"structgs_1_1ui_1_1State.html#aadff129fd99cb55a0c46e399b92b8910"
+"reflection_8h_source.html",
+"structgs_1_1TranslateGizmo.html#a879e93029f5f88f7ce0323da98f08bb3",
+"structgs_1_1ecs_1_1component_1_1MainColor.html",
+"structgs_1_1ui_1_1State.html#ac02538f7bc7584b9a087f629b628c651"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

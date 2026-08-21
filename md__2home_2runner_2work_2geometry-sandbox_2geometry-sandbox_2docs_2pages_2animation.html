@@ -134,24 +134,7 @@ $(function(){initNavTree('md__2home_2runner_2work_2geometry-sandbox_2geometry-sa
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md8"></a></p>
-<div class="fragment"><div class="line"><span class="keyword">using namespace </span>std::chrono;</div>
-<div class="line"> </div>
-<div class="line">animation::KeyframeCollection keyframes;</div>
-<div class="line">keyframes += keyframe(0s)</div>
-<div class="line">             | accessor::point(pointId) / point::position &lt;&lt; Vec3{0, 0, 1}</div>
-<div class="line">             | accessor::point(pointId) / point::color  &lt;&lt; Color::blue();</div>
-<div class="line"> </div>
-<div class="line">keyframes += keyframe(1s)</div>
-<div class="line">             | accessor::point(pointId) / point::position &lt;&lt; key(Vec3{0, 0, 1}, circularMovement)</div>
-<div class="line">             | accessor::point(pointId) / point::color  &lt;&lt; Color::red();</div>
-<div class="line"> </div>
-<div class="line">animation::Manager manager;</div>
-<div class="line">animation::Clip clip = manager.build(keyframes);</div>
-<div class="line">clip.loop = <span class="keyword">true</span>;</div>
-<div class="line"> </div>
-<div class="line">animation::Handle handle; <span class="comment">// id, version</span></div>
-<div class="line">handle = manager.play(clip); <span class="comment">// starts animation::Instance </span></div>
-</div><!-- fragment --><p>The animation system provides a compile-time validated DSL for defining property animations on scene objects, UI elements, and cameras. It supports keyframe-based animation with easing functions, custom interpolators, and runtime playback control.</p>
+<p>The animation system provides a compile-time validated DSL for defining property animations on scene objects, UI elements, and cameras. It supports keyframe-based animation with easing functions, custom interpolators, and runtime playback control.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
 Core Components</h1>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
