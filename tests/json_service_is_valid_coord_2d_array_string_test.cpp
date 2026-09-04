@@ -3,16 +3,32 @@
 #include <gtest/gtest.h>
 
 #include "core/json_service.h"
+#include "core/log_manager.h"
+#include "core/settings.h"
 
 #include <string>
 
 namespace gs
 {
+namespace
+{
+auto& getTestDependencyInjectionContext()
+{
+	static auto ctx = []()
+	{
+		return boost::di::make_injector(boost::di::bind<Settings>().in(boost::di::singleton),  //
+										di::logManager(),
+										di::jsonService());
+	}();
+	return ctx;
+};
+}  // namespace
+
 TEST(isValidCoord2dArrayString, validate_ratio_numbers)
 {
 	// arrange
-	JsonService serviceImpl{};
-	const IJsonService& service = serviceImpl;
+	auto& ctx					= getTestDependencyInjectionContext();
+	const IJsonService& service = ctx.create<const IJsonService&>();
 	std::string input			= "[[3,42],[-4,0.5]]";
 
 	// act
@@ -25,8 +41,8 @@ TEST(isValidCoord2dArrayString, validate_ratio_numbers)
 TEST(isValidCoord2dArrayString, validate_with_spaces)
 {
 	// arrange
-	JsonService serviceImpl{};
-	const IJsonService& service = serviceImpl;
+	auto& ctx					= getTestDependencyInjectionContext();
+	const IJsonService& service = ctx.create<const IJsonService&>();
 	std::string input			= "  [  [  3  ,  0  ]  ,  [  -4  ,  0.5  ]  ]  ";
 
 	// act
@@ -39,8 +55,8 @@ TEST(isValidCoord2dArrayString, validate_with_spaces)
 TEST(isValidCoord2dArrayString, validate_invalid_bracers)
 {
 	// arrange
-	JsonService serviceImpl{};
-	const IJsonService& service = serviceImpl;
+	auto& ctx					= getTestDependencyInjectionContext();
+	const IJsonService& service = ctx.create<const IJsonService&>();
 	std::string input			= "[3,42],[-4,0.5]]";
 
 	// act
@@ -53,8 +69,8 @@ TEST(isValidCoord2dArrayString, validate_invalid_bracers)
 TEST(isValidCoord2dArrayString, validate_invalid_numbers)
 {
 	// arrange
-	JsonService serviceImpl{};
-	const IJsonService& service = serviceImpl;
+	auto& ctx					= getTestDependencyInjectionContext();
+	const IJsonService& service = ctx.create<const IJsonService&>();
 	std::string input			= "[[3],[-4,0.5]]";
 
 	// act
@@ -67,8 +83,8 @@ TEST(isValidCoord2dArrayString, validate_invalid_numbers)
 TEST(isValidCoord2dArrayString, validate_valid_big_intput)
 {
 	// arrange
-	JsonService serviceImpl{};
-	const IJsonService& service = serviceImpl;
+	auto& ctx					= getTestDependencyInjectionContext();
+	const IJsonService& service = ctx.create<const IJsonService&>();
 	std::string
 		input = "[[14.21,3.87],[7.34,12.91],[0.56,8.23],[5.89,4.12],[13.45,1.78],[2.31,14.67],[9.87,6.54],[11.23,9.01],[3.45,2.89],[6."
 				"78,13.4],[14.56,7.89],[1.23,5.67],[8.90,0.34],[12.34,14.78],[4.56,11.23],[10.12,3.45],[0.89,1.23],[13.67,10.34],[5."

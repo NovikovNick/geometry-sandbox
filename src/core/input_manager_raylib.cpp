@@ -5,13 +5,20 @@
 
 #include "raylib.h"
 
+#include <algorithm>
 #include <array>
 #include <bitset>
+#include <cstddef>
 #include <utility>
 #include <vector>
 
 namespace gs
 {
+bool InputManager::isKeyPressed(InputKey key) const
+{
+	return pressed_.at(static_cast<std::size_t>(key)).any();
+}
+
 void InputManager::onPress(InputKey key, Callback&& callback)
 {
 	const auto index = static_cast<int>(key);
@@ -34,30 +41,39 @@ Vec2 InputManager::getCursorDelta() const
 	return currCursorScreenPosition_ - prevCursorScreenPosition_;
 }
 
-void InputManager::press(InputKey key)
+void InputManager::press(InputKey key, InputSource src)
 {
-	const auto index = static_cast<int>(key);
-	if (!pressed_[index])
+	const auto keyIndex = static_cast<int>(key);
+	const auto srcIndex = static_cast<int>(src);
+
+	if (pressed_.at(keyIndex).none())
 	{
-		pressed_[index] = true;
-		for (const auto& callback : onPressCallbacks_.at(index))
+		for (const auto& callback : onPressCallbacks_.at(keyIndex))
 		{
 			callback();
 		}
 	}
+
+	pressed_.at(keyIndex).set(srcIndex, true);
 }
-void InputManager::release(InputKey key)
+
+void InputManager::release(InputKey key, InputSource src)
 {
-	const auto index = static_cast<int>(key);
-	if (pressed_[index])
+	const auto keyIndex	  = static_cast<int>(key);
+	const auto srcIndex	  = static_cast<int>(src);
+
+	const bool wasPressed = pressed_.at(keyIndex).any();
+	pressed_.at(keyIndex).set(srcIndex, false);
+	const bool isReleased = pressed_.at(keyIndex).none();
+
+	if (wasPressed && isReleased)
 	{
-		pressed_[index] = false;
-		for (const auto& callback : onReleaseCallbacks_.at(index))
+		for (const auto& callback : onReleaseCallbacks_.at(keyIndex))
 		{
 			callback();
 		}
+		lastUpdateAt_ = Clock::now();
 	}
-	lastUpdateAt_ = Clock::now();
 }
 
 void InputManager::tick()
@@ -69,70 +85,40 @@ void InputManager::tick()
 	}
 	prevCursorScreenPosition_ = std::exchange(currCursorScreenPosition_, {mousePos.x, mousePos.y});
 
-	if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+	static const std::array mouseButtonMapping{std::make_pair(MOUSE_BUTTON_LEFT, InputKey::MouseLeft),
+											   std::make_pair(MOUSE_BUTTON_RIGHT, InputKey::MouseRight)};
+
+	for (const auto [raylibKey, appKey] : mouseButtonMapping)
 	{
-		press(InputKey::MouseLeft);
-	}
-	if (IsMouseButtonReleased(MOUSE_BUTTON_LEFT))
-	{
-		release(InputKey::MouseLeft);
+		if (IsMouseButtonPressed(raylibKey))
+		{
+			press(appKey, InputSource::Mouse);
+		}
+		if (IsMouseButtonReleased(raylibKey))
+		{
+			release(appKey, InputSource::Mouse);
+		}
 	}
 
-	if (IsMouseButtonPressed(MOUSE_BUTTON_RIGHT))
+	static const std::array keyboardMapping{std::make_pair(KEY_W, InputKey::Forward),
+											std::make_pair(KEY_A, InputKey::Left),
+											std::make_pair(KEY_S, InputKey::Backward),
+											std::make_pair(KEY_D, InputKey::Right),
+											std::make_pair(KEY_Q, InputKey::Test)};
+
+	for (const auto [raylibKey, appKey] : keyboardMapping)
 	{
-		press(InputKey::MouseRight);
-	}
-	if (IsMouseButtonReleased(MOUSE_BUTTON_RIGHT))
-	{
-		release(InputKey::MouseRight);
+		if (IsKeyPressed(raylibKey))
+		{
+			press(appKey, InputSource::Keybord);
+		}
+		if (IsKeyReleased(raylibKey))
+		{
+			release(appKey, InputSource::Keybord);
+		}
 	}
 
-	if (IsKeyPressed(KEY_W))
-	{
-		press(InputKey::Forward);
-	}
-	if (IsKeyReleased(KEY_W))
-	{
-		release(InputKey::Forward);
-	}
-
-	if (IsKeyPressed(KEY_S))
-	{
-		press(InputKey::Backward);
-	}
-	if (IsKeyReleased(KEY_S))
-	{
-		release(InputKey::Backward);
-	}
-
-	if (IsKeyPressed(KEY_A))
-	{
-		press(InputKey::Left);
-	}
-	if (IsKeyReleased(KEY_A))
-	{
-		release(InputKey::Left);
-	}
-
-	if (IsKeyPressed(KEY_D))
-	{
-		press(InputKey::Right);
-	}
-	if (IsKeyReleased(KEY_D))
-	{
-		release(InputKey::Right);
-	}
-
-	if (IsKeyPressed(KEY_Q))
-	{
-		press(InputKey::Test);
-	}
-	if (IsKeyReleased(KEY_Q))
-	{
-		release(InputKey::Test);
-	}
-
-	if (pressed_.any())
+	if (std::ranges::any_of(pressed_, [](const auto& state) { return state.any(); }))
 	{
 		lastUpdateAt_ = Clock::now();
 	}

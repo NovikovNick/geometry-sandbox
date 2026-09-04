@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.25)
 project ("geometry-sandbox"
-    VERSION 0.1.0
+    VERSION 0.2.0
     DESCRIPTION "Yet another geometry sandbox project"
     LANGUAGES CXX)
 
@@ -74,9 +74,9 @@ message(STATUS "  CMake build type .............................: ${CMAKE_BUILD_
 message(STATUS "  CMAKE_CXX_FLAGS ..............................: ${CMAKE_CXX_FLAGS}")
 message(STATUS "  CMAKE_EXE_LINKER_FLAGS .......................: ${CMAKE_EXE_LINKER_FLAGS}")
 message(STATUS "  LINK_FLAGS ...................................: ${LINK_FLAGS}")
-message(STATUS "  Enable static analysis with clang-tidy .......: ${GSAND_USE_CLANG_TIDY}")
-message(STATUS "  Enable unit tests ............................: ${GSAND_ENABLE_TESTS}")
-message(STATUS "  Enable unit benchmarks .......................: ${GSAND_ENABLE_BENCHMARKS}")
-message(STATUS "  Build docs ...................................: ${GSAND_BUILD_DOCS}")
 message(STATUS "  Build samples ................................: ${GSAND_BUILD_SAMPLES}")
+message(STATUS "  Enable unit tests ............................: ${GSAND_ENABLE_TESTS}")
+message(STATUS "  Build docs ...................................: ${GSAND_BUILD_DOCS}")
+message(STATUS "  Enable static analysis with clang-tidy .......: ${GSAND_USE_CLANG_TIDY}")
+message(STATUS "  Enable unit benchmarks .......................: ${GSAND_ENABLE_BENCHMARKS}")
 message(STATUS "")

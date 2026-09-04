@@ -69,17 +69,16 @@ ReversableAnimation Service::createHoverPlaneAnimation(entt::entity entity)
 
 ReversableAnimation Service::createHoverButtonAnimation(const ui::Element& elem)
 {
-	constexpr PropertyPath arg0			= dsl::accessor::button(0);
-	constexpr Color defaultColor		= Color::white();
-	constexpr Color hoveredColor		= Color::blue();
+	constexpr PropertyPath arg0			= dsl::accessor::button(0);	 // strange name cause it is placeholder
+
 	const static AssetCollection assets = [&]
 	{
 		// NOLINTBEGIN(*-using-namespace, *-magic-numbers)
 		using namespace animation::dsl;
 
 		KeyframeCollection keyframes;
-		keyframes += keyframe(0s) | arg0 / btn::color << defaultColor;
-		keyframes += keyframe(300ms) | arg0 / btn::color << hoveredColor;
+		keyframes += keyframe(0s) | arg0 / btn::color << settings_->buttonColor;
+		keyframes += keyframe(300ms) | arg0 / btn::color << settings_->buttonColorHover;
 		return animationManager_->build(keyframes);
 		// NOLINTEND(*-using-namespace, *-magic-numbers)
 	}();
@@ -99,7 +98,7 @@ void Service::playAppearUIAnimation()
 
 	KeyframeCollection keyframes;
 	keyframes += keyframe(0s) | dsl::accessor::ui() / dsl::layout::opacity << 0.0F;
-	keyframes += keyframe(2s) | dsl::accessor::ui() / dsl::layout::opacity << 1.0F;
+	keyframes += keyframe(2s) | dsl::accessor::ui() / dsl::layout::opacity << key(1.0F, cubic::in);
 	animationManager_->buildAndPlay(keyframes, [](Clip& clip) { clip.removeOnComplete = true; });
 	// NOLINTEND(*-using-namespace, *-magic-numbers)
 }

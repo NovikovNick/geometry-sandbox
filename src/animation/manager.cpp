@@ -4,8 +4,6 @@
 #include "animation/handle.h"
 #include "animation/sampler.h"
 #include "animation/types.h"
-#include "core/ecs.h"
-#include "core/log_manager.h"
 #include "core/settings.h"
 #include "core/types.h"
 
@@ -21,7 +19,6 @@
 
 namespace gs::animation
 {
-
 AssetCollection Manager::build(KeyframeCollection& keyframes)
 {
 	AssetCollection res{.duration = Milliseconds{0}};
@@ -62,7 +59,6 @@ Handle Manager::play(Clip& clip)
 	animation.elapsed  = Nanoseconds{0};
 	animation.setRemoveOnComplete(clip.removeOnComplete);
 	animation.setLooping(clip.loop);
-	animation.setPauseOnMarker(clip.pauseOnMarker);
 
 	// setup animation
 	const auto durationMs = static_cast<float>(clip.duration.count());
@@ -88,25 +84,28 @@ Handle Manager::buildAndPlay(KeyframeCollection& keyframes, std::function<void(C
 	return play(clip);
 }
 
-void Manager::tick(Nanoseconds deltaTime)
+void Manager::updateAndApplyAnimations(Nanoseconds deltaTime)
 {
 	deltaTime = std::chrono::duration_cast<Nanoseconds>(deltaTime * settings_->animationSpeed);
 	for (auto&& [i, animation] : animations_.forEach())
 	{
+		if (animation.isComplete() && animation.isRemoveOnComplete())
+		{
+			animations_.remove(i);
+			continue;
+		}
+
 		if (animation.isPaused())
 		{
 			continue;
 		}
 
-		if (!animation.isComplete())
-		{
-			integrate(animation, deltaTime);
-		}
-		logManager_->frameLog("anim#{}: {} / {}", i, animation.elapsed, animation.duration);
+		integrate(animation, deltaTime);
+		applyAnimation(animation);
 	}
 }
 
-void Manager::animate(ecs::Registry& registry, ui::State& uiState, Instance& animation)
+void Manager::applyAnimation(const Instance& animation)
 {
 	const auto totalDuration = static_cast<float>(animation.duration.count());
 	const auto totalProgress = static_cast<float>(animation.elapsed.count()) / totalDuration;
@@ -123,53 +122,8 @@ void Manager::animate(ecs::Registry& registry, ui::State& uiState, Instance& ani
 
 		const std::span<float> sample = sampler_.sample(progress, asset);
 
-		apply(registry, uiState, target, asset.channels, sample);
+		apply(target, asset.channels, sample);
 	}
 }
 
-void Manager::animate(ecs::Registry& registry, ui::State& uiState, Instance& animation, float progress)
-{
-	for (const std::pair<Target, Asset*>& entry : animation.animations)
-	{
-		const Target& target = entry.first;
-		const Asset& asset	 = *entry.second;
-		assert(sampler_.isBufferSufficientForChannels(asset.channels.size()));
-
-		const std::span<float> sample = sampler_.sample(progress, asset);
-
-		apply(registry, uiState, target, asset.channels, sample);
-	}
-}
-
-void Manager::animate(ecs::Registry& registry, ui::State& uiState)
-{
-	for (auto&& [i, animation] : animations_.forEach())
-	{
-		if (animation.isPaused())
-		{
-			continue;
-		}
-
-		// finilize state if complete
-		if (animation.isComplete())
-		{
-			if (!animation.isFinished())
-			{
-				const float progress = animation.isReversed() ? 0.0F : 1.0F;
-				animate(registry, uiState, animation, progress);
-
-				animation.setFinished(true);
-			}
-
-			if (animation.isRemoveOnComplete())
-			{
-				animations_.remove(i);
-			}
-		}
-		else
-		{
-			animate(registry, uiState, animation);
-		}
-	}
-}
 }  // namespace gs::animation

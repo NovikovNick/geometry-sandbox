@@ -42,17 +42,17 @@ class ILogManager
 	/**
 	 * @brief general log
 	 */
-	template <class... _Types>
-	void log(const std::format_string<_Types...> _Fmt, _Types&&... _Args)
+	template <class... Args>
+	void log(const std::format_string<Args...> format, Args&&... args)
 	{
-		log(std::vformat(_Fmt.get(), std::make_format_args(_Args...)));
+		addLog(std::vformat(format.get(), std::make_format_args(args...)));
 	}
 
 	virtual ~ILogManager() = default;
 
   protected:
 	virtual void addFrameLog(const std::string&) = 0;
-	virtual void log(const std::string&)		 = 0;
+	virtual void addLog(const std::string&)		 = 0;
 };
 
 /** @brief basic ILogManager implementation */
@@ -66,7 +66,7 @@ class LogManager : public ILogManager
 
   protected:
 	virtual void addFrameLog(const std::string& str) override { frameLogs_.push_back(str); };
-	virtual void log(const std::string& str) override { std::cout << str << std::endl; };
+	virtual void addLog(const std::string& str) override { std::cout << str << std::endl; };
 };
 
 namespace di

@@ -6,6 +6,7 @@
 #ifndef GEOMETRY_SANDBOX_SCENE_SERVICE_H
 #define GEOMETRY_SANDBOX_SCENE_SERVICE_H
 
+#include "core/base_app_component.h"
 #include "core/ecs.h"
 #include "core/types.h"
 
@@ -15,8 +16,6 @@
 
 namespace gs
 {
-struct Settings;
-
 /** @brief Creating and updating objects on the scene */
 class ISceneService
 {
@@ -32,6 +31,7 @@ class ISceneService
 	virtual AABB getSceneBounds() const							= 0;
 	virtual Vec3 getSceneCenter() const							= 0;
 
+	virtual void setColor(ecs::Entity, const Color&)			= 0;
 	virtual void setPosition(ecs::Entity, const Vec3&)			= 0;
 	virtual void setEndPosition(ecs::Entity, const Vec3&)		= 0;
 	virtual void setNormal(ecs::Entity, const Vec3&)			= 0;
@@ -42,14 +42,15 @@ class ISceneService
 };
 
 /** @brief basic ISceneService implementation */
-class SceneService : public ISceneService
+class SceneService : public BaseService, public ISceneService
 {
-	std::shared_ptr<Settings> settings_;
 	std::shared_ptr<ecs::Registry> registry_;
 
   public:
-	SceneService(std::shared_ptr<Settings> settings, std::shared_ptr<ecs::Registry> registry)
-		: settings_(settings), registry_(registry)
+	SceneService(const std::shared_ptr<Settings>& settings,
+				 const std::shared_ptr<ILogManager>& log,
+				 const std::shared_ptr<ecs::Registry>& registry)
+		: BaseService(settings, log), registry_(registry)
 	{
 	}
 
@@ -64,6 +65,7 @@ class SceneService : public ISceneService
 	virtual AABB getSceneBounds() const override;
 	virtual Vec3 getSceneCenter() const override;
 
+	virtual void setColor(ecs::Entity, const Color&) override;
 	virtual void setPosition(ecs::Entity, const Vec3&) override;
 	virtual void setEndPosition(ecs::Entity, const Vec3&) override;
 	virtual void setNormal(ecs::Entity, const Vec3&) override;

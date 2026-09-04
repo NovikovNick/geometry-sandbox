@@ -49,6 +49,9 @@ struct Handle
 
 	/** @brief sets the progress value to the value of the previous marker, relative to the current progress */
 	void stepBackToPrevMarker() const;
+
+	/** @brief mark animation to pause when rich marker */
+	void setPauseOnMarker(bool) const;
 };
 }  // namespace gs::animation
 #endif	// GEOMETRY_SANDBOX_ANIMATION_HANDLE_H

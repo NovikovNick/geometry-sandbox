@@ -30,13 +30,25 @@ std::string toString(const Nanoseconds duration)
 
 void PlayerManager::init(ui::AnimationPlayer& player)
 {
-	player.prevButton.onHover			   = animationService_->createHoverButtonAnimation(player.prevButton);
-	player.playButton.onHover			   = animationService_->createHoverButtonAnimation(player.playButton);
-	player.nextButton.onHover			   = animationService_->createHoverButtonAnimation(player.nextButton);
+	player.prevButton.onHover = animationService_->createHoverButtonAnimation(player.prevButton);
+	player.playButton.onHover = animationService_->createHoverButtonAnimation(player.playButton);
+	player.nextButton.onHover = animationService_->createHoverButtonAnimation(player.nextButton);
 
-	player.prevButton.onClick			   = [this] { backward(); };
-	player.nextButton.onClick			   = [this] { forward(); };
-	player.playButton.onClick			   = [this] { togglePlayPause(); };
+	player.prevButton.onClick = [this]
+	{
+		backward();
+		animationHandle_.setPauseOnMarker(true);
+	};
+	player.nextButton.onClick = [this]
+	{
+		forward();
+		animationHandle_.setPauseOnMarker(true);
+	};
+	player.playButton.onClick = [this]
+	{
+		togglePlayPause();
+		animationHandle_.setPauseOnMarker(false);
+	};
 	player.timelineSlider.onUpdate		   = [this](float progress) { setProgress(progress); };
 	player.timelineSlider.tooltipConverter = [this](float progress) { return convertProgressToString(progress); };
 }
@@ -62,8 +74,9 @@ void PlayerManager::update(ui::AnimationPlayer& player) const
 
 		if (!animation.atEnd() || animation.isLooping())
 		{
-			player.nextButton.icon = animation.isForward() || animation.isPaused() ? settings_->iconPlayerForwardStep
-																				   : settings_->iconPlayerForwardFast;
+			player.nextButton.active = true;
+			player.nextButton.icon	 = animation.isReversed() || animation.isPaused() ? settings_->iconPlayerForwardStep
+																					  : settings_->iconPlayerForwardFast;
 		}
 		else
 		{
@@ -93,10 +106,6 @@ void PlayerManager::backward()
 		if (animation.isPlaying() && animation.isReversed())
 		{
 			animationHandle_.stepBackToPrevMarker();
-			if (animation.isPauseOnMarker())
-			{
-				animationHandle_.pause();
-			}
 		}
 		else if (!animation.atBegin() || animation.isLooping())
 		{
@@ -113,10 +122,6 @@ void PlayerManager::forward()
 		if (animation.isPlaying() && animation.isForward())
 		{
 			animationHandle_.stepForwardToNextMarker();
-			if (animation.isPauseOnMarker())
-			{
-				animationHandle_.pause();
-			}
 		}
 		else if (!animation.atEnd() || animation.isLooping())
 		{
@@ -130,7 +135,16 @@ void PlayerManager::togglePlayPause()
 	if (animationHandle_.isValid())
 	{
 		const Instance& animation = animationHandle_.getAnimationInstance();
-		if (animation.isPaused())
+
+		if (animation.atBegin() && !animation.isLooping())
+		{
+			forward();
+		}
+		else if (animation.atEnd() && !animation.isLooping())
+		{
+			backward();
+		}
+		else if (animation.isPaused())
 		{
 			animationHandle_.resume();
 		}

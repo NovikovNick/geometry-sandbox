@@ -3,21 +3,18 @@
  *
  * @brief main entry class
  *
- * @todo [bugfix]: ★★★ Details panel annoyingly blocks the translate gizmo
- * @todo [docs]: ★★★★ Dark/light theme toggle in docs doesn't work correctly
- * @todo [sample]: ★★★★ Fix camera right/left coords system
- * @todo [sample]: ★★★ Camera sample
- *
- * @todo [linter]: ★★★ Check names in clang-tidy (active, hover, constrained...)
+ * @todo [docs]: ★★★ Cleanup .bat and .sh scripts
+ * @todo [improvement]: ★★★★ Real 3D text, not a 2D projection
  * @todo [improvement]: ★★★ Template accessor instead of std::span<std::byte>?
  * @todo [improvement]: ★★★★ Template <typename T> using Animator = std::function<T(Nanoseconds)>
  * @todo [improvement]: ★★★★ Move platform specific code to separate class
- * @todo [docs]: ★★★ Cleanup .bat and .sh scripts
+ * @todo [docs]: ★★★★ Dark/light theme toggle in docs doesn't work correctly
+ * @todo [linter]: ★★★ Check names in clang-tidy (active, hover, constrained...)
  *
  * @todo [sample]: ★★★ Add samples for all https://gamemath.com/book/geomtests.html
  * @todo [sample]: ★★★ Boids simulation for benchmark: https://github.com/SkitzFist/Boids
  * @todo [R&D]: ★★★ Dual contouring vs marching cubes
- * @todo [R&D]: ★★★ Motion design sample
+ * @todo [R&D]: ★★★★ Motion matching sample
  * @todo [improvement]: ★★★★ ASAN for unit-tests on clang
  * @todo [performance]: ★★★★	 Animation build should be at compile-time
  * @todo [performance]: ★★★★ Arena allocator should improve animation build's performance
@@ -25,7 +22,6 @@
  * @todo [performance]: ★★★ Frustum culling? scene manager and octree
  * @todo [feature]: ★★★★ Rotation gizmo example: https://github.com/CedricGuillemet/ImGuizmo
  * @todo [feature]: ★★★ Select scene objects with rectangle
- * @todo [feature]: ★★★★ Show Tutorial if buttons haven't been pressed for a long time.
  * @todo [feature]: ★★★★ Ru/En lang switcher? Asset manager to load i18n?
  * @todo [feature]: ★★★★ Add https://github.com/NanoMichael/MicroTeX
  * @todo [feature]: ★★★ Add color chooser and setup app's color theme
@@ -51,6 +47,7 @@ class IInputManager;
 class IWindowManager;
 class IResourceManager;
 class IUIManager;
+class IUIStateManager;
 class IViewportManager;
 class ILogManager;
 class IRenderService;
@@ -77,6 +74,7 @@ class Application
 	std::shared_ptr<IResourceManager> resourceManager_;
 	std::shared_ptr<animation::IManager> animationManager_;
 	std::shared_ptr<IUIManager> uiManager_;
+	std::shared_ptr<IUIStateManager> uiStateManager_;
 	std::shared_ptr<render::IFacade> renderer_;
 	std::shared_ptr<ICameraControllerService> cameraController_;
 	std::shared_ptr<IInteractionService> interationService_;
@@ -90,6 +88,7 @@ class Application
 				const std::shared_ptr<IResourceManager>&,
 				const std::shared_ptr<animation::IManager>&,
 				const std::shared_ptr<IUIManager>&,
+				const std::shared_ptr<IUIStateManager>&,
 				const std::shared_ptr<render::IFacade>&,
 				const std::shared_ptr<ICameraControllerService>&,
 				const std::shared_ptr<IInteractionService>&,

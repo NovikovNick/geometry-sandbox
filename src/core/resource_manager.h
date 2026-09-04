@@ -10,6 +10,7 @@
 #ifndef GEOMETRY_SANDBOX_RESOURCE_MANAGER_H
 #define GEOMETRY_SANDBOX_RESOURCE_MANAGER_H
 
+#include "core/base_app_component.h"
 #include "core/types.h"
 
 #include "boost/di.hpp"
@@ -49,7 +50,7 @@ class IResourceManager
 };
 
 /** @brief basic IResourceManager implementation */
-class ResourceManager : public IResourceManager
+class ResourceManager : public BaseManager, public IResourceManager
 {
 	ImFont* defaultUIFont_;
 	ImFont* iconsFont_;
@@ -62,7 +63,7 @@ class ResourceManager : public IResourceManager
 	// std::list<Material> materials_;
 
   public:
-	ResourceManager() {};
+	ResourceManager(const std::shared_ptr<Settings>& settings, const std::shared_ptr<ILogManager>& log) : BaseManager(settings, log) {}
 
 	virtual void load() override;
 

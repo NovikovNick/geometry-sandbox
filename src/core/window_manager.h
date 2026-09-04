@@ -7,6 +7,7 @@
 #define GEOMETRY_SANDBOX_WINDOW_MANAGER_H
 
 #include "boost/di.hpp"
+#include "core/base_app_component.h"
 
 #include <functional>
 #include <memory>
@@ -33,14 +34,13 @@ class IWindowManager
 };
 
 /** @brief basic IWindowManager implementation */
-class WindowManager : public IWindowManager
+class WindowManager : public BaseManager, public IWindowManager
 {
-	std::shared_ptr<Settings> settings_;
 	std::vector<OnResizeCallback> onResizeCallbacks_;
 	std::vector<OnCloseCallback> onCloseCallbacks_;
 
   public:
-	WindowManager(std::shared_ptr<Settings> settings) : settings_(settings) {}
+	WindowManager(const std::shared_ptr<Settings>& settings, const std::shared_ptr<ILogManager>& log) : BaseManager(settings, log) {}
 
 	virtual void initWindow() override;
 	virtual void tick() override;

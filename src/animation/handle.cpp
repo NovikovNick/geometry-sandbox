@@ -1,4 +1,5 @@
-﻿#include "animation/handle.h"
+﻿#include "handle.h"
+#include "animation/handle.h"
 
 #include "animation/manager.h"
 #include "animation/types.h"
@@ -17,6 +18,7 @@ void Handle::setProgress(const float progress) const
 	assert(isValid());
 	Instance& animation = manager->getAnimationInstance(*this);
 	animation.elapsed	= std::chrono::duration_cast<Nanoseconds>(animation.duration * progress);
+	manager->applyAnimation(animation);
 }
 
 void Handle::pause() const
@@ -28,7 +30,8 @@ void Handle::pause() const
 void Handle::resume() const
 {
 	assert(isValid());
-	manager->getAnimationInstance(*this).setPaused(false);
+	Instance& animation = manager->getAnimationInstance(*this);
+	animation.setPaused(false);
 }
 
 void Handle::stop()
@@ -60,7 +63,6 @@ void Handle::stepForwardToNextMarker() const
 {
 	assert(isValid());
 	Instance& animation	 = manager->getAnimationInstance(*this);
-
 	const float progress = animation.getProgress();
 	auto marker			 = animation.markers.upper_bound(progress);
 	if (marker == animation.markers.end())
@@ -71,13 +73,14 @@ void Handle::stepForwardToNextMarker() const
 	{
 		animation.elapsed = std::chrono::duration_cast<Milliseconds>(animation.duration * *marker);
 	}
+	manager->applyAnimation(animation);
+	animation.setPaused(true);
 }
 
 void Handle::stepBackToPrevMarker() const
 {
 	assert(isValid());
 	Instance& animation	 = manager->getAnimationInstance(*this);
-
 	const float progress = animation.getProgress();
 	auto marker			 = std::ranges::upper_bound(animation.markers | std::views::reverse, progress, std::greater<>{});
 	if (marker == animation.markers.rend())
@@ -88,6 +91,14 @@ void Handle::stepBackToPrevMarker() const
 	{
 		animation.elapsed = std::chrono::duration_cast<Milliseconds>(animation.duration * *marker);
 	}
+	manager->applyAnimation(animation);
+	animation.setPaused(true);
+}
+
+void Handle::setPauseOnMarker(bool val) const
+{
+	assert(isValid());
+	manager->getAnimationInstance(*this).setPauseOnMarker(val);
 }
 
 bool Handle::isValid() const

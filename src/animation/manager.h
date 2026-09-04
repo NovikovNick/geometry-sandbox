@@ -10,7 +10,9 @@
 #include "animation/handle.h"
 #include "animation/sampler.h"
 #include "animation/types.h"
+#include "core/base_app_component.h"
 #include "core/ecs.h"
+#include "core/settings.h"
 #include "core/types.h"
 
 #include "boost/di.hpp"
@@ -22,8 +24,7 @@
 
 namespace gs
 {
-struct Settings;
-class ILogManager;
+class IUIStateManager;
 
 /** @brief animation system */
 namespace animation
@@ -41,25 +42,28 @@ class IManager
 	virtual Handle buildAndPlay(KeyframeCollection&, std::function<void(Clip&)> setupCallback = [](Clip&) {}) = 0;
 	virtual bool isValid(const Handle&) const																  = 0;
 	virtual Instance& getAnimationInstance(const Handle&)													  = 0;
-
-	virtual void tick(Nanoseconds deltaTime)																  = 0;
-	virtual void animate(ecs::Registry& registry, ui::State& uiState)										  = 0;
+	virtual void updateAndApplyAnimations(Nanoseconds deltaTime)											  = 0;
+	virtual void applyAnimation(const Instance&)															  = 0;
 	~IManager()																								  = default;
 };
 
 /**
  * @brief IManager implementation with slot map
  */
-class Manager : public IManager
+class Manager : public BaseManager, public IManager
 {
-	std::shared_ptr<Settings> settings_;
-	std::shared_ptr<ILogManager> logManager_;
-	Sampler<64> sampler_;
+	Sampler<Settings::kSamplerChannelCount> sampler_;
 	std::list<Asset> assets_;  // just some storage for assets without iterator invalidation.
 	SlotMap<Instance> animations_;
+	std::shared_ptr<ecs::Registry> registry_;
+	std::shared_ptr<IUIStateManager> uiStateManager_;
 
   public:
-	Manager(std::shared_ptr<Settings> settings, std::shared_ptr<ILogManager> logManager) : settings_(settings), logManager_(logManager)
+	Manager(const std::shared_ptr<Settings>& settings,	//
+			const std::shared_ptr<ILogManager>& log,
+			const std::shared_ptr<ecs::Registry>& registry,
+			const std::shared_ptr<IUIStateManager>& uiStateManager)
+		: BaseManager(settings, log), registry_(registry), uiStateManager_(uiStateManager)
 	{
 	}
 
@@ -69,20 +73,18 @@ class Manager : public IManager
 	virtual bool isValid(const Handle&) const override;
 	virtual Instance& getAnimationInstance(const Handle&) override;
 
-	virtual void tick(Nanoseconds deltaTime) override;
-	virtual void animate(ecs::Registry&, ui::State&) override;
+	virtual void updateAndApplyAnimations(Nanoseconds deltaTime) override;
+	virtual void applyAnimation(const Instance&) override;
 
   private:
-	static Asset build(std::span<Key> keys);
+	void apply(const Target&, const std::vector<Asset::Channel>&, const std::span<float>& sample);
 
 	/**
 	 * @brief update animation's elapsed and pause on markers
 	 */
 	static void integrate(Instance&, Nanoseconds deltaTime);
-	static void apply(ecs::Registry&, ui::State&, const Target&, const std::vector<Asset::Channel>&, const std::span<float>& sample);
 
-	void animate(ecs::Registry&, ui::State&, Instance&);
-	void animate(ecs::Registry&, ui::State&, Instance&, float progress);
+	static Asset build(std::span<Key> keys);
 };
 
 }  // namespace animation

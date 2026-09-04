@@ -24,6 +24,7 @@ void Manager::integrate(Instance& instance, Nanoseconds deltaTime)
 		else
 		{
 			elapsed = instance.duration;  // complete
+			instance.setPaused(true);
 		}
 	}
 	else if (elapsed < Nanoseconds{0})
@@ -36,6 +37,7 @@ void Manager::integrate(Instance& instance, Nanoseconds deltaTime)
 		else
 		{
 			elapsed = Nanoseconds{0};  // complete
+			instance.setPaused(true);
 		}
 	}
 	else if (instance.isPauseOnMarker())

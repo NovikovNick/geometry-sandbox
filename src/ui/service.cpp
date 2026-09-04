@@ -1,3 +1,4 @@
+#include "service.h"
 #include "ui/service.h"
 
 #include "core/log_manager.h"
@@ -68,21 +69,22 @@ bool UIService::button(const ui::Button& btn)
 {
 	constexpr ImVec4 transparent{0, 0, 0, 0};
 
-	bool pressed	   = false;
-	const float width  = settings_->uiPlayerControlButtonWidth;
-	const float height = settings_->uiPlayerHeight;
-	ImFont* iconFont   = resourceManager_->iconFont();
+	bool pressed	 = false;
+	ImFont* iconFont = resourceManager_->iconFont();
 
-	ImGui::PushFont(iconFont, btn.size);
+	ImGui::PushFont(iconFont, btn.fontSize);
 	ImGui::PushStyleColor(ImGuiCol_Button, transparent);
+	ImGui::PushStyleColor(ImGuiCol_Border, convert(btn.props.color));
 	ImGui::PushStyleColor(ImGuiCol_ButtonHovered, transparent);
 	ImGui::PushStyleColor(ImGuiCol_ButtonActive, transparent);
 	ImGui::PushStyleColor(ImGuiCol_Text, convert(btn.props.color));
 	ImGui::PushStyleVar(ImGuiStyleVar_ButtonTextAlign, ImVec2(0.5F, 0.5F));	 // NOLINT(*-magic-numbers)
 	ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(0, 0));
+	ImGui::PushStyleVar(ImGuiStyleVar_FrameBorderSize, btn.border);
+	ImGui::PushStyleVar(ImGuiStyleVar_FrameRounding, settings_->buttonRounding);
 
 	ImGui::BeginDisabled(!btn.active);
-	if (ImGui::Button(std::string{btn.icon}.c_str(), ImVec2{width, height}))
+	if (ImGui::Button(std::string{btn.icon}.c_str(), ImVec2{btn.size.width, btn.size.height}))
 	{
 		pressed = true;
 		if (btn.onClick)
@@ -91,6 +93,8 @@ bool UIService::button(const ui::Button& btn)
 		}
 	}
 	ImGui::EndDisabled();
+
+	btn.pressed = ImGui::IsItemActive();
 
 	if (btn.hovered != ImGui::IsItemHovered())
 	{
@@ -101,8 +105,8 @@ bool UIService::button(const ui::Button& btn)
 		}
 	}
 
-	ImGui::PopStyleVar(2);
-	ImGui::PopStyleColor(4);
+	ImGui::PopStyleVar(4);	  // NOLINT(*-magic-numbers)
+	ImGui::PopStyleColor(5);  // NOLINT(*-magic-numbers)
 	ImGui::PopFont();
 
 	return pressed;
@@ -123,23 +127,37 @@ void UIService::settingsButton(const ui::Button& btn)
 			{
 				ImGui::SeparatorText("Animation player");  // ------------
 				{
-					ImGui::Checkbox("Reset timeline after updating data", &settings_->resetTimelineAfterDataChange);
 					ImGui::SliderFloat("speed",
 									   &settings_->animationSpeed,
 									   Settings::kAnimationSpeedMin,
 									   Settings::kAnimationSpeedMax);
 				}
 
+				ImGui::SeparatorText("UI Layout");	// -----------------------------
+				{
+					ImGui::Checkbox("show details", &settings_->showDetailsView);
+					ImGui::Checkbox("show footer", &settings_->showFooter);
+					ImGui::Checkbox("show controls", &settings_->showControls);
+				}
+
+				ImGui::SeparatorText("Console");  // -----------------------------
+				{
+					ImGui::Checkbox("show console", &settings_->showConsole);
+
+					ImGui::BeginDisabled(!settings_->showConsole);
+					ImGui::Checkbox("show performance in console", &settings_->showPerformance);
+					ImGui::Checkbox("show translate gizmo in console", &settings_->showTranslateGizmo);
+					ImGui::EndDisabled();
+				}
+
 				ImGui::EndTabItem();
 			}
 			if (ImGui::BeginTabItem("Debug"))
 			{
-				ImGui::SeparatorText("Common");	 // -----------------------------
-				{
-					ImGui::Checkbox("showConsole", &settings_->showConsole);
-					ImGui::Checkbox("showCollisions", &settings_->showCollisions);
-					ImGui::Checkbox("showCursorRay", &settings_->showCursorRay);
-				}
+
+				ImGui::SeparatorText("Collisions");	 // -----------------------------
+				ImGui::Checkbox("show collisions", &settings_->showCollisions);
+				ImGui::Checkbox("show cursor ray", &settings_->showCursorRay);
 
 				ImGui::EndTabItem();
 			}
@@ -147,6 +165,13 @@ void UIService::settingsButton(const ui::Button& btn)
 		}
 		ImGui::EndPopup();
 	}
+}
+
+void UIService::text(const std::string& text, const Color& color)
+{
+	ImGui::PushStyleColor(ImGuiCol_Text, convert(color));
+	ImGui::TextUnformatted(text.c_str());
+	ImGui::PopStyleColor(1);
 }
 
 }  // namespace gs

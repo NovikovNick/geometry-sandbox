@@ -11,6 +11,7 @@
 #define GEOMETRY_SANDBOX_CAMERA_IDLE_ROTATION_MANAGER_H
 
 #include "animation/handle.h"
+#include "core/base_app_component.h"
 #include "core/types.h"
 
 #include "boost/di.hpp"
@@ -20,7 +21,7 @@
 namespace gs
 {
 class Settings;
-class IUIManager;
+class IUIStateManager;
 class IInputManager;
 class ISceneService;
 
@@ -39,10 +40,9 @@ class ICameraIdleRotationManager
 };
 
 /** @brief basic ICameraIdleRotationManager implementation */
-class CameraIdleRotationAnimationManager : public ICameraIdleRotationManager
+class CameraIdleRotationAnimationManager : public BaseManager, public ICameraIdleRotationManager
 {
-	std::shared_ptr<Settings> settings_;
-	std::shared_ptr<IUIManager> uiManager_;
+	std::shared_ptr<IUIStateManager> uiStateManager_;
 	std::shared_ptr<IInputManager> inputManager_;
 	std::shared_ptr<ISceneService> sceneService_;
 	std::shared_ptr<animation::IManager> animationManager_;
@@ -58,13 +58,14 @@ class CameraIdleRotationAnimationManager : public ICameraIdleRotationManager
 	animation::Handle activeAnimation_;
 
   public:
-	CameraIdleRotationAnimationManager(std::shared_ptr<Settings> settings,
-									   std::shared_ptr<IUIManager> uiManager,
-									   std::shared_ptr<IInputManager> inputManager,
-									   std::shared_ptr<ISceneService> sceneService,
-									   std::shared_ptr<animation::IManager> animationManager)
-		: settings_(settings),					//
-		  uiManager_(uiManager),				//
+	CameraIdleRotationAnimationManager(const std::shared_ptr<Settings>& settings,
+									   const std::shared_ptr<ILogManager>& log,
+									   const std::shared_ptr<IUIStateManager>& uiStateManager,
+									   const std::shared_ptr<IInputManager>& inputManager,
+									   const std::shared_ptr<ISceneService>& sceneService,
+									   const std::shared_ptr<animation::IManager>& animationManager)
+		: BaseManager(settings, log),			//
+		  uiStateManager_(uiStateManager),		//
 		  inputManager_(inputManager),			//
 		  sceneService_(sceneService),			//
 		  animationManager_(animationManager),	//

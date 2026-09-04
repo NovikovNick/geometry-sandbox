@@ -24,6 +24,7 @@ add_library(${PROJECT_NAME}-core STATIC
     "animation/player_manager.cpp"
     "animation/handle.cpp"
     
+    "ui/state_manager.cpp"
     "ui/slider.cpp"
     "ui/service.cpp"
     "ui/manager.cpp"

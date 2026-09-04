@@ -6,6 +6,7 @@
 #ifndef GEOMETRY_SANDBOX_JSON_SERVICE_H
 #define GEOMETRY_SANDBOX_JSON_SERVICE_H
 
+#include "core/base_app_component.h"
 #include "core/types.h"
 
 #include "boost/di.hpp"
@@ -34,16 +35,18 @@ class IJsonService
 };
 
 /** @brief basic IJsonService implementation */
-class JsonService : public IJsonService
+class JsonService : public BaseService, public IJsonService
 {
   public:
+	JsonService(const std::shared_ptr<Settings>& settings, const std::shared_ptr<ILogManager>& log) : BaseManager(settings, log) {}
+
 	virtual bool isValidCoord2dArrayString(std::string_view input) const override;
 	virtual void parseCoord2dArrayString(std::string_view input, std::vector<Vec2>& outPoints) const override;
 };
 
 namespace di
 {
-inline auto sceneService() noexcept
+inline auto jsonService() noexcept
 {
 	return boost::di::bind<IJsonService>.to<JsonService>();
 }

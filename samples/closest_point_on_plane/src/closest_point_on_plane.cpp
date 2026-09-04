@@ -2,14 +2,11 @@
  * @file closest_point_on_plane.cpp
  * @brief Implementation of finding the closest point on a plane algorithm
  *
- * - Since the code example provided is not intended to be tested or run in
- * a multi-threaded environment, the data is static for simplicity.
- * - The file contains many magic literals, as this is just a visualization
- * example.
- * - When dragging, the plane normal always points away from the origin. To
+ * When dragging, the plane normal always points away from the origin. To
  * change the sign of the normal need to use UI slider.
  *
  * @todo plane has AABB collider, need to add a rotatable box collider.
+ * @todo FPS drop cause of large dashed line.
  *
  * @author MetalHeart
  */
@@ -26,6 +23,7 @@
 #include "feature/camera_idle_rotation_manager.h"
 #include "interaction/ecs_components.h"
 #include "interaction/service.h"
+#include "ui/state_manager.h"
 
 #include "imgui.h"
 
@@ -113,14 +111,14 @@ void setupScene(Parameters& params, Entities& entities)
 	// NOLINTBEGIN(*-magic-numbers)
 	auto& ctx			  = di::getContext();
 	auto& sceneService	  = ctx.create<ISceneService&>();
-	auto& uiManager		  = ctx.create<IUIManager&>();
+	auto& uiStateManager  = ctx.create<IUIStateManager&>();
 	auto& settings		  = ctx.create<Settings&>();
 
 	params.point		  = Vec3{0.6F, 0.5F, 0.5F};
 	params.planeNormal	  = Vec3{0.7F, 0.6F, -0.3F}.normalized();
 	params.planeDistance  = 2.0F;
 
-	ui::State& ui		  = uiManager.getState();
+	ui::State& ui		  = uiStateManager.getState();
 	Camera& camera		  = ui.cameras[ui.activeCameraIndex];
 	camera.target		  = Vec3{0.0F, 1.5F, 0.0F};
 
@@ -226,12 +224,13 @@ void setupInteractionLogic(Parameters& params, Results& res, const Entities& ent
 void setupUI(UIContext& uiContext, Parameters& params, Results& res, const Entities& entities)
 {
 	auto& ctx						= di::getContext();
+	auto& uiStateManager			= ctx.create<IUIStateManager&>();
 	auto& uiManager					= ctx.create<IUIManager&>();
 	auto& sceneService				= ctx.create<ISceneService&>();
 	auto& idleManager				= ctx.create<ICameraIdleRotationManager&>();
 	auto& settings					= ctx.create<Settings&>();
 
-	const int idleRotationCameraIdx = uiManager.getState().activeCameraIndex;
+	const int idleRotationCameraIdx = uiStateManager.getState().activeCameraIndex;
 	idleManager.enableIdleRotation(idleRotationCameraIdx);
 	uiContext.idleRotationEnabled = true;
 

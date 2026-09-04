@@ -6,6 +6,7 @@
 #ifndef GEOMETRY_SANDBOX_INPUT_H
 #define GEOMETRY_SANDBOX_INPUT_H
 
+#include "core/base_app_component.h"
 #include "core/math.h"
 #include "core/types.h"
 
@@ -17,42 +18,53 @@
 
 namespace gs
 {
-enum class InputKey : int
+enum class InputKey : std::size_t
 {
-	Test,
 	Forward,
 	Backward,
 	Left,
 	Right,
 	MouseLeft,
 	MouseRight,
+	Test,
 	Count
 };
 
-constexpr size_t kInputKeyCount = static_cast<size_t>(InputKey::Count);
+enum class InputSource : std::size_t
+{
+	Keybord,
+	Mouse,
+	UI,
+	Count
+};
+
+constexpr std::size_t kInputKeyCount	= static_cast<std::size_t>(InputKey::Count);
+constexpr std::size_t kInputSourceCount = static_cast<std::size_t>(InputSource::Count);
 
 /** @brief tracks key states and handles press/release callbacks */
 class IInputManager
 {
   public:
-	virtual bool isKeyPressed(InputKey key) const						   = 0;
-	virtual void onPress(InputKey key, std::function<void()>&& callback)   = 0;
-	virtual void onRelease(InputKey key, std::function<void()>&& callback) = 0;
-	virtual Vec2 getCursorScreenPosition() const						   = 0;
-	virtual Vec2 getCursorDelta() const									   = 0;
-	virtual Timepoint getLastUpdateAt() const							   = 0;
+	virtual bool isKeyPressed(InputKey) const						   = 0;
+	virtual void onPress(InputKey, std::function<void()>&& callback)   = 0;
+	virtual void onRelease(InputKey, std::function<void()>&& callback) = 0;
+	virtual Vec2 getCursorScreenPosition() const					   = 0;
+	virtual Vec2 getCursorDelta() const								   = 0;
+	virtual Timepoint getLastUpdateAt() const						   = 0;
+	virtual void press(InputKey, InputSource = InputSource::Keybord)   = 0;
+	virtual void release(InputKey, InputSource = InputSource::Keybord) = 0;
 
-	virtual void tick()													   = 0;
+	virtual void tick()												   = 0;
 
-	virtual ~IInputManager()											   = default;
+	virtual ~IInputManager()										   = default;
 };
 
 /** @brief basic IInputManager implementation */
-class InputManager final : public IInputManager
+class InputManager : public BaseManager, public IInputManager
 {
 	using Callback = std::function<void()>;
 
-	std::bitset<kInputKeyCount> pressed_;
+	std::array<std::bitset<kInputSourceCount>, kInputKeyCount> pressed_;
 	std::array<std::vector<Callback>, kInputKeyCount> onPressCallbacks_;
 	std::array<std::vector<Callback>, kInputKeyCount> onReleaseCallbacks_;
 	Vec2 currCursorScreenPosition_;
@@ -60,18 +72,20 @@ class InputManager final : public IInputManager
 	Timepoint lastUpdateAt_{Seconds{0}};
 
   public:
-	virtual bool isKeyPressed(InputKey key) const override { return pressed_[static_cast<size_t>(key)]; }
-	virtual void onPress(InputKey key, Callback&& callback) override;
-	virtual void onRelease(InputKey key, Callback&& callback) override;
+	InputManager(const std::shared_ptr<Settings>& settings, const std::shared_ptr<ILogManager>& log) : BaseManager(settings, log) {}
+
+	virtual bool isKeyPressed(InputKey key) const override;
+	virtual void onPress(InputKey, Callback&&) override;
+	virtual void onRelease(InputKey, Callback&&) override;
 	virtual Vec2 getCursorScreenPosition() const override;
 	virtual Vec2 getCursorDelta() const override;
 	virtual Timepoint getLastUpdateAt() const override { return lastUpdateAt_; };
+	virtual void press(InputKey, InputSource) override;
+	virtual void release(InputKey, InputSource) override;
 
 	virtual void tick() override;
 
   private:
-	void press(InputKey key);
-	void release(InputKey key);
 };
 
 namespace di

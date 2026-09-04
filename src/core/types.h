@@ -216,18 +216,13 @@ struct Camera
 	CoordinateHandedness handedness;
 	Vec3 position;
 	Vec3 target;
-	Vec3 rotation;
-	Quat quat;
-
 	Axis upAxis;
-
-	int width;
-	int height;
-
-	float fov;
-	float zNear;
-	float zFar;
-	bool perspective;
+	int width;		   // viewport's width, to calculate aspect ratio, viewport texture
+	int height;		   // viewport's height
+	float fov;		   // field of view by Y axis
+	float zNear;	   // near clipping plane distance from position
+	float zFar;		   // far clipping plane distance from position
+	bool perspective;  // perspective or orthographic
 };
 
 /** @brief Holds per-frame timings for each stage of the update/render pipeline  */
@@ -270,9 +265,12 @@ struct Button : public Element
 		Color color;
 	} props;
 
+	RectSize size;
+	float fontSize;
+	float border;
 	std::string_view icon;
-	float size;
 	bool active;
+	mutable bool pressed;
 };
 
 /** @brief Custom slide properties */
@@ -326,6 +324,10 @@ struct State
 
 	AnimationPlayer player;
 	Button settingsButton;
+	Button forwardButton;
+	Button leftButton;
+	Button backwardButton;
+	Button rightButton;
 };
 }  // namespace ui
 }  // namespace gs

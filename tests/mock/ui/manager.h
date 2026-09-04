@@ -1,5 +1,3 @@
-
-
 #ifndef GEOMETRY_SANDBOX_UI_MANAGER_MOCK_H
 #define GEOMETRY_SANDBOX_UI_MANAGER_MOCK_H
 
@@ -16,7 +14,6 @@ class UIManager : public IUIManager
   public:
 	MOCK_METHOD(void, init, (), (override));
 	MOCK_METHOD(void, tick, (), (override));
-	MOCK_METHOD(ui::State&, getState, (), (override));
 	MOCK_METHOD(void, render, (), (override));
 	MOCK_METHOD(void, onDetailsViewDraw, (std::function<void()> callback), (override));
 	MOCK_METHOD(bool, isMouseCaptured, (), (const, override));

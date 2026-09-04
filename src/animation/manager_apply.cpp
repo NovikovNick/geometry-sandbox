@@ -4,6 +4,7 @@
 #include "animation/types.h"
 #include "core/ecs.h"
 #include "core/types.h"
+#include "ui/state_manager.h"
 
 #include <cassert>
 #include <cstddef>	// for std::byte, std::size_t
@@ -46,11 +47,7 @@ void write(void* dst, T value)
 
 }  // namespace
 
-void Manager::apply(ecs::Registry& registry,
-					ui::State& ui,
-					const Target& target,
-					const std::vector<Asset::Channel>& channels,
-					const std::span<float>& sample)
+void Manager::apply(const Target& target, const std::vector<Asset::Channel>& channels, const std::span<float>& sample)
 {
 	assert(channels.size() == sample.size());
 	for (int i = 0; i < channels.size(); ++i)
@@ -58,7 +55,8 @@ void Manager::apply(ecs::Registry& registry,
 		const Asset::Channel& channel		 = channels.at(i);
 
 		const reflection::Property& property = reflection::getProperty(channel.propertyId);
-		const std::span<std::byte> bytes	 = getAsBytes(property.entryType, target.entityId, ui, registry);
+		ui::State& state					 = uiStateManager_->getState();
+		const std::span<std::byte> bytes	 = getAsBytes(property.entryType, target.entityId, state, *registry_);
 
 		if (property.type == reflection::PropertyType::Bool)
 		{

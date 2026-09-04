@@ -9,7 +9,7 @@
 #include "core/settings.h"
 #include "core/types.h"
 #include "easing.h"
-#include "ui/manager.h"
+#include "ui/state_manager.h"
 
 #include <algorithm>
 #include <cassert>
@@ -37,7 +37,7 @@ void CameraIdleRotationAnimationManager::enableIdleRotation(int cameraId)
 		Nanoseconds elapsedAfterLastUpdate	 = Clock::now() - inputManager_->getLastUpdateAt();
 		elapsedAfterLastUpdate -= startDelay;
 
-		Camera camera = uiManager_->getState().cameras[cameraId];
+		Camera camera = uiStateManager_->getState().cameras[cameraId];
 
 		if (elapsedAfterLastUpdate > 0s)
 		{
@@ -79,7 +79,7 @@ void CameraIdleRotationAnimationManager::enableIdleRotation(int cameraId)
 		return camera;
 	};
 
-	const Camera& camera = uiManager_->getState().cameras[cameraId];
+	const Camera& camera = uiStateManager_->getState().cameras[cameraId];
 
 	// since the progress (elapsed/duration) value is not used, keyframes with time should be omitted.
 	animation::KeyframeCollection keyframes;

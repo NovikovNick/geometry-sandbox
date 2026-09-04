@@ -8,7 +8,7 @@
 #include "core/settings.h"
 #include "core/types.h"
 #include "easing.h"
-#include "ui/manager.h"
+#include "ui/state_manager.h"
 
 #include <chrono>
 #include <cmath>
@@ -44,7 +44,7 @@ void OrthoProjectionViewManager::switchTo(int cameraId, ViewProjection view)
 		const Vec3 target		   = sceneService_->getSceneCenter();
 		const Vec3 orthoProjection = getAxis(view);
 
-		const Camera beginCamera   = uiManager_->getState().cameras[cameraId];
+		const Camera beginCamera   = uiStateManager_->getState().cameras[cameraId];
 
 		Camera positionedCamera	   = beginCamera;
 		positionedCamera.target	   = target;

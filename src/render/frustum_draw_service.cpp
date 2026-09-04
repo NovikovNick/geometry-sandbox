@@ -12,6 +12,8 @@
 #include "core/types.h"
 
 #include <array>
+#include <cmath>
+#include <cstddef>
 
 namespace gs::render
 {
@@ -29,27 +31,35 @@ void FrustumDrawService::drawFrustum(std::size_t cameraIndex, const Camera& came
 
 		rlPushMatrix();
 		{
+			//  temporary solution. Should be removed after rotation implement
 			if (camera.handedness == settings_->defaultCamera.handedness)
 			{
 				rlRotatef(180.0F, 0, 1, 0);	 // NOLINT(*-magic-numbers)
 			}
-			// temporary solution. Should be removed after rotation implement
-			graphic_->drawModel(ModelType::Camera, /*pos*/ Vec3::Zero(), /*scale*/ 1.0F);
+
+			// Move it a little so that the camera origin is right in the lens area.
+			rlTranslatef(0, 0, -0.25F);	 // NOLINT(*-magic-numbers)
+
+			graphic_->drawModel(ModelType::Camera, /*pos*/ Vec3::Zero(), 1.0F);
 		}
 		rlPopMatrix();
 
-		// translate to near plane position. I don't know why am I MULTIPLY by -1 to fix old version!
-		rlTranslatef(0, 0, -camera.zNear);
-
-		if (camera.handedness != settings_->defaultCamera.handedness)
+		if (camera.handedness == CoordinateHandedness::Right)
 		{
+			// translate to near plane position. I don't know why am I MULTIPLY by -1 to fix old version!
+			rlTranslatef(0, 0, -camera.zNear);
+		}
+		else
+		{
+			rlTranslatef(0, 0, camera.zNear);
 			// Flip to show orientation correctly in another handedness
 			rlRotatef(180.0F, 0, 1, 0);	 // NOLINT(*-magic-numbers)
 		}
 
+		const float zoom = camera.zNear * std::tan(degToRad(camera.fov / 2));
 		DrawModel(viewports_->getViewport3D(cameraIndex),
 				  /*pos*/ Vector3{.x = 0, .y = 0, .z = 0},
-				  /*scale*/ 2 * camera.zNear,
+				  zoom,
 				  ::WHITE);
 	}
 	rlPopMatrix();
@@ -64,7 +74,7 @@ void FrustumDrawService::drawFrustumWires(const Camera& camera) const
 	const Mat4 model				 = view.inverse();
 	const Mat4 projection			 = cameraService_->getProjectionMatrix(camera);
 
-	const float thickness			 = settings_->lineThick;
+	const float thickness			 = settings_->lineThickness;
 
 	auto drawPolygonWires			 = [&](const Color& color,	//
 								   const float thickness,

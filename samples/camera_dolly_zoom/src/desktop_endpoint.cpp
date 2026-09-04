@@ -1,6 +1,4 @@
-﻿
-
-#include "camera_sample.h"
+﻿#include "camera_dolly_zoom_sample.h"
 
 #include <exception>
 

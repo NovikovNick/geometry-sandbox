@@ -3,7 +3,6 @@
 #include <gtest/gtest.h>
 
 #include "common/slot_map.h"
-#include <iostream>
 
 TEST(SlotMapTest, basic_test)
 {
@@ -76,7 +75,6 @@ TEST(SlotMapTest, reuseSlot_test)
 	for (int i = 0; i < 1024; ++i)
 	{
 		auto key = map.insert(0);
-		std::cout << key.slotIndex << std::endl;
 		map.remove(key.slotIndex);
 	}
 

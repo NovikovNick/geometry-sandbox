@@ -11,6 +11,7 @@
 
 #include "animation/manager.h"
 #include "animation/types.h"
+#include "core/base_app_component.h"
 #include "core/ecs.h"
 #include "core/types.h"
 
@@ -20,8 +21,6 @@
 
 namespace gs
 {
-class Settings;
-
 namespace animation
 {
 /**
@@ -82,15 +81,17 @@ class IService
 };
 
 /** @brief basic IService implementation */
-class Service : public IService
+class Service : public BaseService, public IService
 {
-	std::shared_ptr<Settings> settings_;
 	std::shared_ptr<IManager> animationManager_;
 	std::shared_ptr<ecs::Registry> registry_;
 
   public:
-	Service(std::shared_ptr<Settings> settings, std::shared_ptr<IManager> animationManager, std::shared_ptr<ecs::Registry> registry)
-		: settings_(settings), animationManager_(animationManager), registry_(registry)
+	Service(const std::shared_ptr<Settings>& settings,
+			const std::shared_ptr<ILogManager>& log,
+			const std::shared_ptr<IManager>& animationManager,
+			const std::shared_ptr<ecs::Registry>& registry)
+		: BaseService(settings, log), animationManager_(animationManager), registry_(registry)
 	{
 	}
 

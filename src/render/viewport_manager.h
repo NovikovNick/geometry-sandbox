@@ -1,11 +1,22 @@
 /**
  * @file viewport_manager.h
  * @brief Manages viewports for all scene cameras
+ *
+ * A viewport will be created for each camera in the scene. Only width and height
+ * will be taken from the camera, and the viewport will be created with FoV = 90 and zNear = 1
+ * This is done so that scale in world will be the same as zoom and can be calculated as:
+ *
+ * \f$ Scale = Zoom = \frac{zNear}{\tan(\frac{FoV}{2})} \f$
+ *
+ * The viewport for the active camera (the one you are looking from) will be used for rendering
+ * vieport widgets (like translate gizmo)
+ *
  * @author MetalHeart
  */
 #ifndef GEOMETRY_SANDBOX_RENDER_VIEWPORT_MANAGER_H
 #define GEOMETRY_SANDBOX_RENDER_VIEWPORT_MANAGER_H
 
+#include "core/base_app_component.h"
 #include "core/types.h"
 
 #include "boost/di.hpp"
@@ -16,9 +27,8 @@
 
 namespace gs
 {
-struct Settings;
 class IWindowManager;
-class IUIManager;
+class IUIStateManager;
 
 namespace render
 {
@@ -26,7 +36,9 @@ namespace render
 class IViewportManager
 {
   public:
-	virtual void init()											   = 0;
+	virtual void init() = 0;
+
+	/** @brief setup viewport as render target */
 	virtual void setupViewport(std::size_t viewportIndex)		   = 0;
 	virtual void cleanupViewport()								   = 0;
 	virtual Model getViewport3D(std::size_t viewportIndex) const   = 0;
@@ -35,7 +47,7 @@ class IViewportManager
 };
 
 /** @brief basic IViewportManager implementation */
-class ViewportManager : public IViewportManager
+class ViewportManager : public BaseManager, public IViewportManager
 {
 	struct Viewport
 	{
@@ -44,18 +56,17 @@ class ViewportManager : public IViewportManager
 	};
 
 	std::vector<Viewport> viewports_;
-
-	std::shared_ptr<Settings> settings_;
 	std::shared_ptr<IWindowManager> windowManager_;
-	std::shared_ptr<IUIManager> uiManager_;
+	std::shared_ptr<IUIStateManager> uiStateManager_;
 
   public:
-	ViewportManager(const std::shared_ptr<Settings>& settings,			   //
-					const std::shared_ptr<IWindowManager>& windowManager,  //
-					const std::shared_ptr<IUIManager>& uiManager)
-		: settings_(settings),			  //
+	ViewportManager(const std::shared_ptr<Settings>& settings,
+					const std::shared_ptr<ILogManager>& log,
+					const std::shared_ptr<IWindowManager>& windowManager,
+					const std::shared_ptr<IUIStateManager>& uiStateManager)
+		: BaseManager(settings, log),	  //
 		  windowManager_(windowManager),  //
-		  uiManager_(uiManager) {};
+		  uiStateManager_(uiStateManager) {};
 
 	virtual void init() override;
 	virtual void setupViewport(std::size_t viewportIndex) override;
@@ -64,7 +75,7 @@ class ViewportManager : public IViewportManager
 	virtual Texture getViewport2D(std::size_t viewportIndex) const override;
 
   private:
-	static Viewport createViewport(const RectSize&, float fov);
+	static Viewport createViewport(const RectSize&);
 	void buildViewports();
 	void rebuildViewports(const RectSize&);
 };

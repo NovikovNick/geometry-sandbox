@@ -12,6 +12,7 @@
 #include "render/facade.h"
 #include "render/viewport_manager.h"
 #include "ui/manager.h"
+#include "ui/state_manager.h"
 
 #include <memory>
 
@@ -23,6 +24,7 @@ Application::Application(const std::shared_ptr<ecs::Registry>& registry,
 						 const std::shared_ptr<IResourceManager>& resourceManager,
 						 const std::shared_ptr<animation::IManager>& animationManager,
 						 const std::shared_ptr<IUIManager>& uiManager,
+						 const std::shared_ptr<IUIStateManager>& uiStateManager,
 						 const std::shared_ptr<render::IFacade>& renderer,
 						 const std::shared_ptr<ICameraControllerService>& cameraController,
 						 const std::shared_ptr<IInteractionService>& interationService,
@@ -34,6 +36,7 @@ Application::Application(const std::shared_ptr<ecs::Registry>& registry,
 	  resourceManager_(resourceManager),	  //
 	  animationManager_(animationManager),	  //
 	  uiManager_(uiManager),				  //
+	  uiStateManager_(uiStateManager),		  //
 	  renderer_(renderer),					  //
 	  cameraController_(cameraController),	  //
 	  interationService_(interationService),  //
@@ -50,7 +53,7 @@ Application::Application(const std::shared_ptr<ecs::Registry>& registry,
 void Application::drawNextFrame(Nanoseconds timeDelta)
 {
 	const Timepoint startedAt = Clock::now();
-	ui::State& ui			  = uiManager_->getState();
+	ui::State& ui			  = uiStateManager_->getState();
 
 	{  // update
 		const Timepoint measurementStart = Clock::now();
@@ -64,8 +67,7 @@ void Application::drawNextFrame(Nanoseconds timeDelta)
 
 	{  // Animation
 		const Timepoint measurementStart = Clock::now();
-		animationManager_->tick(timeDelta);
-		animationManager_->animate(*registry_, ui);
+		animationManager_->updateAndApplyAnimations(timeDelta);
 		ui.performance.animation = Clock::now() - measurementStart;
 	}
 

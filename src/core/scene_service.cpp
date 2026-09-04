@@ -121,6 +121,11 @@ ecs::Entity SceneService::addAABB(const scene::AABB& aabb)
 	return entity;
 }
 
+void SceneService::setColor(ecs::Entity entity, const Color& val)
+{
+	registry_->get<ecs::component::MainColor>(entity).val = val;
+}
+
 void SceneService::setPosition(ecs::Entity entity, const Vec3& val)
 {
 	registry_->get<ecs::component::Position>(entity).val = val;

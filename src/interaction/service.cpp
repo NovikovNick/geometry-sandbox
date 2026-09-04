@@ -1,4 +1,5 @@
 #include "interaction/service.h"
+
 #include "core/camera_service.h"
 #include "core/ecs.h"
 #include "core/input_manager.h"
@@ -7,6 +8,7 @@
 #include "interaction/ecs_components.h"
 #include "interaction/translate_gizmo.h"
 #include "ui/manager.h"
+#include "ui/state_manager.h"
 
 #include <limits>
 
@@ -48,7 +50,7 @@ void onHoverEnd(entt::registry& registry, entt::entity entity)
 
 void InteractionService::init()
 {
-	ui::State& ui		= uiManager_->getState();
+	ui::State& ui		= uiStateManager_->getState();
 	auto onMousePressed = [&]
 	{
 		if (ui.transformGizmo.isHovered())	// first check all vieport widgets
@@ -108,7 +110,7 @@ void InteractionService::update()
 	}
 
 	const Vec2 screenPos = inputManager_->getCursorScreenPosition();
-	ui::State& ui		 = uiManager_->getState();
+	ui::State& ui		 = uiStateManager_->getState();
 	ui.mouseRay			 = cameraService_->getScreenToWorldRay(screenPos, ui.cameras[ui.activeCameraIndex]);
 
 	// 1. raycast

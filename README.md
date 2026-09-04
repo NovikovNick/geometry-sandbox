@@ -1,9 +1,9 @@
 ﻿<div style="text-align: center; margin-bottom: 15px;" align="center">
     <h3><b>Geometry Sandbox</b></h3>
     <i>A sandbox for geometric ideas, interactive demos, and quick animations</i><br />
-    <a href="https://github.com/NovikovNick/geometry-sandbox/actions/workflows/build.yml"><img src="https://github.com/NovikovNick/geometry-sandbox/actions/workflows/build.yml/badge.svg"></a>
-    <a href="https://github.com/NovikovNick/geometry-sandbox/actions/workflows/linter.yml"><img src="https://github.com/NovikovNick/geometry-sandbox/actions/workflows/linter.yml/badge.svg"></a>
-    <a href="https://github.com/NovikovNick/geometry-sandbox/actions/workflows/test.yml"><img src="https://github.com/NovikovNick/geometry-sandbox/actions/workflows/test.yml/badge.svg"></a>
+    <a href="https://github.com/NovikovNick/geometry-sandbox/actions/workflows/build.yml?query=branch%3Amaster"><img src="https://github.com/NovikovNick/geometry-sandbox/actions/workflows/build.yml/badge.svg"></a>
+    <a href="https://github.com/NovikovNick/geometry-sandbox/actions/workflows/linter.yml?query=branch%3Amaster"><img src="https://github.com/NovikovNick/geometry-sandbox/actions/workflows/linter.yml/badge.svg"></a>
+    <a href="https://github.com/NovikovNick/geometry-sandbox/actions/workflows/test.yml?query=branch%3Amaster"><img src="https://github.com/NovikovNick/geometry-sandbox/actions/workflows/test.yml/badge.svg"></a>
 </div>
 
 ![Geometry Sandbox Demo](docs/images/closest_point_on_plane_screenshot.png)
@@ -45,6 +45,8 @@ Docs are generated via [Doxygen](https://www.doxygen.nl/) from source file comme
 | | |
 |---|---|
 | [![Closest point on plane](docs/images/closest_point_on_plane_screenshot.png)](https://novikovnick.github.io/geometry-sandbox/demo/closest-point-on-plane/) | **Closest point on plane**<br><br> This is a simple example of an interactive visualization of a geometric formula. This format is perfect for personal notes or articles. |
+| [![Handedness of coordinate systems](docs/images/coord_handedness.gif)](https://novikovnick.github.io/geometry-sandbox/demo/camera-handedness/) | **Handedness of coordinate systems**<br><br> For now, this is just a camera with a handedness switch. Perhaps I'll expand the example later to demonstrate how the handedness of coordinate systems is related to the rotation direction and vertex order. |
+| [![DollyZoom](docs/images/dolly_zoom.gif)](https://novikovnick.github.io/geometry-sandbox/demo/camera-dolly-zoom/) | **DollyZoom**<br><br> Sample with math to perform smooth transition from perspective projection -> almost orthographic perspective -> orthographic projection. And in reverse order. |
 
 ## ⚖ License
  

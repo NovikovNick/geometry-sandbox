@@ -1,9 +1,10 @@
 #include "core/resource_manager.h"
 
+#include "core/types.h"
 #include "imgui.h"
 #include "raylib.h"
-#include "raymath.h"
 
+#include <cstddef>
 #include <format>
 
 #ifdef PLATFORM_DESKTOP
@@ -19,12 +20,10 @@ namespace
 ImFont* loadUIFont(const char* filename, float sizePixels)
 {
 	ImFontConfig config;
-	config.SizePixels		  = sizePixels;	 // Base font size in pixels
-	config.RasterizerDensity  = 2;			 // Improves rendering at small sizes
-	config.OversampleH		  = 4;			 // Horizontal anti-aliasing
-	config.OversampleV		  = 4;			 // Vertical anti-aliasing
-	config.PixelSnapH		  = false;		 // Disable pixel snapping for smoother text
-	config.RasterizerMultiply = 0.9F;		 // NOLINT(*-magic-numbers) Slightly boosts brightness
+	config.SizePixels  = sizePixels;  // Base font size in pixels
+	config.OversampleH = 4;			  // Horizontal anti-aliasing
+	config.OversampleV = 4;			  // Vertical anti-aliasing
+	config.PixelSnapH  = false;		  // Disable pixel snapping for smoother text
 
 	return ImGui::GetIO().Fonts->AddFontFromFileTTF(filename, sizePixels, &config);
 }
@@ -48,8 +47,8 @@ void ResourceManager::load()
 
 	// Mesh instancing shader
 	{
-		Shader shader = LoadShader(std::format("resources/shaders/glsl{}/shader_instanced_color.vs", kGlslVersion).c_str(),
-								   std::format("resources/shaders/glsl{}/shader_instanced_color.fs", kGlslVersion).c_str());
+		const Shader shader = LoadShader(std::format("resources/shaders/glsl{}/shader_instanced_color.vs", kGlslVersion).c_str(),
+										 std::format("resources/shaders/glsl{}/shader_instanced_color.fs", kGlslVersion).c_str());
 
 		// NOLINTBEGIN(cppcoreguidelines-pro-bounds-pointer-arithmetic)
 		shader.locs[SHADER_LOC_MATRIX_MVP]	 = GetShaderLocation(shader, "mvp");
@@ -79,10 +78,10 @@ void ResourceManager::load()
 		constexpr int kSphereRings	= 16;
 		constexpr int kSphereSlices = 16;
 		meshes_.push_back(GenMeshSphere(1.0F, kSphereRings, kSphereSlices));
-		Mesh& mesh											   = meshes_.back();
+		const Mesh& mesh									   = meshes_.back();
 
 		models_.at(static_cast<std::size_t>(ModelType::Point)) = LoadModelFromMesh(mesh);
-		Model& model										   = models_.at(static_cast<std::size_t>(ModelType::Point));
+		const Model& model									   = models_.at(static_cast<std::size_t>(ModelType::Point));
 		Material& material						  = model.materials[0];	 // NOLINT(cppcoreguidelines-pro-bounds-pointer-arithmetic)
 		material.maps[MATERIAL_MAP_DIFFUSE].color = ::BLACK;			 // NOLINT(cppcoreguidelines-pro-bounds-pointer-arithmetic)
 		material.shader							  = getShader(ShaderType::MeshInstancing);

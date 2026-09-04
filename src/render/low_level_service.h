@@ -11,6 +11,7 @@
 #ifndef GEOMETRY_SANDBOX_RENDER_LOW_LEVEL_SERVICE_H
 #define GEOMETRY_SANDBOX_RENDER_LOW_LEVEL_SERVICE_H
 
+#include "core/base_app_component.h"
 #include "core/types.h"
 
 #include "boost/di.hpp"
@@ -21,7 +22,6 @@
 
 namespace gs
 {
-struct Settings;
 class IResourceManager;
 class ICameraService;
 
@@ -59,17 +59,17 @@ class ILowLevelService
 };
 
 /** @brief Implements ILowLevelService with Raylib */
-class LowLevelService : public ILowLevelService
+class LowLevelService : public BaseService, public ILowLevelService
 {
-	std::shared_ptr<Settings> settings_;
 	std::shared_ptr<IResourceManager> resources_;
 	std::shared_ptr<ICameraService> cameraService_;
 
   public:
-	LowLevelService(std::shared_ptr<Settings> settings,
-					std::shared_ptr<IResourceManager> resources,
-					std::shared_ptr<ICameraService> cameraService)
-		: settings_(settings), resources_(resources), cameraService_(cameraService)
+	LowLevelService(const std::shared_ptr<Settings>& settings,
+					const std::shared_ptr<ILogManager>& log,
+					const std::shared_ptr<IResourceManager>& resources,
+					const std::shared_ptr<ICameraService>& cameraService)
+		: BaseService(settings, log), resources_(resources), cameraService_(cameraService)
 	{
 	}
 
@@ -78,6 +78,12 @@ class LowLevelService : public ILowLevelService
 
 	virtual void clearBackground(const Color&) const override;
 	virtual void drawLine(const Vec3& startWorld, const Vec3& endWorld, float thickness, const Color&) const override;
+
+	/**
+	 * @brief Draw dashed line (naive implementation, don't use it for large lines)
+	 *
+	 * @todo Currently it has naive implementation with draw call for each dash. Definitely needs improvement
+	 */
 	virtual void drawDashedLine(const Vec3& startWorld,
 								const Vec3& endWorld,
 								float thickness,

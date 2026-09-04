@@ -1,7 +1,7 @@
 ﻿#include <emscripten/bind.h>
 #include <emscripten/emscripten.h>
 
-#include "camera_sample.h"
+#include "camera_handedness_sample.h"
 
 EMSCRIPTEN_BINDINGS()
 {

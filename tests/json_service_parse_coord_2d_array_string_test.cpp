@@ -3,17 +3,33 @@
 #include <gtest/gtest.h>
 
 #include "core/json_service.h"
+#include "core/log_manager.h"
+#include "core/settings.h"
 
 #include <span>
 #include <vector>
 
 namespace gs
 {
+namespace
+{
+auto& getTestDependencyInjectionContext()
+{
+	static auto ctx = []()
+	{
+		return boost::di::make_injector(boost::di::bind<Settings>().in(boost::di::singleton),  //
+										di::logManager(),
+										di::jsonService());
+	}();
+	return ctx;
+};
+}  // namespace
+
 TEST(parseCoord2dArrayString, parse_ratio_numbers)
 {
 	// arrange
-	JsonService serviceImpl{};
-	const IJsonService& service = serviceImpl;
+	auto& ctx					= getTestDependencyInjectionContext();
+	const IJsonService& service = ctx.create<const IJsonService&>();
 	std::string input			= "[[3,42],[-4,0.5]]";
 	std::vector<Vec2> points;
 
@@ -31,8 +47,8 @@ TEST(parseCoord2dArrayString, parse_ratio_numbers)
 TEST(parseCoord2dArrayString, parse_with_spaces)
 {
 	// arrange
-	JsonService serviceImpl{};
-	const IJsonService& service = serviceImpl;
+	auto& ctx					= getTestDependencyInjectionContext();
+	const IJsonService& service = ctx.create<const IJsonService&>();
 	std::string input			= "  [  [  3  ,  0  ]  ,  [  -4  ,  0.5  ]  ]  ";
 	std::vector<Vec2> points;
 

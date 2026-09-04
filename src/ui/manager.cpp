@@ -1,13 +1,15 @@
 #include "ui/manager.h"
 
-#include "animation/manager.h"
 #include "animation/player_manager.h"
 #include "animation/service.h"
+#include "core/base_app_component.h"
+#include "core/input_manager.h"
 #include "core/resource_manager.h"
 #include "core/settings.h"
 #include "core/types.h"
 #include "core/window_manager.h"
 #include "ui/service.h"
+#include "ui/state_manager.h"
 
 #include "imgui.h"
 #include "rlImGui.h"
@@ -15,82 +17,31 @@
 #include <cassert>
 #include <functional>
 #include <memory>
-#include <string_view>
+#include <string>
 
 namespace gs
 {
-namespace
-{
-constexpr void registerElement(ui::State& state, ui::Element& element)
-{
-	element.id = static_cast<int>(state.elements.size());
-	state.elements.push_back(&element);
-}
-}  // namespace
-
 UIManager::UIManager(const std::shared_ptr<Settings>& settings,
+					 const std::shared_ptr<ILogManager>& log,
 					 const std::shared_ptr<IResourceManager>& resourceManager,
-					 const std::shared_ptr<animation::IManager>& animationManager,
 					 const std::shared_ptr<IWindowManager>& windowManager,
 					 const std::shared_ptr<animation::IService>& animationService,
 					 const std::shared_ptr<IUIService>& uiService,
-					 const std::shared_ptr<animation::IPlayerManager>& animationPlayerManager)
-	: settings_(settings), resourceManager_(resourceManager), animationManager_(animationManager), windowManager_(windowManager),
-	  animationService_(animationService), uiService_(uiService), animationPlayerManager_(animationPlayerManager), state_({}),
-	  mouseCapturedByDetailsView_(false), mouseCapturedByFooter_(false)
+					 const std::shared_ptr<IUIStateManager>& stateManager,
+					 const std::shared_ptr<animation::IPlayerManager>& animationPlayerManager,
+					 const std::shared_ptr<IInputManager>& inputManager)
+	: BaseManager(settings, log), resourceManager_(resourceManager), windowManager_(windowManager),
+	  animationService_(animationService), uiService_(uiService), stateManager_(stateManager),
+	  animationPlayerManager_(animationPlayerManager), inputManager_(inputManager), mouseCaptured_(false)
 {
-
-	state_.width									= settings->width;
-	state_.height									= settings->height;
-
-	state_.player.prevButton.icon					= settings->iconPlayerBackwardStep;
-	state_.player.prevButton.props.color			= settings->uiButtonColor;
-	state_.player.prevButton.size					= settings->uiFontSize;
-	state_.player.prevButton.active					= true;
-
-	state_.player.playButton.icon					= settings->iconPlayerPlay;
-	state_.player.playButton.props.color			= settings->uiButtonColor;
-	state_.player.playButton.size					= settings->uiFontSize;
-	state_.player.playButton.active					= true;
-
-	state_.player.nextButton.icon					= settings->iconPlayerForwardStep;
-	state_.player.nextButton.props.color			= settings->uiButtonColor;
-	state_.player.nextButton.size					= settings->uiFontSize;
-	state_.player.nextButton.active					= true;
-
-	state_.settingsButton.icon						= settings->iconSettings;
-	state_.settingsButton.props.color				= settings->uiButtonColor;
-	state_.settingsButton.size						= settings->uiFontSize;
-	state_.settingsButton.active					= true;
-
-	state_.player.timelineSlider.backgroudColor		= settings->uiPlayerTimelineBackgroundColor;
-	state_.player.timelineSlider.fillColor			= settings->uiPlayerTimelineFillColor;
-	state_.player.timelineSlider.grabberColor		= settings->uiPlayerTimelineGrabberColor;
-	state_.player.timelineSlider.grabberColorActive = settings->uiPlayerTimelineGrabberColorActive;
-	state_.player.timelineSlider.grabberSize		= settings->uiPlayerTimelineGrabberSize;
-	state_.player.timelineSlider.roundingSize		= settings->uiPlayerTimelineRoundingSize;
-	state_.player.timelineSlider.height				= settings->uiPlayerTimelineHeight;
-
-	registerElement(state_, state_.player);
-	registerElement(state_, state_.player.prevButton);
-	registerElement(state_, state_.player.playButton);
-	registerElement(state_, state_.player.nextButton);
-	registerElement(state_, state_.player.timelineSlider);
-	registerElement(state_, state_.settingsButton);
-
-	Camera camera			 = settings->defaultCamera;
-	camera.width			 = settings->width;
-	camera.height			 = settings->height;
-	state_.activeCameraIndex = static_cast<int>(state_.cameras.size());
-	state_.cameras.push_back(camera);
-
 	windowManager_->onResize(
 		[&](const int width, const int height)
 		{
-			state_.width  = width;
-			state_.height = height;
+			ui::State& state = stateManager_->getState();
+			state.width		 = width;
+			state.height	 = height;
 
-			for (Camera& camera : state_.cameras)
+			for (Camera& camera : state.cameras)
 			{
 				camera.width  = width;
 				camera.height = height;
@@ -102,40 +53,74 @@ void UIManager::init()
 	ImGuiIO& imGuiIO						  = ImGui::GetIO();
 	imGuiIO.ConfigWindowsMoveFromTitleBarOnly = true;
 
-	animationPlayerManager_->init(state_.player);
-	state_.settingsButton.onHover = animationService_->createHoverButtonAnimation(state_.settingsButton);
+	ui::State& state						  = stateManager_->getState();
+	animationPlayerManager_->init(state.player);
+	state.settingsButton.onHover = animationService_->createHoverButtonAnimation(state.settingsButton);
+	state.forwardButton.onHover	 = animationService_->createHoverButtonAnimation(state.forwardButton);
+	state.leftButton.onHover	 = animationService_->createHoverButtonAnimation(state.leftButton);
+	state.backwardButton.onHover = animationService_->createHoverButtonAnimation(state.backwardButton);
+	state.rightButton.onHover	 = animationService_->createHoverButtonAnimation(state.rightButton);
 
 	animationService_->playAppearUIAnimation();
 }
 
 void UIManager::tick()
 {
-	animationPlayerManager_->update(state_.player);
+	ui::State& ui = stateManager_->getState();
+	animationPlayerManager_->update(ui.player);
+
+	const Color hovered			  = settings_->buttonColorHover;
+	const Color base			  = settings_->buttonColor;
+
+	ui.forwardButton.props.color  = inputManager_->isKeyPressed(InputKey::Forward) || ui.forwardButton.hovered ? hovered : base;
+	ui.leftButton.props.color	  = inputManager_->isKeyPressed(InputKey::Left) || ui.leftButton.hovered ? hovered : base;
+	ui.backwardButton.props.color = inputManager_->isKeyPressed(InputKey::Backward) || ui.backwardButton.hovered ? hovered : base;
+	ui.rightButton.props.color	  = inputManager_->isKeyPressed(InputKey::Right) || ui.rightButton.hovered ? hovered : base;
 }
 
 void UIManager::render()
 {
+	const ui::State& state = stateManager_->getState();
+
 	rlImGuiBegin();
 
 	ImGuiStyle& style = ImGui::GetStyle();
-	style.Alpha		  = state_.layout.opacity;
+	style.Alpha		  = state.layout.opacity;
 
 	ImFont* myFont	  = resourceManager_->defaultUIFont();
 	ImGui::PushFont(myFont, settings_->uiFontSize);
 
-	const auto footerWidth	  = static_cast<float>(state_.width);
-	const float footerHeight  = settings_->footerHeight;
-	const float detailsWidth  = settings_->detailsWidth;
-	const float detailsHeight = static_cast<float>(state_.height) - footerHeight;
-	const float consoleWidth  = static_cast<float>(state_.width) - detailsWidth;
-	const float consoleHeight = static_cast<float>(state_.height) - footerHeight;
+	const auto footerWidth			 = static_cast<float>(state.width);
+	const float footerHeight		 = settings_->footerHeight;
+	const float controlsWidth		 = settings_->controlsWidthOffset;
+	const float controlsHeight		 = settings_->controlsHeightOffset;
+	const float controlsWidthOffset	 = static_cast<float>(state.width) - controlsWidth;
+	const float controlsHeightOffset = static_cast<float>(state.height) - footerHeight - controlsHeight;
+	const float detailsWidth		 = settings_->detailsWidth;
+	const float detailsHeight = static_cast<float>(state.height) - footerHeight - settings_->detailsHeightOffset - controlsHeight;
+	const float consoleWidth  = static_cast<float>(state.width) - detailsWidth;
+	const float consoleHeight = static_cast<float>(state.height) - footerHeight;
 
 	if (settings_->showConsole)
 	{
 		uiService_->overlayConsole({.width = consoleWidth, .height = consoleHeight}, Vec2::Zero());
 	}
-	drawDetailsView({.width = detailsWidth, .height = detailsHeight}, Vec2{consoleWidth, 0.0F});
-	drawFooter({.width = footerWidth, .height = footerHeight}, Vec2{0.0F, consoleHeight});
+
+	if (settings_->showDetailsView)
+	{
+
+		drawDetailsView({.width = detailsWidth, .height = detailsHeight}, Vec2{consoleWidth, settings_->detailsHeightOffset});
+	}
+
+	if (settings_->showControls)
+	{
+		drawControls({.width = controlsWidth, .height = controlsHeight}, Vec2{controlsWidthOffset, controlsHeightOffset});
+	}
+
+	if (settings_->showFooter)
+	{
+		drawFooter({.width = footerWidth, .height = footerHeight}, Vec2{0.0F, consoleHeight});
+	}
 
 	ImGui::PopFont();
 
@@ -144,43 +129,90 @@ void UIManager::render()
 
 void UIManager::drawFooter(const RectSize& size, const Vec2& coord)
 {
+	const ui::State& state = stateManager_->getState();
+
 	ImGui::SetNextWindowSize(ImVec2(size.width, size.height));
 	ImGui::SetNextWindowPos(ImVec2(coord.x(), coord.y()));
 	const auto flags = ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove |
 					   ImGuiWindowFlags_NoResize;
 	ImGui::Begin("##footer", nullptr, flags);
 
-	mouseCapturedByFooter_ = ImGui::IsWindowHovered();
+	mouseCaptured_ = ImGui::IsWindowHovered();
 
 	if (animationPlayerManager_->hasAnimation())
 	{
-		uiService_->animationPlayer(state_.player);
+		uiService_->animationPlayer(state.player);
 	}
 
 	constexpr int margin = 10;	// todo move to settings
 	ImGui::SameLine(ImGui::GetWindowWidth() - settings_->uiPlayerControlButtonWidth - margin);
-	uiService_->settingsButton(state_.settingsButton);
+	uiService_->settingsButton(state.settingsButton);
 
 	ImGui::End();
 }
 
 void UIManager::drawDetailsView(const RectSize& size, const Vec2& coord)
 {
-	if (detailsViewDrawCallback_)
+	ImGui::SetNextWindowSize(ImVec2(size.width, size.height));
+	ImGui::SetNextWindowPos(ImVec2(coord.x(), coord.y()));
+	auto flags = ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize;
+	if (ImGui::Begin("##details", nullptr, flags))
 	{
-		ImGui::SetNextWindowSize(ImVec2(size.width, size.height));
-		ImGui::SetNextWindowPos(ImVec2(coord.x(), coord.y()));
-		auto flags = ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize;
-		if (ImGui::Begin("##details", nullptr, flags))
+		detailsViewDrawCallback_();
+	}
+	ImGui::End();
+}
+void gs::UIManager::drawControls(const RectSize& size, const Vec2& coord)
+{
+	static const std::string rotateTip	= "hold right mouse button to rotate";
+	constexpr float controlsMarginRight = 100.0F;  // it depends entirely on the length of the rotateTip
+
+	ImGui::SetNextWindowSize(ImVec2(size.width, size.height));
+	ImGui::SetNextWindowPos(ImVec2(coord.x(), coord.y()));
+
+	const ui::State& state = stateManager_->getState();
+
+	auto flags = ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize;
+	if (ImGui::Begin("##cameraControl", nullptr, flags))
+	{
+		auto drawButton = [&](const ui::Button& btn, InputKey key)
 		{
-			mouseCapturedByDetailsView_ = ImGui::IsWindowHovered();
-			detailsViewDrawCallback_();
-		}
-		ImGui::End();
+			uiService_->button(btn);
+			if (btn.pressed)
+			{
+				inputManager_->press(key, InputSource::UI);
+			}
+			else
+			{
+				inputManager_->release(key, InputSource::UI);
+			}
+		};
+
+		// draw WASD buttons
+		ImGui::Dummy(ImVec2(controlsMarginRight, settings_->controlButtonHeight));	// margin
+		ImGui::SameLine();
+		ImGui::Dummy(ImVec2(settings_->controlButtonWidth, settings_->controlButtonHeight));  // skip Q placeholder
+		ImGui::SameLine();
+		drawButton(state.forwardButton, InputKey::Forward);
+
+		// next line
+		ImGui::Dummy(ImVec2(controlsMarginRight, settings_->controlButtonHeight));	//   margin
+
+		ImGui::SameLine();
+		drawButton(state.leftButton, InputKey::Left);
+
+		ImGui::SameLine();
+		drawButton(state.backwardButton, InputKey::Backward);
+
+		ImGui::SameLine();
+		drawButton(state.rightButton, InputKey::Right);
 	}
-	else
+
+	if (settings_->showControlRotation && !inputManager_->isKeyPressed(InputKey::MouseRight))
 	{
-		mouseCapturedByDetailsView_ = false;
+		uiService_->text(rotateTip, settings_->buttonColor);
 	}
+
+	ImGui::End();
 }
 }  // namespace gs

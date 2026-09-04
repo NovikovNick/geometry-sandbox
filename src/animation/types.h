@@ -140,7 +140,6 @@ struct Instance
 	bool isPlaying() const { return !isPaused(); }
 	bool isRemoveOnComplete() const { return flags[removeOnComplete]; }
 	bool isPauseOnMarker() const { return !markers.empty() && flags[pauseOnMarker]; }
-	bool isFinished() const { return flags[finished]; }
 
 	float getProgress() const
 	{
@@ -153,7 +152,6 @@ struct Instance
 	void setPaused(bool v) { flags[paused] = v; }
 	void setRemoveOnComplete(bool v) { flags[removeOnComplete] = v; }
 	void setPauseOnMarker(bool v) { flags[pauseOnMarker] = v; }
-	void setFinished(bool v) { flags[finished] = v; }
 
   private:
 	static constexpr std::size_t looping		  = 0;
@@ -161,9 +159,8 @@ struct Instance
 	static constexpr std::size_t paused			  = 2;
 	static constexpr std::size_t removeOnComplete = 3;
 	static constexpr std::size_t pauseOnMarker	  = 4;
-	static constexpr std::size_t finished		  = 5;
 
-	std::bitset<6> flags;
+	std::bitset<5> flags;
 };
 
 /**
@@ -207,7 +204,6 @@ struct Clip
 	Milliseconds duration;
 	bool loop			  = false;
 	bool removeOnComplete = false;
-	bool pauseOnMarker	  = false;
 };
 }  // namespace gs::animation
 

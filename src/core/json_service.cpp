@@ -20,8 +20,7 @@ bool JsonService::isValidCoord2dArrayString(std::string_view input) const
 		return false;
 	}
 	auto isValid = [](const auto& item) { return item.size() == 2 && item[0].is_number() && item[1].is_number(); };
-
-	return std::ranges::all_of(json::parse(input), isValid);
+	return std::ranges::all_of(data, isValid);
 }
 
 void JsonService::parseCoord2dArrayString(std::string_view input, std::vector<Vec2>& outPoints) const

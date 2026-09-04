@@ -311,9 +311,9 @@ void LowLevelService::drawAxesGrid(Axis up, const scene::Grid2D& grid) const
 	}
 
 	// Draw axis
-	drawArrow(Vec3::Zero(), Vec3::UnitX() * grid.gridSize / 2, settings_->lineThick, Color::red(), settings_->gizmoArrowSize);
-	drawArrow(Vec3::Zero(), Vec3::UnitY() * grid.gridSize / 2, settings_->lineThick, Color::green(), settings_->gizmoArrowSize);
-	drawArrow(Vec3::Zero(), Vec3::UnitZ() * grid.gridSize / 2, settings_->lineThick, Color::blue(), settings_->gizmoArrowSize);
+	drawArrow(Vec3::Zero(), Vec3::UnitX() * grid.gridSize / 2, settings_->lineThickness, Color::red(), settings_->gizmoArrowSize);
+	drawArrow(Vec3::Zero(), Vec3::UnitY() * grid.gridSize / 2, settings_->lineThickness, Color::green(), settings_->gizmoArrowSize);
+	drawArrow(Vec3::Zero(), Vec3::UnitZ() * grid.gridSize / 2, settings_->lineThickness, Color::blue(), settings_->gizmoArrowSize);
 }
 
 void LowLevelService::drawSphereWires(const Vec3& position, const Color& color, float radius) const

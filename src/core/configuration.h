@@ -30,6 +30,7 @@
 #include "render/viewport_manager.h"
 #include "ui/manager.h"
 #include "ui/service.h"
+#include "ui/state_manager.h"
 
 #include "IconsFontAwesome7.h"
 #include "boost/di.hpp"
@@ -44,14 +45,9 @@ inline Settings createDefaultSettings()
 		.handedness	 = CoordinateHandedness::Right,
 		.position	 = Vec3{5, 5, 5},
 		.target		 = Vec3{2, 2, 2},
-		.rotation	 = Vec3{0.0f, 0.0f, 0.0f},		  // in radian
-		.quat		 = Quat{0.0f, 0.0f, 0.0f, 1.0f},  // identity quatertion
-
 		.upAxis		 = Axis::Y,
-
 		.width		 = 1024,
 		.height		 = 768,
-
 		.fov		 = 50.f,
 		.zNear		 = 1.0f,
 		.zFar		 = 100.f,
@@ -73,11 +69,25 @@ inline Settings createDefaultSettings()
 		.vSync								= true,
 
 		.footerHeight						= 50.0F,
-		.detailsWidth						= 300.0f,
+		.detailsWidth						= 350.0f,
+		.detailsHeightOffset				= 15.0F,
+		.buttonRounding						= 8.0F,
+		.controlButtonWidth					= 64.0F,
+		.controlButtonHeight				= 64.0F,
+		.controlsWidthOffset				= 350.0F,
+		.controlsHeightOffset				= 175.0F,
 
-		.showConsole						= false,
+		.showConsole						= true,
+		.showPerformance					= false,
+		.showTranslateGizmo					= false,
 		.showCollisions						= false,
 		.showCursorRay						= false,
+
+		.showControls						= true,
+		.showControlRotation				= true,
+
+		.showDetailsView					= true,
+		.showFooter							= true,
 
 		.animationSpeed						= 1.00F,
 
@@ -88,9 +98,11 @@ inline Settings createDefaultSettings()
 		.iconPlayerForwardStep				= ICON_FA_FORWARD_STEP,
 		.iconPlayerForwardFast				= ICON_FA_FORWARD_FAST,
 		.iconSettings						= ICON_FA_GEAR,
+		.iconCameraForward					= ICON_FA_W,
+		.iconCameraLeft						= ICON_FA_A,
+		.iconCameraBackward					= ICON_FA_S,
+		.iconCameraRight					= ICON_FA_D,
 
-		.enableQuaternionCameraRotation		= false,
-		.resetTimelineAfterDataChange		= true,
 		.gizmoArrowSize						= 7.0F,
 		.gizmoTranslateAxisX				= Color::red(),
 		.gizmoTranslateAxisXSelected		= Color::yellow(),
@@ -111,7 +123,10 @@ inline Settings createDefaultSettings()
 
 		.canvasFontSize						= 32.0F,
 		.uiFontSize							= 20.0F,
-		.uiButtonColor						= Color::white(),  // doesn't work
+		.controlButtonFontSize				= 24.0F,
+		.controlButtonBorderThickness		= 2.0F,
+		.buttonColor						= Color::white(),
+		.buttonColorHover					= Color::blue(),
 		.canvasBackgroundColor				= Color{63.0F, 63.0F, 63.0F, 255.0F},
 
 		.uiPlayerTimelineBackgroundColor	= Color::gray(),
@@ -124,7 +139,8 @@ inline Settings createDefaultSettings()
 		.uiPlayerControlButtonWidth			= 25.0F,
 		.uiPlayerControlTextWidth			= 15.0F,
 		.uiPlayerHeight						= 34.0F,
-		.lineThick							= 0.03F,
+
+		.lineThickness						= 0.03F,
 		.dashLength							= 0.2F,
 
 		.defaultCamera						= defaultCamera,
@@ -156,6 +172,7 @@ inline auto& getContext()
 												  resourceManager(),
 												  animationManager(),
 												  uiManager(),
+												  uiStateManager(),
 												  uiService(),
 												  cameraControllerSystem(),
 												  interactionService(),

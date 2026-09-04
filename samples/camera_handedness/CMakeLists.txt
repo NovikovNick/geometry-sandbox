@@ -1,9 +1,9 @@
-set(ALGORITHM_NAME camera)
+set(ALGORITHM_NAME camera-handedness)
 set(APP_NAME ${PROJECT_NAME}-${ALGORITHM_NAME})
 
 if(EMSCRIPTEN)
 
-    add_executable(${APP_NAME} src/web_endpoint.cpp src/camera_sample.cpp)
+    add_executable(${APP_NAME} src/web_endpoint.cpp src/camera_handedness_sample.cpp)
     
     set_target_properties(${APP_NAME} PROPERTIES SUFFIX ".html")
     target_link_options(${APP_NAME} PUBLIC 
@@ -35,7 +35,7 @@ if(EMSCRIPTEN)
 
 else()
 
-    add_executable(${APP_NAME} src/desktop_endpoint.cpp src/camera_sample.cpp)
+    add_executable(${APP_NAME} src/desktop_endpoint.cpp src/camera_handedness_sample.cpp)
 
 endif()
 

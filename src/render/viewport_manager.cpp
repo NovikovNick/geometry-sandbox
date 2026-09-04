@@ -1,12 +1,16 @@
 #include "render/viewport_manager.h"
 
-#include "core/math.h"
+#include "core/types.h"
 #include "core/window_manager.h"
-#include "ui/manager.h"
+#include "ui/state_manager.h"
 
 #include "raylib.h"
 
+#include <array>
 #include <cassert>
+#include <cstddef>
+#include <cstdint>
+#include <cstring>
 
 namespace gs::render
 {
@@ -26,7 +30,7 @@ void copyToMeshBuffer(T*& dest, const T* src, std::size_t count) noexcept
 }
 
 // resourse manager?
-::Mesh createPlane(const float width, const float length)
+::Mesh createPlane(const float halfWidth, const float halfHeight)
 {
 	::Mesh mesh		   = {.vertexCount = 0};
 	mesh.vertexCount   = 4;
@@ -34,10 +38,10 @@ void copyToMeshBuffer(T*& dest, const T* src, std::size_t count) noexcept
 
 	// clang-format off
 	std::array vertices  {
-        -width, -length, 0.0F, 
-         width, -length, 0.0F,  
-         width,  length, 0.0F, 
-        -width,  length, 0.0F,
+        -halfWidth, -halfHeight, 0.0F, 
+         halfWidth, -halfHeight, 0.0F,  
+         halfWidth,  halfHeight, 0.0F, 
+        -halfWidth,  halfHeight, 0.0F,
     };
 	std::array texcoords = {
 		0.0F, 0.0F,
@@ -99,15 +103,16 @@ Texture ViewportManager::getViewport2D(std::size_t viewportIndex) const
 	return viewports_[viewportIndex].renderTarget.texture;
 }
 
-ViewportManager::Viewport ViewportManager::createViewport(const RectSize& size, const float fov)
+ViewportManager::Viewport ViewportManager::createViewport(const RectSize& size)
 {
 	const float aspect					= size.width / size.height;
-	const float top						= 0.5F * std::tan(degToRad(fov * 0.5F));
-	const float right					= top * aspect;
+	const float top						= aspect;
+	const float right					= 1.0F;
 
 	constexpr float supersamplingFactor = 2.0F;
+
 	ViewportManager::Viewport res{
-		.plane		  = LoadModelFromMesh(createPlane(right, top)),
+		.plane		  = LoadModelFromMesh(createPlane(top, right)),
 		.renderTarget = LoadRenderTexture(static_cast<int>(size.width * supersamplingFactor),
 										  static_cast<int>(size.height * supersamplingFactor)),
 	};
@@ -122,27 +127,24 @@ ViewportManager::Viewport ViewportManager::createViewport(const RectSize& size, 
 
 void ViewportManager::buildViewports()
 {
-	const ui::State ui = uiManager_->getState();
+	const ui::State ui = uiStateManager_->getState();
 	viewports_.resize(ui.cameras.size());
 	for (std::size_t i = 0; i < ui.cameras.size(); ++i)
 	{
 		const Camera& camera = ui.cameras[i];
-		viewports_[i]		 = createViewport(RectSize{.width  = static_cast<float>(camera.width),
-													   .height = static_cast<float>(camera.height)},
-										  camera.fov);
+		const RectSize size{.width = static_cast<float>(camera.width), .height = static_cast<float>(camera.height)};
+		viewports_[i] = createViewport(size);
 	}
 }
 
 void ViewportManager::rebuildViewports(const RectSize& size)
 {
-	const ui::State ui = uiManager_->getState();
+	const ui::State ui = uiStateManager_->getState();
 	for (std::size_t i = 0; i < ui.cameras.size(); ++i)
 	{
 		UnloadRenderTexture(viewports_[i].renderTarget);
 		UnloadModel(viewports_[i].plane);
-
-		const Camera& camera = ui.cameras[i];
-		viewports_[i]		 = createViewport(size, camera.fov);
+		viewports_[i] = createViewport(size);
 	}
 }
 

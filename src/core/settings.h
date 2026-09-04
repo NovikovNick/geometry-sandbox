@@ -16,6 +16,8 @@ namespace gs
 /** @brief Contains all configurable application parameters */
 struct Settings
 {
+	constexpr static std::size_t kSamplerChannelCount = 64;
+
 	std::string title;
 	int width;
 	int height;
@@ -25,10 +27,24 @@ struct Settings
 
 	float footerHeight;
 	float detailsWidth;
+	float detailsHeightOffset;
+	float buttonRounding;
+	float controlButtonWidth;
+	float controlButtonHeight;
+	float controlsWidthOffset;
+	float controlsHeightOffset;
 
 	bool showConsole;
+	bool showPerformance;
+	bool showTranslateGizmo;
 	bool showCollisions;
 	bool showCursorRay;
+
+	bool showControls;
+	bool showControlRotation;
+
+	bool showDetailsView;
+	bool showFooter;
 
 	constexpr static float kAnimationSpeedMin = 0.01f;
 	constexpr static float kAnimationSpeedMax = 10.00f;
@@ -41,9 +57,10 @@ struct Settings
 	std::string_view iconPlayerForwardStep;
 	std::string_view iconPlayerForwardFast;
 	std::string_view iconSettings;
-
-	bool enableQuaternionCameraRotation;
-	bool resetTimelineAfterDataChange;
+	std::string_view iconCameraForward;
+	std::string_view iconCameraLeft;
+	std::string_view iconCameraBackward;
+	std::string_view iconCameraRight;
 
 	float gizmoArrowSize;
 	float gizmoColliderAlpha;
@@ -66,9 +83,11 @@ struct Settings
 	float gizmoColliderPlaneSize;
 
 	float canvasFontSize;
-
 	float uiFontSize;
-	Color uiButtonColor;
+	float controlButtonFontSize;
+	float controlButtonBorderThickness;
+	Color buttonColor;
+	Color buttonColorHover;
 	Color canvasBackgroundColor;
 
 	Color uiPlayerTimelineBackgroundColor;
@@ -82,7 +101,7 @@ struct Settings
 	float uiPlayerControlTextWidth;
 	float uiPlayerHeight;
 
-	float lineThick;
+	float lineThickness;
 	float dashLength;
 
 	Camera defaultCamera;

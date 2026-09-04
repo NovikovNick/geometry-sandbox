@@ -6,6 +6,7 @@
 #ifndef GEOMETRY_SANDBOX_TRANSLATE_GIZMO_H
 #define GEOMETRY_SANDBOX_TRANSLATE_GIZMO_H
 
+#include "core/base_app_component.h"
 #include "core/types.h"
 
 #include "boost/di.hpp"
@@ -32,14 +33,15 @@ class ITranslateGizmoRenderService
 };
 
 /** @brief basic ITranslateGizmoRenderService implementation */
-class TranslateGizmoRenderService : public ITranslateGizmoRenderService
+class TranslateGizmoRenderService : public BaseService, public ITranslateGizmoRenderService
 {
-	std::shared_ptr<Settings> settings_;
 	std::shared_ptr<render::ILowLevelService> graphic_;
 
   public:
-	TranslateGizmoRenderService(std::shared_ptr<Settings> settings, std::shared_ptr<render::ILowLevelService> graphic)
-		: settings_(settings), graphic_(graphic) {};
+	TranslateGizmoRenderService(const std::shared_ptr<Settings>& settings,
+								const std::shared_ptr<ILogManager>& log,
+								const std::shared_ptr<render::ILowLevelService>& graphic)
+		: BaseService(settings, log), graphic_(graphic) {};
 
 	virtual void render(const TranslateGizmo&, float scale) override;
 };
