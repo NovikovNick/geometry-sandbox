@@ -11,6 +11,7 @@ var classgs_1_1ISceneService =
     [ "getSceneBounds", "classgs_1_1ISceneService.html#a2d8f34d3bbacffde472901dd5ff1018e", null ],
     [ "getSceneCenter", "classgs_1_1ISceneService.html#ac10f03d15733d6a6767b7b7cab7f6a3e", null ],
     [ "setAABBSize", "classgs_1_1ISceneService.html#ab360daefa54062796e75c7220ba3ecbb", null ],
+    [ "setColor", "classgs_1_1ISceneService.html#a8553946c7157a84ad48f47438ae995e8", null ],
     [ "setDistance", "classgs_1_1ISceneService.html#ae3f7fb7caf125c0633e4b74348b1168d", null ],
     [ "setEndPosition", "classgs_1_1ISceneService.html#af202a461296854e7d6dff3a22d11f583", null ],
     [ "setNormal", "classgs_1_1ISceneService.html#ab395a412724873600261a46ac3ce66b6", null ],

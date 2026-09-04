@@ -144,25 +144,36 @@ Inheritance diagram for gs::UIService:</div>
  <div class="center">
   <img src="classgs_1_1UIService.png" usemap="#gs_3A_3AUIService_map" alt=""/>
   <map id="gs_3A_3AUIService_map" name="gs_3A_3AUIService_map">
-<area href="classgs_1_1IUIService.html" title="Contains various UI components: overlay console, animation player, buttons." alt="gs::IUIService" shape="rect" coords="0,0,89,24"/>
+<area href="classgs_1_1BaseAppComponent.html" title="Contains logger and settings." alt="gs::BaseAppComponent" shape="rect" coords="0,0,145,24"/>
+<area href="classgs_1_1IUIService.html" title="Contains various UI components: overlay console, animation player, buttons." alt="gs::IUIService" shape="rect" coords="155,0,300,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aaf1dac12114e918a10976bf977aecf80" id="r_aaf1dac12114e918a10976bf977aecf80"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aaf1dac12114e918a10976bf977aecf80">UIService</a> (std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; settings, std::shared_ptr&lt; <a class="el" href="classgs_1_1IResourceManager.html">IResourceManager</a> &gt; resourceManager, std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; logManager)</td></tr>
+<tr class="memitem:af9a624c6357755c8c01679a9bf558348" id="r_af9a624c6357755c8c01679a9bf558348"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af9a624c6357755c8c01679a9bf558348">UIService</a> (const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;settings, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;log, const std::shared_ptr&lt; <a class="el" href="classgs_1_1IResourceManager.html">IResourceManager</a> &gt; &amp;resourceManager, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;logManager)</td></tr>
 <tr class="memitem:aa2f38b61ecb7e52a7cb96823adb45859" id="r_aa2f38b61ecb7e52a7cb96823adb45859"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aa2f38b61ecb7e52a7cb96823adb45859">overlayConsole</a> (const <a class="el" href="structgs_1_1RectSize.html">RectSize</a> &amp;, const <a class="el" href="namespacegs.html#a4cfe276f17208d89cd0dfee026fef598">Vec2</a> &amp;coord) override</td></tr>
 <tr class="memitem:a5ee28dca32cbf4a631e5554b5292793d" id="r_a5ee28dca32cbf4a631e5554b5292793d"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a5ee28dca32cbf4a631e5554b5292793d">animationPlayer</a> (const <a class="el" href="structgs_1_1ui_1_1AnimationPlayer.html">ui::AnimationPlayer</a> &amp;) override</td></tr>
 <tr class="memitem:a561f3930f9849879ce49ec3becffedda" id="r_a561f3930f9849879ce49ec3becffedda"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a561f3930f9849879ce49ec3becffedda">button</a> (const <a class="el" href="structgs_1_1ui_1_1Button.html">ui::Button</a> &amp;) override</td></tr>
 <tr class="memitem:ac7922035703ed57de011c1f6575c17e5" id="r_ac7922035703ed57de011c1f6575c17e5"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ac7922035703ed57de011c1f6575c17e5">settingsButton</a> (const <a class="el" href="structgs_1_1ui_1_1Button.html">ui::Button</a> &amp;) override</td></tr>
+<tr class="memitem:a1df0a202fcc9cc1d3357cb4390732a0d" id="r_a1df0a202fcc9cc1d3357cb4390732a0d"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a1df0a202fcc9cc1d3357cb4390732a0d">text</a> (const std::string &amp;, const <a class="el" href="structgs_1_1Color.html">Color</a> &amp;) override</td></tr>
+<tr class="inherit_header pub_methods_classgs_1_1BaseAppComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classgs_1_1BaseAppComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classgs_1_1BaseAppComponent.html">gs::BaseAppComponent</a></td></tr>
+<tr class="memitem:a509ebe518e3611bdcf05fe811d0e3330 inherit pub_methods_classgs_1_1BaseAppComponent" id="r_a509ebe518e3611bdcf05fe811d0e3330"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a509ebe518e3611bdcf05fe811d0e3330">BaseAppComponent</a> (const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;settings, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;log)</td></tr>
+<tr class="memitem:a1c9a8be3b768eb7a861948e75659018e inherit pub_methods_classgs_1_1BaseAppComponent" id="r_a1c9a8be3b768eb7a861948e75659018e"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a1c9a8be3b768eb7a861948e75659018e">~BaseAppComponent</a> ()=default</td></tr>
 <tr class="inherit_header pub_methods_classgs_1_1IUIService"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classgs_1_1IUIService')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classgs_1_1IUIService.html">gs::IUIService</a></td></tr>
 <tr class="memitem:aa78b084ad474e1176c9d7725625d2f04 inherit pub_methods_classgs_1_1IUIService" id="r_aa78b084ad474e1176c9d7725625d2f04"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1IUIService.html#aa78b084ad474e1176c9d7725625d2f04">~IUIService</a> ()=default</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_classgs_1_1BaseAppComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classgs_1_1BaseAppComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classgs_1_1BaseAppComponent.html">gs::BaseAppComponent</a></td></tr>
+<tr class="memitem:a524fe5fe65593228bded25265e46a64a inherit pro_attribs_classgs_1_1BaseAppComponent" id="r_a524fe5fe65593228bded25265e46a64a"><td class="memItemLeft">std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a524fe5fe65593228bded25265e46a64a">settings_</a></td></tr>
+<tr class="memitem:ab6809c365687543a0c8eea8e04e461f0 inherit pro_attribs_classgs_1_1BaseAppComponent" id="r_ab6809c365687543a0c8eea8e04e461f0"><td class="memItemLeft">std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#ab6809c365687543a0c8eea8e04e461f0">log_</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>basic <a class="el" href="classgs_1_1IUIService.html" title="Contains various UI components: overlay console, animation player, buttons.">IUIService</a> implementation </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aaf1dac12114e918a10976bf977aecf80" name="aaf1dac12114e918a10976bf977aecf80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf1dac12114e918a10976bf977aecf80">&#9670;&#160;</a></span>UIService()</h2>
+<a id="af9a624c6357755c8c01679a9bf558348" name="af9a624c6357755c8c01679a9bf558348"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9a624c6357755c8c01679a9bf558348">&#9670;&#160;</a></span>UIService()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,17 +184,22 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">gs::UIService::UIService </td>
           <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>settings</em></span>, </td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>settings</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classgs_1_1IResourceManager.html">IResourceManager</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>resourceManager</em></span>, </td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>log</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>logManager</em></span>&#160;)</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1IResourceManager.html">IResourceManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>resourceManager</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>logManager</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -305,6 +321,37 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classgs_1_1IUIService.html#a3525e489525295e5ab81195e9c6154c0">gs::IUIService</a>.</p>
+
+</div>
+</div>
+<a id="a1df0a202fcc9cc1d3357cb4390732a0d" name="a1df0a202fcc9cc1d3357cb4390732a0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1df0a202fcc9cc1d3357cb4390732a0d">&#9670;&#160;</a></span>text()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void gs::UIService::text </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structgs_1_1Color.html">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classgs_1_1IUIService.html#a357487c66a7fc3cdff28455099aa4476">gs::IUIService</a>.</p>
 
 </div>
 </div>

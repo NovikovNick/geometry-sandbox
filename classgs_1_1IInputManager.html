@@ -150,12 +150,14 @@ Inheritance diagram for gs::IInputManager:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a499f666f6232e67c62ce6a238c960bc1" id="r_a499f666f6232e67c62ce6a238c960bc1"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a499f666f6232e67c62ce6a238c960bc1">isKeyPressed</a> (<a class="el" href="namespacegs.html#ad9d1d8e9eebf5bba662109072118423d">InputKey</a> key) const =0</td></tr>
-<tr class="memitem:aa0ecfd6871ca29ea6962f484410feacd" id="r_aa0ecfd6871ca29ea6962f484410feacd"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aa0ecfd6871ca29ea6962f484410feacd">onPress</a> (<a class="el" href="namespacegs.html#ad9d1d8e9eebf5bba662109072118423d">InputKey</a> key, std::function&lt; void()&gt; &amp;&amp;callback)=0</td></tr>
-<tr class="memitem:a9a548f557f53501abc93c983682b7612" id="r_a9a548f557f53501abc93c983682b7612"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a9a548f557f53501abc93c983682b7612">onRelease</a> (<a class="el" href="namespacegs.html#ad9d1d8e9eebf5bba662109072118423d">InputKey</a> key, std::function&lt; void()&gt; &amp;&amp;callback)=0</td></tr>
+<tr class="memitem:aaeed5c498cfea4ea1ffb85e9c806db1b" id="r_aaeed5c498cfea4ea1ffb85e9c806db1b"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#aaeed5c498cfea4ea1ffb85e9c806db1b">isKeyPressed</a> (<a class="el" href="namespacegs.html#a959128e0c03bc68f5521156dc93fb63b">InputKey</a>) const =0</td></tr>
+<tr class="memitem:ad09bdd34b84c60d0b3c6335597c28396" id="r_ad09bdd34b84c60d0b3c6335597c28396"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ad09bdd34b84c60d0b3c6335597c28396">onPress</a> (<a class="el" href="namespacegs.html#a959128e0c03bc68f5521156dc93fb63b">InputKey</a>, std::function&lt; void()&gt; &amp;&amp;callback)=0</td></tr>
+<tr class="memitem:aa5b14124379b0a682d4d335229747dd9" id="r_aa5b14124379b0a682d4d335229747dd9"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aa5b14124379b0a682d4d335229747dd9">onRelease</a> (<a class="el" href="namespacegs.html#a959128e0c03bc68f5521156dc93fb63b">InputKey</a>, std::function&lt; void()&gt; &amp;&amp;callback)=0</td></tr>
 <tr class="memitem:a762272661f6310a651281d39041a8abc" id="r_a762272661f6310a651281d39041a8abc"><td class="memItemLeft">virtual <a class="el" href="namespacegs.html#a4cfe276f17208d89cd0dfee026fef598">Vec2</a>&#160;</td><td class="memItemRight"><a class="el" href="#a762272661f6310a651281d39041a8abc">getCursorScreenPosition</a> () const =0</td></tr>
 <tr class="memitem:a188e7cebdb6c2a3e56d993496e54ad6e" id="r_a188e7cebdb6c2a3e56d993496e54ad6e"><td class="memItemLeft">virtual <a class="el" href="namespacegs.html#a4cfe276f17208d89cd0dfee026fef598">Vec2</a>&#160;</td><td class="memItemRight"><a class="el" href="#a188e7cebdb6c2a3e56d993496e54ad6e">getCursorDelta</a> () const =0</td></tr>
 <tr class="memitem:aa9536b50b867a556de252922a5e207b7" id="r_aa9536b50b867a556de252922a5e207b7"><td class="memItemLeft">virtual <a class="el" href="namespacegs.html#aedb258115f068b47017a55b6e892b241">Timepoint</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa9536b50b867a556de252922a5e207b7">getLastUpdateAt</a> () const =0</td></tr>
+<tr class="memitem:a0ddaecfcc70101dc3f6d02b964e7ae55" id="r_a0ddaecfcc70101dc3f6d02b964e7ae55"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a0ddaecfcc70101dc3f6d02b964e7ae55">press</a> (<a class="el" href="namespacegs.html#a959128e0c03bc68f5521156dc93fb63b">InputKey</a>, <a class="el" href="namespacegs.html#ad69d4bf9f494589e244f8a42d4f2e7a5">InputSource</a>=<a class="el" href="namespacegs.html#ad69d4bf9f494589e244f8a42d4f2e7a5a4639f4ea7b3c3438d3c0f7bfa24fa116">InputSource::Keybord</a>)=0</td></tr>
+<tr class="memitem:ad97a06ac8f360fd7cacda67ebc23e4bf" id="r_ad97a06ac8f360fd7cacda67ebc23e4bf"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ad97a06ac8f360fd7cacda67ebc23e4bf">release</a> (<a class="el" href="namespacegs.html#a959128e0c03bc68f5521156dc93fb63b">InputKey</a>, <a class="el" href="namespacegs.html#ad69d4bf9f494589e244f8a42d4f2e7a5">InputSource</a>=<a class="el" href="namespacegs.html#ad69d4bf9f494589e244f8a42d4f2e7a5a4639f4ea7b3c3438d3c0f7bfa24fa116">InputSource::Keybord</a>)=0</td></tr>
 <tr class="memitem:a07f2e6a88ea3b86f48560c43a4fba862" id="r_a07f2e6a88ea3b86f48560c43a4fba862"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a07f2e6a88ea3b86f48560c43a4fba862">tick</a> ()=0</td></tr>
 <tr class="memitem:ae4bb81c3dcacd4e9daa3d0f0f28d0fa1" id="r_ae4bb81c3dcacd4e9daa3d0f0f28d0fa1"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#ae4bb81c3dcacd4e9daa3d0f0f28d0fa1">~IInputManager</a> ()=default</td></tr>
 </table>
@@ -269,8 +271,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a499f666f6232e67c62ce6a238c960bc1" name="a499f666f6232e67c62ce6a238c960bc1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a499f666f6232e67c62ce6a238c960bc1">&#9670;&#160;</a></span>isKeyPressed()</h2>
+<a id="aaeed5c498cfea4ea1ffb85e9c806db1b" name="aaeed5c498cfea4ea1ffb85e9c806db1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeed5c498cfea4ea1ffb85e9c806db1b">&#9670;&#160;</a></span>isKeyPressed()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -281,7 +283,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool gs::IInputManager::isKeyPressed </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacegs.html#ad9d1d8e9eebf5bba662109072118423d">InputKey</a></td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespacegs.html#a959128e0c03bc68f5521156dc93fb63b">InputKey</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -296,8 +298,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa0ecfd6871ca29ea6962f484410feacd" name="aa0ecfd6871ca29ea6962f484410feacd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0ecfd6871ca29ea6962f484410feacd">&#9670;&#160;</a></span>onPress()</h2>
+<a id="ad09bdd34b84c60d0b3c6335597c28396" name="ad09bdd34b84c60d0b3c6335597c28396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad09bdd34b84c60d0b3c6335597c28396">&#9670;&#160;</a></span>onPress()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -308,7 +310,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void gs::IInputManager::onPress </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacegs.html#ad9d1d8e9eebf5bba662109072118423d">InputKey</a></td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespacegs.html#a959128e0c03bc68f5521156dc93fb63b">InputKey</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -323,12 +325,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classgs_1_1InputManager.html#aa9a08555964004c98d1a216ea0367d74">gs::InputManager</a>.</p>
+<p>Implemented in <a class="el" href="classgs_1_1InputManager.html#a79580afc81b4633d7547fface4aee6e2">gs::InputManager</a>.</p>
 
 </div>
 </div>
-<a id="a9a548f557f53501abc93c983682b7612" name="a9a548f557f53501abc93c983682b7612"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a548f557f53501abc93c983682b7612">&#9670;&#160;</a></span>onRelease()</h2>
+<a id="aa5b14124379b0a682d4d335229747dd9" name="aa5b14124379b0a682d4d335229747dd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5b14124379b0a682d4d335229747dd9">&#9670;&#160;</a></span>onRelease()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -339,7 +341,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void gs::IInputManager::onRelease </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacegs.html#ad9d1d8e9eebf5bba662109072118423d">InputKey</a></td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespacegs.html#a959128e0c03bc68f5521156dc93fb63b">InputKey</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -354,7 +356,69 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classgs_1_1InputManager.html#a097b343018473d0229bc321be68d4eec">gs::InputManager</a>.</p>
+<p>Implemented in <a class="el" href="classgs_1_1InputManager.html#a765022b80bc40ecdca85970e33d75351">gs::InputManager</a>.</p>
+
+</div>
+</div>
+<a id="a0ddaecfcc70101dc3f6d02b964e7ae55" name="a0ddaecfcc70101dc3f6d02b964e7ae55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddaecfcc70101dc3f6d02b964e7ae55">&#9670;&#160;</a></span>press()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void gs::IInputManager::press </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacegs.html#a959128e0c03bc68f5521156dc93fb63b">InputKey</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacegs.html#ad69d4bf9f494589e244f8a42d4f2e7a5">InputSource</a></td>          <td class="paramname"><span class="paramname"><em></em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespacegs.html#ad69d4bf9f494589e244f8a42d4f2e7a5a4639f4ea7b3c3438d3c0f7bfa24fa116">InputSource::Keybord</a></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classgs_1_1InputManager.html#abc334427dd99acf23fa2ab42be108e92">gs::InputManager</a>.</p>
+
+</div>
+</div>
+<a id="ad97a06ac8f360fd7cacda67ebc23e4bf" name="ad97a06ac8f360fd7cacda67ebc23e4bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad97a06ac8f360fd7cacda67ebc23e4bf">&#9670;&#160;</a></span>release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void gs::IInputManager::release </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacegs.html#a959128e0c03bc68f5521156dc93fb63b">InputKey</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacegs.html#ad69d4bf9f494589e244f8a42d4f2e7a5">InputSource</a></td>          <td class="paramname"><span class="paramname"><em></em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespacegs.html#ad69d4bf9f494589e244f8a42d4f2e7a5a4639f4ea7b3c3438d3c0f7bfa24fa116">InputSource::Keybord</a></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classgs_1_1InputManager.html#ac506de18de84b4321832f7e520f022ea">gs::InputManager</a>.</p>
 
 </div>
 </div>

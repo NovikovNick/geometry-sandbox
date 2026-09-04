@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['translate_5fgizmo_2eh_0',['translate_gizmo.h',['../translate__gizmo_8h.html',1,'']]],
-  ['types_2eh_1',['types.h',['../animation_2types_8h.html',1,'(Global Namespace)'],['../core_2types_8h.html',1,'(Global Namespace)']]]
+  ['ortho_5fprojection_5fview_5fmanager_2eh_0',['ortho_projection_view_manager.h',['../ortho__projection__view__manager_8h.html',1,'']]]
 ];

@@ -144,13 +144,14 @@ Inheritance diagram for gs::SceneService:</div>
  <div class="center">
   <img src="classgs_1_1SceneService.png" usemap="#gs_3A_3ASceneService_map" alt=""/>
   <map id="gs_3A_3ASceneService_map" name="gs_3A_3ASceneService_map">
-<area href="classgs_1_1ISceneService.html" title="Creating and updating objects on the scene." alt="gs::ISceneService" shape="rect" coords="0,0,114,24"/>
+<area href="classgs_1_1BaseAppComponent.html" title="Contains logger and settings." alt="gs::BaseAppComponent" shape="rect" coords="0,0,145,24"/>
+<area href="classgs_1_1ISceneService.html" title="Creating and updating objects on the scene." alt="gs::ISceneService" shape="rect" coords="155,0,300,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2fb52881ca558913dd4db904c5144c53" id="r_a2fb52881ca558913dd4db904c5144c53"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2fb52881ca558913dd4db904c5144c53">SceneService</a> (std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; settings, std::shared_ptr&lt; <a class="el" href="namespacegs_1_1ecs.html#a48041250f226f69c0aa9075efcbcb8b9">ecs::Registry</a> &gt; registry)</td></tr>
+<tr class="memitem:abac60bfac2191b3ca8d266952cae3aea" id="r_abac60bfac2191b3ca8d266952cae3aea"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#abac60bfac2191b3ca8d266952cae3aea">SceneService</a> (const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;settings, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;log, const std::shared_ptr&lt; <a class="el" href="namespacegs_1_1ecs.html#a48041250f226f69c0aa9075efcbcb8b9">ecs::Registry</a> &gt; &amp;registry)</td></tr>
 <tr class="memitem:a78398e0feeaf91c268177437c93b2041" id="r_a78398e0feeaf91c268177437c93b2041"><td class="memItemLeft">virtual <a class="el" href="namespacegs_1_1ecs.html#a4145124e7eea2c05f14660b198671de2">ecs::Entity</a>&#160;</td><td class="memItemRight"><a class="el" href="#a78398e0feeaf91c268177437c93b2041">addModel</a> (const <a class="el" href="structgs_1_1scene_1_1Model.html">scene::Model</a> &amp;) override</td></tr>
 <tr class="memitem:aea14993f6a645ade27bc2880d006ca34" id="r_aea14993f6a645ade27bc2880d006ca34"><td class="memItemLeft">virtual <a class="el" href="namespacegs_1_1ecs.html#a4145124e7eea2c05f14660b198671de2">ecs::Entity</a>&#160;</td><td class="memItemRight"><a class="el" href="#aea14993f6a645ade27bc2880d006ca34">addPlane</a> (const <a class="el" href="structgs_1_1scene_1_1Plane.html">scene::Plane</a> &amp;) override</td></tr>
 <tr class="memitem:a0fe9534a37c8e112cb5823fa481f251a" id="r_a0fe9534a37c8e112cb5823fa481f251a"><td class="memItemLeft">virtual <a class="el" href="namespacegs_1_1ecs.html#a4145124e7eea2c05f14660b198671de2">ecs::Entity</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0fe9534a37c8e112cb5823fa481f251a">addVector</a> (const <a class="el" href="structgs_1_1scene_1_1Vector.html">scene::Vector</a> &amp;) override</td></tr>
@@ -160,19 +161,29 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aaf5bc4599c5952ba397b54191c4278eb" id="r_aaf5bc4599c5952ba397b54191c4278eb"><td class="memItemLeft">virtual <a class="el" href="namespacegs_1_1ecs.html#a4145124e7eea2c05f14660b198671de2">ecs::Entity</a>&#160;</td><td class="memItemRight"><a class="el" href="#aaf5bc4599c5952ba397b54191c4278eb">addAABB</a> (const <a class="el" href="structgs_1_1scene_1_1AABB.html">scene::AABB</a> &amp;) override</td></tr>
 <tr class="memitem:a3c636d5b59ed00ff333481c335c89bc6" id="r_a3c636d5b59ed00ff333481c335c89bc6"><td class="memItemLeft">virtual <a class="el" href="structgs_1_1AABB.html">AABB</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3c636d5b59ed00ff333481c335c89bc6">getSceneBounds</a> () const override</td></tr>
 <tr class="memitem:a06302d5fbbfb66c2be49bf9e2b893816" id="r_a06302d5fbbfb66c2be49bf9e2b893816"><td class="memItemLeft">virtual <a class="el" href="namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e">Vec3</a>&#160;</td><td class="memItemRight"><a class="el" href="#a06302d5fbbfb66c2be49bf9e2b893816">getSceneCenter</a> () const override</td></tr>
+<tr class="memitem:a07920f27bd21fdd9c3da29ac03ae350a" id="r_a07920f27bd21fdd9c3da29ac03ae350a"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a07920f27bd21fdd9c3da29ac03ae350a">setColor</a> (<a class="el" href="namespacegs_1_1ecs.html#a4145124e7eea2c05f14660b198671de2">ecs::Entity</a>, const <a class="el" href="structgs_1_1Color.html">Color</a> &amp;) override</td></tr>
 <tr class="memitem:a00b0e4fc8959f09576389a51711dfa69" id="r_a00b0e4fc8959f09576389a51711dfa69"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a00b0e4fc8959f09576389a51711dfa69">setPosition</a> (<a class="el" href="namespacegs_1_1ecs.html#a4145124e7eea2c05f14660b198671de2">ecs::Entity</a>, const <a class="el" href="namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e">Vec3</a> &amp;) override</td></tr>
 <tr class="memitem:a43de2093900ed8595be56bc4b1fd1ae6" id="r_a43de2093900ed8595be56bc4b1fd1ae6"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a43de2093900ed8595be56bc4b1fd1ae6">setEndPosition</a> (<a class="el" href="namespacegs_1_1ecs.html#a4145124e7eea2c05f14660b198671de2">ecs::Entity</a>, const <a class="el" href="namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e">Vec3</a> &amp;) override</td></tr>
 <tr class="memitem:afdde8f947adac56413db40957ab18182" id="r_afdde8f947adac56413db40957ab18182"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#afdde8f947adac56413db40957ab18182">setNormal</a> (<a class="el" href="namespacegs_1_1ecs.html#a4145124e7eea2c05f14660b198671de2">ecs::Entity</a>, const <a class="el" href="namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e">Vec3</a> &amp;) override</td></tr>
 <tr class="memitem:a22efe9a490a170a9c54331a05adcf6ea" id="r_a22efe9a490a170a9c54331a05adcf6ea"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a22efe9a490a170a9c54331a05adcf6ea">setDistance</a> (<a class="el" href="namespacegs_1_1ecs.html#a4145124e7eea2c05f14660b198671de2">ecs::Entity</a>, float) override</td></tr>
 <tr class="memitem:af5cf9a4622202634fd9bef1cb10a33f2" id="r_af5cf9a4622202634fd9bef1cb10a33f2"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af5cf9a4622202634fd9bef1cb10a33f2">setAABBSize</a> (<a class="el" href="namespacegs_1_1ecs.html#a4145124e7eea2c05f14660b198671de2">ecs::Entity</a>, float) override</td></tr>
+<tr class="inherit_header pub_methods_classgs_1_1BaseAppComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classgs_1_1BaseAppComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classgs_1_1BaseAppComponent.html">gs::BaseAppComponent</a></td></tr>
+<tr class="memitem:a509ebe518e3611bdcf05fe811d0e3330 inherit pub_methods_classgs_1_1BaseAppComponent" id="r_a509ebe518e3611bdcf05fe811d0e3330"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a509ebe518e3611bdcf05fe811d0e3330">BaseAppComponent</a> (const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;settings, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;log)</td></tr>
+<tr class="memitem:a1c9a8be3b768eb7a861948e75659018e inherit pub_methods_classgs_1_1BaseAppComponent" id="r_a1c9a8be3b768eb7a861948e75659018e"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a1c9a8be3b768eb7a861948e75659018e">~BaseAppComponent</a> ()=default</td></tr>
 <tr class="inherit_header pub_methods_classgs_1_1ISceneService"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classgs_1_1ISceneService')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classgs_1_1ISceneService.html">gs::ISceneService</a></td></tr>
 <tr class="memitem:a4934f823a6a38e57c85fc3f4d257d2dc inherit pub_methods_classgs_1_1ISceneService" id="r_a4934f823a6a38e57c85fc3f4d257d2dc"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1ISceneService.html#a4934f823a6a38e57c85fc3f4d257d2dc">~ISceneService</a> ()=default</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_classgs_1_1BaseAppComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classgs_1_1BaseAppComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classgs_1_1BaseAppComponent.html">gs::BaseAppComponent</a></td></tr>
+<tr class="memitem:a524fe5fe65593228bded25265e46a64a inherit pro_attribs_classgs_1_1BaseAppComponent" id="r_a524fe5fe65593228bded25265e46a64a"><td class="memItemLeft">std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a524fe5fe65593228bded25265e46a64a">settings_</a></td></tr>
+<tr class="memitem:ab6809c365687543a0c8eea8e04e461f0 inherit pro_attribs_classgs_1_1BaseAppComponent" id="r_ab6809c365687543a0c8eea8e04e461f0"><td class="memItemLeft">std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#ab6809c365687543a0c8eea8e04e461f0">log_</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>basic <a class="el" href="classgs_1_1ISceneService.html" title="Creating and updating objects on the scene.">ISceneService</a> implementation </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a2fb52881ca558913dd4db904c5144c53" name="a2fb52881ca558913dd4db904c5144c53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2fb52881ca558913dd4db904c5144c53">&#9670;&#160;</a></span>SceneService()</h2>
+<a id="abac60bfac2191b3ca8d266952cae3aea" name="abac60bfac2191b3ca8d266952cae3aea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abac60bfac2191b3ca8d266952cae3aea">&#9670;&#160;</a></span>SceneService()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -183,12 +194,17 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">gs::SceneService::SceneService </td>
           <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>settings</em></span>, </td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>settings</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="namespacegs_1_1ecs.html#a48041250f226f69c0aa9075efcbcb8b9">ecs::Registry</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>registry</em></span>&#160;)</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>log</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="namespacegs_1_1ecs.html#a48041250f226f69c0aa9075efcbcb8b9">ecs::Registry</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>registry</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -472,6 +488,37 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classgs_1_1ISceneService.html#ab360daefa54062796e75c7220ba3ecbb">gs::ISceneService</a>.</p>
+
+</div>
+</div>
+<a id="a07920f27bd21fdd9c3da29ac03ae350a" name="a07920f27bd21fdd9c3da29ac03ae350a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07920f27bd21fdd9c3da29ac03ae350a">&#9670;&#160;</a></span>setColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void gs::SceneService::setColor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacegs_1_1ecs.html#a4145124e7eea2c05f14660b198671de2">ecs::Entity</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structgs_1_1Color.html">Color</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classgs_1_1ISceneService.html#a8553946c7157a84ad48f47438ae995e8">gs::ISceneService</a>.</p>
 
 </div>
 </div>

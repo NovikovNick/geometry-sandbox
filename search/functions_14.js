@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['white_0',['white',['../structgs_1_1Color.html#a6118f9c9099d2ce6c617261f57cb164d',1,'gs::Color']]],
-  ['windowmanager_1',['WindowManager',['../classgs_1_1WindowManager.html#ac7d1194c139fcc92135395310461dc5f',1,'gs::WindowManager']]],
-  ['windowmanager_2',['windowManager',['../namespacegs_1_1di.html#a732cf43c70883752c1eb66ac69e0d451',1,'gs::di']]]
+  ['viewportmanager_0',['ViewportManager',['../classgs_1_1render_1_1ViewportManager.html#ab7fcb04ac92eb86e39a472c32209bb04',1,'gs::render::ViewportManager']]],
+  ['viewportmanager_1',['viewportManager',['../namespacegs_1_1di.html#a9334d630f35702ad400518073f2bfc97',1,'gs::di']]]
 ];

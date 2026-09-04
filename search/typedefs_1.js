@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['entity_0',['Entity',['../namespacegs_1_1ecs.html#a4145124e7eea2c05f14660b198671de2',1,'gs::ecs']]]
+  ['clock_0',['Clock',['../namespacegs.html#a0e6bd6f22dfbd607697aa919f6dc9325',1,'gs']]]
 ];

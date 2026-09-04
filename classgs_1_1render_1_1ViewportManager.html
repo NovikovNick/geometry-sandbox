@@ -144,26 +144,37 @@ Inheritance diagram for gs::render::ViewportManager:</div>
  <div class="center">
   <img src="classgs_1_1render_1_1ViewportManager.png" usemap="#gs_3A_3Arender_3A_3AViewportManager_map" alt=""/>
   <map id="gs_3A_3Arender_3A_3AViewportManager_map" name="gs_3A_3Arender_3A_3AViewportManager_map">
-<area href="classgs_1_1render_1_1IViewportManager.html" title="Manages viewports for all scene cameras." alt="gs::render::IViewportManager" shape="rect" coords="0,0,179,24"/>
+<area href="classgs_1_1BaseAppComponent.html" title="Contains logger and settings." alt="gs::BaseAppComponent" shape="rect" coords="0,0,179,24"/>
+<area href="classgs_1_1render_1_1IViewportManager.html" title="Manages viewports for all scene cameras." alt="gs::render::IViewportManager" shape="rect" coords="189,0,368,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac9026a287ab075556a8067d4c76df431" id="r_ac9026a287ab075556a8067d4c76df431"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac9026a287ab075556a8067d4c76df431">ViewportManager</a> (const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;settings, const std::shared_ptr&lt; <a class="el" href="classgs_1_1IWindowManager.html">IWindowManager</a> &gt; &amp;windowManager, const std::shared_ptr&lt; <a class="el" href="classgs_1_1IUIManager.html">IUIManager</a> &gt; &amp;uiManager)</td></tr>
+<tr class="memitem:ab7fcb04ac92eb86e39a472c32209bb04" id="r_ab7fcb04ac92eb86e39a472c32209bb04"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab7fcb04ac92eb86e39a472c32209bb04">ViewportManager</a> (const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;settings, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;log, const std::shared_ptr&lt; <a class="el" href="classgs_1_1IWindowManager.html">IWindowManager</a> &gt; &amp;windowManager, const std::shared_ptr&lt; <a class="el" href="classgs_1_1IUIStateManager.html">IUIStateManager</a> &gt; &amp;uiStateManager)</td></tr>
 <tr class="memitem:ad54bd1deb46f313c8f5bda5c50eb690e" id="r_ad54bd1deb46f313c8f5bda5c50eb690e"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ad54bd1deb46f313c8f5bda5c50eb690e">init</a> () override</td></tr>
 <tr class="memitem:af415cbf57809dc80d1390f9af0143364" id="r_af415cbf57809dc80d1390f9af0143364"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#af415cbf57809dc80d1390f9af0143364">setupViewport</a> (std::size_t viewportIndex) override</td></tr>
+<tr class="memdesc:af415cbf57809dc80d1390f9af0143364"><td class="mdescLeft">&#160;</td><td class="mdescRight">setup viewport as render target  <br /></td></tr>
 <tr class="memitem:a528de811e980efb3784b6e732874fbca" id="r_a528de811e980efb3784b6e732874fbca"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a528de811e980efb3784b6e732874fbca">cleanupViewport</a> () override</td></tr>
 <tr class="memitem:a91dba395af50c18e0f07adb491a47b03" id="r_a91dba395af50c18e0f07adb491a47b03"><td class="memItemLeft">virtual Model&#160;</td><td class="memItemRight"><a class="el" href="#a91dba395af50c18e0f07adb491a47b03">getViewport3D</a> (std::size_t viewportIndex) const override</td></tr>
 <tr class="memitem:a67d6d6bce133da6744a190dffe72ef86" id="r_a67d6d6bce133da6744a190dffe72ef86"><td class="memItemLeft">virtual Texture&#160;</td><td class="memItemRight"><a class="el" href="#a67d6d6bce133da6744a190dffe72ef86">getViewport2D</a> (std::size_t viewportIndex) const override</td></tr>
+<tr class="inherit_header pub_methods_classgs_1_1BaseAppComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classgs_1_1BaseAppComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classgs_1_1BaseAppComponent.html">gs::BaseAppComponent</a></td></tr>
+<tr class="memitem:a509ebe518e3611bdcf05fe811d0e3330 inherit pub_methods_classgs_1_1BaseAppComponent" id="r_a509ebe518e3611bdcf05fe811d0e3330"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a509ebe518e3611bdcf05fe811d0e3330">BaseAppComponent</a> (const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;settings, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;log)</td></tr>
+<tr class="memitem:a1c9a8be3b768eb7a861948e75659018e inherit pub_methods_classgs_1_1BaseAppComponent" id="r_a1c9a8be3b768eb7a861948e75659018e"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a1c9a8be3b768eb7a861948e75659018e">~BaseAppComponent</a> ()=default</td></tr>
 <tr class="inherit_header pub_methods_classgs_1_1render_1_1IViewportManager"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classgs_1_1render_1_1IViewportManager')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classgs_1_1render_1_1IViewportManager.html">gs::render::IViewportManager</a></td></tr>
 <tr class="memitem:a6991eb8137568e8af04c5b1ff7326f73 inherit pub_methods_classgs_1_1render_1_1IViewportManager" id="r_a6991eb8137568e8af04c5b1ff7326f73"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1render_1_1IViewportManager.html#a6991eb8137568e8af04c5b1ff7326f73">~IViewportManager</a> ()=default</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_classgs_1_1BaseAppComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classgs_1_1BaseAppComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classgs_1_1BaseAppComponent.html">gs::BaseAppComponent</a></td></tr>
+<tr class="memitem:a524fe5fe65593228bded25265e46a64a inherit pro_attribs_classgs_1_1BaseAppComponent" id="r_a524fe5fe65593228bded25265e46a64a"><td class="memItemLeft">std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a524fe5fe65593228bded25265e46a64a">settings_</a></td></tr>
+<tr class="memitem:ab6809c365687543a0c8eea8e04e461f0 inherit pro_attribs_classgs_1_1BaseAppComponent" id="r_ab6809c365687543a0c8eea8e04e461f0"><td class="memItemLeft">std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#ab6809c365687543a0c8eea8e04e461f0">log_</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>basic <a class="el" href="classgs_1_1render_1_1IViewportManager.html" title="Manages viewports for all scene cameras.">IViewportManager</a> implementation </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ac9026a287ab075556a8067d4c76df431" name="ac9026a287ab075556a8067d4c76df431"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9026a287ab075556a8067d4c76df431">&#9670;&#160;</a></span>ViewportManager()</h2>
+<a id="ab7fcb04ac92eb86e39a472c32209bb04" name="ab7fcb04ac92eb86e39a472c32209bb04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7fcb04ac92eb86e39a472c32209bb04">&#9670;&#160;</a></span>ViewportManager()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -179,12 +190,17 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>log</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1IWindowManager.html">IWindowManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>windowManager</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1IUIManager.html">IUIManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>uiManager</em></span>&#160;)</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1IUIStateManager.html">IUIStateManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>uiStateManager</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -327,6 +343,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>setup viewport as render target </p>
 
 <p>Implements <a class="el" href="classgs_1_1render_1_1IViewportManager.html#a761176968a6fb392b924cf7d1d2ad855">gs::render::IViewportManager</a>.</p>
 

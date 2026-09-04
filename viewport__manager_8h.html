@@ -136,7 +136,8 @@ $(function(){initNavTree('viewport__manager_8h.html','',''); });
 
 <p>Manages viewports for all scene cameras.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="core_2types_8h_source.html">core/types.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="base__app__component_8h_source.html">core/base_app_component.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="core_2types_8h_source.html">core/types.h</a>&quot;</code><br />
 <code>#include &quot;boost/di.hpp&quot;</code><br />
 <code>#include &quot;raylib.h&quot;</code><br />
 <code>#include &lt;memory&gt;</code><br />
@@ -166,6 +167,9 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages viewports for all scene cameras. </p>
+<p>A viewport will be created for each camera in the scene. Only width and height will be taken from the camera, and the viewport will be created with FoV = 90 and zNear = 1 This is done so that scale in world will be the same as zoom and can be calculated as:</p>
+<p>\( Scale = Zoom = \frac{zNear}{\tan(\frac{FoV}{2})} \)</p>
+<p>The viewport for the active camera (the one you are looking from) will be used for rendering vieport widgets (like translate gizmo)</p>
 <dl class="section author"><dt>Author</dt><dd>MetalHeart </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->

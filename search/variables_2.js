@@ -15,6 +15,12 @@ var searchData=
   ['constrainedonsingleaxis_12',['constrainedOnSingleAxis',['../structgs_1_1TranslateGizmo.html#a2db22e77cdd17989a7d42558b25ce30b',1,'gs::TranslateGizmo']]],
   ['constraintaxis_13',['constraintAxis',['../structgs_1_1TranslateGizmo.html#a879e93029f5f88f7ce0323da98f08bb3',1,'gs::TranslateGizmo']]],
   ['constraintplane_14',['constraintPlane',['../structgs_1_1TranslateGizmo.html#a2133ca94b84070c68c6a63e4f1e9746f',1,'gs::TranslateGizmo']]],
-  ['currenttime_15',['currentTime',['../structgs_1_1ui_1_1AnimationPlayer.html#a0e8c32d18c818da335206b5687aa1e5a',1,'gs::ui::AnimationPlayer']]],
-  ['cursortype_16',['cursorType',['../structgs_1_1ui_1_1State.html#a7a07a8ae2afc3de19f3cde00b8917157',1,'gs::ui::State']]]
+  ['controlbuttonborderthickness_15',['controlButtonBorderThickness',['../structgs_1_1Settings.html#a5f88c1d8bab2bec4f5bb638a442ac3aa',1,'gs::Settings']]],
+  ['controlbuttonfontsize_16',['controlButtonFontSize',['../structgs_1_1Settings.html#aa50d30abff6ff533becaa5f7a7ec6d97',1,'gs::Settings']]],
+  ['controlbuttonheight_17',['controlButtonHeight',['../structgs_1_1Settings.html#a6fede6101250b32a9b4d9c581cb294b6',1,'gs::Settings']]],
+  ['controlbuttonwidth_18',['controlButtonWidth',['../structgs_1_1Settings.html#a8bf1ba8d7c45d8deb70cd3bf7fb98bf3',1,'gs::Settings']]],
+  ['controlsheightoffset_19',['controlsHeightOffset',['../structgs_1_1Settings.html#a01bee8936f020e6e5610b322b9d1d283',1,'gs::Settings']]],
+  ['controlswidthoffset_20',['controlsWidthOffset',['../structgs_1_1Settings.html#a4bb6dee281719d17f6c0361fac0290f5',1,'gs::Settings']]],
+  ['currenttime_21',['currentTime',['../structgs_1_1ui_1_1AnimationPlayer.html#a0e8c32d18c818da335206b5687aa1e5a',1,'gs::ui::AnimationPlayer']]],
+  ['cursortype_22',['cursorType',['../structgs_1_1ui_1_1State.html#a7a07a8ae2afc3de19f3cde00b8917157',1,'gs::ui::State']]]
 ];

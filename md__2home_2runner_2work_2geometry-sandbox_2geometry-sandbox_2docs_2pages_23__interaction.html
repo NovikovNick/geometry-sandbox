@@ -104,7 +104,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('md__2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2docs_2pages_2interaction.html','',''); });
+$(function(){initNavTree('md__2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2docs_2pages_23__interaction.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -133,11 +133,11 @@ $(function(){initNavTree('md__2home_2runner_2work_2geometry-sandbox_2geometry-sa
   <div class="headertitle"><div class="title">ECS-based interaction system </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md23"></a></p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md30"></a></p>
 <p>The interaction system handles mouse-based selection, hover detection, and translation gizmo manipulation for entities in the 3D scene. It bridges user input with ECS components and UI state, providing visual feedback and transformation capabilities.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md24"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md31"></a>
 Core Components</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md25"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md32"></a>
 Interaction Service (<span class="tt">service.h</span>)</h2>
 <p>Central coordinator that manages selection and hover state, processes mouse input, and performs raycasting against scene objects.</p>
 <p><b>Responsibilities:</b></p><ul>
@@ -146,7 +146,7 @@ Interaction Service (<span class="tt">service.h</span>)</h2>
 <li>Hover state management with cursor feedback</li>
 <li>Translation gizmo activation and constraint</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md26"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md33"></a>
 ECS Components (<span class="tt">ecs_components.h</span>)</h2>
 <p>Marker and callback components for interaction state:</p>
 <table class="markdownTable">
@@ -165,7 +165,7 @@ ECS Components (<span class="tt">ecs_components.h</span>)</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><span class="tt">OnTranslateCallback</span>  </td><td class="markdownTableBodyNone">Invoked with new position on translation update  </td></tr>
 </table>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md27"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md34"></a>
 Translate Gizmo (<span class="tt">translate_gizmo.h</span>)</h2>
 <p>3D transformation widget with axis and plane manipulation:</p>
 <p><b>Services:</b></p><ul>
@@ -177,24 +177,24 @@ Translate Gizmo (<span class="tt">translate_gizmo.h</span>)</h2>
 <li><span class="tt">constrained</span> — whether gizmo is actively dragging</li>
 <li><span class="tt">constrainedOnSingleAxis</span> — single-axis vs plane translation mode</li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md28"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md35"></a>
 Interaction Flow</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md29"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md36"></a>
 Selection</h2>
 <div class="fragment"><div class="line">Mouse Press → Check gizmo hover → If not, raycast scene</div>
 <div class="line">    → Update Selected component</div>
 <div class="line">    → Show/hide gizmo at entity position</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md30"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md37"></a>
 Hover</h2>
 <div class="fragment"><div class="line">Mouse Move → Raycast all colliders → Find nearest hit</div>
 <div class="line">    → Update Hovered component</div>
 <div class="line">    → Update cursor type (Arrow ↔ PointingHand)</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md31"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md38"></a>
 Translation</h2>
 <div class="fragment"><div class="line">Mouse Press on Gizmo → constrain() → Set constraint plane/axis</div>
 <div class="line">Mouse Drag → translate() → Update Translated component</div>
 <div class="line">Mouse Release → Clear selection and reset gizmo</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md32"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md39"></a>
 Raycasting</h1>
 <p>The service performs ray-sphere and ray-AABB intersection tests:</p>
 <div class="fragment"><div class="line"><span class="comment">// Sphere collider check</span></div>
@@ -208,27 +208,27 @@ Raycasting</h1>
 <div class="ttc" id="anamespacegs_1_1animation_1_1dsl_1_1accessor_html_a5c33d078bdb9eb97e32e13404079aba9"><div class="ttname"><a href="namespacegs_1_1animation_1_1dsl_1_1accessor.html#a5c33d078bdb9eb97e32e13404079aba9">gs::animation::dsl::accessor::ui</a></div><div class="ttdeci">constexpr auto ui()</div><div class="ttdef"><b>Definition</b> dsl.h:204</div></div>
 <div class="ttc" id="anamespacegs_html_a8a01b8555e0d30201a5603fe93fc80bc"><div class="ttname"><a href="namespacegs.html#a8a01b8555e0d30201a5603fe93fc80bc">gs::intersect</a></div><div class="ttdeci">Intersection intersect(const Ray &amp;ray, const Sphere &amp;sphere)</div><div class="ttdef"><b>Definition</b> math.h:104</div></div>
 </div><!-- fragment --><p>Nearest hit determines the hovered entity.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md33"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md40"></a>
 Gizmo Math</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md34"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md41"></a>
 Constraint Setup</h2>
 <ul>
 <li><b>Single axis (X/Y/Z):</b> Creates a plane perpendicular to the axis, oriented toward the camera ray</li>
 <li><b>Plane mode (XY/YZ/ZX):</b> Locks movement to the selected plane</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md35"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md42"></a>
 Drag Offset</h2>
 <div class="fragment"><div class="line"><span class="comment">// Calculate initial offset between click point and gizmo position</span></div>
 <div class="line"><span class="keyword">const</span> <span class="keywordtype">float</span> projection = (intersection.point - gizmo.position).dot(gizmo.constraintAxis);</div>
 <div class="line">gizmo.dragOffset = res - gizmo.position;</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md36"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md43"></a>
 Translation</h2>
 <div class="fragment"><div class="line"><span class="comment">// Apply offset during drag for smooth movement</span></div>
 <div class="line"><span class="keyword">const</span> Vec3 res = gizmo.constrainedOnSingleAxis </div>
 <div class="line">    ? gizmo.position + gizmo.constraintAxis * projection </div>
 <div class="line">    : intersection.point;</div>
 <div class="line">gizmo.position = res - gizmo.dragOffset;</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md37"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md44"></a>
 Gizmo Rendering</h1>
 <p>Visual elements with distinct colors:</p><ul>
 <li><b>Arrows</b> — X (red), Y (green), Z (blue) axes</li>
@@ -236,7 +236,7 @@ Gizmo Rendering</h1>
 <li><b>Highlight</b> — hovered axis/plane changes to selected color</li>
 </ul>
 <p>Scale factor adjusts gizmo size based on camera distance for consistent screen-space appearance.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md38"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md45"></a>
 Usage Example</h1>
 <div class="fragment"><div class="line"><span class="comment">// Entity with interaction components</span></div>
 <div class="line">registry.emplace&lt;ecs::component::Position&gt;(entity, Vec3{0, 0, 0});</div>
@@ -251,7 +251,7 @@ Usage Example</h1>
 <div class="line">    <span class="comment">// Handle position update during gizmo drag</span></div>
 <div class="line">});</div>
 <div class="ttc" id="anamespacegs_html_a0766b5dedc2e7f6c167225296cac0a9e"><div class="ttname"><a href="namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e">gs::Vec3</a></div><div class="ttdeci">Eigen::Vector3f Vec3</div><div class="ttdef"><b>Definition</b> math.h:17</div></div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md39"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md46"></a>
 Design Notes</h1>
 <ul>
 <li><b>Event-driven callbacks</b> — uses EnTT's <span class="tt">on_construct</span>/<span class="tt">on_update</span>/<span class="tt">on_destroy</span> signals for component lifecycle notifications</li>

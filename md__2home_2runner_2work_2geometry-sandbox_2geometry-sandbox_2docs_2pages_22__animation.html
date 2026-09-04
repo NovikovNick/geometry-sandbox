@@ -104,7 +104,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('md__2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2docs_2pages_2animation.html','',''); });
+$(function(){initNavTree('md__2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2docs_2pages_22__animation.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -133,11 +133,11 @@ $(function(){initNavTree('md__2home_2runner_2work_2geometry-sandbox_2geometry-sa
   <div class="headertitle"><div class="title">DSL-based animation system </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md8"></a></p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md15"></a></p>
 <p>The animation system provides a compile-time validated DSL for defining property animations on scene objects, UI elements, and cameras. It supports keyframe-based animation with easing functions, custom interpolators, and runtime playback control.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md16"></a>
 Core Components</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md17"></a>
 DSL (<span class="tt">dsl.h</span>)</h2>
 <p>The domain-specific language enables expressive animation definitions with compile-time validation:</p>
 <div class="fragment"><div class="line"><span class="keyword">using namespace </span>animation::dsl;</div>
@@ -153,7 +153,7 @@ DSL (<span class="tt">dsl.h</span>)</h2>
 <li><span class="tt">keyframe(ms)</span> — creates a keyframe at a specific time</li>
 <li><span class="tt">key(value, easing)</span> / <span class="tt">key(value, interpolator)</span> — wraps values with easing/interpolation</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md18"></a>
 Reflection (<span class="tt">reflection.h</span>)</h2>
 <p>Static introspection system that maps scene types to their underlying ECS components and member offsets:</p>
 <div class="fragment"><div class="line">scene::Point</div>
@@ -161,7 +161,7 @@ Reflection (<span class="tt">reflection.h</span>)</h2>
 <div class="line">├── ecs::component::MainColor → Color (r, g, b, a)</div>
 <div class="line">└── ecs::component::Radius → float</div>
 </div><!-- fragment --><p>The reflection registry stores a flat property tree with byte offsets, enabling direct memory writes during animation sampling without virtual dispatch.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md19"></a>
 Float Span Adapter (<span class="tt">float_span_adaptor.h</span>)</h2>
 <p>Converts between typed values and flat float arrays for the animation pipeline. Specialized for:</p><ul>
 <li><span class="tt">float</span> (1 channel)</li>
@@ -170,7 +170,7 @@ Float Span Adapter (<span class="tt">float_span_adaptor.h</span>)</h2>
 <li><span class="tt">scene::Point</span> (8 channels)</li>
 <li><span class="tt">Camera</span> (10 channels)</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md13"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md20"></a>
 Manager (<span class="tt">manager.h</span>)</h2>
 <p>Core lifecycle manager:</p>
 <table class="markdownTable">
@@ -185,35 +185,35 @@ Manager (<span class="tt">manager.h</span>)</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><b>Animate</b>  </td><td class="markdownTableBodyNone">Samples assets and applies values to ECS/UI state  </td></tr>
 </table>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md14"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md21"></a>
 Asset (<span class="tt">types.h</span>)</h2>
 <p>Immutable, pre-baked animation data:</p><ul>
 <li><b>Channels</b> — individual float properties with keyframe time arrays</li>
 <li><b>Keys</b> — packed values in column-major layout for cache efficiency</li>
 <li><b>Interpolations</b> — easing functions or custom multi-channel interpolators</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md15"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md22"></a>
 Instance (<span class="tt">types.h</span>)</h2>
 <p>Runtime playback state with bit-packed flags:</p><ul>
 <li>Looping, reversed, paused, remove-on-complete, pause-on-marker, finished</li>
 <li>Marker set for step control</li>
 <li>Progress tracking (0.0–1.0)</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md16"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md23"></a>
 Handle (<span class="tt">handle.h</span>)</h2>
 <p>Lightweight controller for active animations: </p><div class="fragment"><div class="line">Handle h = manager.buildAndPlay(keyframes);</div>
 <div class="line">h.pause();</div>
 <div class="line">h.setProgress(0.5f);</div>
 <div class="line">h.playForward();</div>
 <div class="line">h.stepForwardToNextMarker();</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md17"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md24"></a>
 Sampler (<span class="tt">sampler.h</span>)</h2>
 <p>Fixed-buffer sampler (no heap allocation during playback):</p><ul>
 <li>Finds bounding keyframes via binary search</li>
 <li>Supports scalar interpolation with easing</li>
 <li>Supports batched custom interpolators for multi-channel properties</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md18"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md25"></a>
 Service (<span class="tt">service.h</span>)</h2>
 <p>Factory for common animation patterns:</p><ul>
 <li><span class="tt">createHoverPointAnimation(entity)</span> — reversible hover effect</li>
@@ -222,14 +222,14 @@ Service (<span class="tt">service.h</span>)</h2>
 <li><span class="tt">createHoverButtonAnimation(element)</span> — shared asset for UI buttons</li>
 <li><span class="tt">playAppearUIAnimation()</span> — fade-in for UI layout</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md19"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md26"></a>
 Player Manager (<span class="tt">player_manager.h</span>)</h2>
 <p>Bridges animation instances to UI controls:</p><ul>
 <li>Play/pause/step/scrub controls</li>
 <li>Marker visualization on timeline slider</li>
 <li>Time formatting (<span class="tt">MM:SS.mmm</span>)</li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md20"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md27"></a>
 Data Flow</h1>
 <div class="fragment"><div class="line">KeyframeCollection (DSL)</div>
 <div class="line">    ↓ build()</div>
@@ -240,7 +240,7 @@ Data Flow</h1>
 <div class="line">Sampled float channels</div>
 <div class="line">    ↓ apply()</div>
 <div class="line">Raw bytes written to ECS/UI memory</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md21"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md28"></a>
 Usage Example</h1>
 <div class="fragment"><div class="line"><span class="comment">// Hover animation</span></div>
 <div class="line">ReversableAnimation hover = service.createHoverPointAnimation(entity);</div>
@@ -258,7 +258,7 @@ Usage Example</h1>
 <div class="line">    c.loop = <span class="keyword">true</span>;</div>
 <div class="line">    c.pauseOnMarker = <span class="keyword">true</span>;</div>
 <div class="line">});</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md22"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md29"></a>
 Design Notes</h1>
 <ul>
 <li><b>Compile-time validation</b> — invalid property paths or type mismatches fail at compile time</li>

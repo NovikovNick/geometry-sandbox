@@ -12,6 +12,7 @@ var namespacegs =
       [ "getContext", "namespacegs_1_1di.html#a25ae220a7f123eb12d5e4f2bf933d2ab", null ],
       [ "inputManager", "namespacegs_1_1di.html#a3ebe10781bd01c870b73f93e0c6fc755", null ],
       [ "interactionService", "namespacegs_1_1di.html#a2ca8f68001887a35b24880663e73e308", null ],
+      [ "jsonService", "namespacegs_1_1di.html#ad50f7e5b78df299fc27ab44601acf63a", null ],
       [ "logManager", "namespacegs_1_1di.html#a1ba605dde6f732cede638df812909a7b", null ],
       [ "lowLevelRenderService", "namespacegs_1_1di.html#a932db564580757d244d72f1443190d6a", null ],
       [ "meshInstancedDrawService", "namespacegs_1_1di.html#a29eeb48e929700c13dd6be519159a5fb", null ],
@@ -23,6 +24,7 @@ var namespacegs =
       [ "translateGizmoUpdateService", "namespacegs_1_1di.html#a814122a0411f5a7c3398f0b55278c20f", null ],
       [ "uiManager", "namespacegs_1_1di.html#ae07e294fd443542876cf9bbc6d369229", null ],
       [ "uiService", "namespacegs_1_1di.html#a46a912ddaf79d8a99cd9d8bca757fd33", null ],
+      [ "uiStateManager", "namespacegs_1_1di.html#ae28d1337203a52066e564c05c470bd7b", null ],
       [ "viewportManager", "namespacegs_1_1di.html#a9334d630f35702ad400518073f2bfc97", null ],
       [ "windowManager", "namespacegs_1_1di.html#a732cf43c70883752c1eb66ac69e0d451", null ]
     ] ],
@@ -32,6 +34,7 @@ var namespacegs =
     [ "scene", "namespacegs_1_1scene.html", "namespacegs_1_1scene" ],
     [ "ui", "namespacegs_1_1ui.html", "namespacegs_1_1ui" ],
     [ "Application", "classgs_1_1Application.html", "classgs_1_1Application" ],
+    [ "BaseAppComponent", "classgs_1_1BaseAppComponent.html", "classgs_1_1BaseAppComponent" ],
     [ "ICameraControllerService", "classgs_1_1ICameraControllerService.html", "classgs_1_1ICameraControllerService" ],
     [ "CameraControllerService", "classgs_1_1CameraControllerService.html", "classgs_1_1CameraControllerService" ],
     [ "ICameraService", "classgs_1_1ICameraService.html", "classgs_1_1ICameraService" ],
@@ -73,6 +76,10 @@ var namespacegs =
     [ "UIManager", "classgs_1_1UIManager.html", "classgs_1_1UIManager" ],
     [ "IUIService", "classgs_1_1IUIService.html", "classgs_1_1IUIService" ],
     [ "UIService", "classgs_1_1UIService.html", "classgs_1_1UIService" ],
+    [ "IUIStateManager", "classgs_1_1IUIStateManager.html", "classgs_1_1IUIStateManager" ],
+    [ "UIStateManager", "classgs_1_1UIStateManager.html", "classgs_1_1UIStateManager" ],
+    [ "BaseManager", "namespacegs.html#aba73d8b0c3d9cfd435dc4f008390ffe5", null ],
+    [ "BaseService", "namespacegs.html#a807604e596e8ad4ba07f1e4c892d143f", null ],
     [ "Clock", "namespacegs.html#a0e6bd6f22dfbd607697aa919f6dc9325", null ],
     [ "Mat4", "namespacegs.html#afe06578d2d3536fe534398353e1f2685", null ],
     [ "Milliseconds", "namespacegs.html#abf3637b3569663c72ad8878676a47e5d", null ],
@@ -92,6 +99,10 @@ var namespacegs =
       [ "Z", "namespacegs.html#ab12d4497e42e30b14afc4aae1c3b496ca21c2e59531c8710156d34a3c30ac81d5", null ],
       [ "ZX", "namespacegs.html#ab12d4497e42e30b14afc4aae1c3b496ca7d40f0d6c4baa81950b1759d3712a225", null ]
     ] ],
+    [ "CameraControllerType", "namespacegs.html#a22d33f2a14e6dc94bb4c8c932ae3985e", [
+      [ "Free", "namespacegs.html#a22d33f2a14e6dc94bb4c8c932ae3985eab24ce0cd392a5b0b8dedc66c25213594", null ],
+      [ "Orbit", "namespacegs.html#a22d33f2a14e6dc94bb4c8c932ae3985ea76e1ab7a1df8e64fe867b420645c8a68", null ]
+    ] ],
     [ "CoordinateHandedness", "namespacegs.html#aec7a1ecf393e9dd407f46ea71f6204bb", [
       [ "Left", "namespacegs.html#aec7a1ecf393e9dd407f46ea71f6204bba945d5e233cf7d6240f6b783b36a374ff", null ],
       [ "Right", "namespacegs.html#aec7a1ecf393e9dd407f46ea71f6204bba92b09c7c48c520c3c55e497875da437c", null ],
@@ -102,15 +113,21 @@ var namespacegs =
       [ "PointingHand", "namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49ea0dced855888015c82814dacbd3afdd87", null ],
       [ "Hidden", "namespacegs.html#a4da6060adb53d0d30d513dfe7c69d49ea7acdf85c69cc3c5305456a293524386e", null ]
     ] ],
-    [ "InputKey", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423d", [
-      [ "Test", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423da0cbc6611f5540bd0809a388dc95a615b", null ],
-      [ "Forward", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423da67d2f6740a8eaebf4d5c6f79be8da481", null ],
-      [ "Backward", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423dab3263eb38f8903efc271cc7a760da510", null ],
-      [ "Left", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423da945d5e233cf7d6240f6b783b36a374ff", null ],
-      [ "Right", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423da92b09c7c48c520c3c55e497875da437c", null ],
-      [ "MouseLeft", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423dabce0118bd8f5bf5e7f849dff486de57f", null ],
-      [ "MouseRight", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423da64be76bfebee9b86f0963be88b3de177", null ],
-      [ "Count", "namespacegs.html#ad9d1d8e9eebf5bba662109072118423dae93f994f01c537c4e2f7d8528c3eb5e9", null ]
+    [ "InputKey", "namespacegs.html#a959128e0c03bc68f5521156dc93fb63b", [
+      [ "Forward", "namespacegs.html#a959128e0c03bc68f5521156dc93fb63ba67d2f6740a8eaebf4d5c6f79be8da481", null ],
+      [ "Backward", "namespacegs.html#a959128e0c03bc68f5521156dc93fb63bab3263eb38f8903efc271cc7a760da510", null ],
+      [ "Left", "namespacegs.html#a959128e0c03bc68f5521156dc93fb63ba945d5e233cf7d6240f6b783b36a374ff", null ],
+      [ "Right", "namespacegs.html#a959128e0c03bc68f5521156dc93fb63ba92b09c7c48c520c3c55e497875da437c", null ],
+      [ "MouseLeft", "namespacegs.html#a959128e0c03bc68f5521156dc93fb63babce0118bd8f5bf5e7f849dff486de57f", null ],
+      [ "MouseRight", "namespacegs.html#a959128e0c03bc68f5521156dc93fb63ba64be76bfebee9b86f0963be88b3de177", null ],
+      [ "Test", "namespacegs.html#a959128e0c03bc68f5521156dc93fb63ba0cbc6611f5540bd0809a388dc95a615b", null ],
+      [ "Count", "namespacegs.html#a959128e0c03bc68f5521156dc93fb63bae93f994f01c537c4e2f7d8528c3eb5e9", null ]
+    ] ],
+    [ "InputSource", "namespacegs.html#ad69d4bf9f494589e244f8a42d4f2e7a5", [
+      [ "Keybord", "namespacegs.html#ad69d4bf9f494589e244f8a42d4f2e7a5a4639f4ea7b3c3438d3c0f7bfa24fa116", null ],
+      [ "Mouse", "namespacegs.html#ad69d4bf9f494589e244f8a42d4f2e7a5af2a47c6809d88e175dade0ef7b16aa13", null ],
+      [ "UI", "namespacegs.html#ad69d4bf9f494589e244f8a42d4f2e7a5a71ff71526d15db86eb50fcac245d183b", null ],
+      [ "Count", "namespacegs.html#ad69d4bf9f494589e244f8a42d4f2e7a5ae93f994f01c537c4e2f7d8528c3eb5e9", null ]
     ] ],
     [ "ModelType", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891", [
       [ "Point", "namespacegs.html#a1128ba681e8ea24f5adf987d81149891a2a3cd5946cfd317eb99c3d32e35e2d4c", null ],
@@ -146,5 +163,6 @@ var namespacegs =
     [ "radToDeg", "namespacegs.html#a169e482436a936233b2b41c18b697160", null ],
     [ "rotateVector", "namespacegs.html#a4fc4ed0c7a85d0efd8c67e48fe8737df", null ],
     [ "slider", "namespacegs.html#a917105522a61e4289dcfea005b74472c", null ],
-    [ "kInputKeyCount", "namespacegs.html#a0ae623ed43327cdaa0ac0c90e2fa031e", null ]
+    [ "kInputKeyCount", "namespacegs.html#a6e51749d4a39024f1f49a15031440961", null ],
+    [ "kInputSourceCount", "namespacegs.html#ac78e4ca375867cd58d06dd4422a3898a", null ]
 ];

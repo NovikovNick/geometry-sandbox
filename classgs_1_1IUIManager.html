@@ -134,7 +134,7 @@ $(function(){initNavTree('classgs_1_1IUIManager.html','','classgs_1_1IUIManager-
 </div><!--header-->
 <div class="contents">
 
-<p>Manages all UI.  
+<p>Render ui widgets.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="ui_2manager_8h_source.html">manager.h</a>&gt;</code></p>
@@ -152,14 +152,13 @@ Inheritance diagram for gs::IUIManager:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2d6eaac3643f6a90432aa6b1d7e64978" id="r_a2d6eaac3643f6a90432aa6b1d7e64978"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a2d6eaac3643f6a90432aa6b1d7e64978">init</a> ()=0</td></tr>
 <tr class="memitem:a3cefda11f635f56d3a49a5bf2ad66e13" id="r_a3cefda11f635f56d3a49a5bf2ad66e13"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a3cefda11f635f56d3a49a5bf2ad66e13">tick</a> ()=0</td></tr>
-<tr class="memitem:a52d28c7ee68bf7e90365dcb64670cac6" id="r_a52d28c7ee68bf7e90365dcb64670cac6"><td class="memItemLeft">virtual <a class="el" href="structgs_1_1ui_1_1State.html">ui::State</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a52d28c7ee68bf7e90365dcb64670cac6">getState</a> ()=0</td></tr>
 <tr class="memitem:a631367b2ac20fd683f9e605259d5f632" id="r_a631367b2ac20fd683f9e605259d5f632"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a631367b2ac20fd683f9e605259d5f632">render</a> ()=0</td></tr>
 <tr class="memitem:ae2cafb138e51b6a5f4cf351f2ac0442a" id="r_ae2cafb138e51b6a5f4cf351f2ac0442a"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ae2cafb138e51b6a5f4cf351f2ac0442a">onDetailsViewDraw</a> (std::function&lt; void()&gt; callback)=0</td></tr>
 <tr class="memitem:afcf6aee4393ddee4072fcce56591a0f1" id="r_afcf6aee4393ddee4072fcce56591a0f1"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#afcf6aee4393ddee4072fcce56591a0f1">isMouseCaptured</a> () const =0</td></tr>
 <tr class="memitem:ab11a00360fe6d1bfcff943b5adbd12e9" id="r_ab11a00360fe6d1bfcff943b5adbd12e9"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="#ab11a00360fe6d1bfcff943b5adbd12e9">~IUIManager</a> ()=default</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Manages all UI. </p>
+<div class="textblock"><p>Render ui widgets. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab11a00360fe6d1bfcff943b5adbd12e9" name="ab11a00360fe6d1bfcff943b5adbd12e9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab11a00360fe6d1bfcff943b5adbd12e9">&#9670;&#160;</a></span>~IUIManager()</h2>
@@ -187,33 +186,6 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a52d28c7ee68bf7e90365dcb64670cac6" name="a52d28c7ee68bf7e90365dcb64670cac6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52d28c7ee68bf7e90365dcb64670cac6">&#9670;&#160;</a></span>getState()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="structgs_1_1ui_1_1State.html">ui::State</a> &amp; gs::IUIManager::getState </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="classgs_1_1UIManager.html#a81a1eeba2a21fbcb2b84cdef687d1ed7">gs::UIManager</a>.</p>
-
-</div>
-</div>
 <a id="a2d6eaac3643f6a90432aa6b1d7e64978" name="a2d6eaac3643f6a90432aa6b1d7e64978"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2d6eaac3643f6a90432aa6b1d7e64978">&#9670;&#160;</a></span>init()</h2>
 

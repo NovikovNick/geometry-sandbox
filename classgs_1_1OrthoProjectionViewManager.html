@@ -144,22 +144,32 @@ Inheritance diagram for gs::OrthoProjectionViewManager:</div>
  <div class="center">
   <img src="classgs_1_1OrthoProjectionViewManager.png" usemap="#gs_3A_3AOrthoProjectionViewManager_map" alt=""/>
   <map id="gs_3A_3AOrthoProjectionViewManager_map" name="gs_3A_3AOrthoProjectionViewManager_map">
-<area href="classgs_1_1IOrthoProjectionViewManager.html" title="manager to animate switch between perspective and front, back, right, left, top, bottom views" alt="gs::IOrthoProjectionViewManager" shape="rect" coords="0,0,202,24"/>
+<area href="classgs_1_1BaseAppComponent.html" title="Contains logger and settings." alt="gs::BaseAppComponent" shape="rect" coords="0,0,202,24"/>
+<area href="classgs_1_1IOrthoProjectionViewManager.html" title="manager to animate switch between perspective and front, back, right, left, top, bottom views" alt="gs::IOrthoProjectionViewManager" shape="rect" coords="212,0,414,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abdd662ab70185788765bf7aecf02a93b" id="r_abdd662ab70185788765bf7aecf02a93b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#abdd662ab70185788765bf7aecf02a93b">OrthoProjectionViewManager</a> (std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; settings, std::shared_ptr&lt; <a class="el" href="classgs_1_1IUIManager.html">IUIManager</a> &gt; uiManager, std::shared_ptr&lt; <a class="el" href="classgs_1_1IInputManager.html">IInputManager</a> &gt; inputManager, std::shared_ptr&lt; <a class="el" href="classgs_1_1ISceneService.html">ISceneService</a> &gt; sceneService, std::shared_ptr&lt; <a class="el" href="classgs_1_1animation_1_1IManager.html">animation::IManager</a> &gt; animationManager)</td></tr>
+<tr class="memitem:ad70ec1a0cebece8ac8c320258073fff7" id="r_ad70ec1a0cebece8ac8c320258073fff7"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad70ec1a0cebece8ac8c320258073fff7">OrthoProjectionViewManager</a> (const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;settings, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;log, const std::shared_ptr&lt; <a class="el" href="classgs_1_1IUIStateManager.html">IUIStateManager</a> &gt; &amp;uiStateManager, const std::shared_ptr&lt; <a class="el" href="classgs_1_1IInputManager.html">IInputManager</a> &gt; &amp;inputManager, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ISceneService.html">ISceneService</a> &gt; &amp;sceneService, const std::shared_ptr&lt; <a class="el" href="classgs_1_1animation_1_1IManager.html">animation::IManager</a> &gt; &amp;animationManager)</td></tr>
 <tr class="memitem:aa2b7a496b83ad1962dce35d671e5b948" id="r_aa2b7a496b83ad1962dce35d671e5b948"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aa2b7a496b83ad1962dce35d671e5b948">switchTo</a> (int cameraId, <a class="el" href="namespacegs.html#aadb077c0fe8d52e082378aff90c800de">ViewProjection</a>) override</td></tr>
+<tr class="inherit_header pub_methods_classgs_1_1BaseAppComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classgs_1_1BaseAppComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classgs_1_1BaseAppComponent.html">gs::BaseAppComponent</a></td></tr>
+<tr class="memitem:a509ebe518e3611bdcf05fe811d0e3330 inherit pub_methods_classgs_1_1BaseAppComponent" id="r_a509ebe518e3611bdcf05fe811d0e3330"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a509ebe518e3611bdcf05fe811d0e3330">BaseAppComponent</a> (const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;settings, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;log)</td></tr>
+<tr class="memitem:a1c9a8be3b768eb7a861948e75659018e inherit pub_methods_classgs_1_1BaseAppComponent" id="r_a1c9a8be3b768eb7a861948e75659018e"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a1c9a8be3b768eb7a861948e75659018e">~BaseAppComponent</a> ()=default</td></tr>
 <tr class="inherit_header pub_methods_classgs_1_1IOrthoProjectionViewManager"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classgs_1_1IOrthoProjectionViewManager')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classgs_1_1IOrthoProjectionViewManager.html">gs::IOrthoProjectionViewManager</a></td></tr>
 <tr class="memitem:acee8d6707fb043dceadfe7c74507b68c inherit pub_methods_classgs_1_1IOrthoProjectionViewManager" id="r_acee8d6707fb043dceadfe7c74507b68c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1IOrthoProjectionViewManager.html#acee8d6707fb043dceadfe7c74507b68c">~IOrthoProjectionViewManager</a> ()=default</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_classgs_1_1BaseAppComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classgs_1_1BaseAppComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classgs_1_1BaseAppComponent.html">gs::BaseAppComponent</a></td></tr>
+<tr class="memitem:a524fe5fe65593228bded25265e46a64a inherit pro_attribs_classgs_1_1BaseAppComponent" id="r_a524fe5fe65593228bded25265e46a64a"><td class="memItemLeft">std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a524fe5fe65593228bded25265e46a64a">settings_</a></td></tr>
+<tr class="memitem:ab6809c365687543a0c8eea8e04e461f0 inherit pro_attribs_classgs_1_1BaseAppComponent" id="r_ab6809c365687543a0c8eea8e04e461f0"><td class="memItemLeft">std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#ab6809c365687543a0c8eea8e04e461f0">log_</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>basic <a class="el" href="classgs_1_1IOrthoProjectionViewManager.html" title="manager to animate switch between perspective and front, back, right, left, top, bottom views">IOrthoProjectionViewManager</a> implementation </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="abdd662ab70185788765bf7aecf02a93b" name="abdd662ab70185788765bf7aecf02a93b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdd662ab70185788765bf7aecf02a93b">&#9670;&#160;</a></span>OrthoProjectionViewManager()</h2>
+<a id="ad70ec1a0cebece8ac8c320258073fff7" name="ad70ec1a0cebece8ac8c320258073fff7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad70ec1a0cebece8ac8c320258073fff7">&#9670;&#160;</a></span>OrthoProjectionViewManager()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -170,27 +180,32 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">gs::OrthoProjectionViewManager::OrthoProjectionViewManager </td>
           <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>settings</em></span>, </td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>settings</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classgs_1_1IUIManager.html">IUIManager</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>uiManager</em></span>, </td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>log</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classgs_1_1IInputManager.html">IInputManager</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>inputManager</em></span>, </td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1IUIStateManager.html">IUIStateManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>uiStateManager</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classgs_1_1ISceneService.html">ISceneService</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>sceneService</em></span>, </td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1IInputManager.html">IInputManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>inputManager</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classgs_1_1animation_1_1IManager.html">animation::IManager</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>animationManager</em></span>&#160;)</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1ISceneService.html">ISceneService</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>sceneService</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1animation_1_1IManager.html">animation::IManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>animationManager</em></span>&#160;)</td>
         </tr>
       </table>
   </td>

@@ -1,6 +1,7 @@
 var dir_aebb8dcc11953d78e620bbef0b9e2183 =
 [
     [ "application.h", "application_8h.html", "application_8h" ],
+    [ "base_app_component.h", "base__app__component_8h.html", "base__app__component_8h" ],
     [ "camera_controller_service.h", "camera__controller__service_8h.html", "camera__controller__service_8h" ],
     [ "camera_service.h", "camera__service_8h.html", "camera__service_8h" ],
     [ "configuration.h", "configuration_8h.html", "configuration_8h" ],

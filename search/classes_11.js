@@ -1,7 +1,7 @@
 var searchData=
 [
   ['sampler_0',['Sampler',['../classgs_1_1animation_1_1Sampler.html',1,'gs::animation']]],
-  ['sampler_3c_2064_20_3e_1',['Sampler&lt; 64 &gt;',['../classgs_1_1animation_1_1Sampler.html',1,'gs::animation']]],
+  ['sampler_3c_20settings_3a_3aksamplerchannelcount_20_3e_1',['Sampler&lt; Settings::kSamplerChannelCount &gt;',['../classgs_1_1animation_1_1Sampler.html',1,'gs::animation']]],
   ['sceneservice_2',['SceneService',['../classgs_1_1SceneService.html',1,'gs']]],
   ['selected_3',['Selected',['../structgs_1_1ecs_1_1component_1_1Selected.html',1,'gs::ecs::component']]],
   ['service_4',['Service',['../classgs_1_1animation_1_1Service.html',1,'gs::animation']]],

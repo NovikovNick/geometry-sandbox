@@ -136,7 +136,8 @@ $(function(){initNavTree('input__manager_8h.html','',''); });
 
 <p>tracks key states and handles press/release callbacks  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="math_8h_source.html">core/math.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="base__app__component_8h_source.html">core/base_app_component.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="math_8h_source.html">core/math.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="core_2types_8h_source.html">core/types.h</a>&quot;</code><br />
 <code>#include &quot;boost/di.hpp&quot;</code><br />
 <code>#include &lt;array&gt;</code><br />
@@ -161,17 +162,22 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:ad9d1d8e9eebf5bba662109072118423d" id="r_ad9d1d8e9eebf5bba662109072118423d"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespacegs.html#ad9d1d8e9eebf5bba662109072118423d">gs::InputKey</a> : int { <br />
-&#160;&#160;<a class="el" href="namespacegs.html#ad9d1d8e9eebf5bba662109072118423da0cbc6611f5540bd0809a388dc95a615b">gs::Test</a>
-, <a class="el" href="namespacegs.html#ad9d1d8e9eebf5bba662109072118423da67d2f6740a8eaebf4d5c6f79be8da481">gs::Forward</a>
-, <a class="el" href="namespacegs.html#ad9d1d8e9eebf5bba662109072118423dab3263eb38f8903efc271cc7a760da510">gs::Backward</a>
-, <a class="el" href="namespacegs.html#ad9d1d8e9eebf5bba662109072118423da945d5e233cf7d6240f6b783b36a374ff">gs::Left</a>
+<tr class="memitem:a959128e0c03bc68f5521156dc93fb63b" id="r_a959128e0c03bc68f5521156dc93fb63b"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespacegs.html#a959128e0c03bc68f5521156dc93fb63b">gs::InputKey</a> : std::size_t { <br />
+&#160;&#160;<a class="el" href="namespacegs.html#a959128e0c03bc68f5521156dc93fb63ba67d2f6740a8eaebf4d5c6f79be8da481">gs::Forward</a>
+, <a class="el" href="namespacegs.html#a959128e0c03bc68f5521156dc93fb63bab3263eb38f8903efc271cc7a760da510">gs::Backward</a>
+, <a class="el" href="namespacegs.html#a959128e0c03bc68f5521156dc93fb63ba945d5e233cf7d6240f6b783b36a374ff">gs::Left</a>
+, <a class="el" href="namespacegs.html#a959128e0c03bc68f5521156dc93fb63ba92b09c7c48c520c3c55e497875da437c">gs::Right</a>
 , <br />
-&#160;&#160;<a class="el" href="namespacegs.html#ad9d1d8e9eebf5bba662109072118423da92b09c7c48c520c3c55e497875da437c">gs::Right</a>
-, <a class="el" href="namespacegs.html#ad9d1d8e9eebf5bba662109072118423dabce0118bd8f5bf5e7f849dff486de57f">gs::MouseLeft</a>
-, <a class="el" href="namespacegs.html#ad9d1d8e9eebf5bba662109072118423da64be76bfebee9b86f0963be88b3de177">gs::MouseRight</a>
-, <a class="el" href="namespacegs.html#ad9d1d8e9eebf5bba662109072118423dae93f994f01c537c4e2f7d8528c3eb5e9">gs::Count</a>
+&#160;&#160;<a class="el" href="namespacegs.html#a959128e0c03bc68f5521156dc93fb63babce0118bd8f5bf5e7f849dff486de57f">gs::MouseLeft</a>
+, <a class="el" href="namespacegs.html#a959128e0c03bc68f5521156dc93fb63ba64be76bfebee9b86f0963be88b3de177">gs::MouseRight</a>
+, <a class="el" href="namespacegs.html#a959128e0c03bc68f5521156dc93fb63ba0cbc6611f5540bd0809a388dc95a615b">gs::Test</a>
+, <a class="el" href="namespacegs.html#a959128e0c03bc68f5521156dc93fb63bae93f994f01c537c4e2f7d8528c3eb5e9">gs::Count</a>
 <br />
+ }</td></tr>
+<tr class="memitem:ad69d4bf9f494589e244f8a42d4f2e7a5" id="r_ad69d4bf9f494589e244f8a42d4f2e7a5"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespacegs.html#ad69d4bf9f494589e244f8a42d4f2e7a5">gs::InputSource</a> : std::size_t { <a class="el" href="namespacegs.html#ad69d4bf9f494589e244f8a42d4f2e7a5a4639f4ea7b3c3438d3c0f7bfa24fa116">gs::Keybord</a>
+, <a class="el" href="namespacegs.html#ad69d4bf9f494589e244f8a42d4f2e7a5af2a47c6809d88e175dade0ef7b16aa13">gs::Mouse</a>
+, <a class="el" href="namespacegs.html#ad69d4bf9f494589e244f8a42d4f2e7a5a71ff71526d15db86eb50fcac245d183b">gs::UI</a>
+, <a class="el" href="namespacegs.html#ad69d4bf9f494589e244f8a42d4f2e7a5ae93f994f01c537c4e2f7d8528c3eb5e9">gs::Count</a>
  }</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
@@ -180,7 +186,8 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a0ae623ed43327cdaa0ac0c90e2fa031e" id="r_a0ae623ed43327cdaa0ac0c90e2fa031e"><td class="memItemLeft">constexpr size_t&#160;</td><td class="memItemRight"><a class="el" href="namespacegs.html#a0ae623ed43327cdaa0ac0c90e2fa031e">gs::kInputKeyCount</a> = static_cast&lt;size_t&gt;(<a class="el" href="namespacegs.html#ad9d1d8e9eebf5bba662109072118423dae93f994f01c537c4e2f7d8528c3eb5e9">InputKey::Count</a>)</td></tr>
+<tr class="memitem:a6e51749d4a39024f1f49a15031440961" id="r_a6e51749d4a39024f1f49a15031440961"><td class="memItemLeft">constexpr std::size_t&#160;</td><td class="memItemRight"><a class="el" href="namespacegs.html#a6e51749d4a39024f1f49a15031440961">gs::kInputKeyCount</a> = static_cast&lt;std::size_t&gt;(<a class="el" href="namespacegs.html#a959128e0c03bc68f5521156dc93fb63bae93f994f01c537c4e2f7d8528c3eb5e9">InputKey::Count</a>)</td></tr>
+<tr class="memitem:ac78e4ca375867cd58d06dd4422a3898a" id="r_ac78e4ca375867cd58d06dd4422a3898a"><td class="memItemLeft">constexpr std::size_t&#160;</td><td class="memItemRight"><a class="el" href="namespacegs.html#ac78e4ca375867cd58d06dd4422a3898a">gs::kInputSourceCount</a> = static_cast&lt;std::size_t&gt;(<a class="el" href="namespacegs.html#ad69d4bf9f494589e244f8a42d4f2e7a5ae93f994f01c537c4e2f7d8528c3eb5e9">InputSource::Count</a>)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>tracks key states and handles press/release callbacks </p>

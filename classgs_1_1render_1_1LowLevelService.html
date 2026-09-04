@@ -144,18 +144,20 @@ Inheritance diagram for gs::render::LowLevelService:</div>
  <div class="center">
   <img src="classgs_1_1render_1_1LowLevelService.png" usemap="#gs_3A_3Arender_3A_3ALowLevelService_map" alt=""/>
   <map id="gs_3A_3Arender_3A_3ALowLevelService_map" name="gs_3A_3Arender_3A_3ALowLevelService_map">
-<area href="classgs_1_1render_1_1ILowLevelService.html" title="Encapsulates low level graphic logic." alt="gs::render::ILowLevelService" shape="rect" coords="0,0,176,24"/>
+<area href="classgs_1_1BaseAppComponent.html" title="Contains logger and settings." alt="gs::BaseAppComponent" shape="rect" coords="0,0,176,24"/>
+<area href="classgs_1_1render_1_1ILowLevelService.html" title="Encapsulates low level graphic logic." alt="gs::render::ILowLevelService" shape="rect" coords="186,0,362,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adf2fbd9d0e24a1ea6f8d70f25096ac10" id="r_adf2fbd9d0e24a1ea6f8d70f25096ac10"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#adf2fbd9d0e24a1ea6f8d70f25096ac10">LowLevelService</a> (std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; settings, std::shared_ptr&lt; <a class="el" href="classgs_1_1IResourceManager.html">IResourceManager</a> &gt; resources, std::shared_ptr&lt; <a class="el" href="classgs_1_1ICameraService.html">ICameraService</a> &gt; cameraService)</td></tr>
+<tr class="memitem:a57289400365f0998f4fce87f2ad686e7" id="r_a57289400365f0998f4fce87f2ad686e7"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a57289400365f0998f4fce87f2ad686e7">LowLevelService</a> (const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;settings, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;log, const std::shared_ptr&lt; <a class="el" href="classgs_1_1IResourceManager.html">IResourceManager</a> &gt; &amp;resources, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ICameraService.html">ICameraService</a> &gt; &amp;cameraService)</td></tr>
 <tr class="memitem:a1fae09caa2a9015ecaee4a542e4fc494" id="r_a1fae09caa2a9015ecaee4a542e4fc494"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a1fae09caa2a9015ecaee4a542e4fc494">setupCamera</a> (const <a class="el" href="structgs_1_1Camera.html">Camera</a> &amp;camera) override</td></tr>
 <tr class="memitem:a4fdfb5a9e18b3dc6a2b8f21da2ef0daa" id="r_a4fdfb5a9e18b3dc6a2b8f21da2ef0daa"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a4fdfb5a9e18b3dc6a2b8f21da2ef0daa">cleanupCamera</a> () override</td></tr>
 <tr class="memitem:a27bbf467d27a103c5d0e74955d6010b5" id="r_a27bbf467d27a103c5d0e74955d6010b5"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a27bbf467d27a103c5d0e74955d6010b5">clearBackground</a> (const <a class="el" href="structgs_1_1Color.html">Color</a> &amp;) const override</td></tr>
 <tr class="memitem:a9ef00c98ef533f95c968f952a23a5ce3" id="r_a9ef00c98ef533f95c968f952a23a5ce3"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a9ef00c98ef533f95c968f952a23a5ce3">drawLine</a> (const <a class="el" href="namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e">Vec3</a> &amp;startWorld, const <a class="el" href="namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e">Vec3</a> &amp;endWorld, float thickness, const <a class="el" href="structgs_1_1Color.html">Color</a> &amp;) const override</td></tr>
 <tr class="memitem:a258e6d077fc71877db55a5944a810ac6" id="r_a258e6d077fc71877db55a5944a810ac6"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a258e6d077fc71877db55a5944a810ac6">drawDashedLine</a> (const <a class="el" href="namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e">Vec3</a> &amp;startWorld, const <a class="el" href="namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e">Vec3</a> &amp;endWorld, float thickness, const <a class="el" href="structgs_1_1Color.html">Color</a> &amp;, float dashLength, float gapLength) const override</td></tr>
+<tr class="memdesc:a258e6d077fc71877db55a5944a810ac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw dashed line (naive implementation, don't use it for large lines).  <br /></td></tr>
 <tr class="memitem:a216f8c3a97147ee2126fcdeb4dcf89cb" id="r_a216f8c3a97147ee2126fcdeb4dcf89cb"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a216f8c3a97147ee2126fcdeb4dcf89cb">drawArrow</a> (const <a class="el" href="namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e">Vec3</a> &amp;startWorld, const <a class="el" href="namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e">Vec3</a> &amp;endWorld, float thickness, const <a class="el" href="structgs_1_1Color.html">Color</a> &amp;, float size) const override</td></tr>
 <tr class="memitem:ac088ec54509ad543f8a5a598a14c59ac" id="r_ac088ec54509ad543f8a5a598a14c59ac"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ac088ec54509ad543f8a5a598a14c59ac">drawAABB</a> (const <a class="el" href="structgs_1_1AABB.html">AABB</a> &amp;, const <a class="el" href="structgs_1_1Color.html">Color</a> &amp;) const override</td></tr>
 <tr class="memitem:a150e0ee1a7ef8e2e925ddcb8b7eeed5a" id="r_a150e0ee1a7ef8e2e925ddcb8b7eeed5a"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a150e0ee1a7ef8e2e925ddcb8b7eeed5a">drawAABBFramed</a> (const <a class="el" href="structgs_1_1AABB.html">AABB</a> &amp;, const <a class="el" href="structgs_1_1Color.html">Color</a> &amp;, float thickness) const override</td></tr>
@@ -165,14 +167,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2c0991bacb6c7bf110b9b8736d2c2a2a" id="r_a2c0991bacb6c7bf110b9b8736d2c2a2a"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a2c0991bacb6c7bf110b9b8736d2c2a2a">drawSphereWires</a> (const <a class="el" href="namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e">Vec3</a> &amp;position, const <a class="el" href="structgs_1_1Color.html">Color</a> &amp;, float radius) const override</td></tr>
 <tr class="memitem:a943f49c93a69211b735d04d64e1b1df0" id="r_a943f49c93a69211b735d04d64e1b1df0"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a943f49c93a69211b735d04d64e1b1df0">drawBoundingBox</a> (const <a class="el" href="namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e">Vec3</a> &amp;min, const <a class="el" href="namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e">Vec3</a> &amp;max, const <a class="el" href="structgs_1_1Color.html">Color</a> &amp;) const override</td></tr>
 <tr class="memitem:a6d7971ca52725a56d26ab3b9460ade79" id="r_a6d7971ca52725a56d26ab3b9460ade79"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a6d7971ca52725a56d26ab3b9460ade79">drawModel</a> (<a class="el" href="namespacegs.html#a1128ba681e8ea24f5adf987d81149891">ModelType</a>, const <a class="el" href="namespacegs.html#a0766b5dedc2e7f6c167225296cac0a9e">Vec3</a> &amp;position, float scale) const override</td></tr>
+<tr class="inherit_header pub_methods_classgs_1_1BaseAppComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classgs_1_1BaseAppComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classgs_1_1BaseAppComponent.html">gs::BaseAppComponent</a></td></tr>
+<tr class="memitem:a509ebe518e3611bdcf05fe811d0e3330 inherit pub_methods_classgs_1_1BaseAppComponent" id="r_a509ebe518e3611bdcf05fe811d0e3330"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a509ebe518e3611bdcf05fe811d0e3330">BaseAppComponent</a> (const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;settings, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;log)</td></tr>
+<tr class="memitem:a1c9a8be3b768eb7a861948e75659018e inherit pub_methods_classgs_1_1BaseAppComponent" id="r_a1c9a8be3b768eb7a861948e75659018e"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a1c9a8be3b768eb7a861948e75659018e">~BaseAppComponent</a> ()=default</td></tr>
 <tr class="inherit_header pub_methods_classgs_1_1render_1_1ILowLevelService"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classgs_1_1render_1_1ILowLevelService')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classgs_1_1render_1_1ILowLevelService.html">gs::render::ILowLevelService</a></td></tr>
 <tr class="memitem:ae6a0ccf3666520dfc95841a7219419e5 inherit pub_methods_classgs_1_1render_1_1ILowLevelService" id="r_ae6a0ccf3666520dfc95841a7219419e5"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1render_1_1ILowLevelService.html#ae6a0ccf3666520dfc95841a7219419e5">~ILowLevelService</a> ()=default</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_classgs_1_1BaseAppComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classgs_1_1BaseAppComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classgs_1_1BaseAppComponent.html">gs::BaseAppComponent</a></td></tr>
+<tr class="memitem:a524fe5fe65593228bded25265e46a64a inherit pro_attribs_classgs_1_1BaseAppComponent" id="r_a524fe5fe65593228bded25265e46a64a"><td class="memItemLeft">std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a524fe5fe65593228bded25265e46a64a">settings_</a></td></tr>
+<tr class="memitem:ab6809c365687543a0c8eea8e04e461f0 inherit pro_attribs_classgs_1_1BaseAppComponent" id="r_ab6809c365687543a0c8eea8e04e461f0"><td class="memItemLeft">std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#ab6809c365687543a0c8eea8e04e461f0">log_</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implements <a class="el" href="classgs_1_1render_1_1ILowLevelService.html" title="Encapsulates low level graphic logic.">ILowLevelService</a> with Raylib. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="adf2fbd9d0e24a1ea6f8d70f25096ac10" name="adf2fbd9d0e24a1ea6f8d70f25096ac10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf2fbd9d0e24a1ea6f8d70f25096ac10">&#9670;&#160;</a></span>LowLevelService()</h2>
+<a id="a57289400365f0998f4fce87f2ad686e7" name="a57289400365f0998f4fce87f2ad686e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57289400365f0998f4fce87f2ad686e7">&#9670;&#160;</a></span>LowLevelService()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -183,17 +194,22 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">gs::render::LowLevelService::LowLevelService </td>
           <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>settings</em></span>, </td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>settings</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classgs_1_1IResourceManager.html">IResourceManager</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>resources</em></span>, </td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>log</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classgs_1_1ICameraService.html">ICameraService</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>cameraService</em></span>&#160;)</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1IResourceManager.html">IResourceManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>resources</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1ICameraService.html">ICameraService</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>cameraService</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -486,6 +502,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Draw dashed line (naive implementation, don't use it for large lines). </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000016">Todo</a></b></dt><dd>Currently it has naive implementation with draw call for each dash. Definitely needs improvement </dd></dl>
 
 <p>Implements <a class="el" href="classgs_1_1render_1_1ILowLevelService.html#a9e7163e29b9b2e886fa1946afcd278f7">gs::render::ILowLevelService</a>.</p>
 

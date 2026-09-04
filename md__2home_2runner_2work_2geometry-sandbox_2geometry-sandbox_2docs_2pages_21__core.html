@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="Doxygen Awesome" />
 <meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
 <!-- END twitter metadata -->
-<title>geometry-sandbox: /home/runner/work/geometry-sandbox/geometry-sandbox/docs/pages/animation.md File Reference</title>
+<title>geometry-sandbox: Core Concepts</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -104,7 +104,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('animation_8md.html','',''); });
+$(function(){initNavTree('md__2home_2runner_2work_2geometry-sandbox_2geometry-sandbox_2docs_2pages_21__core.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -129,11 +129,65 @@ $(function(){initNavTree('animation_8md.html','',''); });
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">/home/runner/work/geometry-sandbox/geometry-sandbox/docs/pages/animation.md File Reference</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">Core Concepts </div></div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><p><a class="anchor" id="autotoc_md8"></a></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+Dependency Injection</h2>
+<p>All components are registered in a single DI container using <span class="tt">boost::di</span>, enabling automatic injection and singleton management:</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> injector = boost::di::make_injector(</div>
+<div class="line">    boost::di::bind&lt;Settings&gt;().in(boost::di::singleton),</div>
+<div class="line">    boost::di::bind&lt;Application&gt;().in(boost::di::singleton),</div>
+<div class="line">    di::inputManager(),</div>
+<div class="line">    di::windowManager(),</div>
+<div class="line">    di::cameraService()</div>
+<div class="line">    <span class="comment">// ...</span></div>
+<div class="line">);</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
+Layer Separation</h2>
+<div class="fragment"><div class="line">Application → Managers (stateful) → Services (stateless) → ECS (data)</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
+Manager/Service Pattern</h2>
+<ul>
+<li><b>Managers</b>: hold state and logic (<span class="tt">InputManager</span>, <span class="tt">WindowManager</span>, <span class="tt">ResourceManager</span>)</li>
+<li><b>Services</b>: pure logic only (<span class="tt">CameraService</span>, <span class="tt">SceneService</span>, <span class="tt">JsonService</span>)</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
+Interface-Based Design</h2>
+<p>Every system exposes an interface and implementation:</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>ICameraService {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <span class="keyword">virtual</span> Vec3 getForward(<span class="keyword">const</span> Camera&amp;) = 0;</div>
+<div class="line">    <span class="keyword">virtual</span> Mat4 getViewMatrix(<span class="keyword">const</span> Camera&amp;) = 0;</div>
+<div class="line">    <span class="keyword">virtual</span> ~ICameraService() = <span class="keywordflow">default</span>;</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>CameraService : <span class="keyword">public</span> BaseService, <span class="keyword">public</span> ICameraService {</div>
+<div class="line">    <span class="comment">// implementation</span></div>
+<div class="line">};</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md13"></a>
+Centralized Configuration</h2>
+<p>All tunable parameters live in <span class="tt">Settings</span> struct, injected as singleton:</p>
+<div class="fragment"><div class="line"><span class="keyword">struct </span>Settings {</div>
+<div class="line">    std::string title;</div>
+<div class="line">    <span class="keywordtype">int</span> width, height;</div>
+<div class="line">    <span class="keywordtype">bool</span> fullscreen;</div>
+<div class="line">    Camera defaultCamera;</div>
+<div class="line">    <span class="keywordtype">float</span> cameraMoveSensitivity;</div>
+<div class="line">    <span class="comment">// ...</span></div>
+<div class="line">};</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md14"></a>
+Frame Loop Pipeline</h2>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Application::drawNextFrame(Nanoseconds timeDelta) {</div>
+<div class="line">    <span class="comment">// 1. Update: input, UI, camera</span></div>
+<div class="line">    <span class="comment">// 2. Animation: tick and animate</span></div>
+<div class="line">    <span class="comment">// 3. Interaction: gizmos, selection</span></div>
+<div class="line">    <span class="comment">// 4. Render: draw scene</span></div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>
@@ -146,7 +200,6 @@ $(function(){initNavTree('animation_8md.html','',''); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="animation_8md.html">animation.md</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

@@ -144,22 +144,63 @@ Inheritance diagram for gs::JsonService:</div>
  <div class="center">
   <img src="classgs_1_1JsonService.png" usemap="#gs_3A_3AJsonService_map" alt=""/>
   <map id="gs_3A_3AJsonService_map" name="gs_3A_3AJsonService_map">
-<area href="classgs_1_1IJsonService.html" title="validates and parses json string to app&#39;s types" alt="gs::IJsonService" shape="rect" coords="0,0,105,24"/>
+<area href="classgs_1_1BaseAppComponent.html" title="Contains logger and settings." alt="gs::BaseAppComponent" shape="rect" coords="0,0,145,24"/>
+<area href="classgs_1_1IJsonService.html" title="validates and parses json string to app&#39;s types" alt="gs::IJsonService" shape="rect" coords="155,0,300,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aa5c9ded1808a44bfd8483fad2837ef40" id="r_aa5c9ded1808a44bfd8483fad2837ef40"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa5c9ded1808a44bfd8483fad2837ef40">JsonService</a> (const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;settings, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;log)</td></tr>
 <tr class="memitem:a26b4c9e0f10b5944af582d493cea6fa2" id="r_a26b4c9e0f10b5944af582d493cea6fa2"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a26b4c9e0f10b5944af582d493cea6fa2">isValidCoord2dArrayString</a> (std::string_view input) const override</td></tr>
 <tr class="memdesc:a26b4c9e0f10b5944af582d493cea6fa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">validate array of 2d points in format [[x1,y1], [x2,y2], ...]  <br /></td></tr>
 <tr class="memitem:ac28f2881f28c019d26d7c39dac435594" id="r_ac28f2881f28c019d26d7c39dac435594"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ac28f2881f28c019d26d7c39dac435594">parseCoord2dArrayString</a> (std::string_view input, std::vector&lt; <a class="el" href="namespacegs.html#a4cfe276f17208d89cd0dfee026fef598">Vec2</a> &gt; &amp;outPoints) const override</td></tr>
 <tr class="memdesc:ac28f2881f28c019d26d7c39dac435594"><td class="mdescLeft">&#160;</td><td class="mdescRight">parse array of 2d points in format [[x1,y1], [x2,y2], ...]  <br /></td></tr>
+<tr class="inherit_header pub_methods_classgs_1_1BaseAppComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classgs_1_1BaseAppComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classgs_1_1BaseAppComponent.html">gs::BaseAppComponent</a></td></tr>
+<tr class="memitem:a509ebe518e3611bdcf05fe811d0e3330 inherit pub_methods_classgs_1_1BaseAppComponent" id="r_a509ebe518e3611bdcf05fe811d0e3330"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a509ebe518e3611bdcf05fe811d0e3330">BaseAppComponent</a> (const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;settings, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;log)</td></tr>
+<tr class="memitem:a1c9a8be3b768eb7a861948e75659018e inherit pub_methods_classgs_1_1BaseAppComponent" id="r_a1c9a8be3b768eb7a861948e75659018e"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a1c9a8be3b768eb7a861948e75659018e">~BaseAppComponent</a> ()=default</td></tr>
 <tr class="inherit_header pub_methods_classgs_1_1IJsonService"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classgs_1_1IJsonService')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classgs_1_1IJsonService.html">gs::IJsonService</a></td></tr>
 <tr class="memitem:a2796ee49e847ec2042bacb7d9a1eae10 inherit pub_methods_classgs_1_1IJsonService" id="r_a2796ee49e847ec2042bacb7d9a1eae10"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1IJsonService.html#a2796ee49e847ec2042bacb7d9a1eae10">~IJsonService</a> ()=default</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_classgs_1_1BaseAppComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classgs_1_1BaseAppComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classgs_1_1BaseAppComponent.html">gs::BaseAppComponent</a></td></tr>
+<tr class="memitem:a524fe5fe65593228bded25265e46a64a inherit pro_attribs_classgs_1_1BaseAppComponent" id="r_a524fe5fe65593228bded25265e46a64a"><td class="memItemLeft">std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a524fe5fe65593228bded25265e46a64a">settings_</a></td></tr>
+<tr class="memitem:ab6809c365687543a0c8eea8e04e461f0 inherit pro_attribs_classgs_1_1BaseAppComponent" id="r_ab6809c365687543a0c8eea8e04e461f0"><td class="memItemLeft">std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#ab6809c365687543a0c8eea8e04e461f0">log_</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>basic <a class="el" href="classgs_1_1IJsonService.html" title="validates and parses json string to app&#39;s types">IJsonService</a> implementation </p>
-</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa5c9ded1808a44bfd8483fad2837ef40" name="aa5c9ded1808a44bfd8483fad2837ef40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5c9ded1808a44bfd8483fad2837ef40">&#9670;&#160;</a></span>JsonService()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">gs::JsonService::JsonService </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>settings</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>log</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a26b4c9e0f10b5944af582d493cea6fa2" name="a26b4c9e0f10b5944af582d493cea6fa2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a26b4c9e0f10b5944af582d493cea6fa2">&#9670;&#160;</a></span>isValidCoord2dArrayString()</h2>
 

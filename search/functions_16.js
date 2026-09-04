@@ -1,29 +1,4 @@
 var searchData=
 [
-  ['_7eelement_0',['~Element',['../structgs_1_1ui_1_1Element.html#a6713025af17f920768e0b80d4e9ec0d3',1,'gs::ui::Element']]],
-  ['_7eicameracontrollerservice_1',['~ICameraControllerService',['../classgs_1_1ICameraControllerService.html#aa1d2ff557c04a0bb8eb3ee6251d1feda',1,'gs::ICameraControllerService']]],
-  ['_7eicameraidlerotationmanager_2',['~ICameraIdleRotationManager',['../classgs_1_1ICameraIdleRotationManager.html#a84427ce4c734d62ec83cb6c7a168c696',1,'gs::ICameraIdleRotationManager']]],
-  ['_7eicameraservice_3',['~ICameraService',['../classgs_1_1ICameraService.html#a24143184147f0927920b992923388e75',1,'gs::ICameraService']]],
-  ['_7eifacade_4',['~IFacade',['../classgs_1_1render_1_1IFacade.html#a7f105a3918ac98f31acba7ae82a81981',1,'gs::render::IFacade']]],
-  ['_7eifrustumdrawservice_5',['~IFrustumDrawService',['../classgs_1_1render_1_1IFrustumDrawService.html#a6e64be5fac4e39456040528fac1a3aae',1,'gs::render::IFrustumDrawService']]],
-  ['_7eiinputmanager_6',['~IInputManager',['../classgs_1_1IInputManager.html#ae4bb81c3dcacd4e9daa3d0f0f28d0fa1',1,'gs::IInputManager']]],
-  ['_7eiinteractionservice_7',['~IInteractionService',['../classgs_1_1IInteractionService.html#ab3c2ad1a9b9710f4fc772afa9cfbc2ee',1,'gs::IInteractionService']]],
-  ['_7eijsonservice_8',['~IJsonService',['../classgs_1_1IJsonService.html#a2796ee49e847ec2042bacb7d9a1eae10',1,'gs::IJsonService']]],
-  ['_7eilogmanager_9',['~ILogManager',['../classgs_1_1ILogManager.html#a64916438d1161c05d9cb774df34c2bdf',1,'gs::ILogManager']]],
-  ['_7eilowlevelservice_10',['~ILowLevelService',['../classgs_1_1render_1_1ILowLevelService.html#ae6a0ccf3666520dfc95841a7219419e5',1,'gs::render::ILowLevelService']]],
-  ['_7eimanager_11',['~IManager',['../classgs_1_1animation_1_1IManager.html#a195b10ff2b93b3e76e0771d9f9cbe564',1,'gs::animation::IManager']]],
-  ['_7eimeshinstanceddrawservice_12',['~IMeshInstancedDrawService',['../classgs_1_1render_1_1IMeshInstancedDrawService.html#aa5fa963e6b735f04f1e71d4b40db5045',1,'gs::render::IMeshInstancedDrawService']]],
-  ['_7eiorthoprojectionviewmanager_13',['~IOrthoProjectionViewManager',['../classgs_1_1IOrthoProjectionViewManager.html#acee8d6707fb043dceadfe7c74507b68c',1,'gs::IOrthoProjectionViewManager']]],
-  ['_7eiplayermanager_14',['~IPlayerManager',['../classgs_1_1animation_1_1IPlayerManager.html#a668341f68f15e158be3a15f79f4c7da8',1,'gs::animation::IPlayerManager']]],
-  ['_7eiresourcemanager_15',['~IResourceManager',['../classgs_1_1IResourceManager.html#a80b913f2ec2ce3d36debfdb7f8676380',1,'gs::IResourceManager']]],
-  ['_7eisceneservice_16',['~ISceneService',['../classgs_1_1ISceneService.html#a4934f823a6a38e57c85fc3f4d257d2dc',1,'gs::ISceneService']]],
-  ['_7eiservice_17',['~IService',['../classgs_1_1animation_1_1IService.html#a620038236139c33d033217d377b38d45',1,'gs::animation::IService']]],
-  ['_7eitranslategizmorenderservice_18',['~ITranslateGizmoRenderService',['../classgs_1_1ITranslateGizmoRenderService.html#adce2d6b5398e84310b1abd78150d2166',1,'gs::ITranslateGizmoRenderService']]],
-  ['_7eitranslategizmoupdateservice_19',['~ITranslateGizmoUpdateService',['../classgs_1_1ITranslateGizmoUpdateService.html#a0ed8b6f78816cec6dcb44dc2bc80f708',1,'gs::ITranslateGizmoUpdateService']]],
-  ['_7eiuimanager_20',['~IUIManager',['../classgs_1_1IUIManager.html#ab11a00360fe6d1bfcff943b5adbd12e9',1,'gs::IUIManager']]],
-  ['_7eiuiservice_21',['~IUIService',['../classgs_1_1IUIService.html#aa78b084ad474e1176c9d7725625d2f04',1,'gs::IUIService']]],
-  ['_7eiviewportmanager_22',['~IViewportManager',['../classgs_1_1render_1_1IViewportManager.html#a6991eb8137568e8af04c5b1ff7326f73',1,'gs::render::IViewportManager']]],
-  ['_7eiwindowmanager_23',['~IWindowManager',['../classgs_1_1IWindowManager.html#af91b72edc67270790112409b7c36750f',1,'gs::IWindowManager']]],
-  ['_7eresourcemanager_24',['~ResourceManager',['../classgs_1_1ResourceManager.html#afa66afa0d42060aeaaff8274c8768d78',1,'gs::ResourceManager']]],
-  ['_7ewindowmanager_25',['~WindowManager',['../classgs_1_1WindowManager.html#a83ab4fa50c46e4b74d6ddba57bdcc391',1,'gs::WindowManager']]]
+  ['yellow_0',['yellow',['../structgs_1_1Color.html#a3410d5c600d4e3e1518513c74be19f2a',1,'gs::Color']]]
 ];

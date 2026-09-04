@@ -26,6 +26,7 @@ var searchData=
   ['itranslategizmoupdateservice_23',['ITranslateGizmoUpdateService',['../classgs_1_1ITranslateGizmoUpdateService.html',1,'gs']]],
   ['iuimanager_24',['IUIManager',['../classgs_1_1IUIManager.html',1,'gs']]],
   ['iuiservice_25',['IUIService',['../classgs_1_1IUIService.html',1,'gs']]],
-  ['iviewportmanager_26',['IViewportManager',['../classgs_1_1render_1_1IViewportManager.html',1,'gs::render']]],
-  ['iwindowmanager_27',['IWindowManager',['../classgs_1_1IWindowManager.html',1,'gs']]]
+  ['iuistatemanager_26',['IUIStateManager',['../classgs_1_1IUIStateManager.html',1,'gs']]],
+  ['iviewportmanager_27',['IViewportManager',['../classgs_1_1render_1_1IViewportManager.html',1,'gs::render']]],
+  ['iwindowmanager_28',['IWindowManager',['../classgs_1_1IWindowManager.html',1,'gs']]]
 ];

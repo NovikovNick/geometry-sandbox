@@ -128,59 +128,66 @@ $(function(){initNavTree('json__service_8h_source.html','',''); });
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef GEOMETRY_SANDBOX_JSON_SERVICE_H</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define GEOMETRY_SANDBOX_JSON_SERVICE_H</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="core_2types_8h.html">core/types.h</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;boost/di.hpp&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacegs.html">gs</a></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
-<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classgs_1_1IJsonService.html">   20</a></span><span class="keyword">class </span><a class="code hl_class" href="classgs_1_1IJsonService.html">IJsonService</a></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classgs_1_1IJsonService.html#a1d93badbb90bdf8ff811369e007500b6">   26</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classgs_1_1IJsonService.html#a1d93badbb90bdf8ff811369e007500b6">isValidCoord2dArrayString</a>(std::string_view input) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classgs_1_1IJsonService.html#a1ed5c19c9dae7722b6665a2ad32c9de8">   31</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classgs_1_1IJsonService.html#a1ed5c19c9dae7722b6665a2ad32c9de8">parseCoord2dArrayString</a>(std::string_view input, std::vector&lt;Vec2&gt;&amp; outPoints) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classgs_1_1IJsonService.html#a2796ee49e847ec2042bacb7d9a1eae10">   33</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="classgs_1_1IJsonService.html#a2796ee49e847ec2042bacb7d9a1eae10">~IJsonService</a>()                                                                          = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>};</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="base__app__component_8h.html">core/base_app_component.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="core_2types_8h.html">core/types.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;boost/di.hpp&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacegs.html">gs</a></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classgs_1_1IJsonService.html">   21</a></span><span class="keyword">class </span><a class="code hl_class" href="classgs_1_1IJsonService.html">IJsonService</a></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>{</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classgs_1_1IJsonService.html#a1d93badbb90bdf8ff811369e007500b6">   27</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classgs_1_1IJsonService.html#a1d93badbb90bdf8ff811369e007500b6">isValidCoord2dArrayString</a>(std::string_view input) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classgs_1_1IJsonService.html#a1ed5c19c9dae7722b6665a2ad32c9de8">   32</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classgs_1_1IJsonService.html#a1ed5c19c9dae7722b6665a2ad32c9de8">parseCoord2dArrayString</a>(std::string_view input, std::vector&lt;Vec2&gt;&amp; outPoints) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classgs_1_1IJsonService.html#a2796ee49e847ec2042bacb7d9a1eae10">   34</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="classgs_1_1IJsonService.html#a2796ee49e847ec2042bacb7d9a1eae10">~IJsonService</a>()                                                                          = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>};</div>
 </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
-<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classgs_1_1JsonService.html">   37</a></span><span class="keyword">class </span><a class="code hl_class" href="classgs_1_1JsonService.html">JsonService</a> : <span class="keyword">public</span> <a class="code hl_class" href="classgs_1_1IJsonService.html">IJsonService</a></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classgs_1_1JsonService.html#a26b4c9e0f10b5944af582d493cea6fa2">   40</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classgs_1_1JsonService.html#a26b4c9e0f10b5944af582d493cea6fa2">isValidCoord2dArrayString</a>(std::string_view input) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classgs_1_1JsonService.html#ac28f2881f28c019d26d7c39dac435594">   41</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classgs_1_1JsonService.html#ac28f2881f28c019d26d7c39dac435594">parseCoord2dArrayString</a>(std::string_view input, std::vector&lt;Vec2&gt;&amp; outPoints) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="};">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classgs_1_1JsonService.html">   38</a></span><span class="keyword">class </span><a class="code hl_function" href="classgs_1_1JsonService.html#aa5c9ded1808a44bfd8483fad2837ef40">JsonService</a> : <span class="keyword">public</span> <a class="code hl_typedef" href="namespacegs.html#a807604e596e8ad4ba07f1e4c892d143f">BaseService</a>, <span class="keyword">public</span> <a class="code hl_class" href="classgs_1_1IJsonService.html">IJsonService</a></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classgs_1_1JsonService.html#aa5c9ded1808a44bfd8483fad2837ef40">   41</a></span>    <a class="code hl_function" href="classgs_1_1JsonService.html#aa5c9ded1808a44bfd8483fad2837ef40">JsonService</a>(<span class="keyword">const</span> std::shared_ptr&lt;Settings&gt;&amp; settings, <span class="keyword">const</span> std::shared_ptr&lt;ILogManager&gt;&amp; log) : <a class="code hl_typedef" href="namespacegs.html#aba73d8b0c3d9cfd435dc4f008390ffe5">BaseManager</a>(settings, log) {}</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classgs_1_1JsonService.html#a26b4c9e0f10b5944af582d493cea6fa2">   43</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classgs_1_1JsonService.html#a26b4c9e0f10b5944af582d493cea6fa2">isValidCoord2dArrayString</a>(std::string_view input) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classgs_1_1JsonService.html#ac28f2881f28c019d26d7c39dac435594">   44</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classgs_1_1JsonService.html#ac28f2881f28c019d26d7c39dac435594">parseCoord2dArrayString</a>(std::string_view input, std::vector&lt;Vec2&gt;&amp; outPoints) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>};</div>
 </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacegs_1_1di.html">di</a></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
-<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="namespacegs_1_1di.html#adc7e64e0a29a0fddc96e7acccee290f1">   46</a></span><span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code hl_function" href="namespacegs_1_1di.html#adc7e64e0a29a0fddc96e7acccee290f1">sceneService</a>() noexcept</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">return</span> boost::di::bind&lt;IJsonService&gt;.to&lt;<a class="code hl_class" href="classgs_1_1JsonService.html">JsonService</a>&gt;();</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacegs_1_1di.html">di</a></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>{</div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="namespacegs_1_1di.html#ad50f7e5b78df299fc27ab44601acf63a">   49</a></span><span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code hl_function" href="namespacegs_1_1di.html#ad50f7e5b78df299fc27ab44601acf63a">jsonService</a>() noexcept</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>{</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">return</span> boost::di::bind&lt;IJsonService&gt;.to&lt;<a class="code hl_class" href="classgs_1_1JsonService.html">JsonService</a>&gt;();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
 </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}  <span class="comment">// namespace di</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}  <span class="comment">// namespace gs</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#endif  </span><span class="comment">// GEOMETRY_SANDBOX_JSON_SERVICE_H</span></div>
-<div class="ttc" id="aclassgs_1_1IJsonService_html"><div class="ttname"><a href="classgs_1_1IJsonService.html">gs::IJsonService</a></div><div class="ttdoc">validates and parses json string to app&#39;s types</div><div class="ttdef"><b>Definition</b> json_service.h:21</div></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}  <span class="comment">// namespace di</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}  <span class="comment">// namespace gs</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#endif  </span><span class="comment">// GEOMETRY_SANDBOX_JSON_SERVICE_H</span></div>
+<div class="ttc" id="abase__app__component_8h_html"><div class="ttname"><a href="base__app__component_8h.html">base_app_component.h</a></div><div class="ttdoc">Base class with logger and settings.</div></div>
+<div class="ttc" id="aclassgs_1_1IJsonService_html"><div class="ttname"><a href="classgs_1_1IJsonService.html">gs::IJsonService</a></div><div class="ttdoc">validates and parses json string to app&#39;s types</div><div class="ttdef"><b>Definition</b> json_service.h:22</div></div>
 <div class="ttc" id="aclassgs_1_1IJsonService_html_a1d93badbb90bdf8ff811369e007500b6"><div class="ttname"><a href="classgs_1_1IJsonService.html#a1d93badbb90bdf8ff811369e007500b6">gs::IJsonService::isValidCoord2dArrayString</a></div><div class="ttdeci">virtual bool isValidCoord2dArrayString(std::string_view input) const =0</div><div class="ttdoc">validate array of 2d points in format [[x1,y1], [x2,y2], ...]</div></div>
 <div class="ttc" id="aclassgs_1_1IJsonService_html_a1ed5c19c9dae7722b6665a2ad32c9de8"><div class="ttname"><a href="classgs_1_1IJsonService.html#a1ed5c19c9dae7722b6665a2ad32c9de8">gs::IJsonService::parseCoord2dArrayString</a></div><div class="ttdeci">virtual void parseCoord2dArrayString(std::string_view input, std::vector&lt; Vec2 &gt; &amp;outPoints) const =0</div><div class="ttdoc">parse array of 2d points in format [[x1,y1], [x2,y2], ...]</div></div>
 <div class="ttc" id="aclassgs_1_1IJsonService_html_a2796ee49e847ec2042bacb7d9a1eae10"><div class="ttname"><a href="classgs_1_1IJsonService.html#a2796ee49e847ec2042bacb7d9a1eae10">gs::IJsonService::~IJsonService</a></div><div class="ttdeci">virtual ~IJsonService()=default</div></div>
-<div class="ttc" id="aclassgs_1_1JsonService_html"><div class="ttname"><a href="classgs_1_1JsonService.html">gs::JsonService</a></div><div class="ttdoc">basic IJsonService implementation</div><div class="ttdef"><b>Definition</b> json_service.h:38</div></div>
+<div class="ttc" id="aclassgs_1_1JsonService_html"><div class="ttname"><a href="classgs_1_1JsonService.html">gs::JsonService</a></div><div class="ttdoc">basic IJsonService implementation</div><div class="ttdef"><b>Definition</b> json_service.h:39</div></div>
 <div class="ttc" id="aclassgs_1_1JsonService_html_a26b4c9e0f10b5944af582d493cea6fa2"><div class="ttname"><a href="classgs_1_1JsonService.html#a26b4c9e0f10b5944af582d493cea6fa2">gs::JsonService::isValidCoord2dArrayString</a></div><div class="ttdeci">virtual bool isValidCoord2dArrayString(std::string_view input) const override</div><div class="ttdoc">validate array of 2d points in format [[x1,y1], [x2,y2], ...]</div></div>
+<div class="ttc" id="aclassgs_1_1JsonService_html_aa5c9ded1808a44bfd8483fad2837ef40"><div class="ttname"><a href="classgs_1_1JsonService.html#aa5c9ded1808a44bfd8483fad2837ef40">gs::JsonService::JsonService</a></div><div class="ttdeci">JsonService(const std::shared_ptr&lt; Settings &gt; &amp;settings, const std::shared_ptr&lt; ILogManager &gt; &amp;log)</div><div class="ttdef"><b>Definition</b> json_service.h:41</div></div>
 <div class="ttc" id="aclassgs_1_1JsonService_html_ac28f2881f28c019d26d7c39dac435594"><div class="ttname"><a href="classgs_1_1JsonService.html#ac28f2881f28c019d26d7c39dac435594">gs::JsonService::parseCoord2dArrayString</a></div><div class="ttdeci">virtual void parseCoord2dArrayString(std::string_view input, std::vector&lt; Vec2 &gt; &amp;outPoints) const override</div><div class="ttdoc">parse array of 2d points in format [[x1,y1], [x2,y2], ...]</div></div>
 <div class="ttc" id="acore_2types_8h_html"><div class="ttname"><a href="core_2types_8h.html">types.h</a></div><div class="ttdoc">core types</div></div>
-<div class="ttc" id="anamespacegs_1_1di_html"><div class="ttname"><a href="namespacegs_1_1di.html">gs::di</a></div><div class="ttdoc">Dependency injection.</div><div class="ttdef"><b>Definition</b> manager.h:91</div></div>
-<div class="ttc" id="anamespacegs_1_1di_html_adc7e64e0a29a0fddc96e7acccee290f1"><div class="ttname"><a href="namespacegs_1_1di.html#adc7e64e0a29a0fddc96e7acccee290f1">gs::di::sceneService</a></div><div class="ttdeci">auto sceneService() noexcept</div><div class="ttdef"><b>Definition</b> json_service.h:46</div></div>
+<div class="ttc" id="anamespacegs_1_1di_html"><div class="ttname"><a href="namespacegs_1_1di.html">gs::di</a></div><div class="ttdoc">Dependency injection.</div><div class="ttdef"><b>Definition</b> manager.h:93</div></div>
+<div class="ttc" id="anamespacegs_1_1di_html_ad50f7e5b78df299fc27ab44601acf63a"><div class="ttname"><a href="namespacegs_1_1di.html#ad50f7e5b78df299fc27ab44601acf63a">gs::di::jsonService</a></div><div class="ttdeci">auto jsonService() noexcept</div><div class="ttdef"><b>Definition</b> json_service.h:49</div></div>
 <div class="ttc" id="anamespacegs_html"><div class="ttname"><a href="namespacegs.html">gs</a></div><div class="ttdoc">geometry sandbox</div><div class="ttdef"><b>Definition</b> dsl.h:21</div></div>
+<div class="ttc" id="anamespacegs_html_a807604e596e8ad4ba07f1e4c892d143f"><div class="ttname"><a href="namespacegs.html#a807604e596e8ad4ba07f1e4c892d143f">gs::BaseService</a></div><div class="ttdeci">BaseAppComponent BaseService</div><div class="ttdoc">Base for each class that contains only logic.</div><div class="ttdef"><b>Definition</b> base_app_component.h:36</div></div>
+<div class="ttc" id="anamespacegs_html_aba73d8b0c3d9cfd435dc4f008390ffe5"><div class="ttname"><a href="namespacegs.html#aba73d8b0c3d9cfd435dc4f008390ffe5">gs::BaseManager</a></div><div class="ttdeci">BaseAppComponent BaseManager</div><div class="ttdoc">Base for each class that contains state and logic.</div><div class="ttdef"><b>Definition</b> base_app_component.h:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

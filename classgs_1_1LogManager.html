@@ -158,15 +158,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afb13d468310f1034201a3116bbe78627 inherit pub_methods_classgs_1_1ILogManager" id="r_afb13d468310f1034201a3116bbe78627"><td class="memTemplParams" colspan="2">template&lt;class... Args&gt; </td></tr>
 <tr class="memitem:afb13d468310f1034201a3116bbe78627 inherit pub_methods_classgs_1_1ILogManager template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1ILogManager.html#afb13d468310f1034201a3116bbe78627">frameLog</a> (const std::format_string&lt; Args... &gt; format, Args &amp;&amp;... args)</td></tr>
 <tr class="memdesc:afb13d468310f1034201a3116bbe78627 inherit pub_methods_classgs_1_1ILogManager"><td class="mdescLeft">&#160;</td><td class="mdescRight">log, which is cleared every frame  <br /></td></tr>
-<tr class="memitem:ae7a0944a7db766c82a1e20ffe8c2de94 inherit pub_methods_classgs_1_1ILogManager" id="r_ae7a0944a7db766c82a1e20ffe8c2de94"><td class="memTemplParams" colspan="2">template&lt;class... _Types&gt; </td></tr>
-<tr class="memitem:ae7a0944a7db766c82a1e20ffe8c2de94 inherit pub_methods_classgs_1_1ILogManager template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1ILogManager.html#ae7a0944a7db766c82a1e20ffe8c2de94">log</a> (const std::format_string&lt; _Types... &gt; _Fmt, _Types &amp;&amp;... _Args)</td></tr>
-<tr class="memdesc:ae7a0944a7db766c82a1e20ffe8c2de94 inherit pub_methods_classgs_1_1ILogManager"><td class="mdescLeft">&#160;</td><td class="mdescRight">general log  <br /></td></tr>
+<tr class="memitem:a633097e3ae3178696b9ef6982659883d inherit pub_methods_classgs_1_1ILogManager" id="r_a633097e3ae3178696b9ef6982659883d"><td class="memTemplParams" colspan="2">template&lt;class... Args&gt; </td></tr>
+<tr class="memitem:a633097e3ae3178696b9ef6982659883d inherit pub_methods_classgs_1_1ILogManager template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1ILogManager.html#a633097e3ae3178696b9ef6982659883d">log</a> (const std::format_string&lt; Args... &gt; format, Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a633097e3ae3178696b9ef6982659883d inherit pub_methods_classgs_1_1ILogManager"><td class="mdescLeft">&#160;</td><td class="mdescRight">general log  <br /></td></tr>
 <tr class="memitem:a64916438d1161c05d9cb774df34c2bdf inherit pub_methods_classgs_1_1ILogManager" id="r_a64916438d1161c05d9cb774df34c2bdf"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1ILogManager.html#a64916438d1161c05d9cb774df34c2bdf">~ILogManager</a> ()=default</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a14929e6bc8294b43f082e7306e6eb8c6" id="r_a14929e6bc8294b43f082e7306e6eb8c6"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a14929e6bc8294b43f082e7306e6eb8c6">addFrameLog</a> (const std::string &amp;str) override</td></tr>
-<tr class="memitem:a8095374130317329e36c81d006c2af93" id="r_a8095374130317329e36c81d006c2af93"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a8095374130317329e36c81d006c2af93">log</a> (const std::string &amp;str) override</td></tr>
+<tr class="memitem:a7f0d4128989bd9667a098f5eadbfa5a0" id="r_a7f0d4128989bd9667a098f5eadbfa5a0"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a7f0d4128989bd9667a098f5eadbfa5a0">addLog</a> (const std::string &amp;str) override</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>basic <a class="el" href="classgs_1_1ILogManager.html" title="Provides frame-scoped logs and general logs.">ILogManager</a> implementation </p>
@@ -195,6 +195,33 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classgs_1_1ILogManager.html#abc499c15a11e5460a7643324a880b83a">gs::ILogManager</a>.</p>
+
+</div>
+</div>
+<a id="a7f0d4128989bd9667a098f5eadbfa5a0" name="a7f0d4128989bd9667a098f5eadbfa5a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f0d4128989bd9667a098f5eadbfa5a0">&#9670;&#160;</a></span>addLog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void gs::LogManager::addLog </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classgs_1_1ILogManager.html#ac6556349fe39c7294dd669ea49c62997">gs::ILogManager</a>.</p>
 
 </div>
 </div>
@@ -253,33 +280,6 @@ Protected Member Functions</h2></td></tr>
 <p>It is convenient to display this log in the overlay console. </p>
 
 <p>Implements <a class="el" href="classgs_1_1ILogManager.html#a46e25d30b2effbcc292613554123a981">gs::ILogManager</a>.</p>
-
-</div>
-</div>
-<a id="a8095374130317329e36c81d006c2af93" name="a8095374130317329e36c81d006c2af93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8095374130317329e36c81d006c2af93">&#9670;&#160;</a></span>log()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void gs::LogManager::log </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implements <a class="el" href="classgs_1_1ILogManager.html#a1abb2faabcc63dc59ad0c5168e0af0e3">gs::ILogManager</a>.</p>
 
 </div>
 </div>

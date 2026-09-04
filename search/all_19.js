@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['z_0',['Z',['../namespacegs.html#ab12d4497e42e30b14afc4aae1c3b496ca21c2e59531c8710156d34a3c30ac81d5',1,'gs']]],
-  ['z_1',['z',['../namespacegs_1_1animation_1_1dsl_1_1vec3.html#a52e216a46db6930e58c75c93e510afea',1,'gs::animation::dsl::vec3']]],
-  ['zfar_2',['zFar',['../structgs_1_1Camera.html#afba1e4de7c38f31ff876de78dfebfe5b',1,'gs::Camera']]],
-  ['znear_3',['zNear',['../structgs_1_1Camera.html#a798b6393c36af22c173527a110263aba',1,'gs::Camera']]],
-  ['zx_4',['ZX',['../namespacegs.html#ab12d4497e42e30b14afc4aae1c3b496ca7d40f0d6c4baa81950b1759d3712a225',1,'gs']]]
+  ['white_0',['white',['../structgs_1_1Color.html#a6118f9c9099d2ce6c617261f57cb164d',1,'gs::Color']]],
+  ['width_1',['width',['../structgs_1_1Settings.html#a77e0150453a038e4b504edd47f126553',1,'gs::Settings::width'],['../structgs_1_1RectSize.html#a379cd25719d291b516307b479e3b403f',1,'gs::RectSize::width'],['../structgs_1_1Camera.html#a92672095a61b16d7fa7f73869d94feec',1,'gs::Camera::width'],['../structgs_1_1ui_1_1State.html#aadff129fd99cb55a0c46e399b92b8910',1,'gs::ui::State::width']]],
+  ['window_5fmanager_2eh_2',['window_manager.h',['../window__manager_8h.html',1,'']]],
+  ['windowmanager_3',['WindowManager',['../classgs_1_1WindowManager.html',1,'gs::WindowManager'],['../classgs_1_1WindowManager.html#aaa8c6e9da4be49d246cc5a365990d8de',1,'gs::WindowManager::WindowManager()']]],
+  ['windowmanager_4',['windowManager',['../namespacegs_1_1di.html#a732cf43c70883752c1eb66ac69e0d451',1,'gs::di']]]
 ];

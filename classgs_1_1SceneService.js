@@ -1,6 +1,6 @@
 var classgs_1_1SceneService =
 [
-    [ "SceneService", "classgs_1_1SceneService.html#a2fb52881ca558913dd4db904c5144c53", null ],
+    [ "SceneService", "classgs_1_1SceneService.html#abac60bfac2191b3ca8d266952cae3aea", null ],
     [ "addAABB", "classgs_1_1SceneService.html#aaf5bc4599c5952ba397b54191c4278eb", null ],
     [ "addDashedLine", "classgs_1_1SceneService.html#a3d36f8c4653607b07d51afb335180e25", null ],
     [ "addModel", "classgs_1_1SceneService.html#a78398e0feeaf91c268177437c93b2041", null ],
@@ -11,6 +11,7 @@ var classgs_1_1SceneService =
     [ "getSceneBounds", "classgs_1_1SceneService.html#a3c636d5b59ed00ff333481c335c89bc6", null ],
     [ "getSceneCenter", "classgs_1_1SceneService.html#a06302d5fbbfb66c2be49bf9e2b893816", null ],
     [ "setAABBSize", "classgs_1_1SceneService.html#af5cf9a4622202634fd9bef1cb10a33f2", null ],
+    [ "setColor", "classgs_1_1SceneService.html#a07920f27bd21fdd9c3da29ac03ae350a", null ],
     [ "setDistance", "classgs_1_1SceneService.html#a22efe9a490a170a9c54331a05adcf6ea", null ],
     [ "setEndPosition", "classgs_1_1SceneService.html#a43de2093900ed8595be56bc4b1fd1ae6", null ],
     [ "setNormal", "classgs_1_1SceneService.html#afdde8f947adac56413db40957ab18182", null ],

@@ -9,6 +9,30 @@ var hierarchy =
     [ "gs::ecs::component::Arrow", "structgs_1_1ecs_1_1component_1_1Arrow.html", null ],
     [ "gs::animation::Asset", "structgs_1_1animation_1_1Asset.html", null ],
     [ "gs::animation::AssetCollection", "structgs_1_1animation_1_1AssetCollection.html", null ],
+    [ "gs::BaseAppComponent", "classgs_1_1BaseAppComponent.html", [
+      [ "gs::CameraControllerService", "classgs_1_1CameraControllerService.html", null ],
+      [ "gs::CameraIdleRotationAnimationManager", "classgs_1_1CameraIdleRotationAnimationManager.html", null ],
+      [ "gs::CameraService", "classgs_1_1CameraService.html", null ],
+      [ "gs::InputManager", "classgs_1_1InputManager.html", null ],
+      [ "gs::InteractionService", "classgs_1_1InteractionService.html", null ],
+      [ "gs::JsonService", "classgs_1_1JsonService.html", null ],
+      [ "gs::OrthoProjectionViewManager", "classgs_1_1OrthoProjectionViewManager.html", null ],
+      [ "gs::ResourceManager", "classgs_1_1ResourceManager.html", null ],
+      [ "gs::SceneService", "classgs_1_1SceneService.html", null ],
+      [ "gs::TranslateGizmoRenderService", "classgs_1_1TranslateGizmoRenderService.html", null ],
+      [ "gs::UIManager", "classgs_1_1UIManager.html", null ],
+      [ "gs::UIService", "classgs_1_1UIService.html", null ],
+      [ "gs::UIStateManager", "classgs_1_1UIStateManager.html", null ],
+      [ "gs::WindowManager", "classgs_1_1WindowManager.html", null ],
+      [ "gs::animation::Manager", "classgs_1_1animation_1_1Manager.html", null ],
+      [ "gs::animation::PlayerManager", "classgs_1_1animation_1_1PlayerManager.html", null ],
+      [ "gs::animation::Service", "classgs_1_1animation_1_1Service.html", null ],
+      [ "gs::render::Facade", "classgs_1_1render_1_1Facade.html", null ],
+      [ "gs::render::FrustumDrawService", "classgs_1_1render_1_1FrustumDrawService.html", null ],
+      [ "gs::render::LowLevelService", "classgs_1_1render_1_1LowLevelService.html", null ],
+      [ "gs::render::MeshInstancedDrawService", "classgs_1_1render_1_1MeshInstancedDrawService.html", null ],
+      [ "gs::render::ViewportManager", "classgs_1_1render_1_1ViewportManager.html", null ]
+    ] ],
     [ "gs::Camera", "structgs_1_1Camera.html", null ],
     [ "gs::animation::Asset::Channel", "structgs_1_1animation_1_1Asset_1_1Channel.html", null ],
     [ "gs::animation::Clip", "structgs_1_1animation_1_1Clip.html", null ],
@@ -96,6 +120,9 @@ var hierarchy =
     ] ],
     [ "gs::IUIService", "classgs_1_1IUIService.html", [
       [ "gs::UIService", "classgs_1_1UIService.html", null ]
+    ] ],
+    [ "gs::IUIStateManager", "classgs_1_1IUIStateManager.html", [
+      [ "gs::UIStateManager", "classgs_1_1UIStateManager.html", null ]
     ] ],
     [ "gs::render::IViewportManager", "classgs_1_1render_1_1IViewportManager.html", [
       [ "gs::render::ViewportManager", "classgs_1_1render_1_1ViewportManager.html", null ]

@@ -144,23 +144,33 @@ Inheritance diagram for gs::CameraIdleRotationAnimationManager:</div>
  <div class="center">
   <img src="classgs_1_1CameraIdleRotationAnimationManager.png" usemap="#gs_3A_3ACameraIdleRotationAnimationManager_map" alt=""/>
   <map id="gs_3A_3ACameraIdleRotationAnimationManager_map" name="gs_3A_3ACameraIdleRotationAnimationManager_map">
-<area href="classgs_1_1ICameraIdleRotationManager.html" title="Rotates a camera around the scene in idle." alt="gs::ICameraIdleRotationManager" shape="rect" coords="0,0,246,24"/>
+<area href="classgs_1_1BaseAppComponent.html" title="Contains logger and settings." alt="gs::BaseAppComponent" shape="rect" coords="0,0,246,24"/>
+<area href="classgs_1_1ICameraIdleRotationManager.html" title="Rotates a camera around the scene in idle." alt="gs::ICameraIdleRotationManager" shape="rect" coords="256,0,502,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a02160f50f6f13bef3da89b926f7f493e" id="r_a02160f50f6f13bef3da89b926f7f493e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a02160f50f6f13bef3da89b926f7f493e">CameraIdleRotationAnimationManager</a> (std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; settings, std::shared_ptr&lt; <a class="el" href="classgs_1_1IUIManager.html">IUIManager</a> &gt; uiManager, std::shared_ptr&lt; <a class="el" href="classgs_1_1IInputManager.html">IInputManager</a> &gt; inputManager, std::shared_ptr&lt; <a class="el" href="classgs_1_1ISceneService.html">ISceneService</a> &gt; sceneService, std::shared_ptr&lt; <a class="el" href="classgs_1_1animation_1_1IManager.html">animation::IManager</a> &gt; animationManager)</td></tr>
+<tr class="memitem:ac107882cdd5893c976c4d083afcf2023" id="r_ac107882cdd5893c976c4d083afcf2023"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac107882cdd5893c976c4d083afcf2023">CameraIdleRotationAnimationManager</a> (const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;settings, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;log, const std::shared_ptr&lt; <a class="el" href="classgs_1_1IUIStateManager.html">IUIStateManager</a> &gt; &amp;uiStateManager, const std::shared_ptr&lt; <a class="el" href="classgs_1_1IInputManager.html">IInputManager</a> &gt; &amp;inputManager, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ISceneService.html">ISceneService</a> &gt; &amp;sceneService, const std::shared_ptr&lt; <a class="el" href="classgs_1_1animation_1_1IManager.html">animation::IManager</a> &gt; &amp;animationManager)</td></tr>
 <tr class="memitem:aaee2f5b2f9781a8a114803bd79f73b7a" id="r_aaee2f5b2f9781a8a114803bd79f73b7a"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#aaee2f5b2f9781a8a114803bd79f73b7a">enableIdleRotation</a> (int cameraId) override</td></tr>
 <tr class="memitem:a28d254afe606534209b38bfb9f5b037a" id="r_a28d254afe606534209b38bfb9f5b037a"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a28d254afe606534209b38bfb9f5b037a">disableIdleRotation</a> () override</td></tr>
+<tr class="inherit_header pub_methods_classgs_1_1BaseAppComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classgs_1_1BaseAppComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classgs_1_1BaseAppComponent.html">gs::BaseAppComponent</a></td></tr>
+<tr class="memitem:a509ebe518e3611bdcf05fe811d0e3330 inherit pub_methods_classgs_1_1BaseAppComponent" id="r_a509ebe518e3611bdcf05fe811d0e3330"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a509ebe518e3611bdcf05fe811d0e3330">BaseAppComponent</a> (const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;settings, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;log)</td></tr>
+<tr class="memitem:a1c9a8be3b768eb7a861948e75659018e inherit pub_methods_classgs_1_1BaseAppComponent" id="r_a1c9a8be3b768eb7a861948e75659018e"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a1c9a8be3b768eb7a861948e75659018e">~BaseAppComponent</a> ()=default</td></tr>
 <tr class="inherit_header pub_methods_classgs_1_1ICameraIdleRotationManager"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classgs_1_1ICameraIdleRotationManager')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classgs_1_1ICameraIdleRotationManager.html">gs::ICameraIdleRotationManager</a></td></tr>
 <tr class="memitem:a84427ce4c734d62ec83cb6c7a168c696 inherit pub_methods_classgs_1_1ICameraIdleRotationManager" id="r_a84427ce4c734d62ec83cb6c7a168c696"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1ICameraIdleRotationManager.html#a84427ce4c734d62ec83cb6c7a168c696">~ICameraIdleRotationManager</a> ()=default</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_classgs_1_1BaseAppComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classgs_1_1BaseAppComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classgs_1_1BaseAppComponent.html">gs::BaseAppComponent</a></td></tr>
+<tr class="memitem:a524fe5fe65593228bded25265e46a64a inherit pro_attribs_classgs_1_1BaseAppComponent" id="r_a524fe5fe65593228bded25265e46a64a"><td class="memItemLeft">std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a524fe5fe65593228bded25265e46a64a">settings_</a></td></tr>
+<tr class="memitem:ab6809c365687543a0c8eea8e04e461f0 inherit pro_attribs_classgs_1_1BaseAppComponent" id="r_ab6809c365687543a0c8eea8e04e461f0"><td class="memItemLeft">std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#ab6809c365687543a0c8eea8e04e461f0">log_</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>basic <a class="el" href="classgs_1_1ICameraIdleRotationManager.html" title="Rotates a camera around the scene in idle.">ICameraIdleRotationManager</a> implementation </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a02160f50f6f13bef3da89b926f7f493e" name="a02160f50f6f13bef3da89b926f7f493e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02160f50f6f13bef3da89b926f7f493e">&#9670;&#160;</a></span>CameraIdleRotationAnimationManager()</h2>
+<a id="ac107882cdd5893c976c4d083afcf2023" name="ac107882cdd5893c976c4d083afcf2023"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac107882cdd5893c976c4d083afcf2023">&#9670;&#160;</a></span>CameraIdleRotationAnimationManager()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -171,27 +181,32 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">gs::CameraIdleRotationAnimationManager::CameraIdleRotationAnimationManager </td>
           <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>settings</em></span>, </td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>settings</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classgs_1_1IUIManager.html">IUIManager</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>uiManager</em></span>, </td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>log</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classgs_1_1IInputManager.html">IInputManager</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>inputManager</em></span>, </td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1IUIStateManager.html">IUIStateManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>uiStateManager</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classgs_1_1ISceneService.html">ISceneService</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>sceneService</em></span>, </td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1IInputManager.html">IInputManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>inputManager</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classgs_1_1animation_1_1IManager.html">animation::IManager</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>animationManager</em></span>&#160;)</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1ISceneService.html">ISceneService</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>sceneService</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1animation_1_1IManager.html">animation::IManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>animationManager</em></span>&#160;)</td>
         </tr>
       </table>
   </td>

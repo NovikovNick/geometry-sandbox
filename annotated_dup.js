@@ -87,6 +87,7 @@ var annotated_dup =
         [ "State", "structgs_1_1ui_1_1State.html", "structgs_1_1ui_1_1State" ]
       ] ],
       [ "Application", "classgs_1_1Application.html", "classgs_1_1Application" ],
+      [ "BaseAppComponent", "classgs_1_1BaseAppComponent.html", "classgs_1_1BaseAppComponent" ],
       [ "ICameraControllerService", "classgs_1_1ICameraControllerService.html", "classgs_1_1ICameraControllerService" ],
       [ "CameraControllerService", "classgs_1_1CameraControllerService.html", "classgs_1_1CameraControllerService" ],
       [ "ICameraService", "classgs_1_1ICameraService.html", "classgs_1_1ICameraService" ],
@@ -127,7 +128,9 @@ var annotated_dup =
       [ "IUIManager", "classgs_1_1IUIManager.html", "classgs_1_1IUIManager" ],
       [ "UIManager", "classgs_1_1UIManager.html", "classgs_1_1UIManager" ],
       [ "IUIService", "classgs_1_1IUIService.html", "classgs_1_1IUIService" ],
-      [ "UIService", "classgs_1_1UIService.html", "classgs_1_1UIService" ]
+      [ "UIService", "classgs_1_1UIService.html", "classgs_1_1UIService" ],
+      [ "IUIStateManager", "classgs_1_1IUIStateManager.html", "classgs_1_1IUIStateManager" ],
+      [ "UIStateManager", "classgs_1_1UIStateManager.html", "classgs_1_1UIStateManager" ]
     ] ],
     [ "SlotMap", "classSlotMap.html", "classSlotMap" ]
 ];

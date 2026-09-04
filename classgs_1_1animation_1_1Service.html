@@ -144,13 +144,14 @@ Inheritance diagram for gs::animation::Service:</div>
  <div class="center">
   <img src="classgs_1_1animation_1_1Service.png" usemap="#gs_3A_3Aanimation_3A_3AService_map" alt=""/>
   <map id="gs_3A_3Aanimation_3A_3AService_map" name="gs_3A_3Aanimation_3A_3AService_map">
-<area href="classgs_1_1animation_1_1IService.html" title="Provides factory methods for creating common animation interactions." alt="gs::animation::IService" shape="rect" coords="0,0,137,24"/>
+<area href="classgs_1_1BaseAppComponent.html" title="Contains logger and settings." alt="gs::BaseAppComponent" shape="rect" coords="0,0,145,24"/>
+<area href="classgs_1_1animation_1_1IService.html" title="Provides factory methods for creating common animation interactions." alt="gs::animation::IService" shape="rect" coords="155,0,300,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a279c30affbdf720f1d2aa85def4d6a04" id="r_a279c30affbdf720f1d2aa85def4d6a04"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a279c30affbdf720f1d2aa85def4d6a04">Service</a> (std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; settings, std::shared_ptr&lt; <a class="el" href="classgs_1_1animation_1_1IManager.html">IManager</a> &gt; animationManager, std::shared_ptr&lt; <a class="el" href="namespacegs_1_1ecs.html#a48041250f226f69c0aa9075efcbcb8b9">ecs::Registry</a> &gt; registry)</td></tr>
+<tr class="memitem:a07cda195756e0856f6acc96463996b9e" id="r_a07cda195756e0856f6acc96463996b9e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a07cda195756e0856f6acc96463996b9e">Service</a> (const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;settings, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;log, const std::shared_ptr&lt; <a class="el" href="classgs_1_1animation_1_1IManager.html">IManager</a> &gt; &amp;animationManager, const std::shared_ptr&lt; <a class="el" href="namespacegs_1_1ecs.html#a48041250f226f69c0aa9075efcbcb8b9">ecs::Registry</a> &gt; &amp;registry)</td></tr>
 <tr class="memitem:a06c930af6e2fe905c27c863d2aa20f6a" id="r_a06c930af6e2fe905c27c863d2aa20f6a"><td class="memItemLeft">virtual <a class="el" href="classgs_1_1animation_1_1ReversableAnimation.html">ReversableAnimation</a>&#160;</td><td class="memItemRight"><a class="el" href="#a06c930af6e2fe905c27c863d2aa20f6a">createHoverPointAnimation</a> (entt::entity entity) override</td></tr>
 <tr class="memdesc:a06c930af6e2fe905c27c863d2aa20f6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">color-based hover  <br /></td></tr>
 <tr class="memitem:a6bc91928ad9e25d584a5c3f98b617be6" id="r_a6bc91928ad9e25d584a5c3f98b617be6"><td class="memItemLeft">virtual std::function&lt; void()&gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6bc91928ad9e25d584a5c3f98b617be6">createSelectPointAnimation</a> (entt::entity entity) override</td></tr>
@@ -161,14 +162,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a011877fc4db96818f621fe93a62a9ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">color-based hover  <br /></td></tr>
 <tr class="memitem:a7f7f9e53ee6e2a17d7d559ec6f0d253b" id="r_a7f7f9e53ee6e2a17d7d559ec6f0d253b"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a7f7f9e53ee6e2a17d7d559ec6f0d253b">playAppearUIAnimation</a> () override</td></tr>
 <tr class="memdesc:a7f7f9e53ee6e2a17d7d559ec6f0d253b"><td class="mdescLeft">&#160;</td><td class="mdescRight">fade-in for UI layout  <br /></td></tr>
+<tr class="inherit_header pub_methods_classgs_1_1BaseAppComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classgs_1_1BaseAppComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classgs_1_1BaseAppComponent.html">gs::BaseAppComponent</a></td></tr>
+<tr class="memitem:a509ebe518e3611bdcf05fe811d0e3330 inherit pub_methods_classgs_1_1BaseAppComponent" id="r_a509ebe518e3611bdcf05fe811d0e3330"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a509ebe518e3611bdcf05fe811d0e3330">BaseAppComponent</a> (const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;settings, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;log)</td></tr>
+<tr class="memitem:a1c9a8be3b768eb7a861948e75659018e inherit pub_methods_classgs_1_1BaseAppComponent" id="r_a1c9a8be3b768eb7a861948e75659018e"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a1c9a8be3b768eb7a861948e75659018e">~BaseAppComponent</a> ()=default</td></tr>
 <tr class="inherit_header pub_methods_classgs_1_1animation_1_1IService"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classgs_1_1animation_1_1IService')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classgs_1_1animation_1_1IService.html">gs::animation::IService</a></td></tr>
 <tr class="memitem:a620038236139c33d033217d377b38d45 inherit pub_methods_classgs_1_1animation_1_1IService" id="r_a620038236139c33d033217d377b38d45"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1animation_1_1IService.html#a620038236139c33d033217d377b38d45">~IService</a> ()=default</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_classgs_1_1BaseAppComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classgs_1_1BaseAppComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classgs_1_1BaseAppComponent.html">gs::BaseAppComponent</a></td></tr>
+<tr class="memitem:a524fe5fe65593228bded25265e46a64a inherit pro_attribs_classgs_1_1BaseAppComponent" id="r_a524fe5fe65593228bded25265e46a64a"><td class="memItemLeft">std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a524fe5fe65593228bded25265e46a64a">settings_</a></td></tr>
+<tr class="memitem:ab6809c365687543a0c8eea8e04e461f0 inherit pro_attribs_classgs_1_1BaseAppComponent" id="r_ab6809c365687543a0c8eea8e04e461f0"><td class="memItemLeft">std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#ab6809c365687543a0c8eea8e04e461f0">log_</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>basic <a class="el" href="classgs_1_1animation_1_1IService.html" title="Provides factory methods for creating common animation interactions.">IService</a> implementation </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a279c30affbdf720f1d2aa85def4d6a04" name="a279c30affbdf720f1d2aa85def4d6a04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a279c30affbdf720f1d2aa85def4d6a04">&#9670;&#160;</a></span>Service()</h2>
+<a id="a07cda195756e0856f6acc96463996b9e" name="a07cda195756e0856f6acc96463996b9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07cda195756e0856f6acc96463996b9e">&#9670;&#160;</a></span>Service()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -179,17 +189,22 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">gs::animation::Service::Service </td>
           <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>settings</em></span>, </td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>settings</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classgs_1_1animation_1_1IManager.html">IManager</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>animationManager</em></span>, </td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>log</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="namespacegs_1_1ecs.html#a48041250f226f69c0aa9075efcbcb8b9">ecs::Registry</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>registry</em></span>&#160;)</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1animation_1_1IManager.html">IManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>animationManager</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="namespacegs_1_1ecs.html#a48041250f226f69c0aa9075efcbcb8b9">ecs::Registry</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>registry</em></span>&#160;)</td>
         </tr>
       </table>
   </td>

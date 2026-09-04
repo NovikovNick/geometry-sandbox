@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['🦴_20development_20build_0',['🦴 Development &amp;amp; Build',['../index.html#autotoc_md4',1,'']]]
+  ['⚡_20high_20performance_20rendering_0',['⚡ High-Performance Rendering',['../index.html#autotoc_md2',1,'']]]
 ];

@@ -1,6 +1,6 @@
 var classgs_1_1ResourceManager =
 [
-    [ "ResourceManager", "classgs_1_1ResourceManager.html#a825161a8f03f52b6a762268108169504", null ],
+    [ "ResourceManager", "classgs_1_1ResourceManager.html#a7bd5bd512bcb9faccb5d7db3321c11ac", null ],
     [ "~ResourceManager", "classgs_1_1ResourceManager.html#afa66afa0d42060aeaaff8274c8768d78", null ],
     [ "defaultCanvasFont", "classgs_1_1ResourceManager.html#a9674e2d1cc4c8b4fe7d43603d247ac3a", null ],
     [ "defaultUIFont", "classgs_1_1ResourceManager.html#a4b3e0ac13ee7185c0e4e7862d46e8425", null ],

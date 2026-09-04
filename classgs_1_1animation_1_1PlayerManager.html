@@ -144,25 +144,36 @@ Inheritance diagram for gs::animation::PlayerManager:</div>
  <div class="center">
   <img src="classgs_1_1animation_1_1PlayerManager.png" usemap="#gs_3A_3Aanimation_3A_3APlayerManager_map" alt=""/>
   <map id="gs_3A_3Aanimation_3A_3APlayerManager_map" name="gs_3A_3Aanimation_3A_3APlayerManager_map">
-<area href="classgs_1_1animation_1_1IPlayerManager.html" title="Manages animation playback for gs::ui::AnimationPlayer." alt="gs::animation::IPlayerManager" shape="rect" coords="0,0,181,24"/>
+<area href="classgs_1_1BaseAppComponent.html" title="Contains logger and settings." alt="gs::BaseAppComponent" shape="rect" coords="0,0,181,24"/>
+<area href="classgs_1_1animation_1_1IPlayerManager.html" title="Manages animation playback for gs::ui::AnimationPlayer." alt="gs::animation::IPlayerManager" shape="rect" coords="191,0,372,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9760377805fa76b726f8e51a61eee534" id="r_a9760377805fa76b726f8e51a61eee534"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9760377805fa76b726f8e51a61eee534">PlayerManager</a> (std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; settings, const std::shared_ptr&lt; <a class="el" href="classgs_1_1animation_1_1IManager.html">IManager</a> &gt; &amp;animationManager, const std::shared_ptr&lt; <a class="el" href="classgs_1_1animation_1_1IService.html">IService</a> &gt; &amp;animationService)</td></tr>
+<tr class="memitem:a73acb37c3f722d2edfda42660572a418" id="r_a73acb37c3f722d2edfda42660572a418"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a73acb37c3f722d2edfda42660572a418">PlayerManager</a> (const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;settings, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;log, const std::shared_ptr&lt; <a class="el" href="classgs_1_1animation_1_1IService.html">IService</a> &gt; &amp;animationService)</td></tr>
 <tr class="memitem:a2fe2243f6f9dae96d10826ebbbbb334d" id="r_a2fe2243f6f9dae96d10826ebbbbb334d"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a2fe2243f6f9dae96d10826ebbbbb334d">init</a> (<a class="el" href="structgs_1_1ui_1_1AnimationPlayer.html">ui::AnimationPlayer</a> &amp;) override</td></tr>
 <tr class="memitem:ade062e4ea7e827962fa6381ed9343655" id="r_ade062e4ea7e827962fa6381ed9343655"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#ade062e4ea7e827962fa6381ed9343655">update</a> (<a class="el" href="structgs_1_1ui_1_1AnimationPlayer.html">ui::AnimationPlayer</a> &amp;) const override</td></tr>
 <tr class="memitem:a1df9b4b399b935290e9d63919518971c" id="r_a1df9b4b399b935290e9d63919518971c"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a1df9b4b399b935290e9d63919518971c">setAnimation</a> (const <a class="el" href="structgs_1_1animation_1_1Handle.html">animation::Handle</a> &amp;handle) override</td></tr>
+<tr class="memitem:a0c70649d0d09c6061fa77d6ab160aeb0" id="r_a0c70649d0d09c6061fa77d6ab160aeb0"><td class="memItemLeft">virtual <a class="el" href="structgs_1_1animation_1_1Handle.html">animation::Handle</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0c70649d0d09c6061fa77d6ab160aeb0">getAnimation</a> () const override</td></tr>
 <tr class="memitem:a15a2d3379197771ef03da98e4f8aa32f" id="r_a15a2d3379197771ef03da98e4f8aa32f"><td class="memItemLeft">virtual bool&#160;</td><td class="memItemRight"><a class="el" href="#a15a2d3379197771ef03da98e4f8aa32f">hasAnimation</a> () const override</td></tr>
+<tr class="inherit_header pub_methods_classgs_1_1BaseAppComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classgs_1_1BaseAppComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classgs_1_1BaseAppComponent.html">gs::BaseAppComponent</a></td></tr>
+<tr class="memitem:a509ebe518e3611bdcf05fe811d0e3330 inherit pub_methods_classgs_1_1BaseAppComponent" id="r_a509ebe518e3611bdcf05fe811d0e3330"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a509ebe518e3611bdcf05fe811d0e3330">BaseAppComponent</a> (const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;settings, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;log)</td></tr>
+<tr class="memitem:a1c9a8be3b768eb7a861948e75659018e inherit pub_methods_classgs_1_1BaseAppComponent" id="r_a1c9a8be3b768eb7a861948e75659018e"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a1c9a8be3b768eb7a861948e75659018e">~BaseAppComponent</a> ()=default</td></tr>
 <tr class="inherit_header pub_methods_classgs_1_1animation_1_1IPlayerManager"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classgs_1_1animation_1_1IPlayerManager')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classgs_1_1animation_1_1IPlayerManager.html">gs::animation::IPlayerManager</a></td></tr>
 <tr class="memitem:a668341f68f15e158be3a15f79f4c7da8 inherit pub_methods_classgs_1_1animation_1_1IPlayerManager" id="r_a668341f68f15e158be3a15f79f4c7da8"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1animation_1_1IPlayerManager.html#a668341f68f15e158be3a15f79f4c7da8">~IPlayerManager</a> ()=default</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_classgs_1_1BaseAppComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classgs_1_1BaseAppComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classgs_1_1BaseAppComponent.html">gs::BaseAppComponent</a></td></tr>
+<tr class="memitem:a524fe5fe65593228bded25265e46a64a inherit pro_attribs_classgs_1_1BaseAppComponent" id="r_a524fe5fe65593228bded25265e46a64a"><td class="memItemLeft">std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a524fe5fe65593228bded25265e46a64a">settings_</a></td></tr>
+<tr class="memitem:ab6809c365687543a0c8eea8e04e461f0 inherit pro_attribs_classgs_1_1BaseAppComponent" id="r_ab6809c365687543a0c8eea8e04e461f0"><td class="memItemLeft">std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#ab6809c365687543a0c8eea8e04e461f0">log_</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>basic <a class="el" href="classgs_1_1animation_1_1IPlayerManager.html" title="Manages animation playback for gs::ui::AnimationPlayer.">IPlayerManager</a> implementation </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a9760377805fa76b726f8e51a61eee534" name="a9760377805fa76b726f8e51a61eee534"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9760377805fa76b726f8e51a61eee534">&#9670;&#160;</a></span>PlayerManager()</h2>
+<a id="a73acb37c3f722d2edfda42660572a418" name="a73acb37c3f722d2edfda42660572a418"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73acb37c3f722d2edfda42660572a418">&#9670;&#160;</a></span>PlayerManager()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,12 +184,12 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">gs::animation::PlayerManager::PlayerManager </td>
           <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>settings</em></span>, </td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>settings</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1animation_1_1IManager.html">IManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>animationManager</em></span>, </td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>log</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -196,6 +207,33 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a0c70649d0d09c6061fa77d6ab160aeb0" name="a0c70649d0d09c6061fa77d6ab160aeb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c70649d0d09c6061fa77d6ab160aeb0">&#9670;&#160;</a></span>getAnimation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structgs_1_1animation_1_1Handle.html">animation::Handle</a> gs::animation::PlayerManager::getAnimation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classgs_1_1animation_1_1IPlayerManager.html#a720209bb7e3558381c3da9cc4e756e21">gs::animation::IPlayerManager</a>.</p>
+
+</div>
+</div>
 <a id="a15a2d3379197771ef03da98e4f8aa32f" name="a15a2d3379197771ef03da98e4f8aa32f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a15a2d3379197771ef03da98e4f8aa32f">&#9670;&#160;</a></span>hasAnimation()</h2>
 

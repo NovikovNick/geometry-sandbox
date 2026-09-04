@@ -144,23 +144,34 @@ Inheritance diagram for gs::render::Facade:</div>
  <div class="center">
   <img src="classgs_1_1render_1_1Facade.png" usemap="#gs_3A_3Arender_3A_3AFacade_map" alt=""/>
   <map id="gs_3A_3Arender_3A_3AFacade_map" name="gs_3A_3Arender_3A_3AFacade_map">
-<area href="classgs_1_1render_1_1IFacade.html" title="facade for all rendering" alt="gs::render::IFacade" shape="rect" coords="0,0,121,24"/>
+<area href="classgs_1_1BaseAppComponent.html" title="Contains logger and settings." alt="gs::BaseAppComponent" shape="rect" coords="0,0,145,24"/>
+<area href="classgs_1_1render_1_1IFacade.html" title="facade for all rendering" alt="gs::render::IFacade" shape="rect" coords="155,0,300,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab6beb35cadb355583510f386d3bf5883" id="r_ab6beb35cadb355583510f386d3bf5883"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab6beb35cadb355583510f386d3bf5883">Facade</a> (const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;, const std::shared_ptr&lt; <a class="el" href="namespacegs_1_1ecs.html#a48041250f226f69c0aa9075efcbcb8b9">ecs::Registry</a> &gt; &amp;, const std::shared_ptr&lt; <a class="el" href="classgs_1_1IResourceManager.html">IResourceManager</a> &gt; &amp;, const std::shared_ptr&lt; <a class="el" href="classgs_1_1IUIManager.html">IUIManager</a> &gt; &amp;, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ITranslateGizmoRenderService.html">ITranslateGizmoRenderService</a> &gt; &amp;, const std::shared_ptr&lt; <a class="el" href="classgs_1_1render_1_1ILowLevelService.html">ILowLevelService</a> &gt; &amp;, const std::shared_ptr&lt; <a class="el" href="classgs_1_1render_1_1IViewportManager.html">IViewportManager</a> &gt; &amp;, const std::shared_ptr&lt; <a class="el" href="classgs_1_1render_1_1IMeshInstancedDrawService.html">IMeshInstancedDrawService</a> &gt; &amp;, const std::shared_ptr&lt; <a class="el" href="classgs_1_1render_1_1IFrustumDrawService.html">IFrustumDrawService</a> &gt; &amp;, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;)</td></tr>
+<tr class="memitem:afb93877d6c990df38eb02ba5e8862788" id="r_afb93877d6c990df38eb02ba5e8862788"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#afb93877d6c990df38eb02ba5e8862788">Facade</a> (const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;, const std::shared_ptr&lt; <a class="el" href="namespacegs_1_1ecs.html#a48041250f226f69c0aa9075efcbcb8b9">ecs::Registry</a> &gt; &amp;, const std::shared_ptr&lt; <a class="el" href="classgs_1_1IResourceManager.html">IResourceManager</a> &gt; &amp;, const std::shared_ptr&lt; <a class="el" href="classgs_1_1IUIManager.html">IUIManager</a> &gt; &amp;, const std::shared_ptr&lt; <a class="el" href="classgs_1_1IUIStateManager.html">IUIStateManager</a> &gt; &amp;, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ITranslateGizmoRenderService.html">ITranslateGizmoRenderService</a> &gt; &amp;, const std::shared_ptr&lt; <a class="el" href="classgs_1_1render_1_1ILowLevelService.html">ILowLevelService</a> &gt; &amp;, const std::shared_ptr&lt; <a class="el" href="classgs_1_1render_1_1IViewportManager.html">IViewportManager</a> &gt; &amp;, const std::shared_ptr&lt; <a class="el" href="classgs_1_1render_1_1IMeshInstancedDrawService.html">IMeshInstancedDrawService</a> &gt; &amp;, const std::shared_ptr&lt; <a class="el" href="classgs_1_1render_1_1IFrustumDrawService.html">IFrustumDrawService</a> &gt; &amp;)</td></tr>
 <tr class="memitem:a8ecf1654f0ed76e68fe30dd30948d7a1" id="r_a8ecf1654f0ed76e68fe30dd30948d7a1"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#a8ecf1654f0ed76e68fe30dd30948d7a1">render</a> () override</td></tr>
+<tr class="memitem:adf3b65ae99680e4100d8fecbd1637199" id="r_adf3b65ae99680e4100d8fecbd1637199"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="#adf3b65ae99680e4100d8fecbd1637199">onRender</a> (std::function&lt; void()&gt; callback) override</td></tr>
+<tr class="inherit_header pub_methods_classgs_1_1BaseAppComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classgs_1_1BaseAppComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classgs_1_1BaseAppComponent.html">gs::BaseAppComponent</a></td></tr>
+<tr class="memitem:a509ebe518e3611bdcf05fe811d0e3330 inherit pub_methods_classgs_1_1BaseAppComponent" id="r_a509ebe518e3611bdcf05fe811d0e3330"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a509ebe518e3611bdcf05fe811d0e3330">BaseAppComponent</a> (const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;settings, const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;log)</td></tr>
+<tr class="memitem:a1c9a8be3b768eb7a861948e75659018e inherit pub_methods_classgs_1_1BaseAppComponent" id="r_a1c9a8be3b768eb7a861948e75659018e"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a1c9a8be3b768eb7a861948e75659018e">~BaseAppComponent</a> ()=default</td></tr>
 <tr class="inherit_header pub_methods_classgs_1_1render_1_1IFacade"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classgs_1_1render_1_1IFacade')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classgs_1_1render_1_1IFacade.html">gs::render::IFacade</a></td></tr>
 <tr class="memitem:a7f105a3918ac98f31acba7ae82a81981 inherit pub_methods_classgs_1_1render_1_1IFacade" id="r_a7f105a3918ac98f31acba7ae82a81981"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1render_1_1IFacade.html#a7f105a3918ac98f31acba7ae82a81981">~IFacade</a> ()=default</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_classgs_1_1BaseAppComponent"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classgs_1_1BaseAppComponent')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classgs_1_1BaseAppComponent.html">gs::BaseAppComponent</a></td></tr>
+<tr class="memitem:a524fe5fe65593228bded25265e46a64a inherit pro_attribs_classgs_1_1BaseAppComponent" id="r_a524fe5fe65593228bded25265e46a64a"><td class="memItemLeft">std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#a524fe5fe65593228bded25265e46a64a">settings_</a></td></tr>
+<tr class="memitem:ab6809c365687543a0c8eea8e04e461f0 inherit pro_attribs_classgs_1_1BaseAppComponent" id="r_ab6809c365687543a0c8eea8e04e461f0"><td class="memItemLeft">std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="classgs_1_1BaseAppComponent.html#ab6809c365687543a0c8eea8e04e461f0">log_</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages all specific services a managers to render. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000013">Todo</a></b></dt><dd>pointTransforms_ and pointColors_ is a TMP solution. They should be in moved to ecs after implemented rotation </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000014">Todo</a></b></dt><dd>pointTransforms_ and pointColors_ is a TMP solution. They should be in moved to ecs after implemented rotation </dd></dl>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ab6beb35cadb355583510f386d3bf5883" name="ab6beb35cadb355583510f386d3bf5883"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6beb35cadb355583510f386d3bf5883">&#9670;&#160;</a></span>Facade()</h2>
+<a id="afb93877d6c990df38eb02ba5e8862788" name="afb93877d6c990df38eb02ba5e8862788"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb93877d6c990df38eb02ba5e8862788">&#9670;&#160;</a></span>Facade()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -169,6 +180,11 @@ Public Member Functions</h2></td></tr>
           <td class="memname">gs::render::Facade::Facade </td>
           <td>(</td>
           <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="structgs_1_1Settings.html">Settings</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -184,6 +200,11 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1IUIManager.html">IUIManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1IUIStateManager.html">IUIStateManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -208,12 +229,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1render_1_1IFrustumDrawService.html">IFrustumDrawService</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1ILogManager.html">ILogManager</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classgs_1_1render_1_1IFrustumDrawService.html">IFrustumDrawService</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -221,6 +237,33 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="adf3b65ae99680e4100d8fecbd1637199" name="adf3b65ae99680e4100d8fecbd1637199"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf3b65ae99680e4100d8fecbd1637199">&#9670;&#160;</a></span>onRender()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void gs::render::Facade::onRender </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt;</td>          <td class="paramname"><span class="paramname"><em>callback</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classgs_1_1render_1_1IFacade.html#a030b31ed62442b065795df35af12eb6f">gs::render::IFacade</a>.</p>
+
+</div>
+</div>
 <a id="a8ecf1654f0ed76e68fe30dd30948d7a1" name="a8ecf1654f0ed76e68fe30dd30948d7a1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8ecf1654f0ed76e68fe30dd30948d7a1">&#9670;&#160;</a></span>render()</h2>
 

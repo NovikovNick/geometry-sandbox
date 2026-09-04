@@ -1,14 +1,15 @@
 var searchData=
 [
-  ['target_0',['target',['../structgs_1_1animation_1_1Key.html#ad7ff665d3af078371ba1b53f598cb0ee',1,'gs::animation::Key::target'],['../structgs_1_1animation_1_1PropertyPath.html#a87f7708c7d564ef86c306ba1289ef234',1,'gs::animation::PropertyPath::target'],['../structgs_1_1Camera.html#a028c2b8d10c8752ae516765fe8b783a8',1,'gs::Camera::target'],['../namespacegs_1_1animation_1_1dsl_1_1camera.html#a68471f5ba9ed57a86aeadb9bf50c5638',1,'gs::animation::dsl::camera::target']]],
-  ['text_1',['text',['../structgs_1_1ecs_1_1component_1_1Label.html#a84606bd351b627c070d5c546883e4047',1,'gs::ecs::component::Label::text'],['../structgs_1_1scene_1_1Text.html#a29ee32dd946c0776144b2bbd0f1078f5',1,'gs::scene::Text::text']]],
-  ['thickness_2',['thickness',['../structgs_1_1scene_1_1DashedLine.html#a2e7b3f0f2ec82a8d46b88e5db32ec3fa',1,'gs::scene::DashedLine::thickness'],['../structgs_1_1scene_1_1Vector.html#a39641af69414ccd9eda88aabb1ca84d7',1,'gs::scene::Vector::thickness'],['../structgs_1_1scene_1_1AABB.html#a4be53b45787dd73455d858d2d898d647',1,'gs::scene::AABB::thickness']]],
-  ['tick_3',['tick',['../structgs_1_1PerformanceStats.html#ac6b70cc974ad221cbf926d13614b505e',1,'gs::PerformanceStats']]],
-  ['time_4',['time',['../structgs_1_1animation_1_1Key.html#a13804a9e37d0127e479dd20dc8005a18',1,'gs::animation::Key::time'],['../structgs_1_1animation_1_1Keyframe.html#ae3b49d2c85f5a1e088a13c269c8f2b7a',1,'gs::animation::Keyframe::time'],['../structgs_1_1animation_1_1Asset_1_1KeyframeTime.html#ac0a0e1a94ae219787d52ae1a58f8d8ec',1,'gs::animation::Asset::KeyframeTime::time']]],
-  ['timelineslider_5',['timelineSlider',['../structgs_1_1ui_1_1AnimationPlayer.html#ada059011b5fe4cb4874820477b0bb5dd',1,'gs::ui::AnimationPlayer']]],
-  ['title_6',['title',['../structgs_1_1Settings.html#a7657039bbd7e15436e1e3e3730061673',1,'gs::Settings']]],
-  ['tooltipconverter_7',['tooltipConverter',['../structgs_1_1ui_1_1Slider.html#acc704d9ac8c38a6a573df67938808caf',1,'gs::ui::Slider']]],
-  ['total_8',['total',['../structgs_1_1PerformanceStats.html#ab64e03c5435955b8b431b4319f76f6f4',1,'gs::PerformanceStats']]],
-  ['transformgizmo_9',['transformGizmo',['../structgs_1_1ui_1_1State.html#a507fd6b09fc6be5519c2c6773d639046',1,'gs::ui::State']]],
-  ['type_10',['type',['../structgs_1_1reflection_1_1Property.html#af5713588eb06ccb7061f53a13928619b',1,'gs::reflection::Property::type'],['../structgs_1_1ecs_1_1component_1_1Mesh.html#afd71a78c0ae5d918bc3fa65a2e58f016',1,'gs::ecs::component::Mesh::type'],['../structgs_1_1scene_1_1Model.html#adf7c1eeca195f98b3aec352a349f588b',1,'gs::scene::Model::type']]]
+  ['uifontsize_0',['uiFontSize',['../structgs_1_1Settings.html#aecd9f8d807c4ade22940f2dc3eef01e6',1,'gs::Settings']]],
+  ['uiplayercontrolbuttonwidth_1',['uiPlayerControlButtonWidth',['../structgs_1_1Settings.html#a7f75ab725bc513291547dc93bc7256f7',1,'gs::Settings']]],
+  ['uiplayercontroltextwidth_2',['uiPlayerControlTextWidth',['../structgs_1_1Settings.html#a99e9335fd8c7bdd4f1ae22c88ee3718b',1,'gs::Settings']]],
+  ['uiplayerheight_3',['uiPlayerHeight',['../structgs_1_1Settings.html#a3da8b8ae5d3c33c8c7dcce4b106f02c0',1,'gs::Settings']]],
+  ['uiplayertimelinebackgroundcolor_4',['uiPlayerTimelineBackgroundColor',['../structgs_1_1Settings.html#a2b7eb85d5fd0274932dba51a7f970b33',1,'gs::Settings']]],
+  ['uiplayertimelinefillcolor_5',['uiPlayerTimelineFillColor',['../structgs_1_1Settings.html#a5724f45ed421afe67b2b82957085b1da',1,'gs::Settings']]],
+  ['uiplayertimelinegrabbercolor_6',['uiPlayerTimelineGrabberColor',['../structgs_1_1Settings.html#aa12f5406e84bbac76fc8fc41cb03f28e',1,'gs::Settings']]],
+  ['uiplayertimelinegrabbercoloractive_7',['uiPlayerTimelineGrabberColorActive',['../structgs_1_1Settings.html#a2066f119a16d50563f7a43eab0082e61',1,'gs::Settings']]],
+  ['uiplayertimelinegrabbersize_8',['uiPlayerTimelineGrabberSize',['../structgs_1_1Settings.html#ad87bcb3f97b5016e40b936258b403ea4',1,'gs::Settings']]],
+  ['uiplayertimelineheight_9',['uiPlayerTimelineHeight',['../structgs_1_1Settings.html#a3e5c699a3920f6fb7cf63388bff0b605',1,'gs::Settings']]],
+  ['uiplayertimelineroundingsize_10',['uiPlayerTimelineRoundingSize',['../structgs_1_1Settings.html#a26bc1b05a57933a5d9b7fed9f357674e',1,'gs::Settings']]],
+  ['upaxis_11',['upAxis',['../structgs_1_1Camera.html#a96c69850a2c905c2b9ff0d4b6869fb10',1,'gs::Camera']]]
 ];

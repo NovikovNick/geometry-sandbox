@@ -1,7 +1,6 @@
 var classgs_1_1UIManager =
 [
-    [ "UIManager", "classgs_1_1UIManager.html#a66d050ad5b1b133a5ea166fe27b2d5a4", null ],
-    [ "getState", "classgs_1_1UIManager.html#a81a1eeba2a21fbcb2b84cdef687d1ed7", null ],
+    [ "UIManager", "classgs_1_1UIManager.html#a0bad304fa40c936a62424f9a561f593f", null ],
     [ "init", "classgs_1_1UIManager.html#a3b79f0fbd5215178b9dc1c057d2538e8", null ],
     [ "isMouseCaptured", "classgs_1_1UIManager.html#ac8b3f624af2fc1dd5ae44dd608ed1102", null ],
     [ "onDetailsViewDraw", "classgs_1_1UIManager.html#aae2890e49b72cf39867ce679c2e6d952", null ],

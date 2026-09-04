@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['onclosecallback_0',['OnCloseCallback',['../classgs_1_1IWindowManager.html#a90f50ac6d972f58c625df3a301c9ebdf',1,'gs::IWindowManager']]],
-  ['onresizecallback_1',['OnResizeCallback',['../classgs_1_1IWindowManager.html#a5b93fd0cfe68dd2f1fa5654a6c5f0d35',1,'gs::IWindowManager']]]
+  ['nanoseconds_0',['Nanoseconds',['../namespacegs.html#aa18cfe8695b4789ce1aafd2c0b4e4aa5',1,'gs']]]
 ];

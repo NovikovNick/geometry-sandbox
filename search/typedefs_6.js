@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['quat_0',['Quat',['../namespacegs.html#a2140b21f220e92e19495bdcbbcffb758',1,'gs']]]
+  ['onclosecallback_0',['OnCloseCallback',['../classgs_1_1IWindowManager.html#a90f50ac6d972f58c625df3a301c9ebdf',1,'gs::IWindowManager']]],
+  ['onresizecallback_1',['OnResizeCallback',['../classgs_1_1IWindowManager.html#a5b93fd0cfe68dd2f1fa5654a6c5f0d35',1,'gs::IWindowManager']]]
 ];

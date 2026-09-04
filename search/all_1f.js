@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['🛠_20tech_20stack_0',['🛠 Tech Stack',['../index.html#autotoc_md3',1,'']]]
+  ['⚙️_20animation_20core_0',['⚙️ Animation Core',['../index.html#autotoc_md1',1,'']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['sampleinterpolator_0',['SampleInterpolator',['../namespacegs_1_1animation.html#abc832131da044e3070db528afc6a616f',1,'gs::animation']]],
-  ['seconds_1',['Seconds',['../namespacegs.html#a1ee1126c8bb96cdc626a33587274d5d3',1,'gs']]]
+  ['registry_0',['Registry',['../namespacegs_1_1ecs.html#a48041250f226f69c0aa9075efcbcb8b9',1,'gs::ecs']]]
 ];
