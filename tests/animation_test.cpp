@@ -175,8 +175,8 @@ TEST_F(AnimationTest, interpolator_test)
 	using namespace animation::dsl;
 
 	float i = 0;
-	const Camera beginCamera{.position = Vec3{++i, ++i, ++i}, .target = Vec3{++i, ++i, ++i}, .fov = ++i};
-	const Camera endCamera{.position = Vec3{++i, ++i, ++i}, .target = Vec3{++i, ++i, ++i}, .fov = ++i};
+	const Camera beginCamera{.position = Vec3{++i, ++i, ++i}, .rotation = Quat{++i, ++i, ++i, ++i}.normalized(), .fovY = ++i};
+	const Camera endCamera{.position = Vec3{++i, ++i, ++i}, .rotation = Quat{++i, ++i, ++i, ++i}.normalized(), .fovY = ++i};
 	const int cameraId = 0;
 	ui::State& state   = uiStateManager->getState();
 	state.cameras.resize(1);
@@ -185,7 +185,7 @@ TEST_F(AnimationTest, interpolator_test)
 	const animation::Interpolator<Camera> interpolator = [](const Camera& lhs, const Camera& rhs, float progress)
 	{
 		Camera res = lhs;
-		res.fov	   = std::lerp(lhs.fov, rhs.fov, progress);
+		res.fovY   = std::lerp(lhs.fovY, rhs.fovY, progress);
 		return res;
 	};
 
@@ -200,7 +200,7 @@ TEST_F(AnimationTest, interpolator_test)
 
 	// assert
 	const Camera& camera = state.cameras[cameraId];
-	EXPECT_EQ(camera.fov, std::lerp(beginCamera.fov, endCamera.fov, 0.5));
+	EXPECT_EQ(camera.fovY, std::lerp(beginCamera.fovY, endCamera.fovY, 0.5));
 }
 
 }  // namespace gs::animation

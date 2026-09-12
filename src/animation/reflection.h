@@ -70,6 +70,7 @@ enum class PropertyType : std::uint8_t
 	Float,
 	Bool,
 	Vec3,
+	Quat,
 	Color,
 };
 
@@ -93,6 +94,7 @@ constexpr PropertyType propertyType()
 	if constexpr (std::is_same_v<T, float>) return PropertyType::Float;
 	else if constexpr (std::is_same_v<T, bool>) return PropertyType::Bool;
 	else if constexpr (std::is_same_v<T, Vec3>) return PropertyType::Vec3;
+	else if constexpr (std::is_same_v<T, Quat>) return PropertyType::Quat;
 	else if constexpr (std::is_same_v<T, Color>) return PropertyType::Color;
 	else { static_assert(sizeof(T) == 0, "There is no such property type"); return PropertyType::None; }
 	// clang-format on
@@ -200,6 +202,13 @@ class PropertyRegistry	// it is like "join" table
 			propertyId = registerPropertyLeaf<F, E, float>(propertyId, depth, offset + sizeof(float) * 1, "y");
 			propertyId = registerPropertyLeaf<F, E, float>(propertyId, depth, offset + sizeof(float) * 2, "z");
 		}
+		else if constexpr (std::is_same_v<P, Quat>)
+		{
+			propertyId = registerPropertyLeaf<F, E, float>(propertyId, depth, offset + sizeof(float) * 0, "x");
+			propertyId = registerPropertyLeaf<F, E, float>(propertyId, depth, offset + sizeof(float) * 1, "y");
+			propertyId = registerPropertyLeaf<F, E, float>(propertyId, depth, offset + sizeof(float) * 2, "z");
+			propertyId = registerPropertyLeaf<F, E, float>(propertyId, depth, offset + sizeof(float) * 3, "w");
+		}
 		else if constexpr (!std::is_same_v<P, float> && !std::is_same_v<P, bool>)  // if NOT float or bool
 		{
 			static_assert(sizeof(P) == 0, "Type is not registered as a property type");
@@ -249,8 +258,8 @@ class PropertyRegistry	// it is like "join" table
 		else if constexpr (std::is_same_v<E, Camera>)
 		{
 			propertyId = registerPropertyLeaf<F, E, Vec3>(propertyId, depth, offsetof(E, position), "position");
-			propertyId = registerPropertyLeaf<F, E, Vec3>(propertyId, depth, offsetof(E, target), "target");
-			propertyId = registerPropertyLeaf<F, E, float>(propertyId, depth, offsetof(E, fov), "fov");
+			propertyId = registerPropertyLeaf<F, E, Quat>(propertyId, depth, offsetof(E, rotation), "rotation");
+			propertyId = registerPropertyLeaf<F, E, float>(propertyId, depth, offsetof(E, fovY), "fovY");
 			propertyId = registerPropertyLeaf<F, E, float>(propertyId, depth, offsetof(E, zNear), "zNear");
 			propertyId = registerPropertyLeaf<F, E, float>(propertyId, depth, offsetof(E, zFar), "zFar");
 			propertyId = registerPropertyLeaf<F, E, bool>(propertyId, depth, offsetof(E, perspective), "perspective");

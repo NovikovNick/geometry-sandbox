@@ -109,18 +109,18 @@ Results findClosestPoint(const Parameters& input)
 void setupScene(Parameters& params, Entities& entities)
 {
 	// NOLINTBEGIN(*-magic-numbers)
-	auto& ctx			  = di::getContext();
-	auto& sceneService	  = ctx.create<ISceneService&>();
-	auto& uiStateManager  = ctx.create<IUIStateManager&>();
-	auto& settings		  = ctx.create<Settings&>();
+	auto& ctx			 = di::getContext();
+	auto& sceneService	 = ctx.create<ISceneService&>();
+	auto& uiStateManager = ctx.create<IUIStateManager&>();
+	auto& settings		 = ctx.create<Settings&>();
 
-	params.point		  = Vec3{0.6F, 0.5F, 0.5F};
-	params.planeNormal	  = Vec3{0.7F, 0.6F, -0.3F}.normalized();
-	params.planeDistance  = 2.0F;
+	params.point		 = Vec3{0.6F, 0.5F, 0.5F};
+	params.planeNormal	 = Vec3{0.7F, 0.6F, -0.3F}.normalized();
+	params.planeDistance = 2.0F;
 
-	ui::State& ui		  = uiStateManager.getState();
-	Camera& camera		  = ui.cameras[ui.activeCameraIndex];
-	camera.target		  = Vec3{0.0F, 1.5F, 0.0F};
+	ui::State& ui		 = uiStateManager.getState();
+	Camera& camera		 = ui.cameras[ui.activeCameraIndex];
+	// camera.target		  = Vec3{0.0F, 1.5F, 0.0F};
 
 	entities.point.sphere = sceneService.addPoint({.color = Color::blue(), .radius = 0.08F});
 	entities.point.label  = sceneService.addText({.text = "q", .color = Color::white(), .fontSize = settings.canvasFontSize});

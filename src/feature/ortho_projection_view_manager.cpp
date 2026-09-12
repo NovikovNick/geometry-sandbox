@@ -33,14 +33,15 @@ Vec3 getAxis(ViewProjection view)
 }
 }  // namespace
 
-void OrthoProjectionViewManager::switchTo(int cameraId, ViewProjection view)
+void OrthoProjectionViewManager::switchTo(int  /*cameraId*/, ViewProjection  /*view*/)
 {
 	constexpr float dollyDist = 1000.0F;
 
 	if (!activeAnimation_.isValid())
 	{
-		using namespace animation::dsl;	 // NOLINT(*-using-namespace)
+		/*
 
+		using namespace animation::dsl;	 // NOLINT(*-using-namespace)
 		const Vec3 target		   = sceneService_->getSceneCenter();
 		const Vec3 orthoProjection = getAxis(view);
 
@@ -65,8 +66,8 @@ void OrthoProjectionViewManager::switchTo(int cameraId, ViewProjection view)
 		const float beginDist							   = (endCamera.target - positionedCamera.position).norm();
 		const float endDist								   = (endCamera.target - endCamera.position).norm();
 
-		const float beginTop							   = beginDist * std::tan(degToRad(positionedCamera.fov / 2));
-		endCamera.fov									   = radToDeg(std::atan(beginTop / endDist) * 2);
+		const float beginTop							   = beginDist * std::tan(degToRad(positionedCamera.fovY / 2));
+		endCamera.fovY									   = radToDeg(std::atan(beginTop / endDist) * 2);
 
 		const animation::Interpolator<Camera> interpolator = [](const Camera& lhs, const Camera& rhs, float progress)
 		{
@@ -82,8 +83,8 @@ void OrthoProjectionViewManager::switchTo(int cameraId, ViewProjection view)
 			const float beginDist = (rhs.target - lhs.position).norm();
 			const float currDist  = (rhs.target - currCamera.position).norm();
 
-			const float beginTop  = beginDist * std::tan(degToRad(lhs.fov / 2));
-			currCamera.fov		  = radToDeg(std::atan(beginTop / currDist) * 2);
+			const float beginTop  = beginDist * std::tan(degToRad(lhs.fovY / 2));
+			currCamera.fovY		  = radToDeg(std::atan(beginTop / currDist) * 2);
 			return currCamera;
 		};
 
@@ -92,6 +93,8 @@ void OrthoProjectionViewManager::switchTo(int cameraId, ViewProjection view)
 		keyframes += keyframe(1s) | accessor::camera(cameraId) << key(positionedCamera, expo::in_out);
 		keyframes += keyframe(2s) | accessor::camera(cameraId) << key(endCamera, interpolator);
 		activeAnimation_ = animationManager_->buildAndPlay(keyframes);
+
+										 */
 	}
 	else if (const animation::Instance& animation = activeAnimation_.getAnimationInstance();
 			 animation.isComplete() && animation.isForward())

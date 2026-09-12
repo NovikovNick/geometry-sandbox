@@ -50,6 +50,11 @@ namespace
 struct Parameters
 {
 	Camera camera;
+	Vec3 a;
+	Vec3 b;
+	Vec3 c;
+	Vec3 origin;
+	Vec3 rotation;
 };
 
 /** @brief Identifiers of scene objects related to the camera */
@@ -57,46 +62,70 @@ struct Entities
 {
 	ecs::Entity position;
 	ecs::Entity target;
+
+	ecs::Entity a;
+	ecs::Entity b;
+	ecs::Entity c;
+	ecs::Entity origin;
 };
 
 /** @brief Create scene objecs and define colors, radiuses, font sizes and etc */
 void setupScene(Parameters& params, Entities& entities)
 {
 	// NOLINTBEGIN(*-magic-numbers)
-	auto& ctx			   = di::getContext();
-	auto& sceneService	   = ctx.create<ISceneService&>();
-	auto& uiStateManager   = ctx.create<IUIStateManager&>();
-	auto& settings		   = ctx.create<Settings&>();
-	auto& facade		   = ctx.create<render::IFacade&>();
-	auto& graphic		   = ctx.create<render::ILowLevelService&>();
-	auto& cameraService	   = ctx.create<ICameraService&>();
-	auto& log			   = ctx.create<ILogManager&>();
+	auto& ctx			 = di::getContext();
+	auto& sceneService	 = ctx.create<ISceneService&>();
+	auto& uiStateManager = ctx.create<IUIStateManager&>();
+	auto& settings		 = ctx.create<Settings&>();
+	auto& renderer		 = ctx.create<render::IFacade&>();
+	auto& graphic		 = ctx.create<render::ILowLevelService&>();
+	auto& cameraService	 = ctx.create<ICameraService&>();
+	auto& registry		 = ctx.create<ecs::Registry&>();
+	auto& log			 = ctx.create<ILogManager&>();
 
-	settings.showConsole   = false;
+	settings.showConsole = true;
 
-	ui::State& ui		   = uiStateManager.getState();
+	ui::State& ui		 = uiStateManager.getState();
 
-	Camera& mainCamera	   = ui.cameras[ui.activeCameraIndex];
-	mainCamera.position	   = Vec3{5.0F, 5.0F, 2.0F};
-	mainCamera.target	   = Vec3::Zero();
+	Camera& mainCamera	 = ui.cameras[ui.activeCameraIndex];
+	// mainCamera.position	 = Vec3{5.0F, 5.0F, 2.0F};
+	//  mainCamera.target	   = Vec3::Zero();
+
+	params.rotation		   = Vec3::Zero();
 
 	params.camera		   = settings.defaultCamera;
-	params.camera.position = Vec3{2, 2, 2};
-	params.camera.target   = Vec3::Zero();
-	params.camera.fov	   = 55.0F;
+	params.camera.position = Vec3{1, 1, 5};
+	params.camera.fovY	   = 55.0F;
 	params.camera.zNear	   = 1.0F;
 	params.camera.zFar	   = 15.0F;
-
 	ui.cameras.push_back(params.camera);
 
-	entities.position = sceneService.addPoint({.color = Color::transparent(), .radius = 0.0F});
-	entities.target	  = sceneService.addModel({.origin = Vec3{0.2F, 0.0F, 0.0F}, .scale = 1.0F, .type = ModelType::Duck});
+	params.a		  = Vec3{-3, 1.5, -3};
+	params.b		  = Vec3{-2.5, 2.5, -1.5};
+	params.c		  = params.a.cross(params.b);
+	params.origin	  = Vec3{-2.5, 1, -2};
 
+	entities.position = sceneService.addPoint({.color = Color::transparent(), .radius = 0.0F});
+	entities.target	  = sceneService.addModel({.position = Vec3::Zero(),  //
+											   .origin	 = Vec3{0.2F, 0.0F, 0.0F},
+											   .scale	 = 1.0F,
+											   .type	 = ModelType::Duck});
+
+	entities.a		  = sceneService.addVector({.color	   = Color::red(),	//
+												.thickness = settings.lineThickness,
+												.arrowSize = settings.gizmoArrowSize});
+	entities.b		  = sceneService.addVector({.color	   = Color::green(),  //
+												.thickness = settings.lineThickness,
+												.arrowSize = settings.gizmoArrowSize});
+	entities.c		  = sceneService.addVector({.color	   = Color::blue(),	 //
+												.thickness = settings.lineThickness,
+												.arrowSize = settings.gizmoArrowSize});
+	entities.origin	  = sceneService.addPoint({.color = Color::white(), .radius = 0.08F});
 	// NOLINTEND(*-magic-numbers)
 }
 
 /** @brief Recalculate data and update positions after UI update or dragging scene objects */
-void updateScene(const Parameters& params, const Entities& entities)
+void updateScene(Parameters& params, const Entities& entities)
 {
 	auto& ctx			  = di::getContext();
 	auto& sceneService	  = ctx.create<ISceneService&>();
@@ -107,8 +136,27 @@ void updateScene(const Parameters& params, const Entities& entities)
 	sampleCamera.position = params.camera.position;
 	sceneService.setPosition(entities.position, params.camera.position);
 
-	sampleCamera.target = params.camera.target;
-	sceneService.setPosition(entities.target, params.camera.target);
+	const float yaw		  = degToRad(params.rotation.x());
+	const float pitch	  = degToRad(params.rotation.y());
+	const float roll	  = degToRad(params.rotation.z());
+	const Quat qFromEuler = Eigen::AngleAxisf(yaw, Vec3::UnitX())	   //
+							* Eigen::AngleAxisf(pitch, Vec3::UnitY())  //
+							* Eigen::AngleAxisf(roll, Vec3::UnitZ());
+
+	sampleCamera.rotation = qFromEuler.normalized();
+
+	const Vec3 a		  = params.a - params.origin;
+	const Vec3 b		  = params.b - params.origin;
+
+	params.c			  = params.origin + a.cross(b);
+
+	sceneService.setPosition(entities.origin, params.origin);
+	sceneService.setEndPosition(entities.a, params.origin);
+	sceneService.setEndPosition(entities.b, params.origin);
+	sceneService.setEndPosition(entities.c, params.origin);
+	sceneService.setPosition(entities.a, params.a);
+	sceneService.setPosition(entities.b, params.b);
+	sceneService.setPosition(entities.c, params.c);
 }
 
 void setupInteractionLogic(Parameters& params, const Entities& entities)
@@ -130,11 +178,27 @@ void setupInteractionLogic(Parameters& params, const Entities& entities)
 															  updateScene(params, entities);
 														  });
 
-	registry.emplace<ecs::component::SphereCollider>(entities.target, kObjectCollisionRadius);
-	registry.emplace<ecs::component::OnTranslateCallback>(entities.target,
+	registry.emplace<ecs::component::SphereCollider>(entities.a, kObjectCollisionRadius);
+	registry.emplace<ecs::component::OnTranslateCallback>(entities.a,
 														  [&](Vec3 position)
 														  {
-															  params.camera.target = std::move(position);
+															  params.a = std::move(position);
+															  updateScene(params, entities);
+														  });
+
+	registry.emplace<ecs::component::SphereCollider>(entities.b, kObjectCollisionRadius);
+	registry.emplace<ecs::component::OnTranslateCallback>(entities.b,
+														  [&](Vec3 position)
+														  {
+															  params.b = std::move(position);
+															  updateScene(params, entities);
+														  });
+
+	registry.emplace<ecs::component::SphereCollider>(entities.origin, kObjectCollisionRadius);
+	registry.emplace<ecs::component::OnTranslateCallback>(entities.origin,
+														  [&](Vec3 position)
+														  {
+															  params.origin = std::move(position);
 															  updateScene(params, entities);
 														  });
 }
@@ -159,9 +223,18 @@ void setupUI(Parameters& params, const Entities& entities)
 			drawCombo("Camera", ui.activeCameraIndex, "Main", "Second");
 
 			changed |= drawCombo("Handedness", camera.handedness, "Left-hand", "Right-hand");
-			changed |= ImGui::SliderFloat("pos.x", &params.camera.position.x(), -sceneSize, sceneSize);
-			changed |= ImGui::SliderFloat("pos.y", &params.camera.position.y(), -sceneSize, sceneSize);
-			changed |= ImGui::SliderFloat("pos.z", &params.camera.position.z(), -sceneSize, sceneSize);
+			ImGui::Separator();
+			changed |= ImGui::SliderFloat("a.x", &params.a.x(), -sceneSize, sceneSize);
+			changed |= ImGui::SliderFloat("a.y", &params.a.y(), -sceneSize, sceneSize);
+			changed |= ImGui::SliderFloat("a.z", &params.a.z(), -sceneSize, sceneSize);
+			ImGui::Separator();
+			changed |= ImGui::SliderFloat("b.x", &params.b.x(), -sceneSize, sceneSize);
+			changed |= ImGui::SliderFloat("b.y", &params.b.y(), -sceneSize, sceneSize);
+			changed |= ImGui::SliderFloat("b.z", &params.b.z(), -sceneSize, sceneSize);
+			ImGui::Separator();
+			changed |= ImGui::SliderFloat("origin.x", &params.origin.x(), -sceneSize, sceneSize);
+			changed |= ImGui::SliderFloat("origin.y", &params.origin.y(), -sceneSize, sceneSize);
+			changed |= ImGui::SliderFloat("origin.z", &params.origin.z(), -sceneSize, sceneSize);
 
 			if (changed)
 			{

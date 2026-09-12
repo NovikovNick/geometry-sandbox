@@ -3,7 +3,9 @@
 #include "animation/dsl.h"
 #include "animation/manager.h"
 #include "animation/types.h"
+#include "core/camera_service.h"
 #include "core/input_manager.h"
+#include "core/log_manager.h"
 #include "core/math.h"
 #include "core/scene_service.h"
 #include "core/settings.h"
@@ -27,7 +29,6 @@ void CameraIdleRotationAnimationManager::enableIdleRotation(int cameraId)
 	// todo: callback should receive the frame delta time, not the animation progress. Need to add new abstraction
 	const animation::Interpolator<Camera> cameraIdleRotation = [&, cameraId](const Camera&, const Camera&, float)
 	{
-		const float rotationAnglePerFrame	 = settings_->idleRotationAnglePerFrame;
 		const Seconds startDelay			 = settings_->idleRotationAnimationStartDelay;
 		const Nanoseconds transitionDuration = settings_->idleRotationTransitionDuration;
 		const float distanceMin				 = settings_->idleRotationDistanceMin;
@@ -43,34 +44,48 @@ void CameraIdleRotationAnimationManager::enableIdleRotation(int cameraId)
 		{
 			if (sceneBoundsDirty_)
 			{
+				sceneBoundsDirty_		   = false;
 				const AABB sceneBounds	   = sceneService_->getSceneBounds();
 				const Vec3 sceneExtents	   = sceneBounds.max - sceneBounds.min;	 // dimensions along all three axes of the scene
 				const float sceneMaxExtent = sceneExtents.maxCoeff();			 // the max value among all elements of the extents.
 
-				beginPosition_			   = camera.position;
-				beginTarget_			   = camera.target;
-
 				sceneCenter_			   = std::lerp(sceneBounds.min, sceneBounds.max, 0.5F);	 // NOLINT(*-magic-numbers)
+
+				beginPosition_			   = camera.position;
+				beginRotation_			   = camera.rotation;
+
 				distanceToSceneCenter_	   = std::clamp(sceneMaxExtent * distanceMod, distanceMin, camera.zFar);
 
-				sceneBoundsDirty_		   = false;
+				const Quat nextRotation	   = quaternionFromLookAt(camera.position, sceneCenter_, getUpVector(camera.upAxis));
+				ccw_					   = beginRotation_.dot(nextRotation) > 0;
 			}
 
 			const auto elapsed	 = static_cast<float>(elapsedAfterLastUpdate.count());
 			const auto duration	 = static_cast<float>(transitionDuration.count());
-			const float progress = std::clamp(elapsed / duration, 0.0F, 1.0F);
+			const float progress = std::clamp(elapsed / duration, 0.0F, 1.0F);	// progress is calculated based on elapsed time
 
-			// look at scene center
-			camera.target = std::lerp(beginTarget_, sceneCenter_, expo::in_out(progress));
+			// 1. look at scene center
+			const Quat newRotation = quaternionFromLookAt(camera.position, sceneCenter_, getUpVector(camera.upAxis));
+			camera.rotation		   = beginRotation_.slerp(expo::in_out(progress), newRotation);
 
-			// move the camera along the ray to the target to maintain distance
+			// 2. move the camera along the ray to the target to maintain distance
 			const Vec3 retractedPosition = sceneCenter_ + (camera.position - sceneCenter_).normalized() * distanceToSceneCenter_;
-			camera.position				 = std::lerp(beginPosition_, retractedPosition, expo::in_out(progress));
+			Vec3 newPosition			 = std::lerp(beginPosition_, retractedPosition, expo::in_out(progress));
 
-			// rotate around scene center
-			camera.position -= sceneCenter_;
-			camera.position = rotateVector(camera.position, rotationAxis, rotationAnglePerFrame * progress);
-			camera.position += sceneCenter_;
+			// 3. rotate around scene center
+			newPosition -= sceneCenter_;
+			float angle = settings_->idleRotationAnglePerFrame;
+			angle *= progress;	// start smoothly
+
+			// direction of rotation must align with the quaternion slerp's arc,
+			// otherwise, a shorter arc may appear in the middle of animation,
+			// disrupting the slerp and make ugle orientation teleport
+			angle *= (ccw_ ? -1.0F : 1.0F);
+
+			newPosition = rotateVector(newPosition, rotationAxis, angle);
+			newPosition += sceneCenter_;
+
+			camera.position = newPosition;
 		}
 		else
 		{

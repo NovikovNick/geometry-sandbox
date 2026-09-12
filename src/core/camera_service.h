@@ -30,6 +30,7 @@ class ICameraService
 	virtual void rotateYaw(Camera&, float delta) const					 = 0;
 	virtual void rotatePitch(Camera&, float delta) const				 = 0;
 	virtual Ray getScreenToWorldRay(Vec2 screenPos, const Camera&) const = 0;
+	virtual void lookAt(Camera&, const Vec3& target) const				 = 0;
 	virtual ~ICameraService()											 = default;
 };
 
@@ -49,6 +50,7 @@ class CameraService : public BaseService, public ICameraService
 
 	/** @todo add support for orthographic projection */
 	virtual Ray getScreenToWorldRay(Vec2 screenPos, const Camera&) const override;
+	virtual void lookAt(Camera&, const Vec3& target) const override;
 };
 
 namespace di

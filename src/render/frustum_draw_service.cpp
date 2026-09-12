@@ -56,7 +56,7 @@ void FrustumDrawService::drawFrustum(std::size_t cameraIndex, const Camera& came
 			rlRotatef(180.0F, 0, 1, 0);	 // NOLINT(*-magic-numbers)
 		}
 
-		const float zoom = camera.zNear * std::tan(degToRad(camera.fov / 2));
+		const float zoom = camera.zNear * std::tan(degToRad(camera.fovY / 2));
 		DrawModel(viewports_->getViewport3D(cameraIndex),
 				  /*pos*/ Vector3{.x = 0, .y = 0, .z = 0},
 				  zoom,

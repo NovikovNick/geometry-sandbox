@@ -21,15 +21,14 @@ namespace gs
  */
 void adjustFOVWithDistanceCompensation(Camera& cam, const float nextFov, const float fixedDistance)
 {
-	const float r	  = (cam.zNear + fixedDistance) * std::tan(degToRad(cam.fovY / 2));
+	const float r	  = (cam.zNear + fixedDistance) * std::tan(degToRad(cam.fov / 2));
 	const float d	  = r / std::tan(degToRad(nextFov / 2));
 	const float delta = (cam.zNear + fixedDistance) - d;
 
-	Vec3 forward	  = (cam.rotation * Vec3::UnitZ());
-	cam.position	  = cam.position - forward * delta;	 // distance compensation
-	cam.zNear		  = cam.zNear - delta;				 // shift clipping planes along with the camera,
-	cam.zFar		  = cam.zFar - delta;				 // so that the frustum stays fixed to the scene
-	cam.fovY		  = nextFov;
+	cam.position	  = cam.position - (cam.position - cam.target).normalized() * delta;  // distance compensation
+	cam.zNear		  = cam.zNear - delta;	// shift clipping planes along with the camera,
+	cam.zFar		  = cam.zFar - delta;	// so that the frustum stays fixed to the scene
+	cam.fov			  = nextFov;
 }
 
 /** @brief Recalculates FOV for a new projection distance while maintaining the scale at a certain distance */

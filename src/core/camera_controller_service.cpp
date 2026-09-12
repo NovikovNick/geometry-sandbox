@@ -3,6 +3,7 @@
 #include "core/base_app_component.h"
 #include "core/camera_service.h"
 #include "core/input_manager.h"
+#include "core/log_manager.h"
 #include "core/math.h"
 #include "core/settings.h"
 #include "core/types.h"
@@ -33,32 +34,32 @@ void CameraControllerService::update(Camera& camera) const
 
 void gs::CameraControllerService::updateFree(Camera& camera) const
 {
-	const float moveSensitivity = settings_->cameraMoveSensitivity;
+	float moveSensitivity = settings_->cameraMoveSensitivity;
 	if (inputManager_->isKeyPressed(InputKey::Forward))
 	{
 		const Vec3 offset = cameraService_->getForward(camera) * moveSensitivity;
 
 		camera.position += offset;
-		camera.target += offset;
+		// camera.target += offset;
 	}
 	if (inputManager_->isKeyPressed(InputKey::Backward))
 	{
 		const Vec3 offset = cameraService_->getForward(camera) * -moveSensitivity;
 
 		camera.position += offset;
-		camera.target += offset;
+		// camera.target += offset;
 	}
 	if (inputManager_->isKeyPressed(InputKey::Left))
 	{
 		const Vec3 offset = cameraService_->getRight(camera) * -moveSensitivity;
 		camera.position += offset;
-		camera.target += offset;
+		// camera.target += offset;
 	}
 	if (inputManager_->isKeyPressed(InputKey::Right))
 	{
 		const Vec3 offset = cameraService_->getRight(camera) * moveSensitivity;
 		camera.position += offset;
-		camera.target += offset;
+		// camera.target += offset;
 	}
 
 	if (inputManager_->isKeyPressed(InputKey::MouseRight))

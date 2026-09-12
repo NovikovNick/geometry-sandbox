@@ -13,6 +13,7 @@
 #include <cmath>
 #include <functional>
 #include <set>
+#include <stdexcept>
 #include <string>
 #include <vector>
 
@@ -85,6 +86,22 @@ enum class Axis : std::uint8_t
 	Z	 = 0b100,
 	ZX	 = 0b101
 };
+
+/**
+ * @return x, y, z unit or exception
+ *
+ * ideally should be public method of Axis
+ */
+inline Vec3 getUpVector(const Axis& axis)
+{
+	switch (axis)
+	{
+		case Axis::X: return Vec3::UnitX();
+		case Axis::Y: return Vec3::UnitY();
+		case Axis::Z: return Vec3::UnitZ();
+		default: throw std::runtime_error("invalid up vector");
+	}
+}
 
 /** @brief cursor type for UI */
 enum class CursorType
@@ -215,11 +232,12 @@ struct Camera
 {
 	CoordinateHandedness handedness;
 	Vec3 position;
-	Vec3 target;
+	Quat rotation;
+
 	Axis upAxis;
 	int width;		   // viewport's width, to calculate aspect ratio, viewport texture
 	int height;		   // viewport's height
-	float fov;		   // field of view by Y axis
+	float fovY;		   // field of view by Y axis
 	float zNear;	   // near clipping plane distance from position
 	float zFar;		   // far clipping plane distance from position
 	bool perspective;  // perspective or orthographic

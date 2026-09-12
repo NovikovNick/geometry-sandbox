@@ -3,24 +3,33 @@
  *
  * @brief main entry class
  *
- * @todo [docs]: ★★★ Cleanup .bat and .sh scripts
- * @todo [improvement]: ★★★★ Real 3D text, not a 2D projection
- * @todo [improvement]: ★★★ Template accessor instead of std::span<std::byte>?
+ * @todo [improvement]: ★★★★ Quaternion rotation for camera
+ * @todo [sample]: ★★★★ Quaternion like https://quaternions.online/
+ * @todo [improvement]: ★★★★ Transform (Translate + Rotator + Scale)
+ * @todo [sample]: ★★★★ Boids simulation for benchmark: https://github.com/SkitzFist/Boids
  * @todo [improvement]: ★★★★ Template <typename T> using Animator = std::function<T(Nanoseconds)>
+ * @todo [improvement]: ★★★★ WebGPU renderer
+ * @todo [feature]: ★★★★ Rotation gizmo example: https://github.com/CedricGuillemet/ImGuizmo
+ * @todo [performance]: ★★★★ Frustum culling? scene manager and octree
+ *
+ * @todo [bugfix]: ★★★ broken html layout on mobile devices (github link)
+ * @todo [docs]: ★★★ Cleanup .bat and .sh scripts
+ * @todo [improvement]: ★★ Update Eigen to 5.0.0 version + display versions on cmake build
+ * @todo [improvement]: ★★★ Template accessor instead of std::span<std::byte>?
  * @todo [improvement]: ★★★★ Move platform specific code to separate class
  * @todo [docs]: ★★★★ Dark/light theme toggle in docs doesn't work correctly
  * @todo [linter]: ★★★ Check names in clang-tidy (active, hover, constrained...)
  *
  * @todo [sample]: ★★★ Add samples for all https://gamemath.com/book/geomtests.html
- * @todo [sample]: ★★★ Boids simulation for benchmark: https://github.com/SkitzFist/Boids
+ * @todo [improvement]: ★★★★ DSL to describe scene geometry, some Geometry Markup Language. One wasm to rule them all :)
+ * @todo [improvement]: ★★★★ Real 3D text, not a 2D projection
+ *
  * @todo [R&D]: ★★★ Dual contouring vs marching cubes
  * @todo [R&D]: ★★★★ Motion matching sample
  * @todo [improvement]: ★★★★ ASAN for unit-tests on clang
  * @todo [performance]: ★★★★	 Animation build should be at compile-time
  * @todo [performance]: ★★★★ Arena allocator should improve animation build's performance
  * @todo [performance]: ★★★★ Concurrency for animation system. Does -pthread work on github pages?
- * @todo [performance]: ★★★ Frustum culling? scene manager and octree
- * @todo [feature]: ★★★★ Rotation gizmo example: https://github.com/CedricGuillemet/ImGuizmo
  * @todo [feature]: ★★★ Select scene objects with rectangle
  * @todo [feature]: ★★★★ Ru/En lang switcher? Asset manager to load i18n?
  * @todo [feature]: ★★★★ Add https://github.com/NanoMichael/MicroTeX

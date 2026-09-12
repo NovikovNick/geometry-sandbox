@@ -1,5 +1,6 @@
-#include "core/camera_service.h"
+﻿#include "core/camera_service.h"
 
+#include "core/log_manager.h"
 #include "core/math.h"
 #include "core/settings.h"
 #include "core/types.h"
@@ -11,34 +12,21 @@
 
 namespace gs
 {
-namespace
-{
-Vec3 getUpVector(const Camera& camera)
-{
-	switch (camera.upAxis)
-	{
-		case Axis::X: return Vec3::UnitX();
-		case Axis::Y: return Vec3::UnitY();
-		case Axis::Z: return Vec3::UnitZ();
-		default: throw std::runtime_error("invalid up vector");
-	}
-}
-}  // namespace
-
 Vec3 CameraService::getForward(const Camera& camera) const
 {
-	return (camera.target - camera.position).normalized();
+	return -(camera.rotation * Vec3::UnitZ());
 }
 
 Vec3 CameraService::getRight(const Camera& camera) const
 {
-	const Vec3 upVector = getUpVector(camera);
+	const Vec3 upVector = getUpVector(camera.upAxis);
 	const Vec3 forward	= getForward(camera);
 	return (camera.handedness == CoordinateHandedness::Left ? upVector.cross(forward) : forward.cross(upVector)).normalized();
 }
 
 Vec3 CameraService::getUp(const Camera& camera) const
 {
+
 	const Vec3 right   = getRight(camera);
 	const Vec3 forward = getForward(camera);
 	return (camera.handedness == CoordinateHandedness::Left ? forward.cross(right) : right.cross(forward)).normalized();
@@ -64,7 +52,7 @@ Mat4 gs::CameraService::getViewMatrix(const Camera& camera) const
 Mat4 gs::CameraService::getProjectionMatrix(const Camera& camera) const
 {
 	const float aspect = static_cast<float>(camera.width) / static_cast<float>(camera.height);
-	const float t	   = camera.zNear * std::tan(degToRad(camera.fov * 0.5F));
+	const float t	   = camera.zNear * std::tan(degToRad(camera.fovY * 0.5F));
 	// float b					= -t;
 	const float r = t * aspect;
 	// float l					= -r;
@@ -106,28 +94,32 @@ Mat4 gs::CameraService::getProjectionMatrix(const Camera& camera) const
 
 void CameraService::rotateYaw(Camera& camera, float angleRad) const
 {
+	// Positive rotation in LH coordinates: CW (clockwise, left-hand rule)
+	// Positive rotation in RH coordinates : CCW(counterclockwise, right - hand rule)
 	const float handedness = camera.handedness == CoordinateHandedness::Right ? -1.0F : 1.0F;
-	const Vec3 direction   = rotateVector(getForward(camera), getUp(camera), angleRad * handedness);
-	const float distance   = (camera.target - camera.position).norm();
-	camera.target		   = camera.position + direction.normalized() * distance;
+
+	const Vec3 up		   = getUpVector(camera.upAxis);
+	const Quat delta{Eigen::AngleAxisf(angleRad * handedness, up)};
+	const Quat newRotation = delta * camera.rotation;
+	camera.rotation		   = newRotation;
 }
 
 void CameraService::rotatePitch(Camera& camera, float angleRad) const
 {
-	// Positive rotation in LH coordinates: CW (clockwise, left-hand rule)
-	// Positive rotation in RH coordinates : CCW(counterclockwise, right - hand rule)
+	const float minPitch   = degToRad(-settings_->pitchClampingDegree);
+	const float maxPitch   = degToRad(settings_->pitchClampingDegree);
 
-	const float handedness			 = camera.handedness == CoordinateHandedness::Right ? -1.0F : 1.0F;
+	const Vec3 forward	   = -(camera.rotation * Vec3::UnitZ());
+	const Vec3 right	   = camera.rotation * Vec3::UnitX();
 
-	const Vec3 direction			 = rotateVector(getForward(camera), getRight(camera), angleRad * handedness);
+	const float currPitch  = std::asin(forward.y());
+	const float nextPitch  = std::clamp(currPitch - angleRad, minPitch, maxPitch);
+	const float deltaPitch = nextPitch - currPitch;
 
-	constexpr float kGimbalLockGuard = 0.98F;
-	if (std::abs(direction.dot(getUpVector(camera))) > kGimbalLockGuard)
-	{
-		return;
-	}
-	const float distance = (camera.target - camera.position).norm();
-	camera.target		 = camera.position + direction.normalized() * distance;
+	const Quat delta{Eigen::AngleAxisf(deltaPitch, right)};
+	const Quat newRotation = (delta * camera.rotation).normalized();
+
+	camera.rotation		   = newRotation;
 }
 
 Ray CameraService::getScreenToWorldRay(Vec2 screenPos, const Camera& camera) const
@@ -153,4 +145,10 @@ Ray CameraService::getScreenToWorldRay(Vec2 screenPos, const Camera& camera) con
 		ray.position = cameraPlanePointerPos;*/
 	return ray;
 }
+
+void gs::CameraService::lookAt(Camera& camera, const Vec3& target) const
+{
+	camera.rotation = quaternionFromLookAt(camera.position, target, getUpVector(camera.upAxis));
+}
+
 }  // namespace gs

@@ -52,7 +52,11 @@ class IOrthoProjectionViewManager
 	~IOrthoProjectionViewManager()						= default;
 };
 
-/** @brief basic IOrthoProjectionViewManager implementation */
+/**
+ * @brief basic IOrthoProjectionViewManager implementation
+ *
+ * @todo after quaternion rotation this feature was broken. Also math is not optimal, so need rework
+ */
 class OrthoProjectionViewManager : public BaseManager, public IOrthoProjectionViewManager
 {
 	std::shared_ptr<IUIStateManager> uiStateManager_;

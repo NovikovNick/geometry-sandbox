@@ -51,7 +51,6 @@ constexpr std::size_t kSampleCameraIndex = 1;
 struct Parameters
 {
 	Camera camera;
-	Vec3 cameraRotationEuler;
 	float zFixed = 0.0F;
 };
 
@@ -59,7 +58,7 @@ struct Parameters
 struct Entities
 {
 	ecs::Entity position;
-	ecs::Entity duck;
+	ecs::Entity target;
 	ecs::Entity dLabel;
 	ecs::Entity rLabel;
 	ecs::Entity tLabel;
@@ -70,38 +69,35 @@ void setupScene(Parameters& params, Entities& entities)
 {
 
 	// NOLINTBEGIN(*-magic-numbers)
-	auto& ctx			 = di::getContext();
-	auto& sceneService	 = ctx.create<ISceneService&>();
-	auto& uiStateManager = ctx.create<IUIStateManager&>();
-	auto& facade		 = ctx.create<render::IFacade&>();
-	auto& graphic		 = ctx.create<render::ILowLevelService&>();
-	auto& cameraService	 = ctx.create<ICameraService&>();
-	auto& input			 = ctx.create<IInputManager&>();
-	auto& settings		 = ctx.create<Settings&>();
-	auto& log			 = ctx.create<ILogManager&>();
+	auto& ctx			   = di::getContext();
+	auto& sceneService	   = ctx.create<ISceneService&>();
+	auto& uiStateManager   = ctx.create<IUIStateManager&>();
+	auto& facade		   = ctx.create<render::IFacade&>();
+	auto& graphic		   = ctx.create<render::ILowLevelService&>();
+	auto& cameraService	   = ctx.create<ICameraService&>();
+	auto& input			   = ctx.create<IInputManager&>();
+	auto& settings		   = ctx.create<Settings&>();
+	auto& log			   = ctx.create<ILogManager&>();
 
-	params.zFixed		 = 2.0F;
+	params.zFixed		   = 2.0F;
 
-	ui::State& ui		 = uiStateManager.getState();
+	ui::State& ui		   = uiStateManager.getState();
 
-	Camera& mainCamera	 = ui.cameras[kMainCameraIndex];
-	mainCamera.position	 = Vec3{10.0F, 10.0F, 10.0F};
-	cameraService.lookAt(mainCamera, Vec3::Zero());
+	Camera& mainCamera	   = ui.cameras[kMainCameraIndex];
+	mainCamera.position	   = Vec3{10.0F, 10.0F, 10.0F};
+	mainCamera.target	   = Vec3::Zero();
 
 	params.camera		   = settings.defaultCamera;
-	params.camera.position = Vec3{0, 1, 3};
-	params.camera.rotation = Quat::Identity();
-	params.camera.fovY	   = 90.0F;
+	params.camera.position = Vec3{0, 0, 3};
+	params.camera.target   = Vec3::Zero();
+	params.camera.fov	   = 90.0F;
 	params.camera.zNear	   = 1.0F;
 	params.camera.zFar	   = 15.0F;
 
 	ui.cameras.push_back(params.camera);
 
 	entities.position = sceneService.addPoint({.color = Color::transparent(), .radius = 0.0F});
-	entities.duck	  = sceneService.addModel({.position = Vec3::Zero(),  //
-											   .origin	 = Vec3{0.2F, 0.0F, 0.0F},
-											   .scale	 = 1.0F,
-											   .type	 = ModelType::Duck});
+	entities.target	  = sceneService.addModel({.origin = Vec3{0.2F, 0.0F, 0.0F}, .scale = 1.0F, .type = ModelType::Duck});
 	entities.dLabel	  = sceneService.addText({.text = "d", .color = Color::white(), .fontSize = settings.canvasFontSize});
 	entities.rLabel	  = sceneService.addText({.text = "r", .color = Color::white(), .fontSize = settings.canvasFontSize});
 	entities.tLabel	  = sceneService.addText({.text = "t", .color = Color::white(), .fontSize = settings.canvasFontSize});
@@ -138,11 +134,11 @@ void setupScene(Parameters& params, Entities& entities)
 			const Camera& cam	   = uiStateManager.getState().cameras[1];
 			params.camera.position = cam.position;
 
-			const Vec3 direction   = cameraService.getForward(cam);
+			const Vec3 direction   = (cam.target - cam.position).normalized();
 
 			const float aspect	   = static_cast<float>(cam.width) / static_cast<float>(cam.height);
 			const float d		   = cam.zNear + (cam.perspective ? params.zFixed : 0);
-			const float t		   = d * std::tan(degToRad(cam.fovY / 2));
+			const float t		   = d * std::tan(degToRad(cam.fov / 2));
 			const float r		   = t * aspect;
 
 			const Vec3 top		   = cameraService.getUp(cam) * t;
@@ -223,7 +219,7 @@ void setupPlaybackAnimation(const Parameters& params)
 	{
 		Camera res		= lhs;
 		res.perspective = true;
-		adjustFOVWithDistanceCompensation(res, std::lerp(lhs.fovY, rhs.fovY, progress), params.zFixed);
+		adjustFOVWithDistanceCompensation(res, std::lerp(lhs.fov, rhs.fov, progress), params.zFixed);
 		return res;
 	};
 
@@ -231,7 +227,7 @@ void setupPlaybackAnimation(const Parameters& params)
 	{
 		Camera res		= lhs;
 		res.perspective = false;
-		adjustFOVWithDistanceCompensation(res, std::lerp(lhs.fovY, rhs.fovY, progress), 0.0F);
+		adjustFOVWithDistanceCompensation(res, std::lerp(lhs.fov, rhs.fov, progress), 0.0F);
 		return res;
 	};
 
@@ -255,9 +251,9 @@ void setupPlaybackAnimation(const Parameters& params)
 
 		ortographic				= beginCamera;
 		ortographic.perspective = false;
-		ortographic.fovY		= calculateFOVAtDistance(/*oldDistance*/ beginCamera.zNear + params.zFixed,
-													 /*oldFov*/ beginCamera.fovY,
-													 /*newDistance*/ beginCamera.zNear);
+		ortographic.fov			= calculateFOVAtDistance(/*oldDistance*/ beginCamera.zNear + params.zFixed,
+												 /*oldFov*/ beginCamera.fov,
+												 /*newDistance*/ beginCamera.zNear);
 
 		keyframes += keyframe(0s) | accessor::camera(kSampleCameraIndex) << perspective;
 		keyframes += keyframe(1s) | accessor::camera(kSampleCameraIndex) << key(almostOrthographicPerspective, perspectiveLerp);
@@ -270,18 +266,18 @@ void setupPlaybackAnimation(const Parameters& params)
 		almostOrthographicPerspective			  = beginCamera;
 		almostOrthographicPerspective.perspective = false;
 		const float d							  = calculateDistanceAtFOV(/*oldDistance*/ beginCamera.zNear,
-											   /*oldFov*/ beginCamera.fovY,
+											   /*oldFov*/ beginCamera.fov,
 											   /*newFov*/ 0.01);
-		almostOrthographicPerspective.fovY		  = 0.01;
-		almostOrthographicPerspective.position += -cameraService.getForward(beginCamera) * d;
+		almostOrthographicPerspective.fov		  = 0.01;
+		almostOrthographicPerspective.position += (beginCamera.position - beginCamera.target).normalized() * d;
 		almostOrthographicPerspective.zNear += d;
 		almostOrthographicPerspective.zFar += d;
 
 		perspective				= beginCamera;
 		perspective.perspective = true;
-		perspective.fovY		= calculateFOVAtDistance(/*oldDistance*/ beginCamera.zNear,
-													 /*oldFov*/ beginCamera.fovY,
-													 /*newDistance*/ beginCamera.zNear + params.zFixed);
+		perspective.fov			= calculateFOVAtDistance(/*oldDistance*/ beginCamera.zNear,
+												 /*oldFov*/ beginCamera.fov,
+												 /*newDistance*/ beginCamera.zNear + params.zFixed);
 
 		keyframes += keyframe(0s) | accessor::camera(kSampleCameraIndex) << ortographic;
 		keyframes += keyframe(1s) | accessor::camera(kSampleCameraIndex) << key(almostOrthographicPerspective, ortographicLerp);
@@ -307,13 +303,8 @@ void updateScene(const Parameters& params, const Entities& entities)
 	sampleCamera.position = params.camera.position;
 	sceneService.setPosition(entities.position, params.camera.position);
 
-	const float yaw		  = degToRad(params.cameraRotationEuler.x());
-	const float pitch	  = degToRad(params.cameraRotationEuler.y());
-	const float roll	  = degToRad(params.cameraRotationEuler.z());
-	const Quat qFromEuler = Eigen::AngleAxisf(yaw, Vec3::UnitX())	   //
-							* Eigen::AngleAxisf(pitch, Vec3::UnitY())  //
-							* Eigen::AngleAxisf(roll, Vec3::UnitZ());
-	sampleCamera.rotation = qFromEuler.normalized();
+	sampleCamera.target = params.camera.target;
+	sceneService.setPosition(entities.target, params.camera.target);
 
 	setupPlaybackAnimation(params);
 }
@@ -333,6 +324,14 @@ void enableInteractionLogic(Parameters& params, const Entities& entities)
 																		 params.camera.position = std::move(position);
 																		 updateScene(params, entities);
 																	 });
+
+	registry.emplace_or_replace<ecs::component::SphereCollider>(entities.target, kObjectCollisionRadius);
+	registry.emplace_or_replace<ecs::component::OnTranslateCallback>(entities.target,
+																	 [&](Vec3 position)
+																	 {
+																		 params.camera.target = std::move(position);
+																		 updateScene(params, entities);
+																	 });
 }
 
 void disableInteractionLogic(const Entities& entities)
@@ -342,6 +341,8 @@ void disableInteractionLogic(const Entities& entities)
 
 	registry.remove<ecs::component::SphereCollider>(entities.position);
 	registry.remove<ecs::component::OnTranslateCallback>(entities.position);
+	registry.remove<ecs::component::SphereCollider>(entities.target);
+	registry.remove<ecs::component::OnTranslateCallback>(entities.target);
 }
 
 void setupUI(Parameters& params, const Entities& entities)
@@ -400,24 +401,14 @@ void setupUI(Parameters& params, const Entities& entities)
 			ImGui::BeginDisabled(ui.player.isPlaying);
 			changed |= drawCombo("Projection", camera.perspective, "Orthographic", "Perspective");
 
-			changed |= ImGui::SliderFloat("fov", &camera.fovY, 0, 180);	 // NOLINT(*-magic-numbers)
+			changed |= ImGui::SliderFloat("fov", &camera.fov, 0, 180);	// NOLINT(*-magic-numbers)
 			changed |= ImGui::SliderFloat("zNear", &camera.zNear, 0, sceneSize * 2);
 			changed |= ImGui::SliderFloat("zFixed", &params.zFixed, 0, camera.zFar - camera.zNear);
 			changed |= ImGui::SliderFloat("zFar", &camera.zFar, 0, sceneSize * 2);
 
-			ImGui::Separator();
 			changed |= ImGui::SliderFloat("pos.x", &params.camera.position.x(), -sceneSize, sceneSize);
 			changed |= ImGui::SliderFloat("pos.y", &params.camera.position.y(), -sceneSize, sceneSize);
 			changed |= ImGui::SliderFloat("pos.z", &params.camera.position.z(), -sceneSize, sceneSize);
-
-			ImGui::Separator();
-			changed |= ImGui::SliderFloat("pitch",
-										  &params.cameraRotationEuler.x(),
-										  -settings.pitchClampingDegree,
-										  settings.pitchClampingDegree);
-			changed |= ImGui::SliderFloat("yaw", &params.cameraRotationEuler.y(), -179.9, 179.9);
-			changed |= ImGui::SliderFloat("roll", &params.cameraRotationEuler.z(), -179.9, 179.9);
-
 			ImGui::EndDisabled();
 
 			if (changed)

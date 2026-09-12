@@ -210,5 +210,49 @@ inline Vec3 rotateVector(const Vec3& v, Vec3 axis, float angle)
 	return result;
 }
 
+/**
+ * @brief Builds a rotation quaternion that orients an object to look at a target.
+ *
+ * @todo need to add unit tests, not sure this fallback preserves the correct orientation across the degenerate case
+ */
+inline Quat quaternionFromLookAt(const Vec3& eye, const Vec3& target, const Vec3& up)
+{
+	constexpr float kTolerance = 1e-4F;
+
+	// 1. Forward
+	const Vec3 forward = (target - eye).normalized();  // direction from eye to target
+
+	// 2. Right
+	Vec3 right = forward.cross(up.normalized());
+	if (right.squaredNorm() < kTolerance)
+	{
+		// forward is almost parallel to up — pick the axis that is least
+		// aligned with forward, so the cross product is well-conditioned.
+		const Vec3 absF = forward.cwiseAbs();  // abs for each element
+		Vec3 fallback	= Vec3::UnitZ();
+
+		if (absF.x() <= absF.y() && absF.x() <= absF.z())
+		{
+			fallback = Vec3::UnitX();
+		}
+		else if (absF.y() <= absF.z())
+		{
+			fallback = Vec3::UnitY();
+		}
+		right = forward.cross(fallback);
+	}
+	right.normalize();
+
+	// 3. Up
+	const Vec3 newUp = right.cross(forward);
+
+	// build quaternion from matrix
+	Eigen::Matrix3f rotMatrix;
+	rotMatrix.col(0) = right;	  // X axis
+	rotMatrix.col(1) = newUp;	  // Y axis
+	rotMatrix.col(2) = -forward;  // Z axis (camera looks down -Z for RH)
+	return Quat{rotMatrix}.normalized();
+}
+
 }  // namespace gs
 #endif	// GEOMETRY_SANDBOX_MATH_H

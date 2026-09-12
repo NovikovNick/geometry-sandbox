@@ -105,6 +105,7 @@ struct Settings
 	float dashLength;
 
 	Camera defaultCamera;
+	float pitchClampingDegree;
 
 	scene::Grid2D grid;
 

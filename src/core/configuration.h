@@ -43,12 +43,12 @@ inline Settings createDefaultSettings()
 {
 	const Camera defaultCamera{
 		.handedness	 = CoordinateHandedness::Right,
-		.position	 = Vec3{5, 5, 5},
-		.target		 = Vec3{2, 2, 2},
+		.position	 = Vec3{0, 2, 15},
+		.rotation	 = Quat::Identity(),
 		.upAxis		 = Axis::Y,
 		.width		 = 1024,
 		.height		 = 768,
-		.fov		 = 50.f,
+		.fovY		 = 50.f,
 		.zNear		 = 1.0f,
 		.zFar		 = 100.f,
 		.perspective = true,  //  perspective or orthographic
@@ -144,6 +144,7 @@ inline Settings createDefaultSettings()
 		.dashLength							= 0.2F,
 
 		.defaultCamera						= defaultCamera,
+		.pitchClampingDegree				= 89.9F,
 		.grid								= grid,
 
 		.idleRotationAnglePerFrame			= 0.002F,

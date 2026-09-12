@@ -24,6 +24,7 @@ class Settings;
 class IUIStateManager;
 class IInputManager;
 class ISceneService;
+class ICameraService;
 
 namespace animation
 {
@@ -46,11 +47,13 @@ class CameraIdleRotationAnimationManager : public BaseManager, public ICameraIdl
 	std::shared_ptr<IInputManager> inputManager_;
 	std::shared_ptr<ISceneService> sceneService_;
 	std::shared_ptr<animation::IManager> animationManager_;
+	std::shared_ptr<ICameraService> cameraService_;
 
 	bool sceneBoundsDirty_;
 
 	Vec3 beginPosition_;
-	Vec3 beginTarget_;
+	Quat beginRotation_;
+	bool ccw_;	// true if counterclockwise rotation, otherwise clockwise
 
 	Vec3 sceneCenter_;
 	float distanceToSceneCenter_;
@@ -63,12 +66,14 @@ class CameraIdleRotationAnimationManager : public BaseManager, public ICameraIdl
 									   const std::shared_ptr<IUIStateManager>& uiStateManager,
 									   const std::shared_ptr<IInputManager>& inputManager,
 									   const std::shared_ptr<ISceneService>& sceneService,
-									   const std::shared_ptr<animation::IManager>& animationManager)
+									   const std::shared_ptr<animation::IManager>& animationManager,
+									   const std::shared_ptr<ICameraService>& cameraService_)
 		: BaseManager(settings, log),			//
 		  uiStateManager_(uiStateManager),		//
 		  inputManager_(inputManager),			//
 		  sceneService_(sceneService),			//
 		  animationManager_(animationManager),	//
+		  cameraService_(cameraService_),		//
 		  sceneBoundsDirty_(true),				//
 		  activeAnimation_({})
 	{

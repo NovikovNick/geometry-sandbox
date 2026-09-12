@@ -264,7 +264,6 @@ constexpr auto color = SubProperty{&ui::Button::Props::color, "color"};
 namespace camera
 {
 constexpr auto position = SubProperty{&Camera::position, "position"};
-constexpr auto target	= SubProperty{&Camera::target, "target"};
 }  // namespace camera
 }  // namespace dsl
 }  // namespace gs::animation
