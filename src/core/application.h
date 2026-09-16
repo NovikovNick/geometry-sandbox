@@ -3,7 +3,6 @@
  *
  * @brief main entry class
  *
- * @todo [improvement]: ★★★★ Quaternion rotation for camera
  * @todo [sample]: ★★★★ Quaternion like https://quaternions.online/
  * @todo [improvement]: ★★★★ Transform (Translate + Rotator + Scale)
  * @todo [sample]: ★★★★ Boids simulation for benchmark: https://github.com/SkitzFist/Boids
@@ -19,6 +18,7 @@
  * @todo [improvement]: ★★★★ Move platform specific code to separate class
  * @todo [docs]: ★★★★ Dark/light theme toggle in docs doesn't work correctly
  * @todo [linter]: ★★★ Check names in clang-tidy (active, hover, constrained...)
+ * @todo [improvement]: ★★★ deproject screen ray in 2d (orthographic camera) to select viewport gizmos
  *
  * @todo [sample]: ★★★ Add samples for all https://gamemath.com/book/geomtests.html
  * @todo [improvement]: ★★★★ DSL to describe scene geometry, some Geometry Markup Language. One wasm to rule them all :)
