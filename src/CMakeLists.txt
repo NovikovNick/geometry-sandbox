@@ -9,6 +9,7 @@ add_library(${PROJECT_NAME}-core STATIC
     "core/resource_manager.cpp"
     "core/window_manager.cpp"
     "core/input_manager_raylib.cpp"
+    "core/job_manager.cpp"
 
     "render/facade.cpp"
     "render/mesh_instanced_draw_service.cpp"
@@ -35,7 +36,7 @@ add_library(${PROJECT_NAME}-core STATIC
 
     "feature/camera_idle_rotation_manager.cpp"
     "feature/ortho_projection_view_manager.cpp"
-)
+ )
 
 target_link_libraries(${PROJECT_NAME}-core
     PRIVATE

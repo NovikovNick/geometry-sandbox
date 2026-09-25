@@ -18,14 +18,16 @@
 
 namespace gs
 {
+class IResourceManager;
+
 namespace render
 {
 /** @brief GPU instancing optimization */
 class IMeshInstancedDrawService
 {
   public:
-	virtual void drawMeshInstanced(const ::Mesh& mesh,
-								   const ::Material& material,
+	virtual void drawMeshInstanced(ResourceId,
+								   const Vec3& cameraPosition,
 								   const std::span<Mat4>& transforms,
 								   const std::span<Color>& colors) const = 0;
 	virtual ~IMeshInstancedDrawService()								 = default;
@@ -34,14 +36,17 @@ class IMeshInstancedDrawService
 /** @brief basic IMeshInstancedDrawService implementation */
 class MeshInstancedDrawService : public BaseService, public IMeshInstancedDrawService
 {
-  public:
-	MeshInstancedDrawService(const std::shared_ptr<Settings>& settings, const std::shared_ptr<ILogManager>& log)
-		: BaseService(settings, log)
-	{
-	}
+	std::shared_ptr<IResourceManager> resources_;
 
-	virtual void drawMeshInstanced(const ::Mesh& mesh,
-								   const ::Material& material,
+	ResourceId shaderId_{};
+
+  public:
+	MeshInstancedDrawService(const std::shared_ptr<Settings>& settings,
+							 const std::shared_ptr<ILogManager>& log,
+							 const std::shared_ptr<IResourceManager>& resources);
+
+	virtual void drawMeshInstanced(ResourceId,
+								   const Vec3& cameraPosition,
 								   const std::span<Mat4>& transforms,
 								   const std::span<Color>& colors) const override;
 };

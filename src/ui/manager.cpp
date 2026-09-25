@@ -106,7 +106,7 @@ void UIManager::render()
 		uiService_->overlayConsole({.width = consoleWidth, .height = consoleHeight}, Vec2::Zero());
 	}
 
-	if (settings_->showDetailsView)
+	if (settings_->showDetailsView && detailsViewDrawCallback_)
 	{
 
 		drawDetailsView({.width = detailsWidth, .height = detailsHeight}, Vec2{consoleWidth, settings_->detailsHeightOffset});

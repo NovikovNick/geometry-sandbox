@@ -328,8 +328,8 @@ void LowLevelService::drawBoundingBox(const Vec3& min, const Vec3& max, const Co
 	DrawBoundingBox(BoundingBox{.min = convert(min), .max = convert(max)}, convert(color));
 }
 
-void LowLevelService::drawModel(ModelType type, const Vec3& position, float scale) const
+void LowLevelService::drawModel(ResourceId resourceId, const Vec3& position, float scale) const
 {
-	DrawModel(resources_->getModel(type), convert(position), scale, ::WHITE);
+	DrawModel(resources_->getModel(resourceId), convert(position), scale, ::WHITE);
 }
 }  // namespace gs::render

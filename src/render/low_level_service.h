@@ -53,7 +53,7 @@ class ILowLevelService
 	virtual void drawSphereWires(const Vec3& position, const Color&, float radius) const								  = 0;
 
 	virtual void drawBoundingBox(const Vec3& min, const Vec3& max, const Color&) const									  = 0;
-	virtual void drawModel(ModelType, const Vec3& position, float scale) const											  = 0;
+	virtual void drawModel(ResourceId, const Vec3& position, float scale) const											  = 0;
 
 	~ILowLevelService()																									  = default;
 };
@@ -99,7 +99,7 @@ class LowLevelService : public BaseService, public ILowLevelService
 
 	virtual void drawSphereWires(const Vec3& position, const Color&, float radius) const override;
 	virtual void drawBoundingBox(const Vec3& min, const Vec3& max, const Color&) const override;
-	virtual void drawModel(ModelType, const Vec3& position, float scale) const override;
+	virtual void drawModel(ResourceId, const Vec3& position, float scale) const override;
 };
 }  // namespace render
 

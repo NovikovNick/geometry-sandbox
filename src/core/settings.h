@@ -25,6 +25,8 @@ struct Settings
 	bool multiSampleAntiAliasing4X;
 	bool vSync;
 
+	Nanoseconds jobBudget;
+
 	float footerHeight;
 	float detailsWidth;
 	float detailsHeightOffset;
@@ -49,6 +51,10 @@ struct Settings
 	constexpr static float kAnimationSpeedMin = 0.01f;
 	constexpr static float kAnimationSpeedMax = 10.00f;
 	float animationSpeed;
+
+	std::string resourcePathFXAAFragmentShader;
+	std::string resourcePathInstancingVertexShader;
+	std::string resourcePathInstancingFragmentShader;
 
 	std::string_view iconPlayerBackwardFast;
 	std::string_view iconPlayerBackwardStep;

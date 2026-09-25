@@ -29,7 +29,8 @@ void copyToMeshBuffer(T*& dest, const T* src, std::size_t count) noexcept
 	}
 }
 
-// resourse manager?
+// todo: all meshes should be loaded from resourse manager. But first of all, need to
+// remove model recreation after each aspect update
 ::Mesh createPlane(const float halfWidth, const float halfHeight)
 {
 	::Mesh mesh		   = {.vertexCount = 0};

@@ -13,6 +13,7 @@
 #include "core/camera_controller_service.h"
 #include "core/camera_service.h"
 #include "core/input_manager.h"
+#include "core/job_manager.h"
 #include "core/log_manager.h"
 #include "core/math.h"
 #include "core/resource_manager.h"
@@ -39,6 +40,12 @@
 
 namespace gs
 {
+#ifdef PLATFORM_DESKTOP
+constexpr int kGlslVersion = 330;
+#else
+constexpr int kGlslVersion = 100;
+#endif
+
 inline Settings createDefaultSettings()
 {
 	const Camera defaultCamera{
@@ -61,100 +68,106 @@ inline Settings createDefaultSettings()
 							 .gridSize		 = 10};
 
 	return Settings{
-		.title								= "Geometry Sandbox",
-		.width								= 1024,
-		.height								= 768,
-		.fullscreen							= false,
-		.multiSampleAntiAliasing4X			= true,
-		.vSync								= true,
+		.title								  = "Geometry Sandbox",
+		.width								  = 1024,
+		.height								  = 768,
+		.fullscreen							  = false,
+		.multiSampleAntiAliasing4X			  = true,
+		.vSync								  = true,
 
-		.footerHeight						= 50.0F,
-		.detailsWidth						= 350.0f,
-		.detailsHeightOffset				= 15.0F,
-		.buttonRounding						= 8.0F,
-		.controlButtonWidth					= 64.0F,
-		.controlButtonHeight				= 64.0F,
-		.controlsWidthOffset				= 350.0F,
-		.controlsHeightOffset				= 175.0F,
+		.jobBudget							  = Milliseconds{4},
 
-		.showConsole						= true,
-		.showPerformance					= false,
-		.showTranslateGizmo					= false,
-		.showCollisions						= false,
-		.showCursorRay						= false,
+		.footerHeight						  = 50.0F,
+		.detailsWidth						  = 350.0f,
+		.detailsHeightOffset				  = 15.0F,
+		.buttonRounding						  = 8.0F,
+		.controlButtonWidth					  = 64.0F,
+		.controlButtonHeight				  = 64.0F,
+		.controlsWidthOffset				  = 350.0F,
+		.controlsHeightOffset				  = 175.0F,
 
-		.showControls						= true,
-		.showControlRotation				= true,
+		.showConsole						  = true,
+		.showPerformance					  = false,
+		.showTranslateGizmo					  = false,
+		.showCollisions						  = false,
+		.showCursorRay						  = false,
 
-		.showDetailsView					= true,
-		.showFooter							= true,
+		.showControls						  = true,
+		.showControlRotation				  = true,
 
-		.animationSpeed						= 1.00F,
+		.showDetailsView					  = true,
+		.showFooter							  = true,
 
-		.iconPlayerBackwardFast				= ICON_FA_BACKWARD_FAST,
-		.iconPlayerBackwardStep				= ICON_FA_BACKWARD_STEP,
-		.iconPlayerPlay						= ICON_FA_PLAY,
-		.iconPlayerPause					= ICON_FA_PAUSE,
-		.iconPlayerForwardStep				= ICON_FA_FORWARD_STEP,
-		.iconPlayerForwardFast				= ICON_FA_FORWARD_FAST,
-		.iconSettings						= ICON_FA_GEAR,
-		.iconCameraForward					= ICON_FA_W,
-		.iconCameraLeft						= ICON_FA_A,
-		.iconCameraBackward					= ICON_FA_S,
-		.iconCameraRight					= ICON_FA_D,
+		.animationSpeed						  = 1.00F,
 
-		.gizmoArrowSize						= 7.0F,
-		.gizmoTranslateAxisX				= Color::red(),
-		.gizmoTranslateAxisXSelected		= Color::yellow(),
-		.gizmoTranslateAxesXY				= Color::blue(),
-		.gizmoTranslateAxesXYSelected		= Color::yellow(),
-		.gizmoTranslateAxisY				= Color::green(),
-		.gizmoTranslateAxisYSelected		= Color::yellow(),
-		.gizmoTranslateAxesYZ				= Color::red(),
-		.gizmoTranslateAxesYZSelected		= Color::yellow(),
-		.gizmoTranslateAxisZ				= Color::blue(),
-		.gizmoTranslateAxisZSelected		= Color::yellow(),
-		.gizmoTranslateAxesZX				= Color::green(),
-		.gizmoTranslateAxesZXSelected		= Color::yellow(),
-		.gizmoColliderPlaneThickness		= 0,
-		.gizmoColliderAxisThickness			= 0.005F,
-		.gizmoColliderAxisLength			= 0.2,
-		.gizmoColliderPlaneSize				= 0.1,
+		.resourcePathFXAAFragmentShader		  = std::format("shaders/glsl{}/fxaa.fs", kGlslVersion),
+		.resourcePathInstancingVertexShader	  = std::format("shaders/glsl{}/shader_instanced_color.vs", kGlslVersion),
+		.resourcePathInstancingFragmentShader = std::format("shaders/glsl{}/shader_instanced_color.fs", kGlslVersion),
 
-		.canvasFontSize						= 32.0F,
-		.uiFontSize							= 20.0F,
-		.controlButtonFontSize				= 24.0F,
-		.controlButtonBorderThickness		= 2.0F,
-		.buttonColor						= Color::white(),
-		.buttonColorHover					= Color::blue(),
-		.canvasBackgroundColor				= Color{63.0F, 63.0F, 63.0F, 255.0F},
+		.iconPlayerBackwardFast				  = ICON_FA_BACKWARD_FAST,
+		.iconPlayerBackwardStep				  = ICON_FA_BACKWARD_STEP,
+		.iconPlayerPlay						  = ICON_FA_PLAY,
+		.iconPlayerPause					  = ICON_FA_PAUSE,
+		.iconPlayerForwardStep				  = ICON_FA_FORWARD_STEP,
+		.iconPlayerForwardFast				  = ICON_FA_FORWARD_FAST,
+		.iconSettings						  = ICON_FA_GEAR,
+		.iconCameraForward					  = ICON_FA_W,
+		.iconCameraLeft						  = ICON_FA_A,
+		.iconCameraBackward					  = ICON_FA_S,
+		.iconCameraRight					  = ICON_FA_D,
 
-		.uiPlayerTimelineBackgroundColor	= Color::gray(),
-		.uiPlayerTimelineFillColor			= Color::blue(),
-		.uiPlayerTimelineGrabberColor		= Color::white(),
-		.uiPlayerTimelineGrabberColorActive = Color::yellow(),
-		.uiPlayerTimelineGrabberSize		= 10.0F,
-		.uiPlayerTimelineRoundingSize		= 5.0F,
-		.uiPlayerTimelineHeight				= 6.0F,
-		.uiPlayerControlButtonWidth			= 25.0F,
-		.uiPlayerControlTextWidth			= 15.0F,
-		.uiPlayerHeight						= 34.0F,
+		.gizmoArrowSize						  = 7.0F,
+		.gizmoTranslateAxisX				  = Color::red(),
+		.gizmoTranslateAxisXSelected		  = Color::yellow(),
+		.gizmoTranslateAxesXY				  = Color::blue(),
+		.gizmoTranslateAxesXYSelected		  = Color::yellow(),
+		.gizmoTranslateAxisY				  = Color::green(),
+		.gizmoTranslateAxisYSelected		  = Color::yellow(),
+		.gizmoTranslateAxesYZ				  = Color::red(),
+		.gizmoTranslateAxesYZSelected		  = Color::yellow(),
+		.gizmoTranslateAxisZ				  = Color::blue(),
+		.gizmoTranslateAxisZSelected		  = Color::yellow(),
+		.gizmoTranslateAxesZX				  = Color::green(),
+		.gizmoTranslateAxesZXSelected		  = Color::yellow(),
+		.gizmoColliderPlaneThickness		  = 0,
+		.gizmoColliderAxisThickness			  = 0.005F,
+		.gizmoColliderAxisLength			  = 0.2,
+		.gizmoColliderPlaneSize				  = 0.1,
 
-		.lineThickness						= 0.03F,
-		.dashLength							= 0.2F,
+		.canvasFontSize						  = 32.0F,
+		.uiFontSize							  = 20.0F,
+		.controlButtonFontSize				  = 24.0F,
+		.controlButtonBorderThickness		  = 2.0F,
+		.buttonColor						  = Color::white(),
+		.buttonColorHover					  = Color::blue(),
+		.canvasBackgroundColor				  = Color{63.0F, 63.0F, 63.0F, 255.0F},
 
-		.defaultCamera						= defaultCamera,
-		.pitchClampingDegree				= 89.9F,
-		.grid								= grid,
+		.uiPlayerTimelineBackgroundColor	  = Color::gray(),
+		.uiPlayerTimelineFillColor			  = Color::blue(),
+		.uiPlayerTimelineGrabberColor		  = Color::white(),
+		.uiPlayerTimelineGrabberColorActive	  = Color::yellow(),
+		.uiPlayerTimelineGrabberSize		  = 10.0F,
+		.uiPlayerTimelineRoundingSize		  = 5.0F,
+		.uiPlayerTimelineHeight				  = 6.0F,
+		.uiPlayerControlButtonWidth			  = 25.0F,
+		.uiPlayerControlTextWidth			  = 15.0F,
+		.uiPlayerHeight						  = 34.0F,
 
-		.idleRotationAnglePerFrame			= 0.002F,
-		.idleRotationAnimationStartDelay	= Seconds{1},
-		.idleRotationTransitionDuration		= Seconds{5},
-		.idleRotationDistanceMin			= 4.0F,
-		.idleRotationDistanceMod			= 1.5F,
+		.lineThickness						  = 0.03F,
+		.dashLength							  = 0.2F,
 
-		.cameraRotateSensitivity			= 0.002F,
-		.cameraMoveSensitivity				= 0.15F,
+		.defaultCamera						  = defaultCamera,
+		.pitchClampingDegree				  = 89.9F,
+		.grid								  = grid,
+
+		.idleRotationAnglePerFrame			  = 0.002F,
+		.idleRotationAnimationStartDelay	  = Seconds{1},
+		.idleRotationTransitionDuration		  = Seconds{5},
+		.idleRotationDistanceMin			  = 4.0F,
+		.idleRotationDistanceMod			  = 1.5F,
+
+		.cameraRotateSensitivity			  = 0.002F,
+		.cameraMoveSensitivity				  = 0.15F,
 	};
 }
 
@@ -190,6 +203,7 @@ inline auto& getContext()
 												  lowLevelRenderService(),
 												  meshInstancedDrawService(),
 												  viewportManager(),
+												  jobManager(),
 												  logManager());
 
 		Settings& settings = injector.create<Settings&>();

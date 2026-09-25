@@ -4,6 +4,7 @@
 #include "core/camera_controller_service.h"
 #include "core/ecs.h"
 #include "core/input_manager.h"
+#include "core/job_manager.h"
 #include "core/log_manager.h"
 #include "core/resource_manager.h"
 #include "core/types.h"
@@ -11,6 +12,7 @@
 #include "interaction/service.h"
 #include "render/facade.h"
 #include "render/viewport_manager.h"
+#include "settings.h"
 #include "ui/manager.h"
 #include "ui/state_manager.h"
 
@@ -29,6 +31,8 @@ Application::Application(const std::shared_ptr<ecs::Registry>& registry,
 						 const std::shared_ptr<ICameraControllerService>& cameraController,
 						 const std::shared_ptr<IInteractionService>& interationService,
 						 const std::shared_ptr<render::IViewportManager>& viewportManager,
+						 const std::shared_ptr<IJobManager>& jobManager,
+						 const std::shared_ptr<Settings>& settings,
 						 const std::shared_ptr<ILogManager>& logManager)
 	: registry_(registry),					  //
 	  inputManager_(inputManager),			  //
@@ -41,6 +45,8 @@ Application::Application(const std::shared_ptr<ecs::Registry>& registry,
 	  cameraController_(cameraController),	  //
 	  interationService_(interationService),  //
 	  viewportManager_(viewportManager),	  //
+	  jobManager_(jobManager),				  //
+	  settings_(settings),					  //
 	  logManager_(logManager)				  //
 {
 	windowManager_->initWindow();
@@ -58,6 +64,7 @@ void Application::drawNextFrame(Nanoseconds timeDelta)
 	{  // update
 		const Timepoint measurementStart = Clock::now();
 		logManager_->clearFrameLog();
+		jobManager_->tick(settings_->jobBudget);
 		windowManager_->tick();
 		inputManager_->tick();
 		uiManager_->tick();

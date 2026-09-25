@@ -104,8 +104,9 @@ struct Dashed
 struct Mesh
 {
 	Vec3 origin;
+	Quat rotation;
 	float scale;
-	ModelType type;
+	ResourceId resourceId;
 };
 }  // namespace component
 

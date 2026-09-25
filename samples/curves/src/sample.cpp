@@ -91,6 +91,8 @@ void setupScene(Parameters& params, Entities& entities)
 	constexpr float radius		  = 0.05F;
 	constexpr Color color		  = Color::yellow();
 
+	settings.showCursorRay		  = true;
+
 	Camera& camera				  = uiStateManager.getState().cameras[0];
 	camera.position				  = Vec3{2, 2, 5};
 	cameraService.lookAt(camera, Vec3{2, 2, 0});
@@ -105,6 +107,7 @@ void setupScene(Parameters& params, Entities& entities)
 
 	params.showDerivative = false;
 	params.algorithm	  = BezierAlgorithm::DeCasteljau;
+	params.projection	  = CameraProjection::Orthographic;
 
 	entities.controlPoints.reserve(count);
 

@@ -1,10 +1,6 @@
 /**
  * @file resource_manager.h
  * @brief load and access to all resources: fonts, meshes, shaders
- *
- * If dynamic loading from file system were used, it could be called an asset manager.
- * But all resources are static and loaded at startup, so the name is appropriate.
- *
  * @author MetalHeart
  */
 #ifndef GEOMETRY_SANDBOX_RESOURCE_MANAGER_H
@@ -16,54 +12,104 @@
 #include "boost/di.hpp"
 #include "raylib.h"
 
-#include <array>
+#include <filesystem>
 #include <functional>
-#include <list>
 #include <memory>
+#include <vector>
 
 // imgui types
 struct ImFont;
 
 namespace gs
 {
-enum class ShaderType
+class IJobManager;
+
+struct ShaderPaths
 {
-	MeshInstancing,
-	Blur,
-	FXAA,
-	Count
+	std::filesystem::path vertex;
+	std::filesystem::path fragment;
 };
 
-/** @brief load and access to all resources: fonts, meshes, shaders */
+/**
+ * @brief load and access to all resources: fonts, meshes, shaders
+ *
+ * As for me "asset manager" is close to editor mode, and "resource manager" is closer to runtime
+ * All resources are expected to be loaded on startup. There is no release functionality.
+ */
 class IResourceManager
 {
   public:
-	virtual void load()								  = 0;
-	virtual const Font& defaultCanvasFont() const	  = 0;
-	virtual ImFont* defaultUIFont() const			  = 0;
-	virtual ImFont* iconFont() const				  = 0;
+	// begin getters
 
-	virtual const Shader& getShader(ShaderType) const = 0;
-	virtual const Model& getModel(ModelType) const	  = 0;
+	virtual const Font& defaultCanvasFont() const = 0;
+	virtual ImFont* defaultUIFont() const		  = 0;
+	virtual ImFont* iconFont() const			  = 0;
 
-	virtual ~IResourceManager()						  = default;
+	virtual ::Shader& getShader(ResourceId)		  = 0;
+	virtual ::Model& getModel(ResourceId)		  = 0;
+
+	// end getters
+
+	/**
+	 * @brief load predefined resources (like fonts)
+	 *
+	 * Should be called upon startup
+	 */
+	virtual void load() = 0;
+
+	/** @brief load some resource from file */
+	virtual ResourceId loadResourceAsync(ResourceType, const std::filesystem::path&) = 0;
+
+	/** @brief load shader program from files */
+	virtual ResourceId loadShaderAsync(const ShaderPaths&, std::function<void(::Shader&)>&& onLoad = [](::Shader&) {}) = 0;
+
+	/** @brief generate mesh */
+	virtual ResourceId generateModelAsync(std::function<::Model()>&& generator) = 0;
+
+	/** @brief check for pending resources */
+	virtual bool isAllResourcesLoaded() const = 0;
+
+	virtual void onAllResourcesLoaded() const = 0;
+
+	virtual ~IResourceManager()				  = default;
 };
 
 /** @brief basic IResourceManager implementation */
 class ResourceManager : public BaseManager, public IResourceManager
 {
+	std::shared_ptr<IJobManager> jobManager_;
+
 	ImFont* defaultUIFont_;
 	ImFont* iconsFont_;
 
 	Font defaultCanvasFont_;
 
-	std::array<Shader, static_cast<std::size_t>(ShaderType::Count)> shaders_;
-	std::array<Model, static_cast<std::size_t>(ModelType::Count)> models_;
-	std::list<Mesh> meshes_;
-	// std::list<Material> materials_;
+	std::vector<unsigned char> resourceBuffer_;
+
+	std::vector<Shader> shaders_;
+	std::vector<Model> models_;
+
+	int pendingResourceCount_;	// it looks fragile to use counter for loading resources, so PendingGuard is mandatory
+
+	class PendingGuard
+	{
+	  public:
+		explicit PendingGuard(ResourceManager& owner) noexcept : owner_(&owner) { ++owner_->pendingResourceCount_; }
+
+		~PendingGuard() noexcept
+		{
+			if (owner_ && --owner_->pendingResourceCount_ == 0) owner_->onAllResourcesLoaded();
+		}
+
+		PendingGuard(const PendingGuard&)			 = delete;
+		PendingGuard& operator=(const PendingGuard&) = delete;
+
+	  private:
+		ResourceManager* owner_;
+	};
 
   public:
-	ResourceManager(const std::shared_ptr<Settings>& settings, const std::shared_ptr<ILogManager>& log) : BaseManager(settings, log) {}
+	ResourceManager(const std::shared_ptr<Settings>&, const std::shared_ptr<ILogManager>&, const std::shared_ptr<IJobManager>&);
 
 	virtual void load() override;
 
@@ -71,8 +117,15 @@ class ResourceManager : public BaseManager, public IResourceManager
 	virtual ImFont* defaultUIFont() const override { return defaultUIFont_; };
 	virtual ImFont* iconFont() const override { return iconsFont_; };
 
-	virtual const Shader& getShader(ShaderType) const override;
-	virtual const Model& getModel(ModelType) const override;
+	virtual ResourceId loadResourceAsync(ResourceType, const std::filesystem::path&) override;
+	virtual ResourceId loadShaderAsync(const ShaderPaths&, std::function<void(::Shader&)>&& onLoad) override;
+	virtual ResourceId generateModelAsync(std::function<::Model()>&& generator) override;
+
+	virtual bool isAllResourcesLoaded() const override;
+	virtual void onAllResourcesLoaded() const override;
+
+	virtual ::Shader& getShader(ResourceId) override;
+	virtual ::Model& getModel(ResourceId) override;
 
 	virtual ~ResourceManager() override;
 };
