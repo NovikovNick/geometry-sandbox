@@ -40,7 +40,7 @@ void FrustumDrawService::drawFrustum(std::size_t cameraIndex, const Camera& came
 			// Move it a little so that the camera origin is right in the lens area.
 			rlTranslatef(0, 0, -0.25F);	 // NOLINT(*-magic-numbers)
 
-			graphic_->drawModel(ModelType::Camera, /*pos*/ Vec3::Zero(), 1.0F);
+			// graphic_->drawModel(ModelType::Camera, /*pos*/ Vec3::Zero(), 1.0F);
 		}
 		rlPopMatrix();
 

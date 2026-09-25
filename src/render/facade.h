@@ -21,6 +21,7 @@ namespace gs
 class IResourceManager;
 class IUIManager;
 class IUIStateManager;
+class IJobManager;
 class ITranslateGizmoRenderService;
 
 /** @brief Contains services and managers for rendering */
@@ -56,11 +57,15 @@ class Facade : public BaseAppComponent, public IFacade
 	std::shared_ptr<IViewportManager> viewportManager_;
 	std::shared_ptr<IMeshInstancedDrawService> meshInstancing_;
 	std::shared_ptr<IFrustumDrawService> frustumDrawer_;
+	std::shared_ptr<IJobManager> jobManager_;
 
-	std::vector<Mat4> pointTransforms_;	 // should be moved to ecs after implemented rotation
-	std::vector<Color> pointColors_;	 // should be moved to ecs after implemented rotation
+	std::vector<Mat4> instancingTransformsBuffer_;
+	std::vector<Color> instancingColorsBuffer_;
 
 	std::function<void()> onRenderCallback_;
+
+	ResourceId antiAliasingShaderId_{};
+	ResourceId pointModelId_{};
 
   public:
 	Facade(const std::shared_ptr<Settings>&,
@@ -73,7 +78,8 @@ class Facade : public BaseAppComponent, public IFacade
 		   const std::shared_ptr<ILowLevelService>&,
 		   const std::shared_ptr<IViewportManager>&,
 		   const std::shared_ptr<IMeshInstancedDrawService>&,
-		   const std::shared_ptr<IFrustumDrawService>&);
+		   const std::shared_ptr<IFrustumDrawService>&,
+		   const std::shared_ptr<IJobManager>&);
 
 	virtual void render() override;
 	virtual void onRender(std::function<void()> callback) override { onRenderCallback_ = callback; }

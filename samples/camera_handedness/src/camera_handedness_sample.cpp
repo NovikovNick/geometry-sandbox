@@ -20,6 +20,7 @@
 #include "core/configuration.h"
 #include "core/ecs.h"
 #include "core/math.h"
+#include "core/resource_manager.h"
 #include "core/scene_service.h"
 #include "core/types.h"
 #include "feature/camera_idle_rotation_manager.h"
@@ -81,6 +82,7 @@ void setupScene(Parameters& params, Entities& entities)
 	auto& graphic		 = ctx.create<render::ILowLevelService&>();
 	auto& cameraService	 = ctx.create<ICameraService&>();
 	auto& registry		 = ctx.create<ecs::Registry&>();
+	auto& resources		 = ctx.create<IResourceManager&>();
 	auto& log			 = ctx.create<ILogManager&>();
 
 	settings.showConsole = true;
@@ -105,11 +107,15 @@ void setupScene(Parameters& params, Entities& entities)
 	params.c		  = params.a.cross(params.b);
 	params.origin	  = Vec3{-2.5, 1, -2};
 
-	entities.position = sceneService.addPoint({.color = Color::transparent(), .radius = 0.0F});
-	entities.target	  = sceneService.addModel({.position = Vec3::Zero(),  //
-											   .origin	 = Vec3{0.2F, 0.0F, 0.0F},
-											   .scale	 = 1.0F,
-											   .type	 = ModelType::Duck});
+	entities.position = sceneService.addModel({.position   = Vec3::Zero(),
+											   .origin	   = Vec3{0.0F, 0.0F, 0.0F},
+											   .scale	   = 1.0F,
+											   .resourceId = resources.loadResourceAsync("models/camera.glb", ResourceType::Mesh)});
+
+	entities.target	  = sceneService.addModel({.position   = Vec3::Zero(),
+											   .origin	   = Vec3{0.2F, 0.0F, 0.0F},
+											   .scale	   = 1.0F,
+											   .resourceId = resources.loadResourceAsync("models/little_duck.glb", ResourceType::Mesh)});
 
 	entities.a		  = sceneService.addVector({.color	   = Color::red(),	//
 												.thickness = settings.lineThickness,

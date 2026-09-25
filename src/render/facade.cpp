@@ -2,6 +2,7 @@
 
 #include "core/base_app_component.h"
 #include "core/ecs.h"
+#include "core/job_manager.h"
 #include "core/log_manager.h"
 #include "core/math.h"
 #include "core/resource_manager.h"
@@ -36,7 +37,8 @@ Facade::Facade(const std::shared_ptr<Settings>& settings,
 			   const std::shared_ptr<ILowLevelService>& graphic,
 			   const std::shared_ptr<IViewportManager>& viewportManager,
 			   const std::shared_ptr<IMeshInstancedDrawService>& meshInstancing,
-			   const std::shared_ptr<IFrustumDrawService>& frustumDrawer)
+			   const std::shared_ptr<IFrustumDrawService>& frustumDrawer,
+			   const std::shared_ptr<IJobManager>& jobManager)
 	: BaseAppComponent(settings, log),					//
 	  registry_(registry),								//
 	  resourceManager_(resourceManager),				//
@@ -46,8 +48,19 @@ Facade::Facade(const std::shared_ptr<Settings>& settings,
 	  graphic_(graphic),								//
 	  viewportManager_(viewportManager),				//
 	  meshInstancing_(meshInstancing),					//
-	  frustumDrawer_(frustumDrawer)						//
+	  frustumDrawer_(frustumDrawer),					//
+	  jobManager_(jobManager)							//
 {
+	antiAliasingShaderId_ = resourceManager_->loadShaderAsync({.fragment = settings->resourcePathFXAAFragmentShader});
+
+	jobManager_->schedule(
+		[&]
+		{
+			constexpr int kSphereRings	= 16;
+			constexpr int kSphereSlices = 16;
+			constexpr int kRadius		= 1.0F;
+			pointModelId_ = resourceManager_->addModel(LoadModelFromMesh(GenMeshSphere(kRadius, kSphereRings, kSphereSlices)));
+		});
 }
 
 void Facade::render()
@@ -57,7 +70,7 @@ void Facade::render()
 	updateViewports();
 	updateCursorType();
 
-	// I don't yet have a clear vision of how this method should be organized,
+	// I don't have yet a clear vision of how this method should be organized,
 	// so I left it as is. For future revisions
 	{
 		BeginDrawing();
@@ -111,7 +124,7 @@ void Facade::render()
 		graphic_->cleanupCamera();
 
 		// viewport widgets
-		if (ui.transformGizmo.active)
+		if (resourceManager_->isAllResourcesLoaded() && ui.transformGizmo.active)
 		{
 			const Texture texture = viewportManager_->getViewport2D(ui.activeCameraIndex);
 
@@ -125,14 +138,12 @@ void Facade::render()
 			const float rotation					= 0.0F;
 			const ::Color tint						= ::WHITE;
 
-			const Shader fxaaShader					= resourceManager_->getShader(ShaderType::FXAA);
-
-			const int viewportSizeLoc				= GetShaderLocation(fxaaShader, "uViewportSize");
-
+			const Shader& antiAliasingShader		= resourceManager_->getShader(antiAliasingShaderId_);
+			const int viewportSizeLoc				= GetShaderLocation(antiAliasingShader, "uViewportSize");
 			const std::array<float, 2> viewportSize = {static_cast<float>(texture.width), static_cast<float>(texture.height)};
-			SetShaderValue(fxaaShader, viewportSizeLoc, viewportSize.data(), SHADER_UNIFORM_VEC2);
+			SetShaderValue(antiAliasingShader, viewportSizeLoc, viewportSize.data(), SHADER_UNIFORM_VEC2);
 
-			BeginShaderMode(fxaaShader);
+			BeginShaderMode(antiAliasingShader);
 			DrawTexturePro(texture, src, dst, origin, rotation, tint);
 			EndShaderMode();
 		}
@@ -176,11 +187,14 @@ void Facade::updateViewports()
 		const Camera& camera = ui.cameras[i];
 		viewportManager_->setupViewport(i);
 		graphic_->setupCamera(camera);
-		if (i == ui.activeCameraIndex && ui.transformGizmo.active)
+		if (i == ui.activeCameraIndex)
 		{
-			const float scale = (camera.position - ui.transformGizmo.position).norm();
-			graphic_->clearBackground(Color::transparent());
-			translateGizmoRenderer_->render(ui.transformGizmo, scale);
+			if (ui.transformGizmo.active)
+			{
+				const float scale = (camera.position - ui.transformGizmo.position).norm();
+				graphic_->clearBackground(Color::transparent());
+				translateGizmoRenderer_->render(ui.transformGizmo, scale);
+			}
 		}
 		else
 		{
@@ -220,49 +234,48 @@ void Facade::drawScene(const Camera& camera)
 {
 	graphic_->drawAxesGrid(camera.upAxis, settings_->grid);
 
-	// Points
+	if (resourceManager_->isAllResourcesLoaded())
 	{
-		const Shader& intansingShader = resourceManager_->getShader(ShaderType::MeshInstancing);
-		const Model& point			  = resourceManager_->getModel(ModelType::Point);
-
-		int meshInstanceIdx			  = 0;	// index for mesh instancing
-		for (const auto& [_, position, radius, color] :
-			 registry_->view<ecs::component::Position, ecs::component::Radius, ecs::component::MainColor>().each())
+		// Points
 		{
-			// increase if not enogh
-			if (meshInstanceIdx >= pointTransforms_.size())
-			{
-				pointTransforms_.emplace_back(Mat4::Identity());
-				pointColors_.push_back(Color::white());
-			}
+			const Model& point = resourceManager_->getModel(pointModelId_);
 
-			// clang-format off
-			pointTransforms_[meshInstanceIdx] << radius.val,      0.0F,	      0.0F,	 position.val.x(),
+			int instanceIdx	   = 0;	 // index for mesh instancing
+			for (const auto& [_, position, radius, color] :
+				 registry_->view<ecs::component::Position, ecs::component::Radius, ecs::component::MainColor>().each())
+			{
+				// increase if not enough
+				if (instanceIdx >= instancingTransformsBuffer_.size())
+				{
+					instancingTransformsBuffer_.emplace_back(Mat4::Identity());
+					instancingColorsBuffer_.push_back(Color::white());
+				}
+
+				// clang-format off
+			instancingTransformsBuffer_[instanceIdx] << radius.val,      0.0F,	      0.0F,	 position.val.x(),
 												 	  0.0F,	 radius.val,      0.0F,	 position.val.y(),
 												 	  0.0F,		  0.0F,  radius.val, position.val.z(),
 													  0.0F,		  0.0F,		  0.0F,		    1.0F;
-			// clang-format on
+				// clang-format on
 
-			pointColors_[meshInstanceIdx] = color.val.normalized();
+				instancingColorsBuffer_[instanceIdx] = color.val.normalized();
 
-			meshInstanceIdx++;	// next
+				instanceIdx++;	// next
+			}
+
+			meshInstancing_->drawMeshInstanced(pointModelId_,
+											   camera.position,
+											   std::span{instancingTransformsBuffer_},
+											   std::span{instancingColorsBuffer_});
 		}
 
-		std::array<float, 3> cameraPos = {camera.position.x(), camera.position.y(), camera.position.z()};
-
-		// NOLINTBEGIN(cppcoreguidelines-pro-bounds-pointer-arithmetic)
-		SetShaderValue(intansingShader, intansingShader.locs[SHADER_LOC_VECTOR_VIEW], cameraPos.data(), SHADER_UNIFORM_VEC3);
-
-		meshInstancing_->drawMeshInstanced(point.meshes[0], point.materials[0], std::span{pointTransforms_}, std::span{pointColors_});
-		// NOLINTEND(cppcoreguidelines-pro-bounds-pointer-arithmetic)
-	}
-
-	// Models
-	{
-		for (const auto& [_, mesh, pos] : registry_->view<ecs::component::Mesh, ecs::component::Position>().each())
+		// Models
 		{
-			const Vec3 position = pos.val - mesh.origin;
-			graphic_->drawModel(mesh.type, position, mesh.scale);
+			for (const auto& [_, mesh, pos] : registry_->view<ecs::component::Mesh, ecs::component::Position>().each())
+			{
+				const Vec3 position = pos.val - mesh.origin;
+				graphic_->drawModel(mesh.resourceId, position, mesh.scale);
+			}
 		}
 	}
 

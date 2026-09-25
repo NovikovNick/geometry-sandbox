@@ -1,6 +1,8 @@
 #include "render/mesh_instanced_draw_service.h"
 
 #include "core/math.h"
+#include "core/resource_manager.h"
+#include "core/settings.h"
 #include "core/types.h"
 
 #include "raylib.h"
@@ -9,6 +11,7 @@
 
 #include <array>
 #include <cassert>
+#include <memory>
 #include <span>
 #include <string>
 #include <utility>
@@ -17,21 +20,21 @@ namespace gs::render
 {
 namespace
 {
-class Shader
+class ScopedShader
 {
 	::Shader shader_;
 
   public:
-	explicit Shader(::Shader shader) : shader_(shader) { rlEnableShader(shader_.id); }
-	Shader(Shader&)						 = delete;
-	Shader& operator=(const Shader&)	 = delete;
-	Shader(Shader&&) noexcept			 = delete;
-	Shader& operator=(Shader&&) noexcept = delete;
+	explicit ScopedShader(const ::Shader& shader) : shader_(shader) { rlEnableShader(shader_.id); }
+	ScopedShader(ScopedShader&)						 = delete;
+	ScopedShader& operator=(const ScopedShader&)	 = delete;
+	ScopedShader(ScopedShader&&) noexcept			 = delete;
+	ScopedShader& operator=(ScopedShader&&) noexcept = delete;
 
 	[[nodiscard]] int getLocationIndex(ShaderLocationIndex idx) const { return shader_.locs[idx]; }	 // NOLINT(*-pointer-arithmetic)
 	[[nodiscard]] int getLocationAttr(const std::string& attrName) const { return rlGetLocationAttrib(shader_.id, attrName.c_str()); }
 
-	~Shader() { rlDisableShader(); }
+	~ScopedShader() { rlDisableShader(); }
 };
 
 class Material
@@ -58,7 +61,7 @@ class Material
 		std::make_pair(MATERIAL_MAP_BRDF, SHADER_LOC_MAP_BRDF),
 	};
 
-	void bind(const Shader& shader) const
+	void bind(const ScopedShader& shader) const
 	{
 		for (const auto [materialIdx, shaderLoc] : cubemapIndexes)
 		{
@@ -111,7 +114,7 @@ class Material
 	}
 };
 
-unsigned uploadTransformsToGPU(const std::span<Mat4>& transforms, const Shader& shader)
+unsigned uploadTransformsToGPU(const std::span<Mat4>& transforms, const ScopedShader& shader)
 {
 	const unsigned vboId = rlLoadVertexBuffer(transforms.data(),
 											  static_cast<int>(transforms.size() * sizeof(Mat4)),
@@ -127,7 +130,7 @@ unsigned uploadTransformsToGPU(const std::span<Mat4>& transforms, const Shader& 
 	return vboId;
 }
 
-unsigned uploadColorsToGPU(const std::span<Color>& colors, const Shader& shader)
+unsigned uploadColorsToGPU(const std::span<Color>& colors, const ScopedShader& shader)
 {
 	const int loc = shader.getLocationAttr("instanceColor");
 	assert(loc != -1);
@@ -140,7 +143,7 @@ unsigned uploadColorsToGPU(const std::span<Color>& colors, const Shader& shader)
 	return vboId;
 }
 
-void bindMesh(const ::Mesh& mesh, const Shader& shader)
+void bindMesh(const ::Mesh& mesh, const ScopedShader& shader)
 {
 	assert(shader.getLocationIndex(SHADER_LOC_VERTEX_POSITION) != -1);
 	assert(shader.getLocationIndex(SHADER_LOC_VERTEX_TEXCOORD01) != -1);
@@ -172,16 +175,45 @@ void bindMesh(const ::Mesh& mesh, const Shader& shader)
 }
 }  // namespace
 
-void MeshInstancedDrawService::drawMeshInstanced(const ::Mesh& mesh,
-												 const ::Material& material,
+MeshInstancedDrawService::MeshInstancedDrawService(const std::shared_ptr<Settings>& settings,
+												   const std::shared_ptr<ILogManager>& log,
+												   const std::shared_ptr<IResourceManager>& resources)
+	: BaseService(settings, log), resources_(resources)
+{
+	shaderId_ = resources_->loadShaderAsync({.vertex   = settings->resourcePathInstancingVertexShader,
+											 .fragment = settings->resourcePathInstancingFragmentShader},
+											[](Shader& shader)
+											{
+												// NOLINTBEGIN(cppcoreguidelines-pro-bounds-pointer-arithmetic)
+												shader.locs[SHADER_LOC_MATRIX_MVP]	 = GetShaderLocation(shader, "mvp");
+												shader.locs[SHADER_LOC_VECTOR_VIEW]	 = GetShaderLocation(shader, "viewPos");
+												shader.locs[SHADER_LOC_MATRIX_MODEL] = GetShaderLocationAttrib(shader,
+																											   "instanceTransform");
+												// NOLINTEND(cppcoreguidelines-pro-bounds-pointer-arithmetic)
+											});
+}
+
+/** @brief adapt raylib's DrawMeshInstanced */
+void MeshInstancedDrawService::drawMeshInstanced(ResourceId resourceId,
+												 const Vec3& cameraPosition,
 												 const std::span<Mat4>& transforms,
 												 const std::span<Color>& colors) const
 {
-	// adapt raylib's DrawMeshInstanced
+	assert(resources_->isAllResourcesLoaded());
+	assert(resourceId.type == ResourceType::Mesh);
 	assert(transforms.size() == colors.size());
 
-	const Shader shader{material.shader};
+	::Shader s = resources_->getShader(shaderId_);
+	SetShaderValue(s,
+				   s.locs[SHADER_LOC_VECTOR_VIEW],	// NOLINT(cppcoreguidelines-pro-bounds-pointer-arithmetic)
+				   cameraPosition.data(),
+				   SHADER_UNIFORM_VEC3);
+
+	const ScopedShader shader{s};
 	assert(shader.getLocationIndex(SHADER_LOC_MATRIX_MVP) != -1);
+
+	const ::Model& model = resources_->getModel(resourceId);
+	const ::Mesh& mesh	 = model.meshes[0];	 // NOLINT(cppcoreguidelines-pro-bounds-pointer-arithmetic)
 
 	rlEnableVertexArray(mesh.vaoId);
 
@@ -191,7 +223,7 @@ void MeshInstancedDrawService::drawMeshInstanced(const ::Mesh& mesh,
 	rlDisableVertexBuffer();
 	rlDisableVertexArray();
 
-	const Material mat{material};
+	const Material mat{model.materials[0]};	 // NOLINT(cppcoreguidelines-pro-bounds-pointer-arithmetic)
 	mat.bind(shader);
 
 	bindMesh(mesh, shader);

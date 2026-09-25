@@ -111,13 +111,19 @@ enum class CursorType
 	Hidden
 };
 
-/** @brief All predefined model in applications */
-enum class ModelType : std::uint8_t
+/** @brief resource type for resource manager */
+enum class ResourceType : std::uint8_t
 {
-	Point = 0,
-	Duck,
-	Camera,
-	Count
+	Mesh,
+	Shader,
+	Texture
+};
+
+/** @brief resource id for resource manager */
+struct ResourceId
+{
+	std::uint16_t id;
+	ResourceType type;
 };
 
 /**
@@ -193,13 +199,13 @@ struct AABB
 	float thickness;
 };
 
-/** @brief Colored point */
+/** @brief mesh with transform */
 struct Model
 {
 	Vec3 position;
 	Vec3 origin;
 	float scale;
-	ModelType type;
+	ResourceId resourceId;
 };
 }  // namespace scene
 

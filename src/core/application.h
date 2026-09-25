@@ -1,15 +1,14 @@
 ﻿/**
  * @file application.h
- *
  * @brief main entry class
  *
+ * @todo [improvement]: ★★★ deproject screen ray in 2d (orthographic camera) to select viewport gizmos
+ * @todo [improvement]: ★★★ improve 2D/3D switcher with dolly zoom animation
  * @todo [sample]: ★★★★ Quaternion like https://quaternions.online/
  * @todo [improvement]: ★★★★ Transform (Translate + Rotator + Scale)
  * @todo [sample]: ★★★★ Boids simulation for benchmark: https://github.com/SkitzFist/Boids
  * @todo [improvement]: ★★★★ Template <typename T> using Animator = std::function<T(Nanoseconds)>
- * @todo [improvement]: ★★★★ WebGPU renderer
  * @todo [feature]: ★★★★ Rotation gizmo example: https://github.com/CedricGuillemet/ImGuizmo
- * @todo [performance]: ★★★★ Frustum culling? scene manager and octree
  *
  * @todo [bugfix]: ★★★ broken html layout on mobile devices (github link)
  * @todo [docs]: ★★★ Cleanup .bat and .sh scripts
@@ -18,22 +17,24 @@
  * @todo [improvement]: ★★★★ Move platform specific code to separate class
  * @todo [docs]: ★★★★ Dark/light theme toggle in docs doesn't work correctly
  * @todo [linter]: ★★★ Check names in clang-tidy (active, hover, constrained...)
- * @todo [improvement]: ★★★ deproject screen ray in 2d (orthographic camera) to select viewport gizmos
  *
  * @todo [sample]: ★★★ Add samples for all https://gamemath.com/book/geomtests.html
  * @todo [improvement]: ★★★★ DSL to describe scene geometry, some Geometry Markup Language. One wasm to rule them all :)
  * @todo [improvement]: ★★★★ Real 3D text, not a 2D projection
  *
+ * @todo [R&D]: ★★★★ Skelet Animation editor
  * @todo [R&D]: ★★★ Dual contouring vs marching cubes
+ * @todo [R&D]: ★★★★ Mesh builder (user generated weapon/armor)
  * @todo [R&D]: ★★★★ Motion matching sample
  * @todo [improvement]: ★★★★ ASAN for unit-tests on clang
- * @todo [performance]: ★★★★	 Animation build should be at compile-time
+ * @todo [performance]: ★★★★	 Animation build should be at compile-time?
  * @todo [performance]: ★★★★ Arena allocator should improve animation build's performance
- * @todo [performance]: ★★★★ Concurrency for animation system. Does -pthread work on github pages?
  * @todo [feature]: ★★★ Select scene objects with rectangle
- * @todo [feature]: ★★★★ Ru/En lang switcher? Asset manager to load i18n?
- * @todo [feature]: ★★★★ Add https://github.com/NanoMichael/MicroTeX
- * @todo [feature]: ★★★ Add color chooser and setup app's color theme
+ * @todo [feature]: ★★★★ Ru/En lang switcher? load i18n in resource manager?
+ * @todo [feature]: ★★★★ Add https://github.com/NanoMichael/MicroTeX?
+ * @todo [feature]: ★★★ Add color chooser and setup app's color theme?
+ * @todo [improvement]: ★★★★ WebGPU renderer?
+ * @todo [performance]: ★★★★ Frustum culling? scene manager and octree
  *
  * @author MetalHeart
  */
@@ -58,6 +59,7 @@ class IResourceManager;
 class IUIManager;
 class IUIStateManager;
 class IViewportManager;
+class IJobManager;
 class ILogManager;
 class IRenderService;
 class ICameraControllerService;
@@ -88,6 +90,8 @@ class Application
 	std::shared_ptr<ICameraControllerService> cameraController_;
 	std::shared_ptr<IInteractionService> interationService_;
 	std::shared_ptr<render::IViewportManager> viewportManager_;
+	std::shared_ptr<IJobManager> jobManager_;
+	std::shared_ptr<Settings> settings_;
 	std::shared_ptr<ILogManager> logManager_;
 
   public:
@@ -102,6 +106,8 @@ class Application
 				const std::shared_ptr<ICameraControllerService>&,
 				const std::shared_ptr<IInteractionService>&,
 				const std::shared_ptr<render::IViewportManager>&,
+				const std::shared_ptr<IJobManager>&,
+				const std::shared_ptr<Settings>&,
 				const std::shared_ptr<ILogManager>&);
 	void run();
 	void drawNextFrame(Nanoseconds timeDelta);

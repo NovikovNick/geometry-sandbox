@@ -1,17 +1,15 @@
 #include "core/resource_manager.h"
 
+#include "core/job_manager.h"
+#include "core/log_manager.h"
+#include "core/settings.h"
 #include "core/types.h"
 #include "imgui.h"
 #include "raylib.h"
 
 #include <cstddef>
+#include <filesystem>
 #include <format>
-
-#ifdef PLATFORM_DESKTOP
-constexpr int kGlslVersion = 330;
-#else
-constexpr int kGlslVersion = 100;
-#endif
 
 namespace gs
 {
@@ -40,66 +38,87 @@ void ResourceManager::load()
 	// raylib
 	defaultCanvasFont_ = LoadFontEx("resources/lmmonolt-regular-webfont.ttf", kCanvasFontSize, nullptr, 0);
 	SetTextureFilter(defaultCanvasFont_.texture, TEXTURE_FILTER_BILINEAR);
-
-	// meshes
-	models_.at(static_cast<std::size_t>(ModelType::Camera)) = LoadModel("resources/models/camera.glb");
-	models_.at(static_cast<std::size_t>(ModelType::Duck))	= LoadModel("resources/models/little_duck.glb");
-
-	// Mesh instancing shader
-	{
-		const Shader shader = LoadShader(std::format("resources/shaders/glsl{}/shader_instanced_color.vs", kGlslVersion).c_str(),
-										 std::format("resources/shaders/glsl{}/shader_instanced_color.fs", kGlslVersion).c_str());
-
-		// NOLINTBEGIN(cppcoreguidelines-pro-bounds-pointer-arithmetic)
-		shader.locs[SHADER_LOC_MATRIX_MVP]	 = GetShaderLocation(shader, "mvp");
-		shader.locs[SHADER_LOC_VECTOR_VIEW]	 = GetShaderLocation(shader, "viewPos");
-		shader.locs[SHADER_LOC_MATRIX_MODEL] = GetShaderLocationAttrib(shader, "instanceTransform");
-		// NOLINTEND(cppcoreguidelines-pro-bounds-pointer-arithmetic)
-
-		shaders_[static_cast<std::size_t>(ShaderType::MeshInstancing)] = shader;
-	}
-
-	// Bloom shader
-	{
-		shaders_[static_cast<std::size_t>(ShaderType::Blur)] = LoadShader(nullptr,
-																		  std::format("resources/shaders/glsl{}/blur.fs", kGlslVersion)
-																			  .c_str());
-	}
-
-	// FXAA shader
-	{
-		shaders_[static_cast<std::size_t>(ShaderType::FXAA)] = LoadShader(nullptr,
-																		  std::format("resources/shaders/glsl{}/fxaa.fs", kGlslVersion)
-																			  .c_str());
-	}
-
-	// point
-	{
-		constexpr int kSphereRings	= 16;
-		constexpr int kSphereSlices = 16;
-		meshes_.push_back(GenMeshSphere(1.0F, kSphereRings, kSphereSlices));
-		const Mesh& mesh									   = meshes_.back();
-
-		models_.at(static_cast<std::size_t>(ModelType::Point)) = LoadModelFromMesh(mesh);
-		const Model& model									   = models_.at(static_cast<std::size_t>(ModelType::Point));
-		Material& material						  = model.materials[0];	 // NOLINT(cppcoreguidelines-pro-bounds-pointer-arithmetic)
-		material.maps[MATERIAL_MAP_DIFFUSE].color = ::BLACK;			 // NOLINT(cppcoreguidelines-pro-bounds-pointer-arithmetic)
-		material.shader							  = getShader(ShaderType::MeshInstancing);
-	}
 }
 
-const Shader& ResourceManager::getShader(ShaderType type) const
+Shader& ResourceManager::getShader(ResourceId id)
 {
-	return shaders_.at(static_cast<std::size_t>(type));
+	assert(isAllResourcesLoaded());	 // there is no race condition cause resource manager is single-threaded
+	assert(id.type == ResourceType::Shader);
+	return shaders_.at(id.id);
 }
-const Model& ResourceManager::getModel(ModelType type) const
+
+Model& ResourceManager::getModel(ResourceId id)
 {
-	return models_.at(static_cast<std::size_t>(type));
+	assert(isAllResourcesLoaded());	 // there is no race condition cause resource manager is single-threaded
+	assert(id.type == ResourceType::Mesh);
+	return models_.at(id.id);
+}
+
+ResourceId ResourceManager::addModel(::Model model)
+{
+	ResourceId id{.id = static_cast<std::uint16_t>(models_.size()), .type = ResourceType::Mesh};
+	models_.push_back(model);
+	return id;
+}
+
+ResourceId ResourceManager::loadShaderAsync(const ShaderPaths& shaderPaths, std::function<void(::Shader&)>&& onLoad)
+{
+	ResourceId id{.id = static_cast<std::uint16_t>(shaders_.size()), .type = ResourceType::Shader};
+	shaders_.push_back({});
+
+	++pendingResourceCount_;
+
+	jobManager_->schedule(
+		[&, paths = shaderPaths, callback = std::move(onLoad), idx = id.id]
+		{
+			const std::filesystem::path basePath = std::filesystem::current_path() / "resources";
+
+			shaders_.at(idx)					 = LoadShader(	//
+				paths.vertex.empty() ? nullptr : (basePath / paths.vertex).string().c_str(),
+				paths.fragment.empty() ? nullptr : (basePath / paths.fragment).string().c_str());
+
+			callback(shaders_.at(idx));
+
+			--pendingResourceCount_;
+		});
+
+	return id;
+}
+
+ResourceId ResourceManager::loadResourceAsync(const std::filesystem::path& resourcePath, ResourceType type)
+{
+	ResourceId id{.id = 0, .type = type};
+	switch (type)
+	{
+		case ResourceType::Mesh:
+		{
+			id.id = models_.size();
+			models_.push_back({});
+
+			++pendingResourceCount_;
+			jobManager_->schedule(
+				[&, path = resourcePath, idx = id.id]
+				{
+					const std::filesystem::path p = std::filesystem::current_path() / "resources" / path;
+					models_.at(idx)				  = LoadModel(p.string().c_str());
+					--pendingResourceCount_;
+				});
+
+			break;
+		}
+		default: assert(false && "Unsupported resource type");
+	}
+
+	return id;
+}
+
+bool ResourceManager::isAllResourcesLoaded() const
+{
+	return pendingResourceCount_ == 0;
 }
 
 ResourceManager::~ResourceManager()
 {
 	UnloadFont(defaultCanvasFont_);
 }
-
 }  // namespace gs

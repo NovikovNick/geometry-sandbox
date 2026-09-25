@@ -19,7 +19,7 @@ ecs::Entity SceneService::addModel(const scene::Model& model)
 	auto& mesh				 = registry_->emplace<ecs::component::Mesh>(entity);
 	mesh.origin				 = model.origin;
 	mesh.scale				 = model.scale;
-	mesh.type				 = model.type;
+	mesh.resourceId			 = model.resourceId;
 	registry_->emplace<ecs::component::Position>(entity, model.position);
 	return entity;
 }
