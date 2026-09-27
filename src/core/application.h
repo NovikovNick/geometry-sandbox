@@ -2,7 +2,6 @@
  * @file application.h
  * @brief main entry class
  *
- * @todo [improvement]: ★★★ deproject screen ray in 2d (orthographic camera) to select viewport gizmos
  * @todo [improvement]: ★★★ improve 2D/3D switcher with dolly zoom animation
  * @todo [sample]: ★★★★ Quaternion like https://quaternions.online/
  * @todo [improvement]: ★★★★ Transform (Translate + Rotator + Scale)

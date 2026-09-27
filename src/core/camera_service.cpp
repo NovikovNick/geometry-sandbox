@@ -14,7 +14,7 @@ namespace gs
 {
 Vec3 CameraService::getForward(const Camera& camera) const
 {
-	return -(camera.rotation * Vec3::UnitZ());
+	return -(camera.rotation * Vec3::UnitZ());	// why is handedness ignored?
 }
 
 Vec3 CameraService::getRight(const Camera& camera) const
@@ -123,26 +123,30 @@ void CameraService::rotatePitch(Camera& camera, float angleRad) const
 }
 
 Ray CameraService::getScreenToWorldRay(Vec2 screenPos, const Camera& camera) const
-{  // ndc, y is inverted
-	Vec3 ndc;
-	ndc.x()			   = ((2 * screenPos.x()) / static_cast<float>(camera.width)) - 1;
-	ndc.y()			   = 1 - ((2 * screenPos.y()) / static_cast<float>(camera.height));
-	ndc.z()			   = 1.0F;
-
-	const Mat4 matView = getViewMatrix(camera);
-	const Mat4 matProj = getProjectionMatrix(camera);
-
-	// Unproject far/near points
-	const Vec3 nearPoint = deprojectVector({ndc.x(), ndc.y(), 0.0F}, matView, matProj);
-	const Vec3 farPoint	 = deprojectVector({ndc.x(), ndc.y(), 1.0F}, matView, matProj);
-
+{
 	Ray ray;
-	ray.origin	  = camera.position;
-	ray.direction = (farPoint - nearPoint).normalized();
-	/*if (camera.projection == CAMERA_PERSPECTIVE)
-		ray.position = camera.position;
-	else if (camera.projection == CAMERA_ORTHOGRAPHIC)
-		ray.position = cameraPlanePointerPos;*/
+	Vec3 ndc;
+	ndc.x()				 = ((2 * screenPos.x()) / static_cast<float>(camera.width)) - 1;
+	ndc.y()				 = 1 - ((2 * screenPos.y()) / static_cast<float>(camera.height));  //  y is inverted
+	ndc.z()				 = 1.0F;
+
+	const Mat4 matView	 = getViewMatrix(camera);
+	const Mat4 matProj	 = getProjectionMatrix(camera);
+
+	const Vec3 nearPoint = deprojectVector({ndc.x(), ndc.y(), 0.0F}, matView, matProj);	 // unproject
+
+	if (camera.perspective)
+	{
+		const Vec3 farPoint = deprojectVector({ndc.x(), ndc.y(), 1.0F}, matView, matProj);	// unproject
+
+		ray.origin			= camera.position;
+		ray.direction		= (farPoint - nearPoint).normalized();
+	}
+	else
+	{
+		ray.origin	  = nearPoint;
+		ray.direction = -getForward(camera);
+	}
 	return ray;
 }
 
