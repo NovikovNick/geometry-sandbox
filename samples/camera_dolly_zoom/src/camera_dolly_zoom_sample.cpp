@@ -102,11 +102,11 @@ void setupScene(Parameters& params, Entities& entities)
 	entities.position = sceneService.addModel({.position   = Vec3::Zero(),	//
 											   .origin	   = Vec3{0.0F, 0.0F, 0.0F},
 											   .scale	   = 1.0F,
-											   .resourceId = resources.loadResourceAsync("models/camera.glb", ResourceType::Mesh)});
+											   .resourceId = resources.loadResourceAsync(ResourceType::Mesh, "models/camera.glb")});
 	entities.duck	  = sceneService.addModel({.position   = Vec3::Zero(),	//
 											   .origin	   = Vec3{0.2F, 0.0F, 0.0F},
 											   .scale	   = 1.0F,
-											   .resourceId = resources.loadResourceAsync("models/little_duck.glb", ResourceType::Mesh)});
+											   .resourceId = resources.loadResourceAsync(ResourceType::Mesh, "models/little_duck.glb")});
 	entities.dLabel	  = sceneService.addText({.text = "d", .color = Color::white(), .fontSize = settings.canvasFontSize});
 	entities.rLabel	  = sceneService.addText({.text = "r", .color = Color::white(), .fontSize = settings.canvasFontSize});
 	entities.tLabel	  = sceneService.addText({.text = "t", .color = Color::white(), .fontSize = settings.canvasFontSize});

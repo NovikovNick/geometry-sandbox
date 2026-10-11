@@ -12,23 +12,21 @@
 #include <array>
 #include <cassert>
 #include <cmath>
+#include <span>
 #include <vector>
 
 namespace gs
 {
-namespace
-{
 const std::size_t kMaxPolyDegree = 9;
-}
 
 /** @brief Evaluates bezier value at specified t using De Casteljau algorithm */
-Vec3 calcBezierWithDeCasteljauAlgorithm(const std::vector<Vec3>& controlPoints, const float t)
+inline Vec3 evalBezierByDeCasteljau(std::span<Vec3> poles, const float t)
 {
-	assert(controlPoints.size() >= 2);
-	assert(controlPoints.size() <= kMaxPolyDegree);
+	assert(poles.size() >= 2);
+	assert(poles.size() <= kMaxPolyDegree);
 
 	std::array<Vec3, kMaxPolyDegree> points;
-	std::copy(controlPoints.begin(), controlPoints.end(), points.begin());
+	std::copy(poles.begin(), poles.end(), points.begin());
 
 	// for cubic it should be like:
 	// p0   p1   p2  p3
@@ -38,7 +36,7 @@ Vec3 calcBezierWithDeCasteljauAlgorithm(const std::vector<Vec3>& controlPoints, 
 	//    p012  p123
 	//       \  /
 	//       res
-	int n = controlPoints.size();
+	int n = poles.size();
 	while (n > 0)
 	{
 		--n;
@@ -48,6 +46,16 @@ Vec3 calcBezierWithDeCasteljauAlgorithm(const std::vector<Vec3>& controlPoints, 
 		}
 	}
 	return points[0];
+}
+
+/** @brief Evaluates cubic bezier derivative at specified time */
+inline Vec3 evalDerivate(const std::span<Vec3>& poles, const float t)
+{
+	assert(poles.size() == 4);
+	const Vec3 p01 = std::lerp(poles[0], poles[1], t);
+	const Vec3 p12 = std::lerp(poles[1], poles[2], t);
+	const Vec3 p23 = std::lerp(poles[2], poles[3], t);
+	return 3.0f * (std::lerp(p12, p23, t) - std::lerp(p01, p12, t));
 }
 
 constexpr int factorial(const int n)
@@ -65,7 +73,7 @@ constexpr int factorial(const int n)
 	return res;
 }
 
-float coefficientBinomial(const int n, const int k)
+inline float coefficientBinomial(const int n, const int k)
 {
 	if (n < kMaxPolyDegree && n <= k)
 	{
@@ -85,40 +93,64 @@ float coefficientBinomial(const int n, const int k)
 	return factorial(n) / static_cast<float>(factorial(k) * factorial(n - k));
 }
 
-float bernsteinPolynomial(const int n, const int i, const float t)
+inline float bernsteinPolynomial(const int n, const int i, const float t)
 {
 	return coefficientBinomial(n, i) * std::pow(t, i) * std::pow(1.0F - t, n - i);
 }
 
-/** @brief Evaluates bezier value at specified time using De Casteljau algorithm */
-Vec3 calcBezierWithBernsteinPolynomial(const std::vector<Vec3>& controlPoints, const float t)
+/**
+ * @brief Evaluates bezier value at specified time using Bernstein polynomial
+ *
+ * Bernstein polynomial is just rearranged DeCasteljau
+ */
+inline Vec3 evalBezierByBernstein(std::span<Vec3> poles, const float t)
 {
-	const int n = controlPoints.size() - 1;
-	Vec3 res	= Vec3::Zero();
+	const int n = poles.size() - 1;
+	if (n == 3)
+	{
+		const float t2 = t * t;
+		const float t3 = t2 * t;
+		return poles[0] * (-t3 + 3 * t2 - 3 * t + 1) +	//
+			   poles[1] * (3 * t3 - 6 * t2 + 3 * t) +	//
+			   poles[2] * (-3 * t3 + 3 * t2) +			//
+			   poles[3] * t3;
+	}
 
+	Vec3 res = Vec3::Zero();
 	for (int i = 0; i <= n; ++i)
 	{
-		res += bernsteinPolynomial(n, i, t) * controlPoints[i];
+		res += bernsteinPolynomial(n, i, t) * poles[i];
 	}
 	return res;
 }
 
-/** @brief Calculates Monomial coefficients */
-void updateCoefficientMonomial(const std::vector<Vec3>& controlPoints, std::vector<Vec3>& monomials)
+/** @brief Calculates polinomial coefficients for cubic bezier curve */
+inline std::tuple<Vec3, Vec3, Vec3, Vec3> polinomialCoefficients(std::span<Vec3> poles)
 {
 	// NOLINTBEGIN(*-magic-numbers)
-	assert(controlPoints.size() == 4);
-	assert(monomials.size() == 4);
+	assert(poles.size() == 4);
 
-	const Vec3& p0 = controlPoints[0];
-	const Vec3& p1 = controlPoints[1];
-	const Vec3& p2 = controlPoints[2];
-	const Vec3& p3 = controlPoints[3];
-	monomials[0]   = p0;
-	monomials[1]   = -3 * p0 + 3 * p1;
-	monomials[2]   = 3 * p0 - 6 * p1 + 3 * p2;
-	monomials[3]   = -p0 + 3 * p1 - 3 * p2 + p3;
+	const Vec3& p0 = poles[0];
+	const Vec3& p1 = poles[1];
+	const Vec3& p2 = poles[2];
+	const Vec3& p3 = poles[3];
+
+	return std::make_tuple(p0,						  //
+						   -3 * p0 + 3 * p1,		  //
+						   3 * p0 - 6 * p1 + 3 * p2,  //
+						   -p0 + 3 * p1 - 3 * p2 + p3);
+
 	// NOLINTEND(*-magic-numbers)
+}
+
+inline Vec3 evalBezierByPolinomialCoefficients(std::span<Vec3> poles, const float t)
+{
+	const auto [a1, a2, a3, a4] = polinomialCoefficients(poles);
+
+	return a1 +			 //
+		   a2 * t +		 //
+		   a3 * t * t +	 //
+		   a4 * t * t * t;
 }
 }  // namespace gs
 

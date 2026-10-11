@@ -2,7 +2,9 @@
  * @file application.h
  * @brief main entry class
  *
- * @todo [improvement]: ★★★ improve 2D/3D switcher with dolly zoom animation
+ * @todo [R&D]: ★★★★ NURBS sample
+ * @todo [improvement]: ★★★ improve 2D/3D switcher with dolly zoom animation. Meve dolly_zoom_math.h to ortho_projection_view_manager.h
+ * @todo [improvement]: ★★★★ UE5-like logger
  * @todo [sample]: ★★★★ Quaternion like https://quaternions.online/
  * @todo [improvement]: ★★★★ Transform (Translate + Rotator + Scale)
  * @todo [sample]: ★★★★ Boids simulation for benchmark: https://github.com/SkitzFist/Boids

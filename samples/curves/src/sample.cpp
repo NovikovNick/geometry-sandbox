@@ -21,6 +21,7 @@
 #include "core/input_manager.h"
 #include "core/math.h"
 #include "core/scene_service.h"
+#include "core/settings.h"
 #include "core/types.h"
 #include "feature/camera_idle_rotation_manager.h"
 #include "interaction/ecs_components.h"
@@ -37,6 +38,7 @@
 #include <chrono>
 #include <cmath>
 #include <functional>
+#include <numbers>
 #include <utility>
 #include <vector>
 
@@ -57,33 +59,65 @@ enum class CameraProjection : std::uint8_t
 	Count
 };
 
+struct Spline
+{
+	std::vector<Vec3> poles;  // control points
+	std::vector<float> knots;
+	int degree = 3;
+
+	// todo: implement in future:
+	// std::vector<float> weights;
+	// std::vector<int> multiplicities;
+	// bool rational;
+	// bool periodic;
+};
+
 /** @brief Parameters that the user configures through the UI update or dragging scene objects */
 struct Parameters
 {
-	std::vector<Vec3> controlPoints;
-	std::vector<Vec3> monomials;
+	Spline spline;
 	BezierAlgorithm algorithm	= BezierAlgorithm::DeCasteljau;
 	CameraProjection projection = CameraProjection::Perspective;
 	bool showDerivative			= false;
+	bool addPoint				= false;
+
+	int curveSegemntsCount		= 64;
+	float progress				= 0;
 };
 
 /** @brief Identifiers of scene objects related to the camera */
 struct Entities
 {
-	std::vector<ecs::Entity> controlPoints;
+	std::vector<ecs::Entity> poles;
 };
+
+/** @brief Recalculate data and update positions after UI update or dragging scene objects */
+void updateScene(Parameters& params, const Entities& entities)
+{
+	auto& ctx			 = di::getContext();
+	auto& sceneService	 = ctx.create<ISceneService&>();
+	auto& uiStateManager = ctx.create<IUIStateManager&>();
+
+	for (int i = 0; i < params.spline.poles.size(); ++i)
+	{
+		sceneService.setPosition(entities.poles[i], params.spline.poles[i]);
+	}
+	// updateCoefficientMonomial(params.poles, params.monomials);
+}
 
 /** @brief Create scene objecs and define colors, radiuses, font sizes and etc */
 void setupScene(Parameters& params, Entities& entities)
 {
 	// NOLINTBEGIN(*-magic-numbers)
 	auto& ctx					  = di::getContext();
+	auto& registry				  = ctx.create<ecs::Registry&>();
 	auto& uiStateManager		  = ctx.create<IUIStateManager&>();
 	auto& sceneService			  = ctx.create<ISceneService&>();
 	auto& renderer				  = ctx.create<render::IFacade&>();
 	auto& graphic				  = ctx.create<render::ILowLevelService&>();
 	auto& cameraService			  = ctx.create<ICameraService&>();
 	auto& cameraControllerService = ctx.create<ICameraControllerService&>();
+	auto& input					  = ctx.create<IInputManager&>();
 	auto& log					  = ctx.create<ILogManager&>();
 	auto& settings				  = ctx.create<Settings&>();
 
@@ -91,36 +125,67 @@ void setupScene(Parameters& params, Entities& entities)
 	constexpr float radius		  = 0.05F;
 	constexpr Color color		  = Color::yellow();
 
-	settings.showCursorRay		  = true;
+	settings.showCursorRay		  = false;
 
 	Camera& camera				  = uiStateManager.getState().cameras[0];
 	camera.position				  = Vec3{2, 2, 5};
 	cameraService.lookAt(camera, Vec3{2, 2, 0});
 
-	params.monomials.resize(count);
-	params.controlPoints.resize(count);
-	params.controlPoints[0] = Vec3{0.7F, 2, 0};
-	params.controlPoints[1] = Vec3{1, 4, 0};
-	params.controlPoints[2] = Vec3{4.5F, 2, 0};
-	params.controlPoints[3] = Vec3{1, 0, 0};
-	// params.controlPoints[4] = Vec3{0.7F, 2, 0};
+	input.onPress(InputKey::MouseLeft,
+				  [&]()
+				  {
+					  if (!params.addPoint)
+					  {
+						  return;
+					  }
+
+					  params.addPoint				  = params.spline.poles.size() < 3;
+
+					  const Ray mouseRay			  = cameraService.getScreenToWorldRay(input.getCursorScreenPosition(), camera);
+					  const Intersection intersection = intersect(mouseRay, Plane{Vec3{0, 0, 1}, 0.0F});
+					  const Vec3 newPoint			  = intersection.point;
+					  const std::size_t idx			  = params.spline.poles.size();
+
+					  params.spline.poles.push_back(newPoint);
+
+					  const ecs::Entity id = sceneService.addPoint({.position = newPoint, .color = color, .radius = radius});
+					  entities.poles.push_back(id);
+					  registry.emplace_or_replace<ecs::component::SphereCollider>(id, .1F);
+					  registry.emplace_or_replace<ecs::component::OnTranslateCallback>(id,
+																					   [&, idx](Vec3 position)
+																					   {
+																						   params.spline.poles[idx] = position;
+																						   updateScene(params, entities);
+																					   });
+
+					  log.log("added new point at {}, {}, {}", newPoint.x(), newPoint.y(), newPoint.z());
+				  });
 
 	params.showDerivative = false;
 	params.algorithm	  = BezierAlgorithm::DeCasteljau;
 	params.projection	  = CameraProjection::Orthographic;
 
-	entities.controlPoints.reserve(count);
-
-	for (int i = 0; i < count; ++i)
-	{
-		entities.controlPoints.push_back(sceneService.addPoint({.position = params.controlPoints[i],  //
-																.color	  = color,
-																.radius	  = radius}));
-	}
-
 	renderer.onRender(
 		[&]
 		{
+			auto drawCircle = [&](const Vec3& center, const float radius, const Color color, const float thickness)
+			{
+				if (params.showDerivative)
+				{
+					Vec3 prevPoint{radius, 0, 0};
+					for (int j = 0; j <= params.curveSegemntsCount; ++j)
+					{
+						const float t	 = static_cast<float>(j) / params.curveSegemntsCount;
+						const float t2Pi = 2 * std::numbers::pi * t;
+						Vec3 currPoint	 = Vec3{std::cos(t2Pi), std::sin(t2Pi), 0} * radius;
+
+						graphic.drawLine(center + prevPoint, center + currPoint, thickness, color);
+
+						prevPoint = currPoint;
+					}
+				}
+			};
+
 			Camera& cam = uiStateManager.getState().cameras[0];
 
 			if (params.projection == CameraProjection::Orthographic)
@@ -139,76 +204,55 @@ void setupScene(Parameters& params, Entities& entities)
 				settings.showControlRotation = true;
 			}
 
-			constexpr int curveStepCount	 = 64;
-			constexpr float curveStepCountF	 = curveStepCount;
-			constexpr float curveThickness	 = 0.02F;
-			constexpr float controlThickness = 0.01F;
+			const float controlThickness = settings.lineThickness / 2;
+			const float arrowSize		 = settings.gizmoArrowSize;
 
-			const auto algo					 = params.algorithm == BezierAlgorithm::Bernshtain ? &calcBezierWithBernsteinPolynomial
-																							   : &calcBezierWithDeCasteljauAlgorithm;
-
-			const Vec3 a1					 = params.monomials[1];
-			const Vec3 a2					 = params.monomials[2];
-			const Vec3 a3					 = params.monomials[3];
-
-			for (int i = 1; i <= curveStepCount; ++i)
+			for (int i = 0; (i + params.spline.degree) < params.spline.poles.size(); i += params.spline.degree)
 			{
-				const float t1 = static_cast<float>(i - 1) / curveStepCountF;
-				const float t2 = static_cast<float>(i) / curveStepCountF;
-				const Vec3 p1  = algo(params.controlPoints, t1);
-				const Vec3 p2  = algo(params.controlPoints, t2);
+
+				const std::span range{params.spline.poles.data() + i, static_cast<std::size_t>(params.spline.degree + 1)};
+
+				const auto [_, a, b, c] = polinomialCoefficients(range);
+
+				Vec3 prevPoint			= range[0];
+				for (int j = 1; j <= params.curveSegemntsCount; ++j)
+				{
+					const float t = static_cast<float>(j) / params.curveSegemntsCount;
+
+					// const Vec3 currPoint = evalBezierByBernstein(range, t);
+					// const Vec3 currPoint = evalBezierByDeCasteljau(range, t);
+					const Vec3 currPoint = evalBezierByPolinomialCoefficients(range, t);
+
+					graphic.drawLine(prevPoint, currPoint, controlThickness, Color::white());
+
+					prevPoint = currPoint;
+				}
 
 				if (params.showDerivative)
 				{
-					const Vec3 derivative = a1 + (2 * a2 * t1) + (3 * a3 * t1 * t1);
-					graphic.drawArrow(p1, p1 + derivative, controlThickness, Color::white(), 3);
-				}
-				graphic.drawLine(p1, p2, curveThickness, Color::yellow());
-			}
+					const float t					  = params.progress;
+					const Vec3 d0					  = evalBezierByDeCasteljau(range, t);	// point on curve
+					const Vec3 d1					  = a + 2 * b * t + 3 * c * t * t;		// tangent
+					const Vec3 d2					  = 2 * b + 6 * c * t;
+					const Vec3 d3					  = 6 * c;
 
-			for (int i = 1; i < params.controlPoints.size(); ++i)
-			{
-				const Vec3 p1 = params.controlPoints[i - 1];
-				const Vec3 p2 = params.controlPoints[i];
-				graphic.drawLine(p1, p2, controlThickness, Color::white());
+					const float curvatory			  = d1.cross(d2).norm() / std::pow(d1.norm(), 3);
+					const Vec3 normal				  = rotateVector(d1, Vec3::UnitZ(), degToRad(90.0F)).normalized();
+					const Vec3 binormal				  = d1.cross(normal).normalized();
+
+					const float curvatoryCircleRadius = 1.0F / curvatory;
+					const Vec3 curvatoryCircleCenter  = normal * curvatoryCircleRadius;
+
+					graphic.drawLine(d0, d0 + curvatoryCircleCenter, controlThickness, Color::white());
+					drawCircle(d0 + curvatoryCircleCenter, curvatoryCircleRadius, Color::white(), controlThickness);
+
+					graphic.drawArrow(d0, d0 + d1, controlThickness, Color::yellow(), arrowSize);
+					graphic.drawArrow(d0, d0 + binormal, controlThickness, Color::red(), arrowSize);
+				}
 			}
 		});
 
 	// NOLINTEND(*-magic-numbers)
-}
-
-/** @brief Recalculate data and update positions after UI update or dragging scene objects */
-void updateScene(Parameters& params, const Entities& entities)
-{
-	auto& ctx			 = di::getContext();
-	auto& sceneService	 = ctx.create<ISceneService&>();
-	auto& uiStateManager = ctx.create<IUIStateManager&>();
-
-	for (int i = 0; i < params.controlPoints.size(); ++i)
-	{
-		sceneService.setPosition(entities.controlPoints[i], params.controlPoints[i]);
-	}
-	updateCoefficientMonomial(params.controlPoints, params.monomials);
-}
-
-void setupInteractionLogic(Parameters& params, const Entities& entities)
-{
-	auto& ctx						 = di::getContext();
-	auto& registry					 = ctx.create<ecs::Registry&>();
-
-	constexpr float kCollisionRadius = 0.1F;
-
-	for (int i = 0; i < entities.controlPoints.size(); ++i)
-	{
-		const ecs::Entity id = entities.controlPoints[i];
-		registry.emplace_or_replace<ecs::component::SphereCollider>(id, kCollisionRadius);
-		registry.emplace_or_replace<ecs::component::OnTranslateCallback>(id,
-																		 [&, i](Vec3 position)
-																		 {
-																			 params.controlPoints[i] = std::move(position);
-																			 updateScene(params, entities);
-																		 });
-	}
 }
 
 void setupUI(Parameters& params, const Entities& entities)
@@ -235,6 +279,10 @@ void setupUI(Parameters& params, const Entities& entities)
 			changed |= drawCombo("BezierAlgorithm", params.algorithm, "de Casteljau", "Bernshtain");
 
 			ImGui::Checkbox("Show derivative", &params.showDerivative);
+			ImGui::Checkbox("Add point", &params.addPoint);
+
+			ImGui::SliderInt("Segments count", &params.curveSegemntsCount, 1, 128);
+			ImGui::SliderFloat("Progress", &params.progress, 0.0F, 1.0F);
 
 			if (changed)
 			{
@@ -256,7 +304,6 @@ void init()
 	static Parameters params;
 
 	setupScene(params, entities);
-	setupInteractionLogic(params, entities);
 	setupUI(params, entities);
 
 	updateScene(params, entities);
